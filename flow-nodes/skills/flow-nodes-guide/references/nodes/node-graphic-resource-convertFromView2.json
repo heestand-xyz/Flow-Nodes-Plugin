@@ -1,0 +1,140 @@
+{
+  "complexity": "advanced",
+  "docs": "Convert a view to a graphic with configurable resolution, foreground color, background color, and bit depth.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewIn",
+      "valueType": "raw:view",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Resolution",
+      "typeName": "resolutionIn",
+      "valueType": "raw:core:size",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Foreground Color",
+      "typeName": "foregroundColorIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Background Color",
+      "typeName": "backgroundColorIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Convert from View",
+  "newInAppVersion": "4.1.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": [
+        1000,
+        1000
+      ],
+      "inLetTypeName": "resolutionIn",
+      "isHidden": false,
+      "name": "Resolution",
+      "type": "variable",
+      "typeName": "resolution",
+      "valueType": "raw:core:size"
+    },
+    {
+      "defaultValue": {
+        "blue": 1,
+        "green": 1,
+        "opacity": 1,
+        "red": 1
+      },
+      "inLetTypeName": "foregroundColorIn",
+      "isHidden": false,
+      "name": "Foreground Color",
+      "type": "variable",
+      "typeName": "foregroundColor",
+      "valueType": "raw:core:color"
+    },
+    {
+      "defaultValue": {
+        "blue": 0,
+        "green": 0,
+        "opacity": 0,
+        "red": 0
+      },
+      "inLetTypeName": "backgroundColorIn",
+      "isHidden": false,
+      "name": "Background Color",
+      "type": "variable",
+      "typeName": "backgroundColor",
+      "valueType": "raw:core:color"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "8 Bit",
+        "typeName": "bit8"
+      },
+      "enumCases": [
+        {
+          "name": "8 Bit",
+          "typeName": "bit8"
+        },
+        {
+          "name": "16 Bit",
+          "typeName": "bit16"
+        },
+        {
+          "name": "32 Bit",
+          "typeName": "bit32"
+        }
+      ],
+      "isHidden": false,
+      "name": "Bits",
+      "type": "typedEnum",
+      "typeName": "bits"
+    }
+  ],
+  "replacesTypePaths": [
+    "node:graphic:resource:convertFromView"
+  ],
+  "tags": [
+    "View",
+    "Graphic",
+    "Convert"
+  ],
+  "typePath": "node:graphic:resource:convertFromView2",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/resource/convertFromView2"
+}

@@ -1,0 +1,325 @@
+{
+  "complexity": "basic",
+  "docs": "",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Brightness",
+      "typeName": "brightnessIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Darkness",
+      "typeName": "darknessIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Contrast",
+      "typeName": "contrastIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Gamma",
+      "typeName": "gammaIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Inverted",
+      "typeName": "isInvertedIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Smooth",
+      "typeName": "isSmoothIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Opacity",
+      "typeName": "opacityIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Offset",
+      "typeName": "offsetIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Levels",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Color Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "brightnessIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Brightness",
+      "type": "variable",
+      "typeName": "brightness",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "darknessIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Darkness",
+      "type": "variable",
+      "typeName": "darkness",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "contrastIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Contrast",
+      "type": "variable",
+      "typeName": "contrast",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "gammaIn",
+      "info": "Adjustment of light.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Gamma",
+      "type": "variable",
+      "typeName": "gamma",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "isInvertedIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": true,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": false,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Inverted",
+      "type": "variable",
+      "typeName": "isInverted",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "isSmoothIn",
+      "info": "Applies an s-curve of smooth contrast to the graphic. (With a sine curve)",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": true,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": false,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Smooth",
+      "type": "variable",
+      "typeName": "isSmooth",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "opacityIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Opacity",
+      "type": "variable",
+      "typeName": "opacity",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "offsetIn",
+      "info": "Exposure offset. (With addition)",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": -1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Offset",
+      "type": "variable",
+      "typeName": "offset",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Brightness",
+    "Darkness",
+    "Contrast",
+    "Gamma",
+    "Invert",
+    "Opacity"
+  ],
+  "typePath": "node:graphic:colorEffect:levels",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/colorEffect/levels"
+}

@@ -1,0 +1,108 @@
+{
+  "complexity": "advanced",
+  "docs": "Recursively create a tree structure.",
+  "familyName": "Container",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Seed",
+      "typeName": "seedIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "internal",
+      "name": "Branches",
+      "typeName": "branchesIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The number of generations to create branches. Keep in mind that a high value, above 5, may cause performance issues.",
+      "level": "external",
+      "name": "Generations",
+      "typeName": "generationCountIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Tree",
+  "newInAppVersion": "2.8.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "internal",
+      "name": "Branch",
+      "typeName": "branchOut",
+      "valueType": "generic",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "internal",
+      "name": "Generation",
+      "typeName": "generationIndexOut",
+      "valueType": "raw:core:int",
+      "way": "out"
+    },
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Tree",
+      "typeName": "treeOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Map",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 3,
+      "inLetTypeName": "generationCountIn",
+      "info": "The number of generations to create branches. Keep in mind that a high value, above 5, may cause performance issues.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 5,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Generations",
+      "type": "variable",
+      "typeName": "generationCount",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Recursive"
+  ],
+  "typePath": "node:container:map:tree",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/container/map/tree"
+}

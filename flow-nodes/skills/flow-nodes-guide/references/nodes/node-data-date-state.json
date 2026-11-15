@@ -1,0 +1,43 @@
+{
+  "complexity": "basic",
+  "docs": "Store a Date.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "State",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Date",
+      "typeName": "out",
+      "valueType": "raw:core:date",
+      "way": "out"
+    }
+  ],
+  "parentName": "Date",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "isHidden": false,
+      "name": "Date",
+      "type": "value",
+      "typeName": "date",
+      "valueType": "raw:core:date"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store"
+  ],
+  "typePath": "node:data:date:state",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/date/state"
+}

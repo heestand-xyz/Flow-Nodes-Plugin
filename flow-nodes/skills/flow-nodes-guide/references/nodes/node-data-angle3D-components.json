@@ -1,0 +1,60 @@
+{
+  "complexity": "basic",
+  "docs": "Get the x, y and z Angle components of a 3D Angle.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "in",
+      "valueType": "raw:core:angle3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Components",
+  "newInAppVersion": "1.3.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "X",
+      "typeName": "xOut",
+      "valueType": "raw:core:angle",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Y",
+      "typeName": "yOut",
+      "valueType": "raw:core:angle",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Z",
+      "typeName": "zOut",
+      "valueType": "raw:core:angle",
+      "way": "out"
+    }
+  ],
+  "parentName": "3D Angle",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:angle3D:components",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/angle3D/components"
+}

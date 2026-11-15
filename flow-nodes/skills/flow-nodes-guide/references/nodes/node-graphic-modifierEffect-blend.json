@@ -1,0 +1,266 @@
+{
+  "complexity": "basic",
+  "docs": "Blend two graphics together.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "leadingGraphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Modifier Graphic",
+      "typeName": "trailingGraphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Blend",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Add",
+        "typeName": "add"
+      },
+      "enumCases": [
+        {
+          "name": "Over",
+          "typeName": "over"
+        },
+        {
+          "name": "Over with Alpha",
+          "typeName": "overWithAlpha"
+        },
+        {
+          "name": "Under",
+          "typeName": "under"
+        },
+        {
+          "name": "Screen",
+          "typeName": "screen"
+        },
+        {
+          "name": "Lighten",
+          "typeName": "lighten"
+        },
+        {
+          "name": "Darken",
+          "typeName": "darken"
+        },
+        {
+          "name": "Darken without Alpha",
+          "typeName": "darkenWithoutAlpha"
+        },
+        {
+          "name": "Add",
+          "typeName": "add"
+        },
+        {
+          "name": "Add with Alpha",
+          "typeName": "addWithAlpha"
+        },
+        {
+          "name": "Multiply",
+          "typeName": "multiply"
+        },
+        {
+          "name": "Multiply without Alpha",
+          "typeName": "multiplyWithoutAlpha"
+        },
+        {
+          "name": "Difference",
+          "typeName": "difference"
+        },
+        {
+          "name": "Difference with Alpha",
+          "typeName": "differenceWithAlpha"
+        },
+        {
+          "name": "Subtract",
+          "typeName": "subtract"
+        },
+        {
+          "name": "Subtract with Alpha",
+          "typeName": "subtractWithAlpha"
+        },
+        {
+          "name": "Maximum",
+          "typeName": "maximum"
+        },
+        {
+          "name": "Minimum",
+          "typeName": "minimum"
+        },
+        {
+          "name": "Gamma",
+          "typeName": "gamma"
+        },
+        {
+          "name": "Power",
+          "typeName": "power"
+        },
+        {
+          "name": "Divide",
+          "typeName": "divide"
+        },
+        {
+          "name": "Average",
+          "typeName": "average"
+        },
+        {
+          "name": "Cosine",
+          "typeName": "cosine"
+        },
+        {
+          "name": "Inside",
+          "typeName": "inside"
+        },
+        {
+          "name": "Outside",
+          "typeName": "outside"
+        },
+        {
+          "name": "Exclusive Or",
+          "typeName": "exclusiveOr"
+        }
+      ],
+      "isHidden": false,
+      "name": "Blending Mode",
+      "type": "stringEnum",
+      "typeName": "blendingMode"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Fill",
+        "typeName": "fill"
+      },
+      "enumCases": [
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        },
+        {
+          "name": "Fit",
+          "typeName": "fit"
+        },
+        {
+          "name": "Fill",
+          "typeName": "fill"
+        },
+        {
+          "name": "Fixed",
+          "typeName": "fixed"
+        }
+      ],
+      "isHidden": false,
+      "name": "Placement",
+      "type": "stringEnum",
+      "typeName": "placement"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Center",
+        "typeName": "center"
+      },
+      "enumCases": [
+        {
+          "name": "Top Leading",
+          "typeName": "topLeading"
+        },
+        {
+          "name": "Top",
+          "typeName": "top"
+        },
+        {
+          "name": "Top Trailing",
+          "typeName": "topTrailing"
+        },
+        {
+          "name": "Leading",
+          "typeName": "leading"
+        },
+        {
+          "name": "Center",
+          "typeName": "center"
+        },
+        {
+          "name": "Trailing",
+          "typeName": "trailing"
+        },
+        {
+          "name": "Bottom Leading",
+          "typeName": "bottomLeading"
+        },
+        {
+          "name": "Bottom",
+          "typeName": "bottom"
+        },
+        {
+          "name": "Bottom Trailing",
+          "typeName": "bottomTrailing"
+        }
+      ],
+      "isHidden": false,
+      "name": "Alignment",
+      "type": "stringEnum",
+      "typeName": "alignment"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Over",
+    "Over with Alpha",
+    "Under",
+    "Screen",
+    "Lighten",
+    "Darken",
+    "Darken without Alpha",
+    "Add",
+    "Add with Alpha",
+    "Multiply",
+    "Multiply without Alpha",
+    "Difference",
+    "Difference with Alpha",
+    "Subtract",
+    "Subtract with Alpha",
+    "Maximum",
+    "Minimum",
+    "Gamma",
+    "Power",
+    "Divide",
+    "Average",
+    "Cosine",
+    "Inside",
+    "Outside",
+    "Exclusive Or"
+  ],
+  "typePath": "node:graphic:modifierEffect:blend",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/modifierEffect/blend"
+}

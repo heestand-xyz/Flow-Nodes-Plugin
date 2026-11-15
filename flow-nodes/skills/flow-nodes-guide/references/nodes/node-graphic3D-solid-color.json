@@ -1,0 +1,154 @@
+{
+  "complexity": "basic",
+  "docs": "A plain solid color, filling the volume.",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Color",
+      "typeName": "colorIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Color",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Solid",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "depth": 100,
+        "height": 100,
+        "width": 100
+      },
+      "isHidden": false,
+      "maximumValue": {
+        "type": "value",
+        "value": {
+          "depth": 256,
+          "height": 256,
+          "width": 256
+        },
+        "valueType": {
+          "raw": {
+            "_0": {
+              "core": {
+                "_0": "size3D"
+              }
+            }
+          }
+        }
+      },
+      "minimumValue": {
+        "type": "value",
+        "value": {
+          "depth": 1,
+          "height": 1,
+          "width": 1
+        },
+        "valueType": {
+          "raw": {
+            "_0": {
+              "core": {
+                "_0": "size3D"
+              }
+            }
+          }
+        }
+      },
+      "name": "Resolution",
+      "type": "value",
+      "typeName": "resolution",
+      "valueType": "raw:core:size3D"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "8 Bit",
+        "typeName": "bit8"
+      },
+      "enumCases": [
+        {
+          "name": "8 Bit",
+          "typeName": "bit8"
+        },
+        {
+          "name": "16 Bit",
+          "typeName": "bit16"
+        },
+        {
+          "name": "32 Bit",
+          "typeName": "bit32"
+        }
+      ],
+      "isHidden": false,
+      "name": "Bits",
+      "type": "typedEnum",
+      "typeName": "bits"
+    },
+    {
+      "defaultValue": {
+        "blue": 1,
+        "green": 1,
+        "opacity": 1,
+        "red": 1
+      },
+      "inLetTypeName": "colorIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": {
+          "blue": 1,
+          "green": 1,
+          "opacity": 1,
+          "red": 1
+        },
+        "coreType": "color",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": {
+          "blue": 0,
+          "green": 0,
+          "opacity": 0,
+          "red": 0
+        },
+        "coreType": "color",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Color",
+      "type": "variable",
+      "typeName": "color",
+      "valueType": "raw:core:color"
+    }
+  ],
+  "replacedByTypePath": "node:graphic3D:solid:color2",
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:graphic3D:solid:color",
+  "isVisible": false,
+  "sourceRoute": "/docs/nodes/graphic3D/solid/color"
+}

@@ -1,0 +1,76 @@
+{
+  "complexity": "basic",
+  "docs": "Remove one value from the inlet. (The inlet can be connected to a List State Node.)",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "List",
+      "typeName": "listIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Index",
+      "typeName": "indexIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Remove",
+      "typeName": "actionIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Remove",
+  "newInAppVersion": "1.0.0",
+  "outLets": [],
+  "parentName": "List",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "indexIn",
+      "info": "The position of the element to remove. The first value in the list has index 0.",
+      "isHidden": false,
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Source",
+      "type": "variable",
+      "typeName": "index",
+      "valueType": "raw:core:int"
+    },
+    {
+      "info": "Remove the value at the index in the list.",
+      "isHidden": false,
+      "name": "Remove",
+      "type": "action",
+      "typeName": "action"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:general:list:remove",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/list/remove"
+}

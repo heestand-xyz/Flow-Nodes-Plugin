@@ -1,0 +1,81 @@
+{
+  "complexity": "advanced",
+  "docs": "Combine two lists to one list.",
+  "familyName": "Container",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Leading",
+      "typeName": "leadingListIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Trailing",
+      "typeName": "trailingListIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "internal",
+      "name": "Zipped",
+      "typeName": "zippedValueIn",
+      "valueType": "generic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Zip Edit",
+  "newInAppVersion": "2.3.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "internal",
+      "name": "Leading",
+      "typeName": "leadingValueOut",
+      "valueType": "generic",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "internal",
+      "name": "Trailing",
+      "typeName": "trailingValueOut",
+      "valueType": "generic",
+      "way": "out"
+    },
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Zipped",
+      "typeName": "zippedListOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Map",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Merge",
+    "Combine"
+  ],
+  "typePath": "node:container:map:zipEdit",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/container/map/zipEdit"
+}

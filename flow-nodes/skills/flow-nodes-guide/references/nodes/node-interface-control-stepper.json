@@ -1,0 +1,54 @@
+{
+  "complexity": "basic",
+  "docs": "Increment an Int by stepping up or down. Connect this node upstream to a State node to modify it’s value.",
+  "familyName": "Interface",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Stepper",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewOut",
+      "valueType": "raw:view",
+      "way": "out"
+    }
+  ],
+  "parentName": "Control",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "valueIn",
+      "isHidden": false,
+      "name": "Value",
+      "type": "variable",
+      "typeName": "value",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Increment"
+  ],
+  "typePath": "node:interface:control:stepper",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/interface/control/stepper"
+}

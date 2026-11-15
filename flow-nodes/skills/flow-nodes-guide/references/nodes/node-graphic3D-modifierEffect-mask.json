@@ -1,0 +1,86 @@
+{
+  "complexity": "basic",
+  "docs": "",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "leadingGraphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Modifier Graphic 3D",
+      "typeName": "trailingGraphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Include Alpha",
+      "typeName": "includeAlphaIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Mask",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": true,
+      "inLetTypeName": "includeAlphaIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": true,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": false,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Include Alpha",
+      "type": "variable",
+      "typeName": "includeAlpha",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:graphic3D:modifierEffect:mask",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/modifierEffect/mask"
+}

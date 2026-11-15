@@ -1,0 +1,291 @@
+{
+  "complexity": "advanced",
+  "docs": "Reduce mesh triangle count with QEM edge collapses while preserving key features.",
+  "familyName": "3D Geometry",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Geometry",
+      "typeName": "geometryIn",
+      "valueType": "raw:geometry",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Stops when the mesh reaches this triangle count.",
+      "level": "external",
+      "name": "Target Triangle Count",
+      "typeName": "targetTriangleCountIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Stops when the mesh reaches this fraction of the original triangle count.",
+      "level": "external",
+      "name": "Target Ratio",
+      "typeName": "targetRatioIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Stops if the cheapest collapse exceeds this geometric error. Set to 0 to disable.",
+      "level": "external",
+      "name": "Maximum Error",
+      "typeName": "maximumErrorIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Avoid collapsing edges on open borders.",
+      "level": "external",
+      "name": "Preserve Boundaries",
+      "typeName": "preserveBoundariesIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Edges with a dihedral angle above this threshold are treated as sharp and preserved.",
+      "level": "external",
+      "name": "Feature Angle",
+      "typeName": "featureAngleIn",
+      "valueType": "raw:core:angle",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Avoid collapsing edges that lie on UV seams when UVs are present.",
+      "level": "external",
+      "name": "Preserve UV Seams",
+      "typeName": "preserveUVSeamsIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Allow edge collapses that flip triangle orientation.",
+      "level": "external",
+      "name": "Allow Flip",
+      "typeName": "allowFlipIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "Poly Reduce",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Geometry",
+      "typeName": "geometryOut",
+      "valueType": "raw:geometry",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Ratio",
+        "typeName": "ratio"
+      },
+      "enumCases": [
+        {
+          "name": "Count",
+          "typeName": "count"
+        },
+        {
+          "name": "Ratio",
+          "typeName": "ratio"
+        }
+      ],
+      "info": "Choose whether the reduction target is an absolute triangle count or a ratio of the current count.",
+      "isHidden": false,
+      "name": "Target Type",
+      "type": "typedEnum",
+      "typeName": "targetType"
+    },
+    {
+      "defaultValue": 500,
+      "inLetTypeName": "targetTriangleCountIn",
+      "info": "Stops when the mesh reaches this triangle count.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1000,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Target Triangle Count",
+      "type": "variable",
+      "typeName": "targetTriangleCount",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "targetRatioIn",
+      "info": "Stops when the mesh reaches this fraction of the original triangle count.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Target Ratio",
+      "type": "variable",
+      "typeName": "targetRatio",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "maximumErrorIn",
+      "info": "Stops if the cheapest collapse exceeds this geometric error. Set to 0 to disable.",
+      "isHidden": false,
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Maximum Error",
+      "type": "variable",
+      "typeName": "maximumError",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "preserveBoundariesIn",
+      "info": "Avoid collapsing edges on open borders.",
+      "isHidden": false,
+      "name": "Preserve Boundaries",
+      "type": "variable",
+      "typeName": "preserveBoundaries",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 1.0471975511965976,
+      "inLetTypeName": "featureAngleIn",
+      "info": "Edges with a dihedral angle above this threshold are treated as sharp and preserved.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 3.141592653589793,
+        "coreType": "angle",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "angle",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Feature Angle",
+      "type": "variable",
+      "typeName": "featureAngle",
+      "valueType": "raw:core:angle"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "preserveUVSeamsIn",
+      "info": "Avoid collapsing edges that lie on UV seams when UVs are present.",
+      "isHidden": false,
+      "name": "Preserve UV Seams",
+      "type": "variable",
+      "typeName": "preserveUVSeams",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "allowFlipIn",
+      "info": "Allow edge collapses that flip triangle orientation.",
+      "isHidden": false,
+      "name": "Allow Flip",
+      "type": "variable",
+      "typeName": "allowFlip",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Optimal",
+        "typeName": "optimal"
+      },
+      "enumCases": [
+        {
+          "name": "Optimal",
+          "typeName": "optimal"
+        },
+        {
+          "name": "Midpoint",
+          "typeName": "midpoint"
+        },
+        {
+          "name": "Keep First Vertex",
+          "typeName": "keepFirstVertex"
+        }
+      ],
+      "info": "How the new vertex position is chosen for each edge collapse.",
+      "isHidden": false,
+      "name": "Placement",
+      "type": "typedEnum",
+      "typeName": "placementType"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Mesh",
+    "Reduce",
+    "Decimate",
+    "QEM",
+    "Lowpoly"
+  ],
+  "typePath": "node:geometry:modifier:polyReduce",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/geometry/modifier/polyReduce"
+}

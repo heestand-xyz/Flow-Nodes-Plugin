@@ -1,0 +1,94 @@
+{
+  "complexity": "basic",
+  "docs": "",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Radius",
+      "typeName": "radiusIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Circle",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "out",
+      "valueType": "raw:vector",
+      "way": "out"
+    }
+  ],
+  "parentName": "Shape",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "radiusIn",
+      "isHidden": false,
+      "maximumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 2,
+                      "index": 1
+                    },
+                    "fraction": 0.5
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 2,
+                      "index": 1
+                    },
+                    "fraction": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Radius",
+      "type": "variable",
+      "typeName": "radius",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:vector:shape:circle",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/shape/circle"
+}

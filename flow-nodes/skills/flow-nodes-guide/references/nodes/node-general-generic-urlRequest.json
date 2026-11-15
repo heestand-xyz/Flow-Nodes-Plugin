@@ -1,0 +1,110 @@
+{
+  "complexity": "advanced",
+  "docs": "Fetch data from the internet. To see the data, connect a String or Graphic node.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Data",
+      "supportedGenericRawTypes": [
+        "core:string",
+        "graphic"
+      ],
+      "typeName": "dataIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "URL",
+      "typeName": "urlIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Request",
+      "typeName": "requestIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "URL Request",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Requesting",
+      "typeName": "requestingOut",
+      "valueType": "raw:core:bool",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Status",
+      "typeName": "statusOut",
+      "valueType": "raw:core:int",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Error",
+      "typeName": "errorOut",
+      "valueType": "raw:core:string",
+      "way": "out"
+    }
+  ],
+  "parentName": "Generic",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": "",
+      "inLetTypeName": "urlIn",
+      "info": "A web url starting with http:// or https://",
+      "isHidden": false,
+      "name": "URL",
+      "type": "variable",
+      "typeName": "url",
+      "valueType": "raw:core:string"
+    },
+    {
+      "isHidden": false,
+      "name": "Request",
+      "type": "action",
+      "typeName": "request"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "API",
+    "URL",
+    "Request",
+    "Web",
+    "http",
+    "https",
+    "Download",
+    "Fetch",
+    "Internet",
+    "Network"
+  ],
+  "typePath": "node:general:generic:urlRequest",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/generic/urlRequest"
+}

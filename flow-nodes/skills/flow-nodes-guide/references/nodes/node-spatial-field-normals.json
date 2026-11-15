@@ -1,0 +1,103 @@
+{
+  "complexity": "basic",
+  "docs": "Compute normals of a mesh field.",
+  "familyName": "3D Spatial",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Field",
+      "typeName": "fieldIn",
+      "valueType": "raw:field",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "When on, normals are averaged across shared vertices for smooth shading. When off, each triangle uses its face normal for flat shading.",
+      "level": "external",
+      "name": "Is Smooth",
+      "typeName": "isSmoothIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Smooth shading angle threshold.",
+      "level": "external",
+      "name": "Angle Threshold",
+      "typeName": "angleThresholdIn",
+      "valueType": "raw:core:angle",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Normals",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Field",
+      "typeName": "fieldOut",
+      "valueType": "raw:field",
+      "way": "out"
+    }
+  ],
+  "parentName": "Field",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": true,
+      "inLetTypeName": "isSmoothIn",
+      "info": "When on, normals are averaged across shared vertices for smooth shading. When off, each triangle uses its face normal for flat shading.",
+      "isHidden": false,
+      "name": "Is Smooth",
+      "type": "variable",
+      "typeName": "isSmooth",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 3.141592653589793,
+      "inLetTypeName": "angleThresholdIn",
+      "info": "Smooth shading angle threshold.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 3.141592653589793,
+        "coreType": "angle",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "angle",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Angle Threshold",
+      "type": "variable",
+      "typeName": "angleThreshold",
+      "valueType": "raw:core:angle"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Surface",
+    "Lighting",
+    "Shading"
+  ],
+  "typePath": "node:spatial:field:normals",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/spatial/field/normals"
+}

@@ -1,0 +1,69 @@
+{
+  "complexity": "advanced",
+  "docs": "Construct a Vetex from position, normal, texture coordinate, and color.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Position",
+      "typeName": "positionIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Normal",
+      "typeName": "normalIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Texture Coordinate",
+      "typeName": "texcoordIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Color",
+      "typeName": "colorIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Construct",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "raw:core:vertex",
+      "way": "out"
+    }
+  ],
+  "parentName": "Vertex",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:vertex:construct",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/vertex/construct"
+}

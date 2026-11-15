@@ -1,0 +1,179 @@
+{
+  "complexity": "advanced",
+  "docs": "Convert the light of a graphic from one color space to another, keeping the resolution and the bits.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Color Space",
+  "newInAppVersion": "27.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Convert",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "sRGB",
+        "typeName": "sRGB"
+      },
+      "enumCases": [
+        {
+          "name": "sRGB",
+          "typeName": "sRGB"
+        },
+        {
+          "name": "Linear sRGB",
+          "typeName": "linearSRGB"
+        },
+        {
+          "name": "Display P3",
+          "typeName": "displayP3"
+        },
+        {
+          "name": "Linear Display P3",
+          "typeName": "linearDisplayP3"
+        },
+        {
+          "name": "DCI-P3",
+          "typeName": "dciP3"
+        },
+        {
+          "name": "Rec. 709",
+          "typeName": "rec709"
+        },
+        {
+          "name": "Rec. 2020",
+          "typeName": "rec2020"
+        },
+        {
+          "name": "Linear Rec. 2020",
+          "typeName": "linearRec2020"
+        },
+        {
+          "name": "Adobe RGB",
+          "typeName": "adobeRGB"
+        },
+        {
+          "name": "Rec. 2100 PQ (XDR)",
+          "typeName": "rec2100PQ"
+        },
+        {
+          "name": "Rec. 2100 HLG",
+          "typeName": "rec2100HLG"
+        },
+        {
+          "name": "ACEScg",
+          "typeName": "acesCGLinear"
+        }
+      ],
+      "info": "The color space the graphic is read as.",
+      "isHidden": false,
+      "name": "From",
+      "type": "typedEnum",
+      "typeName": "fromColorSpace"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Linear sRGB",
+        "typeName": "linearSRGB"
+      },
+      "enumCases": [
+        {
+          "name": "sRGB",
+          "typeName": "sRGB"
+        },
+        {
+          "name": "Linear sRGB",
+          "typeName": "linearSRGB"
+        },
+        {
+          "name": "Display P3",
+          "typeName": "displayP3"
+        },
+        {
+          "name": "Linear Display P3",
+          "typeName": "linearDisplayP3"
+        },
+        {
+          "name": "DCI-P3",
+          "typeName": "dciP3"
+        },
+        {
+          "name": "Rec. 709",
+          "typeName": "rec709"
+        },
+        {
+          "name": "Rec. 2020",
+          "typeName": "rec2020"
+        },
+        {
+          "name": "Linear Rec. 2020",
+          "typeName": "linearRec2020"
+        },
+        {
+          "name": "Adobe RGB",
+          "typeName": "adobeRGB"
+        },
+        {
+          "name": "Rec. 2100 PQ (XDR)",
+          "typeName": "rec2100PQ"
+        },
+        {
+          "name": "Rec. 2100 HLG",
+          "typeName": "rec2100HLG"
+        },
+        {
+          "name": "ACEScg",
+          "typeName": "acesCGLinear"
+        }
+      ],
+      "info": "The color space the graphic is converted to.",
+      "isHidden": false,
+      "name": "To",
+      "type": "typedEnum",
+      "typeName": "toColorSpace"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Color Space",
+    "Gamma",
+    "Linear",
+    "sRGB",
+    "Display P3",
+    "DCI-P3",
+    "Rec. 709",
+    "Rec. 2020",
+    "Rec. 2100",
+    "Adobe RGB",
+    "ACEScg",
+    "XDR",
+    "HDR"
+  ],
+  "typePath": "node:graphic:convert:colorSpace",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/convert/colorSpace"
+}

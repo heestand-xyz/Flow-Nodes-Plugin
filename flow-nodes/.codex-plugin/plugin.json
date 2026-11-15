@@ -1,0 +1,39 @@
+{
+  "name": "flow-nodes",
+  "version": "0.1.1",
+  "description": "Learn Flow Nodes and build flows with precise node, property, and wire guidance from bundled documentation.",
+  "author": {
+    "name": "Portobello Studio"
+  },
+  "homepage": "https://flownodes.app",
+  "keywords": [
+    "Flow Nodes",
+    "visual programming",
+    "node graphs",
+    "graphics",
+    "video",
+    "3D",
+    "JavaScript",
+    "Metal"
+  ],
+  "repository": "https://github.com/heestand-xyz/Flow-Nodes-Plugin",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Flow Nodes",
+    "shortDescription": "Learn the app. Wire your flow.",
+    "longDescription": "Get help using Flow Nodes on iPhone, iPad, Mac, and Vision Pro. Learn the Canvas, properties, folders, instances, and playback; choose nodes and follow step-by-step wiring plans with exact port names and types. Explore graphics, video, 3D, interactive interfaces, lists, JavaScript scripts, and Metal shaders. Answers use bundled articles and a structured node catalog, including platform availability and replacement nodes. This plugin provides guidance and does not connect to or edit your running app. Some nodes in the separate Flow Nodes app require existing Pro access. The plugin has no purchases.",
+    "developerName": "Portobello Studio",
+    "websiteURL": "https://flownodes.app",
+    "category": "Creativity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Help me get started with Flow Nodes and build my first flow.",
+      "Show me exactly how to wire a slider to control an image's blur.",
+      "Help me understand why two nodes in my flow will not connect."
+    ],
+    "logo": "./assets/icon.png",
+    "composerIcon": "./assets/icon.png",
+    "logoDark": "./assets/icon-dark.png",
+    "composerIconDark": "./assets/icon-dark.png"
+  }
+}

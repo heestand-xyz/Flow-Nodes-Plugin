@@ -1,0 +1,87 @@
+{
+  "complexity": "advanced",
+  "docs": "Select a value from a JSON dictionary with a specific key.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "JSON",
+      "typeName": "jsonIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Key",
+      "typeName": "keyIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Item from JSON",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Item",
+      "typeName": "itemOut",
+      "valueType": "raw:core:string",
+      "way": "out"
+    }
+  ],
+  "parentName": "String",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": "",
+      "inLetTypeName": "keyIn",
+      "isHidden": false,
+      "name": "Key",
+      "type": "variable",
+      "typeName": "key",
+      "valueType": "raw:core:string"
+    },
+    {
+      "defaultValue": true,
+      "isHidden": false,
+      "name": "Pretty Printed",
+      "type": "value",
+      "typeName": "prettyPrinted",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": false,
+      "isHidden": false,
+      "name": "Sorted Keys",
+      "type": "value",
+      "typeName": "sortedKeys",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": true,
+      "isHidden": false,
+      "name": "Without Escaping Slashes",
+      "type": "value",
+      "typeName": "withoutEscapingSlashes",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Select"
+  ],
+  "typePath": "node:data:string:itemFromJSON",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/string/itemFromJSON"
+}

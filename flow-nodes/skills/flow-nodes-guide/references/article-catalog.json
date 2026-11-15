@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "articles": [
+    {
+      "id": "scripts-guide",
+      "title": "Script Guide",
+      "summary": "Write JavaScript in a Script node or variable property.",
+      "sourceRoute": "/docs/guides/script",
+      "reference": "articles/scripts-guide.md"
+    },
+    {
+      "id": "shaders-guide",
+      "title": "Shader Guide",
+      "summary": "Build a Metal shader, connect inputs, and sample graphics.",
+      "sourceRoute": "/docs/guides/shader",
+      "reference": "articles/shaders-guide.md"
+    },
+    {
+      "id": "scripts-reference",
+      "title": "Script Reference",
+      "summary": "Node access, wires, properties, value types, time, and indices.",
+      "sourceRoute": "/docs/references/script",
+      "reference": "articles/scripts-reference.md"
+    },
+    {
+      "id": "shaders-reference",
+      "title": "Shader Reference",
+      "summary": "Entry points, coordinates, input types, sampling, and execution.",
+      "sourceRoute": "/docs/references/shader",
+      "reference": "articles/shaders-reference.md"
+    },
+    {
+      "id": "guides-getting-started",
+      "title": "Getting Started Guide",
+      "summary": "Build your first flows and learn the core concepts.",
+      "sourceRoute": "/docs/guides/getting-started",
+      "reference": "articles/guides-getting-started.md"
+    },
+    {
+      "id": "guides-pixel-particles",
+      "title": "Pixel Particles Guide",
+      "summary": "Create and animate particles from graphics.",
+      "sourceRoute": "/docs/guides/pixel-particles",
+      "reference": "articles/guides-pixel-particles.md"
+    },
+    {
+      "id": "guides-3d-clones",
+      "title": "3D Clones Guide",
+      "summary": "Build a field of animated 3D clones.",
+      "sourceRoute": "/docs/guides/3d-clones",
+      "reference": "articles/guides-3d-clones.md"
+    },
+    {
+      "id": "guides-video",
+      "title": "Video Guide",
+      "summary": "Play, sample, edit and seek video frames.",
+      "sourceRoute": "/docs/guides/video",
+      "reference": "articles/guides-video.md"
+    },
+    {
+      "id": "guides-3d",
+      "title": "3D Guide",
+      "summary": "Build a 3D scene from geometry, fields and entities.",
+      "sourceRoute": "/docs/guides/3d",
+      "reference": "articles/guides-3d.md"
+    },
+    {
+      "id": "references-type-system",
+      "title": "Type System",
+      "summary": "Understand raw types, core types, conversion and generics.",
+      "sourceRoute": "/docs/references/type-system",
+      "reference": "articles/references-type-system.md"
+    },
+    {
+      "id": "references-3d",
+      "title": "3D Reference",
+      "summary": "Explore geometry, fields, entities and rendering.",
+      "sourceRoute": "/docs/references/3d",
+      "reference": "articles/references-3d.md"
+    },
+    {
+      "id": "info-data-flow",
+      "title": "Data Flow",
+      "summary": "Understand how data travels through nodes and wires.",
+      "sourceRoute": "/docs/info/data-flow",
+      "reference": "articles/info-data-flow.md"
+    },
+    {
+      "id": "info-wire-connections",
+      "title": "Wire Connections",
+      "summary": "Connect inlets and outlets, including binding wires.",
+      "sourceRoute": "/docs/info/wire-connections",
+      "reference": "articles/info-wire-connections.md"
+    },
+    {
+      "id": "info-variable-properties",
+      "title": "Variable Properties",
+      "summary": "Set properties with constants, scripts and connections.",
+      "sourceRoute": "/docs/info/variable-properties",
+      "reference": "articles/info-variable-properties.md"
+    },
+    {
+      "id": "info-folder-instance-nodes",
+      "title": "Folder & Instance Nodes",
+      "summary": "Organize flows with folders and linked instances.",
+      "sourceRoute": "/docs/info/folder-instance-nodes",
+      "reference": "articles/info-folder-instance-nodes.md"
+    },
+    {
+      "id": "info-user-interface-nodes",
+      "title": "User Interface Nodes",
+      "summary": "Build interactive views with UI nodes.",
+      "sourceRoute": "/docs/info/user-interface-nodes",
+      "reference": "articles/info-user-interface-nodes.md"
+    },
+    {
+      "id": "info-playback-time",
+      "title": "Playback Time",
+      "summary": "Control time, playback and animation.",
+      "sourceRoute": "/docs/info/playback-time",
+      "reference": "articles/info-playback-time.md"
+    },
+    {
+      "id": "info-shortcuts",
+      "title": "Shortcuts",
+      "summary": "Run flows from Apple Shortcuts.",
+      "sourceRoute": "/docs/info/shortcuts",
+      "reference": "articles/info-shortcuts.md"
+    },
+    {
+      "id": "info-legacy-releases",
+      "title": "Legacy Releases",
+      "summary": "Explore the archived Flow Nodes 3 and 4 releases.",
+      "sourceRoute": "/docs/info/legacy-releases",
+      "reference": "articles/info-legacy-releases.md"
+    },
+    {
+      "id": "info-local-ai-model-mcp",
+      "title": "Local AI Model via MCP",
+      "summary": "Connect a local language model to Flow Nodes with MCP.",
+      "sourceRoute": "/docs/info/local-ai-model-mcp",
+      "reference": "articles/info-local-ai-model-mcp.md"
+    },
+    {
+      "id": "faq",
+      "title": "FAQ",
+      "summary": "Answers to frequently asked questions.",
+      "sourceRoute": "/docs/faq",
+      "reference": "articles/faq.md"
+    },
+    {
+      "id": "ui-home",
+      "title": "Home",
+      "summary": "Manage flows, search and create new projects.",
+      "sourceRoute": "/docs/ui/home",
+      "reference": "articles/ui-home.md"
+    },
+    {
+      "id": "ui-discover",
+      "title": "Discover",
+      "summary": "Browse featured flows and explore what others have made.",
+      "sourceRoute": "/docs/ui/discover",
+      "reference": "articles/ui-discover.md"
+    },
+    {
+      "id": "ui-canvas",
+      "title": "Canvas",
+      "summary": "Create, connect and arrange nodes.",
+      "sourceRoute": "/docs/ui/canvas",
+      "reference": "articles/ui-canvas.md"
+    },
+    {
+      "id": "ui-tutorials",
+      "title": "Tutorials",
+      "summary": "Learn Flow Nodes with guided in-app tutorials.",
+      "sourceRoute": "/docs/ui/tutorials",
+      "reference": "articles/ui-tutorials.md"
+    },
+    {
+      "id": "ui-properties",
+      "title": "Properties",
+      "summary": "Inspect nodes and edit their properties.",
+      "sourceRoute": "/docs/ui/properties",
+      "reference": "articles/ui-properties.md"
+    },
+    {
+      "id": "ui-node-creator",
+      "title": "Node Creator",
+      "summary": "Find nodes and add them to a flow.",
+      "sourceRoute": "/docs/ui/node-creator",
+      "reference": "articles/ui-node-creator.md"
+    },
+    {
+      "id": "ui-flow-browser",
+      "title": "Flow Browser",
+      "summary": "Navigate the folders and nodes in a flow.",
+      "sourceRoute": "/docs/ui/flow-browser",
+      "reference": "articles/ui-flow-browser.md"
+    },
+    {
+      "id": "ui-tabs-and-split-views",
+      "title": "Tabs and Split Views",
+      "summary": "Arrange multiple views of a flow.",
+      "sourceRoute": "/docs/ui/tabs-and-split-views",
+      "reference": "articles/ui-tabs-and-split-views.md"
+    },
+    {
+      "id": "ui-performance-statistics",
+      "title": "Performance Statistics",
+      "summary": "Inspect the cost of running your flow.",
+      "sourceRoute": "/docs/ui/performance-statistics",
+      "reference": "articles/ui-performance-statistics.md"
+    },
+    {
+      "id": "ui-ai-chat",
+      "title": "AI Chat",
+      "summary": "Build and edit flows with the integrated assistant.",
+      "sourceRoute": "/docs/ui/ai-chat",
+      "reference": "articles/ui-ai-chat.md"
+    },
+    {
+      "id": "ui-settings",
+      "title": "Settings",
+      "summary": "Configure the app and its integrations.",
+      "sourceRoute": "/docs/ui/settings",
+      "reference": "articles/ui-settings.md"
+    },
+    {
+      "id": "info-flow-nodes-4",
+      "title": "Flow Nodes 4.0",
+      "summary": "Highlights from Flow Nodes 4.0.",
+      "sourceRoute": "/docs/info/flow-nodes-4",
+      "reference": "articles/info-flow-nodes-4.md"
+    },
+    {
+      "id": "info-flow-nodes-3",
+      "title": "Flow Nodes 3.0",
+      "summary": "Highlights from Flow Nodes 3.0.",
+      "sourceRoute": "/docs/info/flow-nodes-3",
+      "reference": "articles/info-flow-nodes-3.md"
+    }
+  ]
+}

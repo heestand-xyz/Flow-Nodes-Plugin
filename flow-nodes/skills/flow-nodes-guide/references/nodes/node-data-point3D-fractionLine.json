@@ -1,0 +1,114 @@
+{
+  "complexity": "basic",
+  "docs": "A line of points. Based on a spacing and offset.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Leading",
+      "typeName": "leadingIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Trailing",
+      "typeName": "trailingIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Spacing",
+      "typeName": "spacingIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Offset",
+      "typeName": "offsetIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Fraction Line",
+  "newInAppVersion": "2.6.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Points",
+      "typeName": "pointsOut",
+      "valueType": "raw:core:point3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "3D Point",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "x": 0,
+        "y": 0.5,
+        "z": 0
+      },
+      "inLetTypeName": "leadingIn",
+      "isHidden": false,
+      "name": "Leading",
+      "type": "variable",
+      "typeName": "leading",
+      "valueType": "raw:core:point3D"
+    },
+    {
+      "defaultValue": {
+        "x": 0,
+        "y": -0.5,
+        "z": 0
+      },
+      "inLetTypeName": "trailingIn",
+      "isHidden": false,
+      "name": "Trailing",
+      "type": "variable",
+      "typeName": "trailing",
+      "valueType": "raw:core:point3D"
+    },
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "spacingIn",
+      "isHidden": false,
+      "name": "Spacing",
+      "type": "variable",
+      "typeName": "spacing",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "offsetIn",
+      "isHidden": false,
+      "name": "Offset",
+      "type": "variable",
+      "typeName": "offset",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:point3D:fractionLine",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/point3D/fractionLine"
+}

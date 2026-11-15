@@ -1,0 +1,64 @@
+{
+  "complexity": "basic",
+  "docs": "Construct a Vector Path from a list of Vector Points.",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Vector Points",
+      "typeName": "pointsIn",
+      "valueType": "raw:core:vectorPoint",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Closed",
+      "typeName": "closedIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Construct",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "vectorPathOut",
+      "valueType": "raw:vector",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": false,
+      "inLetTypeName": "closedIn",
+      "isHidden": false,
+      "name": "Closed",
+      "type": "variable",
+      "typeName": "closed",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Path",
+    "Points"
+  ],
+  "typePath": "node:vector:resource:construct",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/resource/construct"
+}

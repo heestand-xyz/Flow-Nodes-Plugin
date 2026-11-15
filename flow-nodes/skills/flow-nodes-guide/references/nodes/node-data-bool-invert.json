@@ -1,0 +1,44 @@
+{
+  "complexity": "basic",
+  "docs": "Negate the boolean value.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Is On",
+      "typeName": "in",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Invert",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Is On",
+      "typeName": "out",
+      "valueType": "raw:core:bool",
+      "way": "out"
+    }
+  ],
+  "parentName": "Bool",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Not"
+  ],
+  "typePath": "node:data:bool:invert",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/bool/invert"
+}

@@ -1,0 +1,113 @@
+{
+  "complexity": "advanced",
+  "docs": "Get a pixel Color at a specific location from a Graphic. Unit coordinates range from zero to one; pixel coordinates use pixel-center indices.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The location in the Graphic at which to sample the color. Fractional locations are interpolated between the nearest pixels.",
+      "level": "external",
+      "name": "Location",
+      "typeName": "locationIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Pixel",
+  "newInAppVersion": "27.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Color",
+      "typeName": "colorOut",
+      "valueType": "raw:core:color",
+      "way": "out"
+    }
+  ],
+  "parentName": "Color",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Unit",
+        "typeName": "unit"
+      },
+      "enumCases": [
+        {
+          "name": "Unit",
+          "typeName": "unit"
+        },
+        {
+          "name": "Pixel",
+          "typeName": "pixel"
+        }
+      ],
+      "info": "Choose whether the location is interpreted as normalized unit coordinates or pixel coordinates.",
+      "isHidden": false,
+      "name": "Coordinate Space",
+      "type": "typedEnum",
+      "typeName": "coordinateSpace"
+    },
+    {
+      "defaultValue": [
+        0.5,
+        0.5
+      ],
+      "inLetTypeName": "locationIn",
+      "info": "The location in the Graphic at which to sample the color. Fractional locations are interpolated between the nearest pixels.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": [
+          1,
+          1
+        ],
+        "coreType": "point",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": [
+          0,
+          0
+        ],
+        "coreType": "point",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Location",
+      "type": "variable",
+      "typeName": "location",
+      "valueType": "raw:core:point"
+    }
+  ],
+  "replacesTypePaths": [
+    "node:data:color:pixel"
+  ],
+  "tags": [
+    "Sample"
+  ],
+  "typePath": "node:data:color:pixel2",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/color/pixel2"
+}

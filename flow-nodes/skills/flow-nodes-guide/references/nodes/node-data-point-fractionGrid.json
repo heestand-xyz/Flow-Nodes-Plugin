@@ -1,0 +1,103 @@
+{
+  "complexity": "basic",
+  "docs": "A grid of points. Based on a spacing and offset.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Frame",
+      "typeName": "frameIn",
+      "valueType": "raw:core:rect",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Spacing",
+      "typeName": "spacingIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Offset",
+      "typeName": "offsetIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Fraction Grid",
+  "newInAppVersion": "2.6.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Points",
+      "typeName": "pointsOut",
+      "valueType": "raw:core:point",
+      "way": "out"
+    }
+  ],
+  "parentName": "Point",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "inLetTypeName": "frameIn",
+      "isHidden": false,
+      "name": "Frame",
+      "type": "variable",
+      "typeName": "frame",
+      "valueType": "raw:core:rect"
+    },
+    {
+      "defaultValue": [
+        0.5,
+        0.5
+      ],
+      "inLetTypeName": "spacingIn",
+      "isHidden": false,
+      "name": "Spacing",
+      "type": "variable",
+      "typeName": "spacing",
+      "valueType": "raw:core:point"
+    },
+    {
+      "defaultValue": [
+        0,
+        0
+      ],
+      "inLetTypeName": "offsetIn",
+      "isHidden": false,
+      "name": "Offset",
+      "type": "variable",
+      "typeName": "offset",
+      "valueType": "raw:core:point"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:point:fractionGrid",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/point/fractionGrid"
+}

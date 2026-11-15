@@ -1,0 +1,110 @@
+{
+  "complexity": "advanced",
+  "docs": "Lookup colors in the second graphic based on the first graphics luminance.",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "leadingGraphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Modifier Graphic 3D",
+      "typeName": "trailingGraphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Sample Coordinate",
+      "typeName": "sampleCoordinateIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Lookup",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "sampleCoordinateIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Sample Coordinate",
+      "type": "variable",
+      "typeName": "sampleCoordinate",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Y",
+        "typeName": "y"
+      },
+      "enumCases": [
+        {
+          "name": "X",
+          "typeName": "x"
+        },
+        {
+          "name": "Y",
+          "typeName": "y"
+        },
+        {
+          "name": "Z",
+          "typeName": "z"
+        }
+      ],
+      "isHidden": false,
+      "name": "Axis",
+      "type": "stringEnum",
+      "typeName": "axis"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:graphic3D:modifierEffect:lookup",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/modifierEffect/lookup"
+}

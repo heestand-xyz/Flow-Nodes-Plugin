@@ -1,0 +1,62 @@
+{
+  "complexity": "advanced",
+  "docs": "Check if the list inlet contains some value. If one of the inner values inlet is true, the final outlet will also be true.",
+  "familyName": "Container",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Array",
+      "typeName": "arrayIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "internal",
+      "name": "Element Contains",
+      "typeName": "elementContainsIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Contains",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Contains",
+      "typeName": "arrayContainsOut",
+      "valueType": "raw:core:bool",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "internal",
+      "name": "Element",
+      "typeName": "elementOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Map",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Exists"
+  ],
+  "typePath": "node:container:map:contains",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/container/map/contains"
+}

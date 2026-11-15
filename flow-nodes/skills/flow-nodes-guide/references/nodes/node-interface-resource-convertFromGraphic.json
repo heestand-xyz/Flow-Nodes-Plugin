@@ -1,0 +1,92 @@
+{
+  "complexity": "advanced",
+  "docs": "Convert a graphic to a view.",
+  "familyName": "Interface",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Convert from Graphic",
+  "newInAppVersion": "1.5.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewOut",
+      "valueType": "raw:view",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Fit",
+        "typeName": "fit"
+      },
+      "enumCases": [
+        {
+          "name": "Fit",
+          "typeName": "fit"
+        },
+        {
+          "name": "Fill",
+          "typeName": "fill"
+        },
+        {
+          "name": "Tile",
+          "typeName": "tile"
+        },
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        },
+        {
+          "name": "Original",
+          "typeName": "original"
+        }
+      ],
+      "isHidden": false,
+      "name": "Scale",
+      "type": "typedEnum",
+      "typeName": "scale"
+    },
+    {
+      "defaultValue": false,
+      "info": "Use as an alpha silhouette mask.",
+      "isHidden": false,
+      "name": "Template",
+      "type": "value",
+      "typeName": "isTemplate",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": false,
+      "isHidden": false,
+      "name": "Pixelated",
+      "type": "value",
+      "typeName": "isPixelated",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:interface:resource:convertFromGraphic",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/interface/resource/convertFromGraphic"
+}

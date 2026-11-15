@@ -1,0 +1,56 @@
+{
+  "complexity": "basic",
+  "docs": "Connect matching particles from two fields into line mesh particles. Each source particle pair becomes one line with two points.",
+  "familyName": "3D Spatial",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Leading",
+      "typeName": "leadingIn",
+      "valueType": "raw:field",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Trailing",
+      "typeName": "trailingIn",
+      "valueType": "raw:field",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Connect Lines",
+  "newInAppVersion": "4.3.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Field",
+      "typeName": "fieldOut",
+      "valueType": "raw:field",
+      "way": "out"
+    }
+  ],
+  "parentName": "Field",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Lines",
+    "Connect",
+    "Pair",
+    "Mesh"
+  ],
+  "typePath": "node:spatial:field:connectLines",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/spatial/field/connectLines"
+}

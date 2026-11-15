@@ -1,0 +1,53 @@
+{
+  "complexity": "advanced",
+  "docs": "Filter values from a list of allowed values.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Filter",
+      "typeName": "allowedValuesIn",
+      "valueType": "generic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Filter",
+  "newInAppVersion": "2.9.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Generic",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Funnel"
+  ],
+  "typePath": "node:general:generic:filter",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/generic/filter"
+}

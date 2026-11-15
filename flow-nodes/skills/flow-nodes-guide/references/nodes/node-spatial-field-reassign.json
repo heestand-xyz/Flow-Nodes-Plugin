@@ -1,0 +1,91 @@
+{
+  "complexity": "basic",
+  "docs": "Copy a tag from a source field into a target field. Requires matching particle count.",
+  "familyName": "3D Spatial",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Source",
+      "typeName": "sourceIn",
+      "valueType": "raw:field",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Target",
+      "typeName": "targetIn",
+      "valueType": "raw:field",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Metal shader snippet, to reassign the field values.\nPosition to color: `target = float4(source.xyz, 1.0);`.\nColor to position: `target = float3(source);`.",
+      "level": "external",
+      "name": "Code",
+      "typeName": "codeIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Reassign",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Field",
+      "typeName": "fieldOut",
+      "valueType": "raw:field",
+      "way": "out"
+    }
+  ],
+  "parentName": "Field",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "info": "Tag to read from the source field.",
+      "isHidden": false,
+      "name": "Source Tag",
+      "type": "item",
+      "typeName": "sourceTagSelection"
+    },
+    {
+      "info": "Tag to write in the target field.",
+      "isHidden": false,
+      "name": "Target Tag",
+      "type": "item",
+      "typeName": "targetTagSelection"
+    },
+    {
+      "defaultValue": "target = source;",
+      "inLetTypeName": "codeIn",
+      "info": "Metal shader snippet, to reassign the field values.\nPosition to color: `target = float4(source.xyz, 1.0);`.\nColor to position: `target = float3(source);`.",
+      "isHidden": false,
+      "name": "Code",
+      "type": "variable",
+      "typeName": "code",
+      "valueType": "raw:core:string"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Assign",
+    "Transfer",
+    "Field",
+    "Remap"
+  ],
+  "typePath": "node:spatial:field:reassign",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/spatial/field/reassign"
+}

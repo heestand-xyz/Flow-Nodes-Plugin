@@ -1,0 +1,63 @@
+{
+  "complexity": "basic",
+  "docs": "Heading of the current device.",
+  "familyName": "Realtime",
+  "inLets": [],
+  "isPro": false,
+  "name": "Compass",
+  "newInAppVersion": "1.2.3",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Heading",
+      "typeName": "headingOut",
+      "valueType": "raw:core:angle",
+      "way": "out"
+    }
+  ],
+  "parentName": "Sensor",
+  "platforms": [
+    "iOS"
+  ],
+  "properties": [
+    {
+      "isHidden": true,
+      "name": "Authorize Location Access",
+      "type": "action",
+      "typeName": "authorize"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "True North",
+        "typeName": "trueNorth"
+      },
+      "enumCases": [
+        {
+          "name": "True North",
+          "typeName": "trueNorth"
+        },
+        {
+          "name": "Magnetic North",
+          "typeName": "magneticNorth"
+        }
+      ],
+      "isHidden": false,
+      "name": "Reference",
+      "type": "typedEnum",
+      "typeName": "headingType"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "GPS",
+    "Geo",
+    "Heading",
+    "True North",
+    "Magnetic North"
+  ],
+  "typePath": "node:realtime:sensor:compass",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/realtime/sensor/compass"
+}

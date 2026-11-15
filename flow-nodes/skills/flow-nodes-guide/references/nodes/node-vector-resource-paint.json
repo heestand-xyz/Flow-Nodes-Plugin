@@ -1,0 +1,190 @@
+{
+  "complexity": "basic",
+  "docs": "Paint by drawing vector paths that are passed upstream to a State Vector node via the source inlet. Switch between release and live paint mode. Control active and location of the drawing via inlets. Overlay a reference graphic with opacity.",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Source",
+      "typeName": "sourceIn",
+      "valueType": "raw:vector",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Active",
+      "typeName": "activeIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Location",
+      "typeName": "locationIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Reference",
+      "typeName": "referenceIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Resolution",
+      "typeName": "resolutionIn",
+      "valueType": "raw:core:size",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Reference Opacity",
+      "typeName": "referenceOpacityIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "When active, the vector subpath will close when the brush is released.",
+      "level": "external",
+      "name": "Close on Release",
+      "typeName": "closeOnReleaseIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Clear",
+      "typeName": "clearIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "Paint",
+  "newInAppVersion": "3.2.0",
+  "outLets": [],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": [
+        100,
+        100
+      ],
+      "inLetTypeName": "resolutionIn",
+      "isHidden": false,
+      "name": "Resolution",
+      "type": "variable",
+      "typeName": "resolution",
+      "valueType": "raw:core:size"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Release",
+        "typeName": "release"
+      },
+      "enumCases": [
+        {
+          "name": "Release",
+          "typeName": "release"
+        },
+        {
+          "name": "Live",
+          "typeName": "live"
+        }
+      ],
+      "info": "In live mode, the source will be updated continuously, and in release mode the source will only apply the path once the brush is released.",
+      "isHidden": false,
+      "name": "Paint Mode",
+      "type": "typedEnum",
+      "typeName": "paintMode"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Fit",
+        "typeName": "fit"
+      },
+      "enumCases": [
+        {
+          "name": "Fixed",
+          "typeName": "fixed"
+        },
+        {
+          "name": "Fit",
+          "typeName": "fit"
+        },
+        {
+          "name": "Fill",
+          "typeName": "fill"
+        },
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        }
+      ],
+      "isHidden": false,
+      "name": "Reference Placement",
+      "type": "typedEnum",
+      "typeName": "referencePlacement"
+    },
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "referenceOpacityIn",
+      "isHidden": false,
+      "name": "Reference Opacity",
+      "type": "variable",
+      "typeName": "referenceOpacity",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "closeOnReleaseIn",
+      "info": "When active, the vector subpath will close when the brush is released.",
+      "isHidden": false,
+      "name": "Close on Release",
+      "type": "variable",
+      "typeName": "closeOnRelease",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "info": "Remove all vector paths from the vector inlet.",
+      "isHidden": false,
+      "name": "Clear",
+      "type": "action",
+      "typeName": "clear"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Painter",
+    "Path",
+    "Draw",
+    "Drawing",
+    "Brush"
+  ],
+  "typePath": "node:vector:resource:paint",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/resource/paint"
+}

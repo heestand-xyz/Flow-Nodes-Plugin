@@ -1,0 +1,256 @@
+{
+  "complexity": "basic",
+  "docs": "",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Translation",
+      "typeName": "translationIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Rotation",
+      "typeName": "rotationIn",
+      "valueType": "raw:core:angle3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Scale",
+      "typeName": "scaleIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Transform",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Space Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "translationIn",
+      "isHidden": false,
+      "maximumValue": {
+        "coreType": "point3D",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 0
+                    },
+                    "fraction": 0.5
+                  }
+                },
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 1
+                    },
+                    "fraction": 0.5
+                  }
+                },
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 2
+                    },
+                    "fraction": 0.5
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "coreType": "point3D",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 0
+                    },
+                    "fraction": -0.5
+                  }
+                },
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 1
+                    },
+                    "fraction": -0.5
+                  }
+                },
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 2
+                    },
+                    "fraction": -0.5
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Translation",
+      "type": "variable",
+      "typeName": "translation",
+      "valueType": "raw:core:point3D"
+    },
+    {
+      "defaultValue": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "inLetTypeName": "rotationIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": {
+          "x": 3.141592653589793,
+          "y": 3.141592653589793,
+          "z": 3.141592653589793
+        },
+        "coreType": "angle3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": {
+          "x": -3.141592653589793,
+          "y": -3.141592653589793,
+          "z": -3.141592653589793
+        },
+        "coreType": "angle3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Rotation",
+      "type": "variable",
+      "typeName": "rotation",
+      "valueType": "raw:core:angle3D"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "scaleIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Scale",
+      "type": "variable",
+      "typeName": "scale",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Stretch",
+        "typeName": "stretch"
+      },
+      "enumCases": [
+        {
+          "name": "Zero",
+          "typeName": "zero"
+        },
+        {
+          "name": "Loop",
+          "typeName": "loop"
+        },
+        {
+          "name": "Mirror",
+          "typeName": "mirror"
+        },
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        }
+      ],
+      "info": "Voxels outside the main bounds will use the extend mode when sampled. This will mainly affect voxels on the edges.",
+      "isHidden": false,
+      "name": "Extend Mode",
+      "type": "stringEnum",
+      "typeName": "extendMode"
+    }
+  ],
+  "replacedByTypePath": "node:graphic3D:spaceEffect:transform2",
+  "replacesTypePaths": [],
+  "tags": [
+    "Translation",
+    "Offset",
+    "Position",
+    "Size",
+    "Scale",
+    "Rotation"
+  ],
+  "typePath": "node:graphic3D:spaceEffect:transform",
+  "isVisible": false,
+  "sourceRoute": "/docs/nodes/graphic3D/spaceEffect/transform"
+}

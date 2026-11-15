@@ -1,0 +1,54 @@
+{
+  "complexity": "advanced",
+  "docs": "Store a list of graphics.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Clear",
+      "typeName": "clearIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "List State",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Graphics",
+      "typeName": "graphicsBindingOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "info": "Remove all graphics.",
+      "isHidden": false,
+      "name": "Clear",
+      "type": "action",
+      "typeName": "clear"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "Array",
+    "Images"
+  ],
+  "typePath": "node:graphic:resource:listState",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/resource/listState"
+}

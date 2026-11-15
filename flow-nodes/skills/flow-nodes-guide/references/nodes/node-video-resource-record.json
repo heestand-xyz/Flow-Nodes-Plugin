@@ -1,0 +1,170 @@
+{
+  "complexity": "basic",
+  "docs": "Record live graphics to a video.",
+  "familyName": "Video",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Source",
+      "typeName": "sourceIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Destination",
+      "typeName": "destinationIn",
+      "valueType": "raw:video",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Frame Rate",
+      "typeName": "frameRateIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Record",
+      "typeName": "recordIn",
+      "valueType": "raw:action",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Stop",
+      "typeName": "stopIn",
+      "valueType": "raw:action",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Cancel",
+      "typeName": "cancelIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Record",
+  "newInAppVersion": "1.5.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Recording",
+      "typeName": "isRecordingOut",
+      "valueType": "raw:core:bool",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Frame Index",
+      "typeName": "frameIndexOut",
+      "valueType": "raw:core:int",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Fixed",
+        "typeName": "fixed"
+      },
+      "enumCases": [
+        {
+          "name": "Fixed",
+          "typeName": "fixed"
+        },
+        {
+          "name": "Variable",
+          "typeName": "variable"
+        }
+      ],
+      "isHidden": false,
+      "name": "Frame Rate Mode",
+      "type": "typedEnum",
+      "typeName": "frameRateMode"
+    },
+    {
+      "defaultValue": 30,
+      "inLetTypeName": "frameRateIn",
+      "info": "Frames per second.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 60,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Frame Rate",
+      "type": "variable",
+      "typeName": "frameRate",
+      "valueType": "raw:core:float"
+    },
+    {
+      "isHidden": false,
+      "name": "Record",
+      "type": "action",
+      "typeName": "startRender"
+    },
+    {
+      "isHidden": true,
+      "name": "Stop",
+      "type": "action",
+      "typeName": "stopRender"
+    },
+    {
+      "isHidden": true,
+      "name": "Cancel",
+      "type": "action",
+      "typeName": "cancelRender"
+    },
+    {
+      "isHidden": true,
+      "name": "Status",
+      "type": "label",
+      "typeName": "renderStatus"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Film",
+    "Movie"
+  ],
+  "typePath": "node:video:resource:record",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/video/resource/record"
+}

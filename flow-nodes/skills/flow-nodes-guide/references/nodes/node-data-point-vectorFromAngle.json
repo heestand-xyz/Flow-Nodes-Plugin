@@ -1,0 +1,42 @@
+{
+  "complexity": "advanced",
+  "docs": "Create a normalized vector Point from an Angle. The length of this vector is always one.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Angle",
+      "typeName": "angleIn",
+      "valueType": "raw:core:angle",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Vector from Angle",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "vectorOut",
+      "valueType": "raw:core:point",
+      "way": "out"
+    }
+  ],
+  "parentName": "Point",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:point:vectorFromAngle",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/point/vectorFromAngle"
+}

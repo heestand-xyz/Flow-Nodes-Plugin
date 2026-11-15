@@ -1,0 +1,86 @@
+{
+  "complexity": "basic",
+  "docs": "Check if a point is contains within the vector path.",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "in",
+      "valueType": "raw:vector",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Point",
+      "typeName": "pointIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Size",
+      "typeName": "sizeIn",
+      "valueType": "raw:core:size",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Contains",
+  "newInAppVersion": "1.7.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Contained",
+      "typeName": "out",
+      "valueType": "raw:core:bool",
+      "way": "out"
+    }
+  ],
+  "parentName": "Info",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": [
+        0,
+        0
+      ],
+      "inLetTypeName": "pointIn",
+      "isHidden": false,
+      "name": "Point",
+      "type": "variable",
+      "typeName": "point",
+      "valueType": "raw:core:point"
+    },
+    {
+      "defaultValue": [
+        1000,
+        1000
+      ],
+      "inLetTypeName": "sizeIn",
+      "info": "The canvas size. It's passed upstream. It is used to define the size of flexible sized shapes. This value is ignored when using fixed layout.",
+      "isHidden": false,
+      "name": "Size",
+      "type": "variable",
+      "typeName": "size",
+      "valueType": "raw:core:size"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:vector:info:contains",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/info/contains"
+}

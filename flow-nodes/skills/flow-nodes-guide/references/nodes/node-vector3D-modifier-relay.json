@@ -1,0 +1,46 @@
+{
+  "complexity": "basic",
+  "docs": "Relay a 3D vector.",
+  "familyName": "3D Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "3D Vector",
+      "typeName": "vectorIn",
+      "valueType": "raw:vector3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Relay",
+  "newInAppVersion": "4.1.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "3D Vector",
+      "typeName": "vectorOut",
+      "valueType": "raw:vector3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Pass Through",
+    "3D",
+    "Path"
+  ],
+  "typePath": "node:vector3D:modifier:relay",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector3D/modifier/relay"
+}

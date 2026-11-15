@@ -1,0 +1,70 @@
+{
+  "complexity": "advanced",
+  "docs": "Logic gate.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Condition",
+      "typeName": "in",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Logic",
+  "newInAppVersion": "1.5.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "raw:core:bool",
+      "way": "out"
+    }
+  ],
+  "parentName": "Bool",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "All",
+        "typeName": "all"
+      },
+      "enumCases": [
+        {
+          "name": "All",
+          "typeName": "all"
+        },
+        {
+          "name": "Some",
+          "typeName": "some"
+        },
+        {
+          "name": "None",
+          "typeName": "none"
+        }
+      ],
+      "isHidden": false,
+      "name": "Is True",
+      "type": "typedEnum",
+      "typeName": "logicOperator"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "And",
+    "Or"
+  ],
+  "typePath": "node:data:bool:logic",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/bool/logic"
+}

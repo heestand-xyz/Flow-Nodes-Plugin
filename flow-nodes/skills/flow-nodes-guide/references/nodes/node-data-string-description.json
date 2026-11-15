@@ -1,0 +1,44 @@
+{
+  "complexity": "basic",
+  "docs": "Describe a value.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "in",
+      "valueType": "generic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Description",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Text",
+      "typeName": "out",
+      "valueType": "raw:core:string",
+      "way": "out"
+    }
+  ],
+  "parentName": "String",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Information"
+  ],
+  "typePath": "node:data:string:description",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/string/description"
+}

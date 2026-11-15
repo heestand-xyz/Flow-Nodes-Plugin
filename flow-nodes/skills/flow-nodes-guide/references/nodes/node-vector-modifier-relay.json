@@ -1,0 +1,45 @@
+{
+  "complexity": "advanced",
+  "docs": "Relay a Vector. This node has no effect. Tho useful to define a type when wiring to generics.",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "in",
+      "valueType": "raw:vector",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Relay",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "out",
+      "valueType": "raw:vector",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Nil",
+    "Null"
+  ],
+  "typePath": "node:vector:modifier:relay",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/modifier/relay"
+}

@@ -1,0 +1,104 @@
+{
+  "complexity": "advanced",
+  "docs": "Split up a date into its components.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Date",
+      "typeName": "in",
+      "valueType": "raw:core:date",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Components",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Year",
+      "typeName": "yearOut",
+      "valueType": "raw:core:int",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Month",
+      "typeName": "monthOut",
+      "valueType": "raw:core:int",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Day",
+      "typeName": "dayOut",
+      "valueType": "raw:core:int",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Hour",
+      "typeName": "hourOut",
+      "valueType": "raw:core:int",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Minute",
+      "typeName": "minuteOut",
+      "valueType": "raw:core:int",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Second",
+      "typeName": "secondOut",
+      "valueType": "raw:core:int",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Millisecond",
+      "typeName": "millisecondOut",
+      "valueType": "raw:core:int",
+      "way": "out"
+    }
+  ],
+  "parentName": "Date",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Year",
+    "Month",
+    "Day",
+    "Hour",
+    "Minute",
+    "Second",
+    "Millisecond"
+  ],
+  "typePath": "node:data:date:components",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/date/components"
+}

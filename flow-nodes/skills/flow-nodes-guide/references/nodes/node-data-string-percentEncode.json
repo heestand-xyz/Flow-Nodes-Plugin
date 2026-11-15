@@ -1,0 +1,155 @@
+{
+  "complexity": "basic",
+  "docs": "Percent-encode a string using the selected character set.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Text",
+      "typeName": "textIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Percent Encode",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Text",
+      "typeName": "textOut",
+      "valueType": "raw:core:string",
+      "way": "out"
+    }
+  ],
+  "parentName": "String",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": "",
+      "inLetTypeName": "textIn",
+      "isHidden": false,
+      "name": "Text",
+      "type": "variable",
+      "typeName": "text",
+      "valueType": "raw:core:string"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "URL Query Allowed",
+        "typeName": "urlQueryAllowed"
+      },
+      "enumCases": [
+        {
+          "name": "Control Characters",
+          "typeName": "controlCharacters"
+        },
+        {
+          "name": "Whitespaces",
+          "typeName": "whitespaces"
+        },
+        {
+          "name": "Newlines",
+          "typeName": "newlines"
+        },
+        {
+          "name": "Whitespaces and Newlines",
+          "typeName": "whitespacesAndNewlines"
+        },
+        {
+          "name": "Decimal Digits",
+          "typeName": "decimalDigits"
+        },
+        {
+          "name": "Letters",
+          "typeName": "letters"
+        },
+        {
+          "name": "Lowercase Letters",
+          "typeName": "lowercaseLetters"
+        },
+        {
+          "name": "Uppercase Letters",
+          "typeName": "uppercaseLetters"
+        },
+        {
+          "name": "Non-base Characters",
+          "typeName": "nonBaseCharacters"
+        },
+        {
+          "name": "Alphanumerics",
+          "typeName": "alphanumerics"
+        },
+        {
+          "name": "Punctuation Characters",
+          "typeName": "punctuationCharacters"
+        },
+        {
+          "name": "Symbols",
+          "typeName": "symbols"
+        },
+        {
+          "name": "Illegal Characters",
+          "typeName": "illegalCharacters"
+        },
+        {
+          "name": "Capitalized Letters",
+          "typeName": "capitalizedLetters"
+        },
+        {
+          "name": "Decomposables",
+          "typeName": "decomposables"
+        },
+        {
+          "name": "URL User Allowed",
+          "typeName": "urlUserAllowed"
+        },
+        {
+          "name": "URL Password Allowed",
+          "typeName": "urlPasswordAllowed"
+        },
+        {
+          "name": "URL Host Allowed",
+          "typeName": "urlHostAllowed"
+        },
+        {
+          "name": "URL Path Allowed",
+          "typeName": "urlPathAllowed"
+        },
+        {
+          "name": "URL Query Allowed",
+          "typeName": "urlQueryAllowed"
+        },
+        {
+          "name": "URL Fragment Allowed",
+          "typeName": "urlFragmentAllowed"
+        }
+      ],
+      "info": "Allowed characters when encoding the string.",
+      "isHidden": false,
+      "name": "Character Set",
+      "type": "typedEnum",
+      "typeName": "characterSet"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Percent",
+    "Encode",
+    "URL",
+    "Escape",
+    "String"
+  ],
+  "typePath": "node:data:string:percentEncode",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/string/percentEncode"
+}

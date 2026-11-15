@@ -1,0 +1,49 @@
+{
+  "complexity": "basic",
+  "docs": "Remove all values from the inlet. (The inlet can be connected to a List State Node.)",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "List",
+      "typeName": "listIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Remove All",
+      "typeName": "actionIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Remove All",
+  "newInAppVersion": "1.0.0",
+  "outLets": [],
+  "parentName": "List",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "info": "Remove all values in the list.",
+      "isHidden": false,
+      "name": "Remove All",
+      "type": "action",
+      "typeName": "action"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:general:list:removeAll",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/list/removeAll"
+}

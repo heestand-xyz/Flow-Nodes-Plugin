@@ -1,0 +1,46 @@
+{
+  "complexity": "basic",
+  "docs": "Store a Size.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "State",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "raw:core:size",
+      "way": "out"
+    }
+  ],
+  "parentName": "Size",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": [
+        1,
+        1
+      ],
+      "isHidden": false,
+      "name": "Value",
+      "type": "value",
+      "typeName": "value",
+      "valueType": "raw:core:size"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store"
+  ],
+  "typePath": "node:data:size:state",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/size/state"
+}

@@ -1,0 +1,134 @@
+{
+  "complexity": "advanced",
+  "docs": "Track a face in a Graphic. Outputs a keyed list of landmarks, like outerLips.03 and leftPupil.00, located in the resolution space of the Graphic. Each region is numbered in path order.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Faces tracked with a lower confidence are left out.",
+      "level": "external",
+      "name": "Minimum Confidence",
+      "typeName": "minimumConfidenceIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Which face to track when there are several. Faces are ordered from leading to trailing.",
+      "level": "external",
+      "name": "Subject Index",
+      "typeName": "subjectIndexIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "Face",
+  "newInAppVersion": "27.0.0",
+  "outLets": [
+    {
+      "capacity": "lex",
+      "direction": "direct",
+      "keyType": "raw:core:string",
+      "level": "external",
+      "name": "Landmarks",
+      "typeName": "landmarksOut",
+      "valueType": "raw:core:point",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Frame",
+      "typeName": "frameOut",
+      "valueType": "raw:core:rect",
+      "way": "out"
+    }
+  ],
+  "parentName": "Tracking",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0.3,
+      "inLetTypeName": "minimumConfidenceIn",
+      "info": "Faces tracked with a lower confidence are left out.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Minimum Confidence",
+      "type": "variable",
+      "typeName": "minimumConfidence",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "subjectIndexIn",
+      "info": "Which face to track when there are several. Faces are ordered from leading to trailing.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 8,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Subject Index",
+      "type": "variable",
+      "typeName": "subjectIndex",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Face",
+    "Landmark",
+    "Eye",
+    "Pupil",
+    "Lips",
+    "Nose",
+    "Tracking",
+    "Vision"
+  ],
+  "typePath": "node:graphic:tracking:face",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/tracking/face"
+}

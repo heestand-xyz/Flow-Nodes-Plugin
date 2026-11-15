@@ -1,0 +1,60 @@
+{
+  "complexity": "basic",
+  "docs": "Construct a 3D Point from x, y and z floats.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "X",
+      "typeName": "xIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Y",
+      "typeName": "yIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Z",
+      "typeName": "zIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Construct",
+  "newInAppVersion": "1.3.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "raw:core:point3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "3D Point",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:point3D:construct",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/point3D/construct"
+}

@@ -1,0 +1,79 @@
+{
+  "complexity": "advanced",
+  "docs": "Apply an unlit material to a geometry. This material has no lighting effects. It simply shows the constant color or texture on the geometry.",
+  "familyName": "3D Geometry",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Geometry",
+      "typeName": "geometryIn",
+      "valueType": "raw:geometry",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Color",
+      "typeName": "colorIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Texture",
+      "typeName": "textureIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Unlit",
+  "newInAppVersion": "2.3.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Geometry",
+      "typeName": "geometryOut",
+      "valueType": "raw:geometry",
+      "way": "out"
+    }
+  ],
+  "parentName": "Material",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "blue": 1,
+        "green": 1,
+        "opacity": 1,
+        "red": 1
+      },
+      "inLetTypeName": "colorIn",
+      "isHidden": false,
+      "name": "Color",
+      "type": "variable",
+      "typeName": "color",
+      "valueType": "raw:core:color"
+    }
+  ],
+  "replacedByTypePath": "node:spatial:material:unlit",
+  "replacesTypePaths": [],
+  "tags": [
+    "Color",
+    "Constant"
+  ],
+  "typePath": "node:geometry:material:unlit",
+  "isVisible": false,
+  "sourceRoute": "/docs/nodes/geometry/material/unlit"
+}

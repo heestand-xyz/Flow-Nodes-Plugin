@@ -1,0 +1,77 @@
+{
+  "complexity": "basic",
+  "docs": "Store a vector.",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Clear",
+      "typeName": "clearIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "State",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "vectorBindingOut",
+      "valueType": "raw:vector",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "info": "Removes the stored content from the node.",
+      "isHidden": false,
+      "name": "Clear",
+      "type": "action",
+      "typeName": "clear"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Fit",
+        "typeName": "fit"
+      },
+      "enumCases": [
+        {
+          "name": "Fixed",
+          "typeName": "fixed"
+        },
+        {
+          "name": "Fit",
+          "typeName": "fit"
+        },
+        {
+          "name": "Fill",
+          "typeName": "fill"
+        }
+      ],
+      "isHidden": false,
+      "name": "Content Mode",
+      "type": "typedEnum",
+      "typeName": "contentMode"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "SVG"
+  ],
+  "typePath": "node:vector:resource:state",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/resource/state"
+}

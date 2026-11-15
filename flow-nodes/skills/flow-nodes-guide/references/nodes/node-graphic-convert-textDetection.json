@@ -1,0 +1,56 @@
+{
+  "complexity": "advanced",
+  "docs": "Detect text in a Graphic and output a keyed list whose frames identify the location of each recognized String.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Text Detection",
+  "newInAppVersion": "27.0.0",
+  "outLets": [
+    {
+      "capacity": "lex",
+      "direction": "direct",
+      "keyType": "raw:core:rect",
+      "level": "external",
+      "name": "Framed Texts",
+      "typeName": "textOut",
+      "valueType": "raw:core:string",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Convert",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "OCR",
+    "Recognize",
+    "Vision"
+  ],
+  "typePath": "node:graphic:convert:textDetection",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/convert/textDetection"
+}

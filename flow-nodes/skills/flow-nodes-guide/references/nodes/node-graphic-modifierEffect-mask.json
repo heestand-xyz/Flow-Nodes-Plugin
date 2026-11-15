@@ -1,0 +1,87 @@
+{
+  "complexity": "basic",
+  "docs": "",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "leadingGraphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Modifier Graphic",
+      "typeName": "trailingGraphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Include Alpha",
+      "typeName": "includeAlphaIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Mask",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": true,
+      "inLetTypeName": "includeAlphaIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": true,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": false,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Include Alpha",
+      "type": "variable",
+      "typeName": "includeAlpha",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacedByTypePath": "node:graphic:modifierEffect:mask2",
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:graphic:modifierEffect:mask",
+  "isVisible": false,
+  "sourceRoute": "/docs/nodes/graphic/modifierEffect/mask"
+}

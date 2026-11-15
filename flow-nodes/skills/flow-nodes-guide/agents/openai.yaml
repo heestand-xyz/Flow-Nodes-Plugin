@@ -1,0 +1,6 @@
+interface:
+  display_name: "Flow Nodes"
+  short_description: "Wire nodes and edit a flow"
+  default_prompt: "Help me build a flow with nodes, wire connections and properties."
+policy:
+  allow_implicit_invocation: true

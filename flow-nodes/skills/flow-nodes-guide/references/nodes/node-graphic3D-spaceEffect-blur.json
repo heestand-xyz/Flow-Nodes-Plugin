@@ -1,0 +1,364 @@
+{
+  "complexity": "basic",
+  "docs": "Blur a graphic.",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Radius",
+      "typeName": "radiusIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Position",
+      "typeName": "positionIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Direction",
+      "typeName": "directionIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Sample Count",
+      "typeName": "sampleCountIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Layer Count",
+      "typeName": "layerCountIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Blur",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Space Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Box",
+        "typeName": "box"
+      },
+      "enumCases": [
+        {
+          "name": "Layered",
+          "typeName": "layered"
+        },
+        {
+          "name": "Box",
+          "typeName": "box"
+        },
+        {
+          "name": "Direction",
+          "typeName": "direction"
+        },
+        {
+          "name": "Zoom",
+          "typeName": "zoom"
+        },
+        {
+          "name": "Random",
+          "typeName": "random"
+        }
+      ],
+      "isHidden": false,
+      "name": "Style",
+      "type": "stringEnum",
+      "typeName": "style"
+    },
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "radiusIn",
+      "isHidden": false,
+      "maximumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 1
+                    },
+                    "fraction": 0.5
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "fixed": {
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Radius",
+      "type": "variable",
+      "typeName": "radius",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "positionIn",
+      "isHidden": false,
+      "maximumValue": {
+        "coreType": "point3D",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 0
+                    },
+                    "fraction": 1
+                  }
+                },
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 1
+                    },
+                    "fraction": 1
+                  }
+                },
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 2
+                    },
+                    "fraction": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "coreType": "point3D",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "fixed": {
+                    "value": 0
+                  }
+                },
+                {
+                  "fixed": {
+                    "value": 0
+                  }
+                },
+                {
+                  "fixed": {
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Position",
+      "type": "variable",
+      "typeName": "position",
+      "valueType": "raw:core:point3D"
+    },
+    {
+      "defaultValue": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "inLetTypeName": "directionIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "coreType": "point3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": {
+          "x": -1,
+          "y": -1,
+          "z": -1
+        },
+        "coreType": "point3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Direction",
+      "type": "variable",
+      "typeName": "direction",
+      "valueType": "raw:core:point3D"
+    },
+    {
+      "defaultValue": 10,
+      "inLetTypeName": "sampleCountIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 10,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Sample Count",
+      "type": "variable",
+      "typeName": "sampleCount",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": 10,
+      "inLetTypeName": "layerCountIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 10,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Layer Count",
+      "type": "variable",
+      "typeName": "layerCount",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Stretch",
+        "typeName": "stretch"
+      },
+      "enumCases": [
+        {
+          "name": "Zero",
+          "typeName": "zero"
+        },
+        {
+          "name": "Loop",
+          "typeName": "loop"
+        },
+        {
+          "name": "Mirror",
+          "typeName": "mirror"
+        },
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        }
+      ],
+      "info": "Voxels outside the main bounds will use the extend mode when sampled. This will mainly affect voxels on the edges.",
+      "isHidden": false,
+      "name": "Extend Mode",
+      "type": "stringEnum",
+      "typeName": "extendMode"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Layered",
+    "Box",
+    "Direction",
+    "Zoom",
+    "Random"
+  ],
+  "typePath": "node:graphic3D:spaceEffect:blur",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/spaceEffect/blur"
+}

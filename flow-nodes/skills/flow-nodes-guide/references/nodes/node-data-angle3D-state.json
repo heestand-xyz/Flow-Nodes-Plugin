@@ -1,0 +1,47 @@
+{
+  "complexity": "basic",
+  "docs": "Store a 3D Angle.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "State",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Angle",
+      "typeName": "out",
+      "valueType": "raw:core:angle3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "3D Angle",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "isHidden": false,
+      "name": "Angle",
+      "type": "value",
+      "typeName": "angle",
+      "valueType": "raw:core:angle3D"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store"
+  ],
+  "typePath": "node:data:angle3D:state",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/angle3D/state"
+}

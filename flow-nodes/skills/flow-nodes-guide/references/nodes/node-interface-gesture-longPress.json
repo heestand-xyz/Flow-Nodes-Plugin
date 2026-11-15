@@ -1,0 +1,149 @@
+{
+  "complexity": "advanced",
+  "docs": "Detect a long press on a view. Specify a minimum duration in seconds. Downstream views will also respond to the gesture.",
+  "familyName": "Interface",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewIn",
+      "valueType": "raw:view",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Minimum Duration",
+      "typeName": "minimumDurationIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Maximum Distance",
+      "typeName": "maximumDistanceIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Long Press",
+  "newInAppVersion": "1.4.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewOut",
+      "valueType": "raw:view",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Action",
+      "typeName": "actionOut",
+      "valueType": "raw:action",
+      "way": "out"
+    }
+  ],
+  "parentName": "Gesture",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Regular",
+        "typeName": "regular"
+      },
+      "enumCases": [
+        {
+          "name": "Regular",
+          "typeName": "regular"
+        },
+        {
+          "name": "High",
+          "typeName": "high"
+        },
+        {
+          "name": "Simultaneous",
+          "typeName": "simultaneous"
+        }
+      ],
+      "isHidden": false,
+      "name": "Priority",
+      "type": "typedEnum",
+      "typeName": "priority"
+    },
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "minimumDurationIn",
+      "info": "The time before a long press is recognized.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Minimum Duration",
+      "type": "variable",
+      "typeName": "minimumDuration",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 10,
+      "inLetTypeName": "maximumDistanceIn",
+      "info": "The distance before a long press is cancelled.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 20,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 5,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Maximum Distance",
+      "type": "variable",
+      "typeName": "maximumDistance",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Touch",
+    "Hold"
+  ],
+  "typePath": "node:interface:gesture:longPress",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/interface/gesture/longPress"
+}

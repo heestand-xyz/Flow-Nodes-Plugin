@@ -1,0 +1,84 @@
+{
+  "complexity": "basic",
+  "docs": "A live camera capture feed.",
+  "familyName": "Graphic",
+  "inLets": [],
+  "isPro": false,
+  "name": "Camera",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "isHidden": true,
+      "name": "Authorize Camera Access",
+      "type": "action",
+      "typeName": "authorize"
+    },
+    {
+      "isHidden": false,
+      "name": "Device",
+      "type": "stringEnum",
+      "typeName": "device"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "1080p",
+        "typeName": "hd1080p"
+      },
+      "enumCases": [
+        {
+          "name": "VGA",
+          "typeName": "vga"
+        },
+        {
+          "name": "720p",
+          "typeName": "hd720p"
+        },
+        {
+          "name": "1080p",
+          "typeName": "hd1080p"
+        },
+        {
+          "name": "4K",
+          "typeName": "hd4K"
+        }
+      ],
+      "isHidden": false,
+      "name": "Quality",
+      "type": "typedEnum",
+      "typeName": "quality"
+    },
+    {
+      "defaultValue": true,
+      "isHidden": true,
+      "name": "Center Stage",
+      "type": "value",
+      "typeName": "centerStage",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Live",
+    "Capture"
+  ],
+  "typePath": "node:graphic:resource:camera",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/resource/camera"
+}

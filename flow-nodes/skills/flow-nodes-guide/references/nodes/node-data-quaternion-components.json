@@ -1,0 +1,69 @@
+{
+  "complexity": "advanced",
+  "docs": "Get the x, y, z and w components of a Quaternion.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "in",
+      "valueType": "raw:core:quaternion",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Components",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "X",
+      "typeName": "xOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Y",
+      "typeName": "yOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Z",
+      "typeName": "zOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "W",
+      "typeName": "wOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    }
+  ],
+  "parentName": "Quaternion",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:quaternion:components",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/quaternion/components"
+}

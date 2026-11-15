@@ -1,0 +1,60 @@
+{
+  "complexity": "advanced",
+  "docs": "Construct a Transform from position, scale, and rotation.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Position",
+      "typeName": "positionIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Scale",
+      "typeName": "scaleIn",
+      "valueType": "raw:core:size",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Rotation",
+      "typeName": "rotationIn",
+      "valueType": "raw:core:angle",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Construct",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "raw:core:transform",
+      "way": "out"
+    }
+  ],
+  "parentName": "Transform",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:transform:construct",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/transform/construct"
+}

@@ -1,0 +1,59 @@
+{
+  "complexity": "basic",
+  "docs": "",
+  "familyName": "3D Geometry",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Size",
+      "typeName": "sizeIn",
+      "valueType": "raw:core:size3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Cube",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Geometry",
+      "typeName": "geometryOut",
+      "valueType": "raw:geometry",
+      "way": "out"
+    }
+  ],
+  "parentName": "Shape",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "depth": 1,
+        "height": 1,
+        "width": 1
+      },
+      "inLetTypeName": "sizeIn",
+      "isHidden": false,
+      "name": "Size",
+      "type": "variable",
+      "typeName": "size",
+      "valueType": "raw:core:size3D"
+    }
+  ],
+  "replacedByTypePath": "node:geometry:shape:cube2",
+  "replacesTypePaths": [],
+  "tags": [
+    "Box"
+  ],
+  "typePath": "node:geometry:shape:cube",
+  "isVisible": false,
+  "sourceRoute": "/docs/nodes/geometry/shape/cube"
+}

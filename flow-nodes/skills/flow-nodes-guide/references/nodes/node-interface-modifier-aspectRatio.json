@@ -1,0 +1,165 @@
+{
+  "complexity": "basic",
+  "docs": "Constrain a view to an aspect ratio using fit or fill.",
+  "familyName": "Interface",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewIn",
+      "valueType": "raw:view",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Ratio",
+      "typeName": "ratioIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Size",
+      "typeName": "sizeIn",
+      "valueType": "raw:core:size",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Aspect Ratio",
+  "newInAppVersion": "27.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewOut",
+      "valueType": "raw:view",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Float",
+        "typeName": "float"
+      },
+      "enumCases": [
+        {
+          "name": "Float",
+          "typeName": "float"
+        },
+        {
+          "name": "Size",
+          "typeName": "size"
+        }
+      ],
+      "info": "The float type is a `width / height` ratio.",
+      "isHidden": false,
+      "name": "Aspect Type",
+      "type": "typedEnum",
+      "typeName": "aspectType"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "ratioIn",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0.5,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Ratio",
+      "type": "variable",
+      "typeName": "ratio",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": [
+        1,
+        1
+      ],
+      "inLetTypeName": "sizeIn",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": [
+          2,
+          2
+        ],
+        "coreType": "size",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": [
+          0.5,
+          0.5
+        ],
+        "coreType": "size",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Size",
+      "type": "variable",
+      "typeName": "size",
+      "valueType": "raw:core:size"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Fit",
+        "typeName": "fit"
+      },
+      "enumCases": [
+        {
+          "name": "Fit",
+          "typeName": "fit"
+        },
+        {
+          "name": "Fill",
+          "typeName": "fill"
+        }
+      ],
+      "isHidden": false,
+      "name": "Content Mode",
+      "type": "typedEnum",
+      "typeName": "contentMode"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "ratio",
+    "fit",
+    "fill"
+  ],
+  "typePath": "node:interface:modifier:aspectRatio",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/interface/modifier/aspectRatio"
+}

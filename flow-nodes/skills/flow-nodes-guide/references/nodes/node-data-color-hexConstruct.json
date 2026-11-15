@@ -1,0 +1,51 @@
+{
+  "complexity": "basic",
+  "docs": "Construct a Color from a hex String and an alpha Float.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Hex",
+      "typeName": "hexIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Alpha",
+      "typeName": "alphaIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Hex Construct",
+  "newInAppVersion": "2.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "raw:core:color",
+      "way": "out"
+    }
+  ],
+  "parentName": "Color",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:color:hexConstruct",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/color/hexConstruct"
+}

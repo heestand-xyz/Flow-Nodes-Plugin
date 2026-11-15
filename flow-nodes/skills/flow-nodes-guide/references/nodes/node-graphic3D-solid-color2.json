@@ -1,0 +1,237 @@
+{
+  "complexity": "basic",
+  "docs": "A plain solid color, filling the volume.",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Resolution",
+      "typeName": "outputResolutionIn",
+      "valueType": "raw:core:size3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Color",
+      "typeName": "colorIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Multiply RGB by alpha for compositing. Turn off for straight alpha.",
+      "level": "external",
+      "name": "Premultiply",
+      "typeName": "premultiplyIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Color",
+  "newInAppVersion": "27.1.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic3D",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Solid",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "depth": 100,
+        "height": 100,
+        "width": 100
+      },
+      "inLetTypeName": "outputResolutionIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": {
+          "depth": 256,
+          "height": 256,
+          "width": 256
+        },
+        "coreType": "size3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": {
+          "depth": 1,
+          "height": 1,
+          "width": 1
+        },
+        "coreType": "size3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Resolution",
+      "type": "variable",
+      "typeName": "outputResolution",
+      "valueType": "raw:core:size3D"
+    },
+    {
+      "defaultValue": {
+        "depth": 100,
+        "height": 100,
+        "width": 100
+      },
+      "isHidden": true,
+      "maximumValue": {
+        "type": "value",
+        "value": {
+          "depth": 256,
+          "height": 256,
+          "width": 256
+        },
+        "valueType": {
+          "raw": {
+            "_0": {
+              "core": {
+                "_0": "size3D"
+              }
+            }
+          }
+        }
+      },
+      "minimumValue": {
+        "type": "value",
+        "value": {
+          "depth": 1,
+          "height": 1,
+          "width": 1
+        },
+        "valueType": {
+          "raw": {
+            "_0": {
+              "core": {
+                "_0": "size3D"
+              }
+            }
+          }
+        }
+      },
+      "name": "Resolution",
+      "type": "value",
+      "typeName": "resolution",
+      "valueType": "raw:core:size3D"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "8 Bit",
+        "typeName": "bit8"
+      },
+      "enumCases": [
+        {
+          "name": "8 Bit",
+          "typeName": "bit8"
+        },
+        {
+          "name": "16 Bit",
+          "typeName": "bit16"
+        },
+        {
+          "name": "32 Bit",
+          "typeName": "bit32"
+        }
+      ],
+      "isHidden": false,
+      "name": "Bits",
+      "type": "typedEnum",
+      "typeName": "bits"
+    },
+    {
+      "defaultValue": {
+        "blue": 1,
+        "green": 1,
+        "opacity": 1,
+        "red": 1
+      },
+      "inLetTypeName": "colorIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": {
+          "blue": 1,
+          "green": 1,
+          "opacity": 1,
+          "red": 1
+        },
+        "coreType": "color",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": {
+          "blue": 0,
+          "green": 0,
+          "opacity": 0,
+          "red": 0
+        },
+        "coreType": "color",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Color",
+      "type": "variable",
+      "typeName": "color",
+      "valueType": "raw:core:color"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "premultiplyIn",
+      "info": "Multiply RGB by alpha for compositing. Turn off for straight alpha.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": true,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": false,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Premultiply",
+      "type": "variable",
+      "typeName": "premultiply",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [
+    "node:graphic3D:solid:color"
+  ],
+  "tags": [],
+  "typePath": "node:graphic3D:solid:color2",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/solid/color2"
+}

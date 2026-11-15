@@ -1,0 +1,60 @@
+{
+  "complexity": "basic",
+  "docs": "Split a String into a list of String.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Text",
+      "typeName": "in",
+      "valueType": "raw:core:string",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Split",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Texts",
+      "typeName": "out",
+      "valueType": "raw:core:string",
+      "way": "out"
+    }
+  ],
+  "parentName": "String",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": " ",
+      "isHidden": false,
+      "name": "Separator",
+      "type": "value",
+      "typeName": "separator",
+      "valueType": "raw:core:string"
+    },
+    {
+      "defaultValue": false,
+      "info": "Not omitting empty subsequences.",
+      "isHidden": false,
+      "name": "Include Empty",
+      "type": "value",
+      "typeName": "includeEmpty",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:string:split",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/string/split"
+}

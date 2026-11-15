@@ -1,0 +1,111 @@
+{
+  "complexity": "basic",
+  "docs": "Generate a random value. To see the value connect the outlet to a relay or other node.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Randomize",
+      "typeName": "randomizeIn",
+      "valueType": "raw:action",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Minimum",
+      "typeName": "minimumIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Maximum",
+      "typeName": "maximumIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Random",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "supportedGenericRawTypes": [
+        "core:angle",
+        "core:angle3D",
+        "core:bool",
+        "core:camera",
+        "core:color",
+        "core:duration",
+        "core:float",
+        "core:int",
+        "core:keyframe",
+        "core:light",
+        "core:point",
+        "core:point3D",
+        "core:quaternion",
+        "core:rect",
+        "core:rect3D",
+        "core:size",
+        "core:size3D",
+        "core:string",
+        "core:transform",
+        "core:transform3D",
+        "core:vectorPoint",
+        "core:vectorPoint3D",
+        "core:vertex"
+      ],
+      "typeName": "out",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Generic",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "info": "Will randomize the output to a value between the minimum and maximum values.",
+      "isHidden": false,
+      "name": "Randomize",
+      "type": "action",
+      "typeName": "randomize"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "minimumIn",
+      "isHidden": false,
+      "name": "Minimum",
+      "type": "variable",
+      "typeName": "minimum",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "maximumIn",
+      "isHidden": false,
+      "name": "Maximum",
+      "type": "variable",
+      "typeName": "maximum",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:general:generic:random",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/generic/random"
+}

@@ -1,0 +1,58 @@
+{
+  "complexity": "basic",
+  "docs": "Percent-decode a string.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Text",
+      "typeName": "textIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Percent Decode",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Text",
+      "typeName": "textOut",
+      "valueType": "raw:core:string",
+      "way": "out"
+    }
+  ],
+  "parentName": "String",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": "",
+      "inLetTypeName": "textIn",
+      "isHidden": false,
+      "name": "Text",
+      "type": "variable",
+      "typeName": "text",
+      "valueType": "raw:core:string"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Percent",
+    "Decode",
+    "URL",
+    "Unescape",
+    "String"
+  ],
+  "typePath": "node:data:string:percentDecode",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/string/percentDecode"
+}

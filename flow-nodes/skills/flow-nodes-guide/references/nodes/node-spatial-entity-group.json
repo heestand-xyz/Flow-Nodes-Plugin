@@ -1,0 +1,44 @@
+{
+  "complexity": "basic",
+  "docs": "Group together spatial entities.",
+  "familyName": "3D Spatial",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Entities",
+      "typeName": "entitiesIn",
+      "valueType": "raw:entity",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Group",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Entity",
+      "typeName": "entityOut",
+      "valueType": "raw:entity",
+      "way": "out"
+    }
+  ],
+  "parentName": "Entity",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Combine"
+  ],
+  "typePath": "node:spatial:entity:group",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/spatial/entity/group"
+}

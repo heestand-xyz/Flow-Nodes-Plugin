@@ -1,0 +1,197 @@
+{
+  "complexity": "basic",
+  "docs": "Highlight the edges of a graphic.",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Amplitude",
+      "typeName": "amplitudeIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Distance",
+      "typeName": "distanceIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Colored",
+      "typeName": "isColoredIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Transparent",
+      "typeName": "isTransparentIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Edge",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Space Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "amplitudeIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Amplitude",
+      "type": "variable",
+      "typeName": "amplitude",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "distanceIn",
+      "isHidden": false,
+      "maximumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "fixed": {
+                    "value": 2
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "fixed": {
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Distance",
+      "type": "variable",
+      "typeName": "distance",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "isColoredIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": true,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": false,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Colored",
+      "type": "variable",
+      "typeName": "isColored",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "isTransparentIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": true,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": false,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Transparent",
+      "type": "variable",
+      "typeName": "isTransparent",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:graphic3D:spaceEffect:edge",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/spaceEffect/edge"
+}

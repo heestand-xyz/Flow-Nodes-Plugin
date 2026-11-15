@@ -1,0 +1,49 @@
+{
+  "complexity": "basic",
+  "docs": "Relay a 3D Vector Point.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueIn",
+      "valueType": "raw:core:vectorPoint3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Relay",
+  "newInAppVersion": "4.1.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueOut",
+      "valueType": "raw:core:vectorPoint3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "3D Vector Point",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Relay",
+    "3D",
+    "Vector",
+    "Bezier",
+    "Nil",
+    "Null"
+  ],
+  "typePath": "node:data:vectorPoint3D:relay",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/vectorPoint3D/relay"
+}

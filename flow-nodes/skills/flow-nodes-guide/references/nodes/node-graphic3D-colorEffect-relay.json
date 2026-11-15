@@ -1,0 +1,45 @@
+{
+  "complexity": "advanced",
+  "docs": "Relay a 3D Graphic. This node has no effect. Tho useful to define a type when wiring to generics.",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic3D",
+      "typeName": "graphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Relay",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Color Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Nil",
+    "Null"
+  ],
+  "typePath": "node:graphic3D:colorEffect:relay",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/colorEffect/relay"
+}

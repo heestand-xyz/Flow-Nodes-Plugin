@@ -1,0 +1,52 @@
+{
+  "complexity": "basic",
+  "docs": "Toggles an upstream Bool when the action is triggered.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Toggle",
+      "typeName": "toggleIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Toggle",
+  "newInAppVersion": "27.0.0",
+  "outLets": [],
+  "parentName": "Bool",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "isHidden": false,
+      "name": "Toggle",
+      "type": "action",
+      "typeName": "toggle"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Boolean",
+    "Action",
+    "Switch"
+  ],
+  "typePath": "node:data:bool:toggle",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/bool/toggle"
+}

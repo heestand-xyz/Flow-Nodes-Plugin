@@ -1,0 +1,54 @@
+{
+  "complexity": "basic",
+  "docs": "An editable text field.",
+  "familyName": "Interface",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Text",
+      "typeName": "textIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Field",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewOut",
+      "valueType": "raw:view",
+      "way": "out"
+    }
+  ],
+  "parentName": "Text",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": "",
+      "inLetTypeName": "textIn",
+      "isHidden": false,
+      "name": "Text",
+      "type": "variable",
+      "typeName": "text",
+      "valueType": "raw:core:string"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "String"
+  ],
+  "typePath": "node:interface:text:field",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/interface/text/field"
+}

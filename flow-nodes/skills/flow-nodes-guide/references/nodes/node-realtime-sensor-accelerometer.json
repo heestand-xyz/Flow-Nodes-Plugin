@@ -1,0 +1,34 @@
+{
+  "complexity": "basic",
+  "docs": "Device accelerometer updates.",
+  "familyName": "Realtime",
+  "inLets": [],
+  "isPro": false,
+  "name": "Accelerometer",
+  "newInAppVersion": "1.2.3",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueOut",
+      "valueType": "raw:core:point3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Sensor",
+  "platforms": [
+    "iOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Hardware",
+    "Device",
+    "Motion"
+  ],
+  "typePath": "node:realtime:sensor:accelerometer",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/realtime/sensor/accelerometer"
+}

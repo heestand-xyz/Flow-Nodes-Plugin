@@ -1,0 +1,45 @@
+{
+  "complexity": "advanced",
+  "docs": "Relay a Quaternion. This node has no effect. Tho useful to define a type when wiring to generics.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "in",
+      "valueType": "raw:core:quaternion",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Relay",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "raw:core:quaternion",
+      "way": "out"
+    }
+  ],
+  "parentName": "Quaternion",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Nil",
+    "Null"
+  ],
+  "typePath": "node:data:quaternion:relay",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/quaternion/relay"
+}

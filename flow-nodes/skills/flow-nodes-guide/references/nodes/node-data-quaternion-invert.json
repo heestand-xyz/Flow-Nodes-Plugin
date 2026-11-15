@@ -1,0 +1,44 @@
+{
+  "complexity": "advanced",
+  "docs": "Invert the angles of a Quaternion.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "in",
+      "valueType": "raw:core:quaternion",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Invert",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "raw:core:quaternion",
+      "way": "out"
+    }
+  ],
+  "parentName": "Quaternion",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Inverse"
+  ],
+  "typePath": "node:data:quaternion:invert",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/quaternion/invert"
+}

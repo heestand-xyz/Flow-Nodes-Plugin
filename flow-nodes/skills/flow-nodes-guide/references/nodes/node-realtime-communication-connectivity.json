@@ -1,0 +1,63 @@
+{
+  "complexity": "advanced",
+  "docs": "Connectivity of WiFi and cellular network status with IP address information.",
+  "familyName": "Realtime",
+  "inLets": [],
+  "isPro": false,
+  "name": "Connectivity",
+  "newInAppVersion": "1.2.3",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Online",
+      "typeName": "isOnlineOut",
+      "valueType": "raw:core:bool",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "WiFi",
+      "typeName": "isOnWiFiOut",
+      "valueType": "raw:core:bool",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Cellular",
+      "typeName": "isOnCellularOut",
+      "valueType": "raw:core:bool",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "IP Address",
+      "typeName": "ipAddressOut",
+      "valueType": "raw:core:string",
+      "way": "out"
+    }
+  ],
+  "parentName": "Communication",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "WiFi",
+    "Cellular",
+    "IP Address"
+  ],
+  "typePath": "node:realtime:communication:connectivity",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/realtime/communication/connectivity"
+}

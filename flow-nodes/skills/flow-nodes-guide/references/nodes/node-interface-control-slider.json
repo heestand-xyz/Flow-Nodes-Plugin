@@ -1,0 +1,90 @@
+{
+  "complexity": "basic",
+  "docs": "A slider with a range from minimum to maximum.",
+  "familyName": "Interface",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Minimum",
+      "typeName": "minimumIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Maximum",
+      "typeName": "maximumIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Slider",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewOut",
+      "valueType": "raw:view",
+      "way": "out"
+    }
+  ],
+  "parentName": "Control",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "valueIn",
+      "isHidden": false,
+      "name": "Value",
+      "type": "variable",
+      "typeName": "value",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "minimumIn",
+      "isHidden": false,
+      "name": "Minimum",
+      "type": "variable",
+      "typeName": "minimum",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "maximumIn",
+      "isHidden": false,
+      "name": "Maximum",
+      "type": "variable",
+      "typeName": "maximum",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Interaction"
+  ],
+  "typePath": "node:interface:control:slider",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/interface/control/slider"
+}

@@ -1,0 +1,115 @@
+{
+  "complexity": "basic",
+  "docs": "A grid of positions in a field based on spacing and offset.",
+  "familyName": "3D Spatial",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The bounding frame of the grid.",
+      "level": "external",
+      "name": "Frame",
+      "typeName": "frameIn",
+      "valueType": "raw:core:rect3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Spacing between points per axis.",
+      "level": "external",
+      "name": "Spacing",
+      "typeName": "spacingIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "A fractional offset inside the frame.",
+      "level": "external",
+      "name": "Offset",
+      "typeName": "offsetIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Fraction Grid",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Field",
+      "typeName": "fieldOut",
+      "valueType": "raw:field",
+      "way": "out"
+    }
+  ],
+  "parentName": "Field",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "origin": {
+          "x": -0.5,
+          "y": -0.5,
+          "z": -0.5
+        },
+        "size": {
+          "depth": 1,
+          "height": 1,
+          "width": 1
+        }
+      },
+      "inLetTypeName": "frameIn",
+      "info": "The bounding frame of the grid.",
+      "isHidden": false,
+      "name": "Frame",
+      "type": "variable",
+      "typeName": "frame",
+      "valueType": "raw:core:rect3D"
+    },
+    {
+      "defaultValue": {
+        "x": 0.1,
+        "y": 0.1,
+        "z": 0.1
+      },
+      "inLetTypeName": "spacingIn",
+      "info": "Spacing between points per axis.",
+      "isHidden": false,
+      "name": "Spacing",
+      "type": "variable",
+      "typeName": "spacing",
+      "valueType": "raw:core:point3D"
+    },
+    {
+      "defaultValue": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "inLetTypeName": "offsetIn",
+      "info": "A fractional offset inside the frame.",
+      "isHidden": false,
+      "name": "Offset",
+      "type": "variable",
+      "typeName": "offset",
+      "valueType": "raw:core:point3D"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Particles"
+  ],
+  "typePath": "node:spatial:field:fractionGrid",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/spatial/field/fractionGrid"
+}

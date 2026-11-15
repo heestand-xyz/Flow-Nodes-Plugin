@@ -1,0 +1,55 @@
+{
+  "complexity": "advanced",
+  "docs": "Evaluate math expressions.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Expression",
+      "typeName": "expressionIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "lex",
+      "direction": "direct",
+      "keyType": "raw:core:string",
+      "level": "external",
+      "name": "Constants",
+      "typeName": "constantsIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "Expression",
+  "newInAppVersion": "2.6.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Result",
+      "typeName": "resultOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    }
+  ],
+  "parentName": "Math",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Code",
+    "Evaluate"
+  ],
+  "typePath": "node:general:math:expression",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/math/expression"
+}

@@ -1,0 +1,67 @@
+{
+  "complexity": "basic",
+  "docs": "Blends a background graphic with a foreground graphic using the mask graphic: black reveals the background and white reveals the foreground.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Mask",
+      "typeName": "leadingGraphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Background",
+      "typeName": "trailingGraphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Foreground",
+      "typeName": "foregroundGraphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Mask",
+  "newInAppVersion": "4.3.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Masked",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [
+    "node:graphic:modifierEffect:mask"
+  ],
+  "tags": [
+    "Mask",
+    "Blend",
+    "Foreground",
+    "Background"
+  ],
+  "typePath": "node:graphic:modifierEffect:mask2",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/modifierEffect/mask2"
+}

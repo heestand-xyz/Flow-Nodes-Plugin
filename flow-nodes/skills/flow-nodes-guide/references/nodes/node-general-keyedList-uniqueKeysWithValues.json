@@ -1,0 +1,54 @@
+{
+  "complexity": "basic",
+  "docs": "Create a keyed list from unique keys and matching values.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Keys",
+      "typeName": "keysIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Values",
+      "typeName": "valuesIn",
+      "valueType": "generic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Unique Keys with Values",
+  "newInAppVersion": "4.3.0",
+  "outLets": [
+    {
+      "capacity": "lex",
+      "direction": "binding",
+      "keyType": "generic",
+      "level": "external",
+      "name": "Values",
+      "typeName": "valuesOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Keyed List",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Dictionary"
+  ],
+  "typePath": "node:general:keyedList:uniqueKeysWithValues",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/keyedList/uniqueKeysWithValues"
+}

@@ -1,0 +1,231 @@
+{
+  "complexity": "basic",
+  "docs": "Simplex noise.",
+  "familyName": "Realtime",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The complexity of the noise. A lower value is smooth, a higher value is noisy. (0 to 10)",
+      "level": "external",
+      "name": "Octaves",
+      "typeName": "octavesIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Offset",
+      "typeName": "offsetIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Frequency",
+      "typeName": "frequencyIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Low",
+      "typeName": "lowIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "High",
+      "typeName": "highIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Deterministic randomness. (0 or above)",
+      "level": "external",
+      "name": "Seed",
+      "typeName": "seedIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Noise",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Noise",
+      "typeName": "noiseOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modulator",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "octavesIn",
+      "info": "The complexity of the noise. A lower value is smooth, a higher value is noisy. (0 to 10)",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 10,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Octaves",
+      "type": "variable",
+      "typeName": "octaves",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": [
+        0,
+        0
+      ],
+      "inLetTypeName": "offsetIn",
+      "isHidden": false,
+      "name": "Offset",
+      "type": "variable",
+      "typeName": "offset",
+      "valueType": "raw:core:point"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "frequencyIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Frequency",
+      "type": "variable",
+      "typeName": "frequency",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "lowIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Low",
+      "type": "variable",
+      "typeName": "low",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "highIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "High",
+      "type": "variable",
+      "typeName": "high",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "seedIn",
+      "info": "Deterministic randomness. (0 or above)",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Seed",
+      "type": "variable",
+      "typeName": "seed",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Random"
+  ],
+  "typePath": "node:realtime:modulator:noise",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/realtime/modulator/noise"
+}

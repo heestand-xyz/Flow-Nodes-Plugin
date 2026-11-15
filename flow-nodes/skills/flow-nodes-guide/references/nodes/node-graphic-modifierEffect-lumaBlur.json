@@ -1,0 +1,406 @@
+{
+  "complexity": "advanced",
+  "docs": "Blur the first graphic based on the second graphic's luminance.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "leadingGraphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Modifier Graphic",
+      "typeName": "trailingGraphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Radius",
+      "typeName": "radiusIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Position",
+      "typeName": "positionIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Rotation",
+      "typeName": "rotationIn",
+      "valueType": "raw:core:angle",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Luma Gamma",
+      "typeName": "lumaGammaIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Sample Count",
+      "typeName": "sampleCountIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Layer Count",
+      "typeName": "layerCountIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "Luma Blur",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Layered",
+        "typeName": "layered"
+      },
+      "enumCases": [
+        {
+          "name": "Box",
+          "typeName": "box"
+        },
+        {
+          "name": "Angle",
+          "typeName": "angle"
+        },
+        {
+          "name": "Zoom",
+          "typeName": "zoom"
+        },
+        {
+          "name": "Random",
+          "typeName": "random"
+        },
+        {
+          "name": "Layered",
+          "typeName": "layered"
+        }
+      ],
+      "isHidden": false,
+      "name": "Style",
+      "type": "stringEnum",
+      "typeName": "style"
+    },
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "radiusIn",
+      "isHidden": false,
+      "maximumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 2,
+                      "index": 1
+                    },
+                    "fraction": 0.5
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "fixed": {
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Radius",
+      "type": "variable",
+      "typeName": "radius",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "positionIn",
+      "isHidden": false,
+      "maximumValue": {
+        "coreType": "point",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 2,
+                      "index": 0
+                    },
+                    "fraction": 1
+                  }
+                },
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 2,
+                      "index": 1
+                    },
+                    "fraction": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "coreType": "point",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "fixed": {
+                    "value": 0
+                  }
+                },
+                {
+                  "fixed": {
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Position",
+      "type": "variable",
+      "typeName": "position",
+      "valueType": "raw:core:point"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "rotationIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 3.141592653589793,
+        "coreType": "angle",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": -3.141592653589793,
+        "coreType": "angle",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Rotation",
+      "type": "variable",
+      "typeName": "rotation",
+      "valueType": "raw:core:angle"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "lumaGammaIn",
+      "info": "Adjustment of light on the modifier graphic.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Luma Gamma",
+      "type": "variable",
+      "typeName": "lumaGamma",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 100,
+      "inLetTypeName": "sampleCountIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Sample Count",
+      "type": "variable",
+      "typeName": "sampleCount",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": 10,
+      "inLetTypeName": "layerCountIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 10,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Layer Count",
+      "type": "variable",
+      "typeName": "layerCount",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Fill",
+        "typeName": "fill"
+      },
+      "enumCases": [
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        },
+        {
+          "name": "Fit",
+          "typeName": "fit"
+        },
+        {
+          "name": "Fill",
+          "typeName": "fill"
+        },
+        {
+          "name": "Fixed",
+          "typeName": "fixed"
+        }
+      ],
+      "isHidden": false,
+      "name": "Placement",
+      "type": "stringEnum",
+      "typeName": "placement"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Stretch",
+        "typeName": "stretch"
+      },
+      "enumCases": [
+        {
+          "name": "Zero",
+          "typeName": "zero"
+        },
+        {
+          "name": "Loop",
+          "typeName": "loop"
+        },
+        {
+          "name": "Mirror",
+          "typeName": "mirror"
+        },
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        }
+      ],
+      "info": "Pixels outside the main bounds will use the extend mode when sampled. This will mainly affect pixels on the edges.",
+      "isHidden": false,
+      "name": "Extend Mode",
+      "type": "stringEnum",
+      "typeName": "extendMode"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Luminance"
+  ],
+  "typePath": "node:graphic:modifierEffect:lumaBlur",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/modifierEffect/lumaBlur"
+}

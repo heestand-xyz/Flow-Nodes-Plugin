@@ -1,0 +1,21 @@
+{
+  "name": "flow-nodes",
+  "version": "0.1.1",
+  "description": "Learn Flow Nodes and build flows with precise node, property, and wire guidance from bundled documentation.",
+  "author": {
+    "name": "Portobello Studio"
+  },
+  "homepage": "https://flownodes.app",
+  "keywords": [
+    "Flow Nodes",
+    "visual programming",
+    "node graphs",
+    "graphics",
+    "video",
+    "3D",
+    "JavaScript",
+    "Metal"
+  ],
+  "repository": "https://github.com/heestand-xyz/Flow-Nodes-Plugin",
+  "displayName": "Flow Nodes"
+}

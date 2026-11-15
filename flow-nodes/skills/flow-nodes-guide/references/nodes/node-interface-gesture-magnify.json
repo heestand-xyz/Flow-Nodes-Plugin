@@ -1,0 +1,132 @@
+{
+  "complexity": "basic",
+  "docs": "Detect a magnification with scale on a view. Downstream views will also respond to the gesture.",
+  "familyName": "Interface",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewIn",
+      "valueType": "raw:view",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Minimum Scale Delta",
+      "typeName": "minimumScaleDeltaIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Magnify",
+  "newInAppVersion": "1.4.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewOut",
+      "valueType": "raw:view",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Active",
+      "typeName": "activeOut",
+      "valueType": "raw:core:bool",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Magnification",
+      "typeName": "magnificationOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Start Location",
+      "typeName": "startLocationOut",
+      "valueType": "raw:core:point",
+      "way": "out"
+    }
+  ],
+  "parentName": "Gesture",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Regular",
+        "typeName": "regular"
+      },
+      "enumCases": [
+        {
+          "name": "Regular",
+          "typeName": "regular"
+        },
+        {
+          "name": "High",
+          "typeName": "high"
+        },
+        {
+          "name": "Simultaneous",
+          "typeName": "simultaneous"
+        }
+      ],
+      "isHidden": false,
+      "name": "Priority",
+      "type": "typedEnum",
+      "typeName": "priority"
+    },
+    {
+      "defaultValue": 0.01,
+      "inLetTypeName": "minimumScaleDeltaIn",
+      "info": "The difference in scale before a gesture is recognized.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 0.02,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0.005,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Count",
+      "type": "variable",
+      "typeName": "minimumScaleDelta",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacedByTypePath": "node:interface:gesture:magnify2",
+  "replacesTypePaths": [],
+  "tags": [
+    "Touch"
+  ],
+  "typePath": "node:interface:gesture:magnify",
+  "isVisible": false,
+  "sourceRoute": "/docs/nodes/interface/gesture/magnify"
+}

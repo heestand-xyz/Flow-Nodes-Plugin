@@ -1,0 +1,266 @@
+{
+  "complexity": "basic",
+  "docs": "",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Radius",
+      "typeName": "radiusIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Width",
+      "typeName": "widthIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Angle",
+      "typeName": "angleIn",
+      "valueType": "raw:core:angle",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Length",
+      "typeName": "lengthIn",
+      "valueType": "raw:core:angle",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Corner Radius",
+      "typeName": "cornerRadiusIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Arc",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "out",
+      "valueType": "raw:vector",
+      "way": "out"
+    }
+  ],
+  "parentName": "Shape",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "radiusIn",
+      "isHidden": false,
+      "maximumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 2,
+                      "index": 1
+                    },
+                    "fraction": 0.5
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 2,
+                      "index": 1
+                    },
+                    "fraction": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Radius",
+      "type": "variable",
+      "typeName": "radius",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "widthIn",
+      "isHidden": false,
+      "maximumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 2,
+                      "index": 1
+                    },
+                    "fraction": 0.5
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 2,
+                      "index": 1
+                    },
+                    "fraction": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Width",
+      "type": "variable",
+      "typeName": "width",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "angleIn",
+      "isHidden": false,
+      "name": "Angle",
+      "type": "variable",
+      "typeName": "angle",
+      "valueType": "raw:core:angle"
+    },
+    {
+      "defaultValue": 1.5707963267948966,
+      "inLetTypeName": "lengthIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 6.283185307179586,
+        "coreType": "angle",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "angle",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Length",
+      "type": "variable",
+      "typeName": "length",
+      "valueType": "raw:core:angle"
+    },
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "cornerRadiusIn",
+      "isHidden": false,
+      "maximumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 2,
+                      "index": 1
+                    },
+                    "fraction": 0.25
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 2,
+                      "index": 1
+                    },
+                    "fraction": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Corner Radius",
+      "type": "variable",
+      "typeName": "cornerRadius",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:vector:shape:arc",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/shape/arc"
+}

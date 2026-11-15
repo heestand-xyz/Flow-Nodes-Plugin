@@ -1,0 +1,71 @@
+{
+  "complexity": "basic",
+  "docs": "A sphere.",
+  "familyName": "3D Geometry",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Radius",
+      "typeName": "radiusIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Sphere",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Geometry",
+      "typeName": "geometryOut",
+      "valueType": "raw:geometry",
+      "way": "out"
+    }
+  ],
+  "parentName": "Shape",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "radiusIn",
+      "isHidden": false,
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Radius",
+      "type": "variable",
+      "typeName": "radius",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 32,
+      "isHidden": false,
+      "name": "Detail",
+      "type": "value",
+      "typeName": "detail",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Ball",
+    "Orb"
+  ],
+  "typePath": "node:geometry:shape:sphere",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/geometry/shape/sphere"
+}

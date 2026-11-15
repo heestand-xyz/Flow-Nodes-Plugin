@@ -1,0 +1,128 @@
+{
+  "complexity": "advanced",
+  "docs": "Sample a 2D slice from a 3D graphic along a selected axis.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "3D Graphic",
+      "typeName": "graphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Slice location along the selected axis.",
+      "level": "external",
+      "name": "Location",
+      "typeName": "locationIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Slice from 3D Graphic",
+  "newInAppVersion": "4.3.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Z",
+        "typeName": "z"
+      },
+      "enumCases": [
+        {
+          "name": "X",
+          "typeName": "x"
+        },
+        {
+          "name": "Y",
+          "typeName": "y"
+        },
+        {
+          "name": "Z",
+          "typeName": "z"
+        }
+      ],
+      "info": "Pick the axis to sample along.",
+      "isHidden": false,
+      "name": "Axis",
+      "type": "typedEnum",
+      "typeName": "axis"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Unit",
+        "typeName": "unit"
+      },
+      "enumCases": [
+        {
+          "name": "Unit",
+          "typeName": "unit"
+        },
+        {
+          "name": "Pixel",
+          "typeName": "pixel"
+        }
+      ],
+      "info": "Choose whether location is interpreted as a normalized unit fraction or pixel coordinate.",
+      "isHidden": false,
+      "name": "Coordinate Space",
+      "type": "typedEnum",
+      "typeName": "coordinateSpace"
+    },
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "locationIn",
+      "info": "Slice location along the selected axis.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Location",
+      "type": "variable",
+      "typeName": "location",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Slice",
+    "Sample"
+  ],
+  "typePath": "node:graphic:resource:sliceFromGraphic3D",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/resource/sliceFromGraphic3D"
+}

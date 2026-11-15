@@ -1,0 +1,164 @@
+{
+  "complexity": "advanced",
+  "docs": "Apply noise to a tag in a field.",
+  "familyName": "3D Spatial",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Field",
+      "typeName": "fieldIn",
+      "valueType": "raw:field",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "An offset in 4th dimension.",
+      "level": "external",
+      "name": "Motion",
+      "typeName": "motionIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Deterministic randomness. (0 or above)",
+      "level": "external",
+      "name": "Seed",
+      "typeName": "seedIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The complexity of the noise. A lower value is more smooth and a higher value is more random. (1 to 10)",
+      "level": "external",
+      "name": "Octaves",
+      "typeName": "octavesIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Scales the position before sampling noise. (0 to 2)",
+      "level": "external",
+      "name": "Scale",
+      "typeName": "scaleIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Source Noise",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Field",
+      "typeName": "fieldOut",
+      "valueType": "raw:field",
+      "way": "out"
+    }
+  ],
+  "parentName": "Field",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "motionIn",
+      "info": "An offset in 4th dimension.",
+      "isHidden": false,
+      "name": "Motion",
+      "type": "variable",
+      "typeName": "motion",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "seedIn",
+      "info": "Deterministic randomness. (0 or above)",
+      "isHidden": false,
+      "name": "Seed",
+      "type": "variable",
+      "typeName": "seed",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "octavesIn",
+      "info": "The complexity of the noise. A lower value is more smooth and a higher value is more random. (1 to 10)",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 10,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Octaves",
+      "type": "variable",
+      "typeName": "octaves",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "scaleIn",
+      "info": "Scales the position before sampling noise. (0 to 2)",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Scale",
+      "type": "variable",
+      "typeName": "scale",
+      "valueType": "raw:core:float"
+    },
+    {
+      "info": "The tag to apply noise to in the field.",
+      "isHidden": false,
+      "name": "Tag",
+      "type": "item",
+      "typeName": "tagSelection"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Random"
+  ],
+  "typePath": "node:spatial:field:noise",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/spatial/field/noise"
+}

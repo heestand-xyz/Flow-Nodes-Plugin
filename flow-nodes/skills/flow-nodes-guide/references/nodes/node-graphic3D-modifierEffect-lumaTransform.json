@@ -1,0 +1,402 @@
+{
+  "complexity": "advanced",
+  "docs": "Transform the first graphic based on the second graphic's luminance.",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "leadingGraphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Modifier Graphic 3D",
+      "typeName": "trailingGraphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Translation",
+      "typeName": "translationIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Rotation",
+      "typeName": "rotationIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Scale",
+      "typeName": "scaleIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Scale Size",
+      "typeName": "scaleSizeIn",
+      "valueType": "raw:core:size3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Transparent",
+      "typeName": "isTransparentIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Luma Gamma",
+      "typeName": "lumaGammaIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Luma Transform",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "translationIn",
+      "isHidden": false,
+      "maximumValue": {
+        "coreType": "point3D",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 0
+                    },
+                    "fraction": 0.5
+                  }
+                },
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 1
+                    },
+                    "fraction": 0.5
+                  }
+                },
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 2
+                    },
+                    "fraction": 0.5
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "coreType": "point3D",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 0
+                    },
+                    "fraction": -0.5
+                  }
+                },
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 1
+                    },
+                    "fraction": -0.5
+                  }
+                },
+                {
+                  "flexible": {
+                    "axis": {
+                      "count": 3,
+                      "index": 2
+                    },
+                    "fraction": -0.5
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Translation",
+      "type": "variable",
+      "typeName": "translation",
+      "valueType": "raw:core:point3D"
+    },
+    {
+      "defaultValue": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "inLetTypeName": "rotationIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "coreType": "point3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "coreType": "point3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Rotation",
+      "type": "variable",
+      "typeName": "rotation",
+      "valueType": "raw:core:point3D"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "scaleIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Scale",
+      "type": "variable",
+      "typeName": "scale",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": {
+        "depth": 1,
+        "height": 1,
+        "width": 1
+      },
+      "inLetTypeName": "scaleSizeIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": {
+          "depth": 2,
+          "height": 2,
+          "width": 2
+        },
+        "coreType": "size3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": {
+          "depth": 0,
+          "height": 0,
+          "width": 0
+        },
+        "coreType": "size3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Scale Size",
+      "type": "variable",
+      "typeName": "scaleSize",
+      "valueType": "raw:core:size3D"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "isTransparentIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": true,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": false,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Transparent",
+      "type": "variable",
+      "typeName": "isTransparent",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Fill",
+        "typeName": "fill"
+      },
+      "enumCases": [
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        },
+        {
+          "name": "Fit",
+          "typeName": "fit"
+        },
+        {
+          "name": "Fill",
+          "typeName": "fill"
+        },
+        {
+          "name": "Fixed",
+          "typeName": "fixed"
+        }
+      ],
+      "isHidden": false,
+      "name": "Placement",
+      "type": "stringEnum",
+      "typeName": "placement"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "lumaGammaIn",
+      "info": "Adjustment of light on the modifier graphic.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Luma Gamma",
+      "type": "variable",
+      "typeName": "lumaGamma",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Zero",
+        "typeName": "zero"
+      },
+      "enumCases": [
+        {
+          "name": "Zero",
+          "typeName": "zero"
+        },
+        {
+          "name": "Loop",
+          "typeName": "loop"
+        },
+        {
+          "name": "Mirror",
+          "typeName": "mirror"
+        },
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        }
+      ],
+      "info": "Voxels outside the main bounds will use the extend mode when sampled. This will mainly affect voxels on the edges.",
+      "isHidden": false,
+      "name": "Extend Mode",
+      "type": "stringEnum",
+      "typeName": "extendMode"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Luminance"
+  ],
+  "typePath": "node:graphic3D:modifierEffect:lumaTransform",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/modifierEffect/lumaTransform"
+}

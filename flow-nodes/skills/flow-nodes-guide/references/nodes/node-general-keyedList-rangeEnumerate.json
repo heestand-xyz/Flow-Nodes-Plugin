@@ -1,0 +1,122 @@
+{
+  "complexity": "basic",
+  "docs": "Keyed list with evenly spaced float keys from Low to High, including both endpoints.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Values",
+      "typeName": "valuesIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The key of the first value.",
+      "level": "external",
+      "name": "Low",
+      "typeName": "lowIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The key of the last value when the list contains at least two values.",
+      "level": "external",
+      "name": "High",
+      "typeName": "highIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Range Enumerate",
+  "newInAppVersion": "27.1.0",
+  "outLets": [
+    {
+      "capacity": "lex",
+      "direction": "binding",
+      "keyType": "raw:core:float",
+      "level": "external",
+      "name": "Values",
+      "typeName": "valuesOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Keyed List",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "lowIn",
+      "info": "The key of the first value.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Low",
+      "type": "variable",
+      "typeName": "low",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "highIn",
+      "info": "The key of the last value when the list contains at least two values.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "High",
+      "type": "variable",
+      "typeName": "high",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Index",
+    "Float",
+    "Range",
+    "Interpolate",
+    "Normalize"
+  ],
+  "typePath": "node:general:keyedList:rangeEnumerate",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/keyedList/rangeEnumerate"
+}

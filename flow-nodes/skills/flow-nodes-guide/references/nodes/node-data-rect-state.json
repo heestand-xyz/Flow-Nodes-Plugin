@@ -1,0 +1,53 @@
+{
+  "complexity": "basic",
+  "docs": "Store a Rect.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "State",
+  "newInAppVersion": "1.7.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "raw:core:rect",
+      "way": "out"
+    }
+  ],
+  "parentName": "Rect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "isHidden": false,
+      "name": "Value",
+      "type": "value",
+      "typeName": "value",
+      "valueType": "raw:core:rect"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "Frame"
+  ],
+  "typePath": "node:data:rect:state",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/rect/state"
+}

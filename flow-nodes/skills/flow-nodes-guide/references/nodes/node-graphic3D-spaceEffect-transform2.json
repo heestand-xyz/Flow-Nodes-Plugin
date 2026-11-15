@@ -1,0 +1,116 @@
+{
+  "complexity": "basic",
+  "docs": "Transform a 3D Graphic.",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic3D",
+      "typeName": "graphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Transform",
+      "typeName": "transformIn",
+      "valueType": "raw:core:transform3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Transform",
+  "newInAppVersion": "4.3.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic3D",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Space Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": {
+          "w": 1,
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "depth": 1,
+          "height": 1,
+          "width": 1
+        }
+      },
+      "inLetTypeName": "transformIn",
+      "isHidden": false,
+      "name": "Transform",
+      "type": "variable",
+      "typeName": "transform",
+      "valueType": "raw:core:transform3D"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Zero",
+        "typeName": "transparent"
+      },
+      "enumCases": [
+        {
+          "name": "Zero",
+          "typeName": "transparent"
+        },
+        {
+          "name": "Loop",
+          "typeName": "loop"
+        },
+        {
+          "name": "Mirror",
+          "typeName": "mirror"
+        },
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        }
+      ],
+      "info": "Controls how voxels outside the main bounds are sampled.",
+      "isHidden": false,
+      "name": "Extend Mode",
+      "type": "typedEnum",
+      "typeName": "extendMode"
+    }
+  ],
+  "replacesTypePaths": [
+    "node:graphic3D:spaceEffect:transform"
+  ],
+  "tags": [
+    "Translation",
+    "Offset",
+    "Position",
+    "Size",
+    "Scale",
+    "Rotation"
+  ],
+  "typePath": "node:graphic3D:spaceEffect:transform2",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/spaceEffect/transform2"
+}

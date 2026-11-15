@@ -1,0 +1,42 @@
+{
+  "complexity": "basic",
+  "docs": "",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Square Root",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    }
+  ],
+  "parentName": "Float",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:float:squareRoot",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/float/squareRoot"
+}

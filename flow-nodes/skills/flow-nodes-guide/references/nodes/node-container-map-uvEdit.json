@@ -1,0 +1,94 @@
+{
+  "complexity": "advanced",
+  "docs": "Edit a graphic by modifying unit UV coordinates. The final external outlet remaps the external inlet with the internal inlet's colors. The red channel is x and the green channel is y. Black color is the top left pixel and yellow color is the bottom right pixel.",
+  "familyName": "Container",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Source",
+      "typeName": "sourceIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "internal",
+      "name": "UV Remap",
+      "typeName": "uvRemapIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "UV Edit",
+  "newInAppVersion": "4.1.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "internal",
+      "name": "UV",
+      "typeName": "uvOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Remap",
+      "typeName": "remapOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Map",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Zero",
+        "typeName": "transparent"
+      },
+      "enumCases": [
+        {
+          "name": "Zero",
+          "typeName": "transparent"
+        },
+        {
+          "name": "Loop",
+          "typeName": "loop"
+        },
+        {
+          "name": "Mirror",
+          "typeName": "mirror"
+        },
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        }
+      ],
+      "info": "Controls how pixels outside the sampled area are resolved during remapping.",
+      "isHidden": false,
+      "name": "Extend Mode",
+      "type": "typedEnum",
+      "typeName": "extendMode"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Graphic",
+    "Coordinate",
+    "Remap"
+  ],
+  "typePath": "node:container:map:uvEdit",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/container/map/uvEdit"
+}

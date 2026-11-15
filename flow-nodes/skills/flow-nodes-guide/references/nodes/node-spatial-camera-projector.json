@@ -1,0 +1,84 @@
+{
+  "complexity": "basic",
+  "docs": "Creates a projector from a camera and graphic, with adjustable intensity.",
+  "familyName": "3D Spatial",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Camera",
+      "typeName": "cameraIn",
+      "valueType": "raw:core:camera",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Scales the projected graphic brightness.",
+      "level": "external",
+      "name": "Intensity",
+      "typeName": "intensityIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "Projector",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Projector",
+      "typeName": "projectorOut",
+      "valueType": "raw:projector",
+      "way": "out"
+    }
+  ],
+  "parentName": "Camera",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "intensityIn",
+      "info": "Scales the projected graphic brightness.",
+      "isHidden": false,
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Intensity",
+      "type": "variable",
+      "typeName": "intensity",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Render",
+    "3D",
+    "Projector"
+  ],
+  "typePath": "node:spatial:camera:projector",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/spatial/camera/projector"
+}

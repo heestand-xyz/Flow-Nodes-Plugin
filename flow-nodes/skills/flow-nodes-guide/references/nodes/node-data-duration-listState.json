@@ -1,0 +1,44 @@
+{
+  "complexity": "advanced",
+  "docs": "Store a list of Durations.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "List State",
+  "newInAppVersion": "2.2.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Durations",
+      "typeName": "out",
+      "valueType": "raw:core:duration",
+      "way": "out"
+    }
+  ],
+  "parentName": "Duration",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValues": [],
+      "isHidden": false,
+      "name": "Durations",
+      "type": "valueArray",
+      "typeName": "durations",
+      "valueType": "raw:core:duration"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "Array"
+  ],
+  "typePath": "node:data:duration:listState",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/duration/listState"
+}

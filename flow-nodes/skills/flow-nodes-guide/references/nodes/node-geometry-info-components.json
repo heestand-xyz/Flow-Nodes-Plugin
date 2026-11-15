@@ -1,0 +1,44 @@
+{
+  "complexity": "advanced",
+  "docs": "Polygons from a Geometry mesh.",
+  "familyName": "3D Geometry",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Geometry",
+      "typeName": "geometryIn",
+      "valueType": "raw:geometry",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Components",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Polygons",
+      "typeName": "polygonsOut",
+      "valueType": "raw:polygon",
+      "way": "out"
+    }
+  ],
+  "parentName": "Info",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Polygons"
+  ],
+  "typePath": "node:geometry:info:components",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/geometry/info/components"
+}

@@ -1,0 +1,45 @@
+{
+  "complexity": "advanced",
+  "docs": "Relay a Duration. This node has no effect. Tho useful to define a type when wiring to generics.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "in",
+      "valueType": "raw:core:duration",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Relay",
+  "newInAppVersion": "2.2.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "raw:core:duration",
+      "way": "out"
+    }
+  ],
+  "parentName": "Duration",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Nil",
+    "Null"
+  ],
+  "typePath": "node:data:duration:relay",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/duration/relay"
+}

@@ -1,0 +1,67 @@
+{
+  "complexity": "advanced",
+  "docs": "Derive a list of values from a JSON array.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "JSON",
+      "typeName": "jsonIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "List from JSON",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "List",
+      "typeName": "listOut",
+      "valueType": "raw:core:string",
+      "way": "out"
+    }
+  ],
+  "parentName": "String",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": true,
+      "isHidden": false,
+      "name": "Pretty Printed",
+      "type": "value",
+      "typeName": "prettyPrinted",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": false,
+      "isHidden": false,
+      "name": "Sorted Keys",
+      "type": "value",
+      "typeName": "sortedKeys",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": true,
+      "isHidden": false,
+      "name": "Without Escaping Slashes",
+      "type": "value",
+      "typeName": "withoutEscapingSlashes",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:string:listFromJSON",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/string/listFromJSON"
+}

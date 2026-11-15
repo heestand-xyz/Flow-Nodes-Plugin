@@ -1,0 +1,42 @@
+{
+  "complexity": "advanced",
+  "docs": "Polygon from Vertices.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Vertices",
+      "typeName": "verticesIn",
+      "valueType": "raw:core:vertex",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Polygon from Vertices",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Polygon",
+      "typeName": "polygonOut",
+      "valueType": "raw:polygon",
+      "way": "out"
+    }
+  ],
+  "parentName": "Vertex",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:vertex:polygonFromVertices",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/vertex/polygonFromVertices"
+}

@@ -1,0 +1,59 @@
+{
+  "complexity": "basic",
+  "docs": "Store a video.",
+  "familyName": "Video",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Clear",
+      "typeName": "clearIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "links": [
+    {
+      "title": "Guide",
+      "url": "https://flownodes.notion.site/Video-Guide-20a9a07f8bd9809394aae6ece4cf2500"
+    }
+  ],
+  "name": "State",
+  "newInAppVersion": "1.5.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Video",
+      "typeName": "videoBindingOut",
+      "valueType": "raw:video",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "info": "Remove the video.",
+      "isHidden": false,
+      "name": "Clear",
+      "type": "action",
+      "typeName": "clear"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "Movie"
+  ],
+  "typePath": "node:video:resource:state",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/video/resource/state"
+}

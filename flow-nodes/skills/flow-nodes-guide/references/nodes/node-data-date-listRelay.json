@@ -1,0 +1,42 @@
+{
+  "complexity": "advanced",
+  "docs": "Relay a list of Dates. This node has no effect. Tho useful to define a type when wiring to generics.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Values",
+      "typeName": "in",
+      "valueType": "raw:core:date",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "List Relay",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Values",
+      "typeName": "out",
+      "valueType": "raw:core:date",
+      "way": "out"
+    }
+  ],
+  "parentName": "Date",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:date:listRelay",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/date/listRelay"
+}

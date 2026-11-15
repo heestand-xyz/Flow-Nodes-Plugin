@@ -1,0 +1,44 @@
+{
+  "complexity": "basic",
+  "docs": "Trigger an action when a bool goes from false to true.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Trigger",
+      "typeName": "triggerIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Trigger",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Action",
+      "typeName": "actionOut",
+      "valueType": "raw:action",
+      "way": "out"
+    }
+  ],
+  "parentName": "Generic",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Action"
+  ],
+  "typePath": "node:general:generic:trigger",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/generic/trigger"
+}

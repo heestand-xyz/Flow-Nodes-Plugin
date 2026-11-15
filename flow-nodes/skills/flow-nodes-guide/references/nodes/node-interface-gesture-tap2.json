@@ -1,0 +1,168 @@
+{
+  "complexity": "basic",
+  "docs": "Detect a tap / click with a location on a view. Downstream views will also respond to the gesture.",
+  "familyName": "Interface",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewIn",
+      "valueType": "raw:view",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Location",
+      "typeName": "locationIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Add a Coordinate Space node downstream to reference its frame.",
+      "level": "external",
+      "name": "Coordinate Space Name",
+      "typeName": "coordinateSpaceNameIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Count",
+      "typeName": "countIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Tap",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Action",
+      "typeName": "actionOut",
+      "valueType": "raw:action",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewOut",
+      "valueType": "raw:view",
+      "way": "out"
+    }
+  ],
+  "parentName": "Gesture",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Local",
+        "typeName": "local"
+      },
+      "enumCases": [
+        {
+          "name": "Local",
+          "typeName": "local"
+        },
+        {
+          "name": "Global",
+          "typeName": "global"
+        },
+        {
+          "name": "Named",
+          "typeName": "named"
+        }
+      ],
+      "isHidden": false,
+      "name": "Coordinate Space",
+      "type": "typedEnum",
+      "typeName": "coordinateSpace"
+    },
+    {
+      "defaultValue": "",
+      "inLetTypeName": "coordinateSpaceNameIn",
+      "info": "Add a Coordinate Space node downstream to reference its frame.",
+      "isHidden": true,
+      "name": "Coordinate Space Name",
+      "type": "variable",
+      "typeName": "coordinateSpaceName",
+      "valueType": "raw:core:string"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Regular",
+        "typeName": "regular"
+      },
+      "enumCases": [
+        {
+          "name": "Regular",
+          "typeName": "regular"
+        },
+        {
+          "name": "High",
+          "typeName": "high"
+        },
+        {
+          "name": "Simultaneous",
+          "typeName": "simultaneous"
+        }
+      ],
+      "isHidden": false,
+      "name": "Priority",
+      "type": "typedEnum",
+      "typeName": "priority"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "countIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Count",
+      "type": "variable",
+      "typeName": "count",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacesTypePaths": [
+    "node:interface:gesture:tap"
+  ],
+  "tags": [
+    "Click",
+    "Touch"
+  ],
+  "typePath": "node:interface:gesture:tap2",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/interface/gesture/tap2"
+}

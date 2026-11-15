@@ -1,0 +1,297 @@
+{
+  "complexity": "advanced",
+  "docs": "Create a 3D vector path from an L-system grammar. Draw forward with F, move forward without drawing with f, use + and - for yaw Z, & and ^ for pitch X, \\ and / for roll Y, and [ ] for branches.",
+  "familyName": "3D Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The initial L-system symbol string.",
+      "level": "external",
+      "name": "Axiom",
+      "typeName": "axiomIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Replacement rules separated by new lines or semicolons.",
+      "level": "external",
+      "name": "Rules",
+      "typeName": "rulesIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The number of times the rules are applied. Warning: this can get heavy fast at higher values.",
+      "level": "external",
+      "name": "Iterations",
+      "typeName": "iterationsIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The starting turtle orientation. Forward is along local Y.",
+      "level": "external",
+      "name": "Initial Rotation",
+      "typeName": "initialRotationIn",
+      "valueType": "raw:core:angle3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The turn amount used by +, -, &, ^, \\, and / symbols.",
+      "level": "external",
+      "name": "Angle",
+      "typeName": "angleIn",
+      "valueType": "raw:core:angle",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The distance moved by draw and move symbols.",
+      "level": "external",
+      "name": "Step Length",
+      "typeName": "stepLengthIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Symbols that draw a segment while moving forward.",
+      "level": "external",
+      "name": "Draw Symbols",
+      "typeName": "drawSymbolsIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Symbols that move forward without drawing.",
+      "level": "external",
+      "name": "Move Symbols",
+      "typeName": "moveSymbolsIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Move the generated path so its bounding box is centered on the origin.",
+      "level": "external",
+      "name": "Center",
+      "typeName": "centerIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "L-System",
+  "newInAppVersion": "4.2.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "3D Vector",
+      "typeName": "vectorPath3DOut",
+      "valueType": "raw:vector3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": "F",
+      "inLetTypeName": "axiomIn",
+      "info": "The initial L-system symbol string.",
+      "isHidden": false,
+      "name": "Axiom",
+      "type": "variable",
+      "typeName": "axiom",
+      "valueType": "raw:core:string"
+    },
+    {
+      "defaultValue": "F=F[+F][-F][&F][^F]",
+      "inLetTypeName": "rulesIn",
+      "info": "Replacement rules separated by new lines or semicolons.",
+      "isHidden": false,
+      "name": "Rules",
+      "type": "variable",
+      "typeName": "rules",
+      "valueType": "raw:core:string"
+    },
+    {
+      "defaultValue": 3,
+      "inLetTypeName": "iterationsIn",
+      "info": "The number of times the rules are applied. Warning: this can get heavy fast at higher values.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 6,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Iterations",
+      "type": "variable",
+      "typeName": "iterations",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "inLetTypeName": "initialRotationIn",
+      "info": "The starting turtle orientation. Forward is along local Y.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": {
+          "x": 3.141592653589793,
+          "y": 3.141592653589793,
+          "z": 3.141592653589793
+        },
+        "coreType": "angle3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": {
+          "x": -3.141592653589793,
+          "y": -3.141592653589793,
+          "z": -3.141592653589793
+        },
+        "coreType": "angle3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Initial Rotation",
+      "type": "variable",
+      "typeName": "initialRotation",
+      "valueType": "raw:core:angle3D"
+    },
+    {
+      "defaultValue": 0.5235987755982988,
+      "inLetTypeName": "angleIn",
+      "info": "The turn amount used by +, -, &, ^, \\, and / symbols.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 3.141592653589793,
+        "coreType": "angle",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "angle",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Angle",
+      "type": "variable",
+      "typeName": "angle",
+      "valueType": "raw:core:angle"
+    },
+    {
+      "defaultValue": 0.1,
+      "inLetTypeName": "stepLengthIn",
+      "info": "The distance moved by draw and move symbols.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Step Length",
+      "type": "variable",
+      "typeName": "stepLength",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": "F",
+      "inLetTypeName": "drawSymbolsIn",
+      "info": "Symbols that draw a segment while moving forward.",
+      "isHidden": false,
+      "name": "Draw Symbols",
+      "type": "variable",
+      "typeName": "drawSymbols",
+      "valueType": "raw:core:string"
+    },
+    {
+      "defaultValue": "f",
+      "inLetTypeName": "moveSymbolsIn",
+      "info": "Symbols that move forward without drawing.",
+      "isHidden": false,
+      "name": "Move Symbols",
+      "type": "variable",
+      "typeName": "moveSymbols",
+      "valueType": "raw:core:string"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "centerIn",
+      "info": "Move the generated path so its bounding box is centered on the origin.",
+      "isHidden": false,
+      "name": "Center",
+      "type": "variable",
+      "typeName": "center",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "LSystem",
+    "Lindenmayer",
+    "Fractal",
+    "Turtle",
+    "Tree",
+    "3D"
+  ],
+  "typePath": "node:vector3D:resource:lSystem",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector3D/resource/lSystem"
+}

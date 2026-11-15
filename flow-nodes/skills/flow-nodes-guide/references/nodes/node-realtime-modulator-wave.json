@@ -1,0 +1,179 @@
+{
+  "complexity": "basic",
+  "docs": "A low frequency oscillator. A sine wave.",
+  "familyName": "Realtime",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Playing",
+      "typeName": "isPlayingIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Time it takes for a wave to fully loop.",
+      "level": "external",
+      "name": "Duration",
+      "typeName": "durationIn",
+      "valueType": "raw:core:duration",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Scale",
+      "typeName": "scaleIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Offset",
+      "typeName": "offsetIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Offset in time.",
+      "level": "external",
+      "name": "Phase",
+      "typeName": "phaseIn",
+      "valueType": "raw:core:angle",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Reset",
+      "typeName": "resetIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Wave",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Wave",
+      "typeName": "waveOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modulator",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": true,
+      "inLetTypeName": "isPlayingIn",
+      "isHidden": false,
+      "name": "Playing",
+      "type": "variable",
+      "typeName": "isPlaying",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "durationIn",
+      "info": "Time it takes for a wave to fully loop.",
+      "isHidden": false,
+      "name": "Duration",
+      "type": "variable",
+      "typeName": "duration",
+      "valueType": "raw:core:duration"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "scaleIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Scale",
+      "type": "variable",
+      "typeName": "scale",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "offsetIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": -1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Offset",
+      "type": "variable",
+      "typeName": "offset",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "phaseIn",
+      "info": "Offset in time.",
+      "isHidden": false,
+      "name": "Phase",
+      "type": "variable",
+      "typeName": "phase",
+      "valueType": "raw:core:angle"
+    },
+    {
+      "isHidden": false,
+      "name": "Reset",
+      "type": "action",
+      "typeName": "reset"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Sine",
+    "LFO",
+    "Oscillator"
+  ],
+  "typePath": "node:realtime:modulator:wave",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/realtime/modulator/wave"
+}

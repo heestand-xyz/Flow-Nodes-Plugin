@@ -1,0 +1,259 @@
+{
+  "complexity": "advanced",
+  "docs": "A waveform is represented by a keyed list of keyframes with Float values. Combine multiple waveforms to create a complex wave. Animatable with the Interpolate node.",
+  "familyName": "Animation",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Value at the beginning.",
+      "level": "external",
+      "name": "Leading",
+      "typeName": "leadingIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Value at the end.",
+      "level": "external",
+      "name": "Trailing",
+      "typeName": "trailingIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Start Time",
+      "typeName": "startTimeIn",
+      "valueType": "raw:core:duration",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Duration",
+      "typeName": "durationIn",
+      "valueType": "raw:core:duration",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Frames per second.",
+      "level": "external",
+      "name": "Frame Rate",
+      "typeName": "frameRateIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Easing Iterations",
+      "typeName": "easingIterationsIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Include Ending Frame",
+      "typeName": "includeEndingFrameIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Waveform",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "lex",
+      "direction": "direct",
+      "keyType": "raw:core:keyframe",
+      "level": "external",
+      "name": "Waveform",
+      "typeName": "waveformOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "leadingIn",
+      "info": "Value at the beginning.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Leading",
+      "type": "variable",
+      "typeName": "leading",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "trailingIn",
+      "info": "Value at the end.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Trailing",
+      "type": "variable",
+      "typeName": "trailing",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "startTimeIn",
+      "isHidden": false,
+      "name": "Start Time",
+      "type": "variable",
+      "typeName": "startTime",
+      "valueType": "raw:core:duration"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "durationIn",
+      "isHidden": false,
+      "name": "Duration",
+      "type": "variable",
+      "typeName": "duration",
+      "valueType": "raw:core:duration"
+    },
+    {
+      "defaultValue": 60,
+      "inLetTypeName": "frameRateIn",
+      "info": "Frames per second.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 120,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Frame Rate",
+      "type": "variable",
+      "typeName": "frameRate",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Linear",
+        "typeName": "linear"
+      },
+      "enumCases": [
+        {
+          "name": "Linear",
+          "typeName": "linear"
+        },
+        {
+          "name": "Ease In",
+          "typeName": "easeIn"
+        },
+        {
+          "name": "Ease Out",
+          "typeName": "easeOut"
+        },
+        {
+          "name": "Ease In Out",
+          "typeName": "easeInOut"
+        }
+      ],
+      "isHidden": false,
+      "name": "Easing",
+      "type": "typedEnum",
+      "typeName": "easing"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "easingIterationsIn",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Easing Iterations",
+      "type": "variable",
+      "typeName": "easingIterations",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "includeEndingFrameIn",
+      "isHidden": false,
+      "name": "Include Ending Frame",
+      "type": "variable",
+      "typeName": "includeEndingFrame",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:animation:resource:waveform",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/animation/resource/waveform"
+}

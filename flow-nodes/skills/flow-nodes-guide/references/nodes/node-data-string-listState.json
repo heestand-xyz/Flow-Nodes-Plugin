@@ -1,0 +1,36 @@
+{
+  "complexity": "advanced",
+  "docs": "Store a list of Strings.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "List State",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Texts",
+      "typeName": "out",
+      "valueType": "raw:core:string",
+      "way": "out"
+    }
+  ],
+  "parentName": "String",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "Array",
+    "Texts"
+  ],
+  "typePath": "node:data:string:listState",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/string/listState"
+}

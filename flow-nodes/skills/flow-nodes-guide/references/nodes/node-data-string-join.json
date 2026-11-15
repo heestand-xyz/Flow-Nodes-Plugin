@@ -1,0 +1,80 @@
+{
+  "complexity": "basic",
+  "docs": "Join a list of Strings into one String, optionally separated by another string.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Texts",
+      "typeName": "in",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Separator",
+      "typeName": "separatorIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Include Empty",
+      "typeName": "includeEmptyIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Join",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Text",
+      "typeName": "out",
+      "valueType": "raw:core:string",
+      "way": "out"
+    }
+  ],
+  "parentName": "String",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": "",
+      "inLetTypeName": "separatorIn",
+      "isHidden": false,
+      "name": "Separator",
+      "type": "variable",
+      "typeName": "separator",
+      "valueType": "raw:core:string"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "includeEmptyIn",
+      "info": "Not omitting empty subsequences. (Only applicable for upstream reverse join a.k.a split)",
+      "isHidden": false,
+      "name": "Include Empty",
+      "type": "variable",
+      "typeName": "includeEmpty",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:string:join",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/string/join"
+}

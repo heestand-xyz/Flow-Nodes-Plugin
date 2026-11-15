@@ -1,0 +1,52 @@
+{
+  "complexity": "basic",
+  "docs": "Store a graphic.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Clear",
+      "typeName": "clearIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "State",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicBindingOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "isHidden": false,
+      "name": "Clear",
+      "type": "action",
+      "typeName": "clear"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "Image"
+  ],
+  "typePath": "node:graphic:resource:state",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/resource/state"
+}

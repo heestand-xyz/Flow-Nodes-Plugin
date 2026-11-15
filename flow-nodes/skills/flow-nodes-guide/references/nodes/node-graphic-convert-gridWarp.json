@@ -1,0 +1,205 @@
+{
+  "complexity": "advanced",
+  "docs": "Warp a graphic through a grid of points. Connect a List State Point node to edit points. The points are expected to be in row-major order.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Points",
+      "typeName": "pointsIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "X Count",
+      "typeName": "xCountIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Y Count",
+      "typeName": "yCountIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Subdivides the quads into even smaller quads for improved warping.",
+      "level": "external",
+      "name": "Subdivide",
+      "typeName": "subdivideIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Subdivisions per quad. A higher value increases the quality of the warp.",
+      "level": "external",
+      "name": "Subdivisions",
+      "typeName": "subdivisionsIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Uses diagonal intersection instead of averaging to determine each quad center.",
+      "level": "external",
+      "name": "Diagonal Intersection",
+      "typeName": "perspectiveIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Save Points",
+      "typeName": "savePointsIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Grid Warp",
+  "newInAppVersion": "4.1.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Convert",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 2,
+      "inLetTypeName": "xCountIn",
+      "isHidden": false,
+      "name": "X Count",
+      "type": "variable",
+      "typeName": "xCount",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": 2,
+      "inLetTypeName": "yCountIn",
+      "isHidden": false,
+      "name": "Y Count",
+      "type": "variable",
+      "typeName": "yCount",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Unit",
+        "typeName": "unit"
+      },
+      "enumCases": [
+        {
+          "name": "Unit",
+          "typeName": "unit"
+        },
+        {
+          "name": "Pixel",
+          "typeName": "pixel"
+        }
+      ],
+      "info": "How the input points are measured. Unit is between 0.0 and 1.0.",
+      "isHidden": false,
+      "name": "Coordinate Space",
+      "type": "typedEnum",
+      "typeName": "coordinateSpace"
+    },
+    {
+      "isHidden": false,
+      "name": "Save Points",
+      "type": "action",
+      "typeName": "savePoints"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "subdivideIn",
+      "info": "Subdivides the quads into even smaller quads for improved warping.",
+      "isHidden": false,
+      "name": "Subdivide",
+      "type": "variable",
+      "typeName": "subdivide",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 16,
+      "inLetTypeName": "subdivisionsIn",
+      "info": "Subdivisions per quad. A higher value increases the quality of the warp.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 32,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 4,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Subdivisions",
+      "type": "variable",
+      "typeName": "subdivisions",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "perspectiveIn",
+      "info": "Uses diagonal intersection instead of averaging to determine each quad center.",
+      "isHidden": true,
+      "name": "Diagonal Intersection",
+      "type": "variable",
+      "typeName": "perspective",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Warp",
+    "Grid",
+    "Deform",
+    "Mesh"
+  ],
+  "typePath": "node:graphic:convert:gridWarp",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/convert/gridWarp"
+}

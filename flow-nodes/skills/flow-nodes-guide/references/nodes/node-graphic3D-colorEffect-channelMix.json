@@ -1,0 +1,209 @@
+{
+  "complexity": "advanced",
+  "docs": "Mix red, green, blue and alpha channels.",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Channel Mix",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Color Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Red",
+        "typeName": "red"
+      },
+      "enumCases": [
+        {
+          "name": "Red",
+          "typeName": "red"
+        },
+        {
+          "name": "Green",
+          "typeName": "green"
+        },
+        {
+          "name": "Blue",
+          "typeName": "blue"
+        },
+        {
+          "name": "Alpha",
+          "typeName": "alpha"
+        },
+        {
+          "name": "Zero",
+          "typeName": "zero"
+        },
+        {
+          "name": "One",
+          "typeName": "one"
+        },
+        {
+          "name": "Luminance",
+          "typeName": "luminance"
+        }
+      ],
+      "info": "The source of the red channel.",
+      "isHidden": false,
+      "name": "Red",
+      "type": "stringEnum",
+      "typeName": "red"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Green",
+        "typeName": "green"
+      },
+      "enumCases": [
+        {
+          "name": "Red",
+          "typeName": "red"
+        },
+        {
+          "name": "Green",
+          "typeName": "green"
+        },
+        {
+          "name": "Blue",
+          "typeName": "blue"
+        },
+        {
+          "name": "Alpha",
+          "typeName": "alpha"
+        },
+        {
+          "name": "Zero",
+          "typeName": "zero"
+        },
+        {
+          "name": "One",
+          "typeName": "one"
+        },
+        {
+          "name": "Luminance",
+          "typeName": "luminance"
+        }
+      ],
+      "info": "The source of the green channel.",
+      "isHidden": false,
+      "name": "Green",
+      "type": "stringEnum",
+      "typeName": "green"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Blue",
+        "typeName": "blue"
+      },
+      "enumCases": [
+        {
+          "name": "Red",
+          "typeName": "red"
+        },
+        {
+          "name": "Green",
+          "typeName": "green"
+        },
+        {
+          "name": "Blue",
+          "typeName": "blue"
+        },
+        {
+          "name": "Alpha",
+          "typeName": "alpha"
+        },
+        {
+          "name": "Zero",
+          "typeName": "zero"
+        },
+        {
+          "name": "One",
+          "typeName": "one"
+        },
+        {
+          "name": "Luminance",
+          "typeName": "luminance"
+        }
+      ],
+      "info": "The source of the blue channel.",
+      "isHidden": false,
+      "name": "Blue",
+      "type": "stringEnum",
+      "typeName": "blue"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Alpha",
+        "typeName": "alpha"
+      },
+      "enumCases": [
+        {
+          "name": "Red",
+          "typeName": "red"
+        },
+        {
+          "name": "Green",
+          "typeName": "green"
+        },
+        {
+          "name": "Blue",
+          "typeName": "blue"
+        },
+        {
+          "name": "Alpha",
+          "typeName": "alpha"
+        },
+        {
+          "name": "Zero",
+          "typeName": "zero"
+        },
+        {
+          "name": "One",
+          "typeName": "one"
+        },
+        {
+          "name": "Luminance",
+          "typeName": "luminance"
+        }
+      ],
+      "info": "The source of the alpha channel.",
+      "isHidden": false,
+      "name": "Alpha",
+      "type": "stringEnum",
+      "typeName": "alpha"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Swizzle"
+  ],
+  "typePath": "node:graphic3D:colorEffect:channelMix",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/colorEffect/channelMix"
+}

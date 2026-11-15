@@ -1,0 +1,54 @@
+{
+  "complexity": "basic",
+  "docs": "Store a lookup.",
+  "familyName": "Lookup",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Clear",
+      "typeName": "clearIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "State",
+  "newInAppVersion": "27.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Lookup",
+      "typeName": "lookupBindingOut",
+      "valueType": "raw:lookup",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "info": "Removes the stored lookup from the node.",
+      "isHidden": false,
+      "name": "Clear",
+      "type": "action",
+      "typeName": "clear"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "LUT",
+    "Lookup"
+  ],
+  "typePath": "node:lookup:resource:state",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/lookup/resource/state"
+}

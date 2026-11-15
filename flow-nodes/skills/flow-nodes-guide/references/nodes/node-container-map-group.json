@@ -1,0 +1,22 @@
+{
+  "complexity": "basic",
+  "docs": "Group nodes together for organization.",
+  "familyName": "Container",
+  "inLets": [],
+  "isPro": false,
+  "name": "Group",
+  "newInAppVersion": "1.0.0",
+  "outLets": [],
+  "parentName": "Map",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:container:map:group",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/container/map/group"
+}

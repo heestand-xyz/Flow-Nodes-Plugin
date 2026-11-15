@@ -1,0 +1,47 @@
+{
+  "complexity": "advanced",
+  "docs": "Create a particle field from a list of 3D points.",
+  "familyName": "3D Spatial",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Points",
+      "typeName": "pointsIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Particles from Points",
+  "newInAppVersion": "4.3.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Field",
+      "typeName": "fieldOut",
+      "valueType": "raw:field",
+      "way": "out"
+    }
+  ],
+  "parentName": "Field",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Points",
+    "Particles",
+    "Position",
+    "Field"
+  ],
+  "typePath": "node:spatial:field:particlesFromPoints",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/spatial/field/particlesFromPoints"
+}

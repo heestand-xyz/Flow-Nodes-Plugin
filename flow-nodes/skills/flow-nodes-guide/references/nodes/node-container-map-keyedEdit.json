@@ -1,0 +1,80 @@
+{
+  "complexity": "advanced",
+  "docs": "Edit key and value in keyed list.",
+  "familyName": "Container",
+  "inLets": [
+    {
+      "capacity": "lex",
+      "direction": "binding",
+      "keyType": "generic",
+      "level": "external",
+      "name": "Values",
+      "typeName": "inputValuesIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "internal",
+      "name": "Key",
+      "typeName": "inputKeyIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "internal",
+      "name": "Value",
+      "typeName": "inputValueIn",
+      "valueType": "generic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Keyed Edit",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "internal",
+      "name": "Key",
+      "typeName": "outputKeyOut",
+      "valueType": "generic",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "internal",
+      "name": "Value",
+      "typeName": "outputValueOut",
+      "valueType": "generic",
+      "way": "out"
+    },
+    {
+      "capacity": "lex",
+      "direction": "binding",
+      "keyType": "generic",
+      "level": "external",
+      "name": "Values",
+      "typeName": "outputValuesOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Map",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:container:map:keyedEdit",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/container/map/keyedEdit"
+}

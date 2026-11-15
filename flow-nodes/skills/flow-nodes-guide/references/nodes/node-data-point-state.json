@@ -1,0 +1,46 @@
+{
+  "complexity": "basic",
+  "docs": "Store a Point.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "State",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "raw:core:point",
+      "way": "out"
+    }
+  ],
+  "parentName": "Point",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": [
+        0,
+        0
+      ],
+      "isHidden": false,
+      "name": "Value",
+      "type": "value",
+      "typeName": "value",
+      "valueType": "raw:core:point"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store"
+  ],
+  "typePath": "node:data:point:state",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/point/state"
+}

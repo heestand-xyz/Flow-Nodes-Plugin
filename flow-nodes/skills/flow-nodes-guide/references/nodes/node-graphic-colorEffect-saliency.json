@@ -1,0 +1,103 @@
+{
+  "complexity": "advanced",
+  "docs": "Detect attention or objectness of a graphic, as a monochrome heat map.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Keep Resolution",
+      "typeName": "keepResolutionIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Saliency",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Color Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Attention",
+        "typeName": "attention"
+      },
+      "enumCases": [
+        {
+          "name": "Attention",
+          "typeName": "attention"
+        },
+        {
+          "name": "Objectness",
+          "typeName": "objectness"
+        }
+      ],
+      "info": "The saliency type defines the strategy used to estimate visual importance in an image, attention for relevance weighting and objectness for detecting potential object regions.",
+      "isHidden": false,
+      "name": "Saliency Type",
+      "type": "stringEnum",
+      "typeName": "saliencyType"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "keepResolutionIn",
+      "info": "Keep the same resolution as the input, by scaling up the output.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": true,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": false,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Keep Resolution",
+      "type": "variable",
+      "typeName": "keepResolution",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Attention",
+    "Objectness",
+    "Heat Map"
+  ],
+  "typePath": "node:graphic:colorEffect:saliency",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/colorEffect/saliency"
+}

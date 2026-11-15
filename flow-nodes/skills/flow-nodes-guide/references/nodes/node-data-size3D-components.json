@@ -1,0 +1,60 @@
+{
+  "complexity": "basic",
+  "docs": "Get the width, height and depth Float components of a 3D Size.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "in",
+      "valueType": "raw:core:size3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Components",
+  "newInAppVersion": "1.3.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Width",
+      "typeName": "widthOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Height",
+      "typeName": "heightOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Depth",
+      "typeName": "depthOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    }
+  ],
+  "parentName": "3D Size",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:size3D:components",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/size3D/components"
+}

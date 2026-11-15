@@ -1,0 +1,53 @@
+{
+  "complexity": "basic",
+  "docs": "Construct a Rect from an origin (top left) and a size.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Origin",
+      "typeName": "originIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Size",
+      "typeName": "sizeIn",
+      "valueType": "raw:core:size",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Construct",
+  "newInAppVersion": "1.7.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "raw:core:rect",
+      "way": "out"
+    }
+  ],
+  "parentName": "Rect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Frame"
+  ],
+  "typePath": "node:data:rect:construct",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/rect/construct"
+}

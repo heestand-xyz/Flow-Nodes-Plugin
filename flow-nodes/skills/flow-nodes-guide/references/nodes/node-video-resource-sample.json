@@ -1,0 +1,90 @@
+{
+  "complexity": "advanced",
+  "docs": "Sample a graphic from a video at a specific frame index. This can be used to seek in a video.",
+  "familyName": "Video",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Video",
+      "typeName": "videoIn",
+      "valueType": "raw:video",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Frame Index",
+      "typeName": "frameIndexIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "links": [
+    {
+      "title": "Guide",
+      "url": "https://flownodes.notion.site/Video-Guide-20a9a07f8bd9809394aae6ece4cf2500"
+    }
+  ],
+  "name": "Sample",
+  "newInAppVersion": "1.5.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "frameIndexIn",
+      "info": "The frame position to sample. 0 is the first frame.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Frame Index",
+      "type": "variable",
+      "typeName": "frameIndex",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacedByTypePath": "node:video:resource:sample2",
+  "replacesTypePaths": [],
+  "tags": [
+    "Frame",
+    "Capture",
+    "Seek",
+    "Scrub"
+  ],
+  "typePath": "node:video:resource:sample",
+  "isVisible": false,
+  "sourceRoute": "/docs/nodes/video/resource/sample"
+}

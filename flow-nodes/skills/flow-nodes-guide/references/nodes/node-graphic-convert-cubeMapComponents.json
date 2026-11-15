@@ -1,0 +1,95 @@
+{
+  "complexity": "advanced",
+  "docs": "Crop the six faces out of a cube map, a horizontal cross in a 4x3 atlas. Each face is a quarter of the width and a third of the height, seen from the outside of the cube. The opposite of Cube Map Construct.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Cube Map",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "Cube Map Components",
+  "newInAppVersion": "27.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Front",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Back",
+      "typeName": "backGraphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Left",
+      "typeName": "leftGraphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Right",
+      "typeName": "rightGraphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Top",
+      "typeName": "topGraphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Bottom",
+      "typeName": "bottomGraphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Convert",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Cube",
+    "Cube Map",
+    "Atlas",
+    "Cross",
+    "Skybox",
+    "Faces",
+    "Split"
+  ],
+  "typePath": "node:graphic:convert:cubeMapComponents",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/convert/cubeMapComponents"
+}

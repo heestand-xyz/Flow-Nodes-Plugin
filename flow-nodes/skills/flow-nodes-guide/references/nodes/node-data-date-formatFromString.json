@@ -1,0 +1,69 @@
+{
+  "complexity": "advanced",
+  "docs": "Format a date from a string.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Formatted",
+      "typeName": "formattedIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Format",
+      "typeName": "formatIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "links": [
+    {
+      "title": "Date Formats",
+      "url": "https://www.nsdateformatter.com"
+    }
+  ],
+  "name": "Format from String",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Date",
+      "typeName": "dateOut",
+      "valueType": "raw:core:date",
+      "way": "out"
+    }
+  ],
+  "parentName": "Date",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": "yyyy-MM-dd HH:mm:ss",
+      "inLetTypeName": "formatIn",
+      "isHidden": false,
+      "name": "Format",
+      "type": "variable",
+      "typeName": "format",
+      "valueType": "raw:core:string"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Time"
+  ],
+  "typePath": "node:data:date:formatFromString",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/date/formatFromString"
+}

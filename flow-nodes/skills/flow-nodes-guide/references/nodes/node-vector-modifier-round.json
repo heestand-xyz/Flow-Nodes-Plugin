@@ -1,0 +1,80 @@
+{
+  "complexity": "advanced",
+  "docs": "Round corners of a Vector shape. (This node is a bit experimental, and does not work in all cases)",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "in",
+      "valueType": "raw:vector",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Corner Radius",
+      "typeName": "cornerRadiusIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Round",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "out",
+      "valueType": "raw:vector",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "cornerRadiusIn",
+      "isHidden": false,
+      "minimumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "fixed": {
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Corner Radius",
+      "type": "variable",
+      "typeName": "cornerRadius",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Corner Radius"
+  ],
+  "typePath": "node:vector:modifier:round",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/modifier/round"
+}

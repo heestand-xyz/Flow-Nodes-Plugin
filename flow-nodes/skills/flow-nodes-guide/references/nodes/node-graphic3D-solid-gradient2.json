@@ -1,0 +1,411 @@
+{
+  "complexity": "basic",
+  "docs": "Creates a gradient from Color Stops, falling back to Gradient when the inlet is disconnected.",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "lex",
+      "direction": "direct",
+      "keyType": "raw:core:float",
+      "level": "external",
+      "name": "Color Stops",
+      "typeName": "colorStopsIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Resolution",
+      "typeName": "outputResolutionIn",
+      "valueType": "raw:core:size3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Position",
+      "typeName": "positionIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Scale",
+      "typeName": "scaleIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Offset",
+      "typeName": "offsetIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Gamma",
+      "typeName": "gammaIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Multiply RGB by alpha for compositing. Turn off for straight alpha.",
+      "level": "external",
+      "name": "Premultiply",
+      "typeName": "premultiplyIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Gradient",
+  "newInAppVersion": "27.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic3D",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Solid",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "depth": 100,
+        "height": 100,
+        "width": 100
+      },
+      "inLetTypeName": "outputResolutionIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": {
+          "depth": 256,
+          "height": 256,
+          "width": 256
+        },
+        "coreType": "size3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": {
+          "depth": 1,
+          "height": 1,
+          "width": 1
+        },
+        "coreType": "size3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Resolution",
+      "type": "variable",
+      "typeName": "outputResolution",
+      "valueType": "raw:core:size3D"
+    },
+    {
+      "defaultValue": {
+        "depth": 100,
+        "height": 100,
+        "width": 100
+      },
+      "isHidden": true,
+      "maximumValue": {
+        "type": "value",
+        "value": {
+          "depth": 256,
+          "height": 256,
+          "width": 256
+        },
+        "valueType": {
+          "raw": {
+            "_0": {
+              "core": {
+                "_0": "size3D"
+              }
+            }
+          }
+        }
+      },
+      "minimumValue": {
+        "type": "value",
+        "value": {
+          "depth": 1,
+          "height": 1,
+          "width": 1
+        },
+        "valueType": {
+          "raw": {
+            "_0": {
+              "core": {
+                "_0": "size3D"
+              }
+            }
+          }
+        }
+      },
+      "name": "Resolution",
+      "type": "value",
+      "typeName": "resolution",
+      "valueType": "raw:core:size3D"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "8 Bit",
+        "typeName": "bit8"
+      },
+      "enumCases": [
+        {
+          "name": "8 Bit",
+          "typeName": "bit8"
+        },
+        {
+          "name": "16 Bit",
+          "typeName": "bit16"
+        },
+        {
+          "name": "32 Bit",
+          "typeName": "bit32"
+        }
+      ],
+      "isHidden": false,
+      "name": "Bits",
+      "type": "typedEnum",
+      "typeName": "bits"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Y",
+        "typeName": "y"
+      },
+      "enumCases": [
+        {
+          "name": "X",
+          "typeName": "x"
+        },
+        {
+          "name": "Y",
+          "typeName": "y"
+        },
+        {
+          "name": "Z",
+          "typeName": "z"
+        },
+        {
+          "name": "Radial",
+          "typeName": "radial"
+        }
+      ],
+      "isHidden": false,
+      "name": "Direction",
+      "type": "typedEnum",
+      "typeName": "direction"
+    },
+    {
+      "isHidden": false,
+      "name": "Gradient",
+      "type": "item",
+      "typeName": "gradient"
+    },
+    {
+      "defaultValue": {
+        "x": 50,
+        "y": 50,
+        "z": 50
+      },
+      "inLetTypeName": "positionIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": {
+          "x": 100,
+          "y": 100,
+          "z": 100
+        },
+        "coreType": "point3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "coreType": "point3D",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Position",
+      "type": "variable",
+      "typeName": "position",
+      "valueType": "raw:core:point3D"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "scaleIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Scale",
+      "type": "variable",
+      "typeName": "scale",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "offsetIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": -1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Offset",
+      "type": "variable",
+      "typeName": "offset",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "gammaIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Gamma",
+      "type": "variable",
+      "typeName": "gamma",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Zero",
+        "typeName": "transparent"
+      },
+      "enumCases": [
+        {
+          "name": "Zero",
+          "typeName": "transparent"
+        },
+        {
+          "name": "Loop",
+          "typeName": "loop"
+        },
+        {
+          "name": "Mirror",
+          "typeName": "mirror"
+        },
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        }
+      ],
+      "isHidden": false,
+      "name": "Extend Mode",
+      "type": "typedEnum",
+      "typeName": "extend"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "premultiplyIn",
+      "info": "Multiply RGB by alpha for compositing. Turn off for straight alpha.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": true,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": false,
+        "coreType": "bool",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Premultiply",
+      "type": "variable",
+      "typeName": "premultiply",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [
+    "node:graphic3D:solid:gradient"
+  ],
+  "tags": [
+    "Gradient",
+    "Color Stops"
+  ],
+  "typePath": "node:graphic3D:solid:gradient2",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/solid/gradient2"
+}

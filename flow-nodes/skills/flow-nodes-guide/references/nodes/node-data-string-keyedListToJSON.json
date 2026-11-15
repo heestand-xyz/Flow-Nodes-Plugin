@@ -1,0 +1,146 @@
+{
+  "complexity": "advanced",
+  "docs": "Combine keys and values into a JSON string.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "lex",
+      "direction": "binding",
+      "keyType": "raw:core:string",
+      "level": "external",
+      "name": "Values",
+      "supportedGenericRawTypes": [
+        "core:angle",
+        "core:angle3D",
+        "core:bool",
+        "core:camera",
+        "core:color",
+        "core:date",
+        "core:duration",
+        "core:float",
+        "core:int",
+        "core:keyframe",
+        "core:light",
+        "core:point",
+        "core:point3D",
+        "core:quaternion",
+        "core:rect",
+        "core:rect3D",
+        "core:size",
+        "core:size3D",
+        "core:string",
+        "core:transform",
+        "core:transform3D",
+        "core:vectorPoint",
+        "core:vectorPoint3D",
+        "core:vertex"
+      ],
+      "typeName": "valuesIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Pretty Printed",
+      "typeName": "prettyPrintedIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Sorted Keys",
+      "typeName": "sortedKeysIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Without Escaping Slashes",
+      "typeName": "withoutEscapingSlashesIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "When the input values are already JSON strings. This will skip re-encoding the values.",
+      "level": "external",
+      "name": "Values are JSON",
+      "typeName": "valuesAreJSONIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Keyed List to JSON",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "JSON",
+      "typeName": "jsonOut",
+      "valueType": "raw:core:string",
+      "way": "out"
+    }
+  ],
+  "parentName": "String",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": true,
+      "inLetTypeName": "prettyPrintedIn",
+      "isHidden": false,
+      "name": "Pretty Printed",
+      "type": "variable",
+      "typeName": "prettyPrinted",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "sortedKeysIn",
+      "isHidden": false,
+      "name": "Sorted Keys",
+      "type": "variable",
+      "typeName": "sortedKeys",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "withoutEscapingSlashesIn",
+      "isHidden": false,
+      "name": "Without Escaping Slashes",
+      "type": "variable",
+      "typeName": "withoutEscapingSlashes",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "valuesAreJSONIn",
+      "info": "When the input values are already JSON strings. This will skip re-encoding the values.",
+      "isHidden": false,
+      "name": "Values are JSON",
+      "type": "variable",
+      "typeName": "valuesAreJSON",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Dictionary"
+  ],
+  "typePath": "node:data:string:keyedListToJSON",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/string/keyedListToJSON"
+}

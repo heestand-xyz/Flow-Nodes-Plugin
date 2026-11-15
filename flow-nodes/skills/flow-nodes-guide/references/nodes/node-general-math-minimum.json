@@ -1,0 +1,44 @@
+{
+  "complexity": "basic",
+  "docs": "Return the minimum value from a list of values.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Values",
+      "typeName": "valuesIn",
+      "valueType": "generic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Minimum",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Math",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Min"
+  ],
+  "typePath": "node:general:math:minimum",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/math/minimum"
+}

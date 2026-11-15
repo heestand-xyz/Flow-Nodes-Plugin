@@ -1,0 +1,57 @@
+{
+  "complexity": "basic",
+  "docs": "Measure the time duration between two dates.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Reference Date",
+      "typeName": "leadingDateIn",
+      "valueType": "raw:core:date",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Target Date",
+      "typeName": "trailingDateIn",
+      "valueType": "raw:core:date",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Duration",
+  "newInAppVersion": "2.2.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Duration",
+      "typeName": "durationOut",
+      "valueType": "raw:core:duration",
+      "way": "out"
+    }
+  ],
+  "parentName": "Date",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [
+    "node:data:date:distance"
+  ],
+  "tags": [
+    "Seconds",
+    "Time",
+    "Distance"
+  ],
+  "typePath": "node:data:date:duration",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/date/duration"
+}

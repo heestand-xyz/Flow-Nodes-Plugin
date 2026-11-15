@@ -1,0 +1,217 @@
+{
+  "complexity": "advanced",
+  "docs": "Convert a vector shape to a view.",
+  "familyName": "Interface",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "vectorIn",
+      "valueType": "raw:vector",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Stroked",
+      "typeName": "isStrokedIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Line Width",
+      "typeName": "lineWidthIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Stroked",
+      "typeName": "isDashedIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Dash Length",
+      "typeName": "dashLengthIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Dash Phase",
+      "typeName": "dashPhaseIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Convert from Vector",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewOut",
+      "valueType": "raw:view",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": false,
+      "inLetTypeName": "isStrokedIn",
+      "isHidden": false,
+      "name": "Stroked",
+      "type": "variable",
+      "typeName": "stroked",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "lineWidthIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 10,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Line Width",
+      "type": "variable",
+      "typeName": "lineWidth",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 10,
+      "isHidden": false,
+      "maximumValue": {
+        "type": "value",
+        "value": 10,
+        "valueType": {
+          "raw": {
+            "_0": {
+              "core": {
+                "_0": "float"
+              }
+            }
+          }
+        }
+      },
+      "minimumValue": {
+        "type": "value",
+        "value": 0,
+        "valueType": {
+          "raw": {
+            "_0": {
+              "core": {
+                "_0": "float"
+              }
+            }
+          }
+        }
+      },
+      "name": "Miter Limit",
+      "type": "value",
+      "typeName": "miterLimit",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "isDashedIn",
+      "isHidden": false,
+      "name": "Dashed",
+      "type": "variable",
+      "typeName": "dashed",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 10,
+      "inLetTypeName": "dashLengthIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Dash Length",
+      "type": "variable",
+      "typeName": "dashLength",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "dashPhaseIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Dash Phase",
+      "type": "variable",
+      "typeName": "dashPhase",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Shape"
+  ],
+  "typePath": "node:interface:resource:convertFromVector",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/interface/resource/convertFromVector"
+}

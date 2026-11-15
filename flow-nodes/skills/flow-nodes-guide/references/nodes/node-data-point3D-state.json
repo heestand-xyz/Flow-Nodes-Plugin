@@ -1,0 +1,47 @@
+{
+  "complexity": "basic",
+  "docs": "Store a 3D Point.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "State",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "raw:core:point3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "3D Point",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "isHidden": false,
+      "name": "Value",
+      "type": "value",
+      "typeName": "value",
+      "valueType": "raw:core:point3D"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store"
+  ],
+  "typePath": "node:data:point3D:state",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/point3D/state"
+}

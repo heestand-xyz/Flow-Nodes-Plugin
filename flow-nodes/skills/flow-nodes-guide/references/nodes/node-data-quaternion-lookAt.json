@@ -1,0 +1,130 @@
+{
+  "complexity": "advanced",
+  "docs": "A rotation looking at a point.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The location of the source of the perspective.",
+      "level": "external",
+      "name": "Eye",
+      "typeName": "eyeIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The location of the target that the source is looking at.",
+      "level": "external",
+      "name": "Target",
+      "typeName": "targetIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "What direction is up. (Default is standard)",
+      "level": "external",
+      "name": "Up",
+      "typeName": "upIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "What direction is forward. (Default is standard)",
+      "level": "external",
+      "name": "Forward",
+      "typeName": "forwardIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Look At",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Rotation",
+      "typeName": "rotationOut",
+      "valueType": "raw:core:quaternion",
+      "way": "out"
+    }
+  ],
+  "parentName": "Quaternion",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "inLetTypeName": "eyeIn",
+      "info": "The location of the source of the perspective.",
+      "isHidden": false,
+      "name": "Eye",
+      "type": "variable",
+      "typeName": "eye",
+      "valueType": "raw:core:point3D"
+    },
+    {
+      "defaultValue": {
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "inLetTypeName": "targetIn",
+      "info": "The location of the target that the source is looking at.",
+      "isHidden": false,
+      "name": "Target",
+      "type": "variable",
+      "typeName": "target",
+      "valueType": "raw:core:point3D"
+    },
+    {
+      "defaultValue": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "inLetTypeName": "upIn",
+      "info": "What direction is up. (Default is standard)",
+      "isHidden": false,
+      "name": "Up",
+      "type": "variable",
+      "typeName": "up",
+      "valueType": "raw:core:point3D"
+    },
+    {
+      "defaultValue": {
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "inLetTypeName": "forwardIn",
+      "info": "What direction is forward. (Default is standard)",
+      "isHidden": false,
+      "name": "Forward",
+      "type": "variable",
+      "typeName": "forward",
+      "valueType": "raw:core:point3D"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:quaternion:lookAt",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/quaternion/lookAt"
+}

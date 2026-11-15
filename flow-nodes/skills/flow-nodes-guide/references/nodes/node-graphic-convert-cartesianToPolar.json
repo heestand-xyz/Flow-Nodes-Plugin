@@ -1,0 +1,71 @@
+{
+  "complexity": "advanced",
+  "docs": "Unwrap the circle at the center of a graphic into polar coordinates, keeping the resolution. The horizontal axis is a full turn from the start angle, going clockwise. The vertical axis is the radius, the top is the center and the bottom is half the height out.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The angle at the leading edge of the result. Zero points right and the turn goes clockwise.",
+      "level": "external",
+      "name": "Start Angle",
+      "typeName": "startAngleIn",
+      "valueType": "raw:core:angle",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "Cartesian to Polar",
+  "newInAppVersion": "27.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Convert",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "startAngleIn",
+      "info": "The angle at the leading edge of the result. Zero points right and the turn goes clockwise.",
+      "isHidden": false,
+      "name": "Start Angle",
+      "type": "variable",
+      "typeName": "startAngle",
+      "valueType": "raw:core:angle"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Polar",
+    "Cartesian",
+    "Radial",
+    "Coordinates",
+    "Unwrap",
+    "Circle",
+    "360"
+  ],
+  "typePath": "node:graphic:convert:cartesianToPolar",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/convert/cartesianToPolar"
+}

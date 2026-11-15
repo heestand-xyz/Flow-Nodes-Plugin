@@ -1,0 +1,53 @@
+{
+  "complexity": "basic",
+  "docs": "Get the origin (top, left, far) and size components of a 3D Rect.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "in",
+      "valueType": "raw:core:rect3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Components",
+  "newInAppVersion": "1.7.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Origin",
+      "typeName": "originOut",
+      "valueType": "raw:core:point3D",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Size",
+      "typeName": "sizeOut",
+      "valueType": "raw:core:size3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "3D Rect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Frame"
+  ],
+  "typePath": "node:data:rect3D:components",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/rect3D/components"
+}

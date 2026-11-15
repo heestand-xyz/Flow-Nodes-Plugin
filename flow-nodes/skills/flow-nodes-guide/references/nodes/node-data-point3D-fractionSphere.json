@@ -1,0 +1,152 @@
+{
+  "complexity": "basic",
+  "docs": "A circle of points. Based on a spacing and offset.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Center",
+      "typeName": "centerIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Radius",
+      "typeName": "radiusIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Rotation",
+      "typeName": "rotationIn",
+      "valueType": "raw:core:angle3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The angle between each longitude line and also between each latitude line.",
+      "level": "external",
+      "name": "Spacing",
+      "typeName": "spacingIn",
+      "valueType": "raw:core:angle",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Ignores overlapping points.",
+      "level": "external",
+      "name": "Optimize",
+      "typeName": "optimizeIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Fraction Sphere",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Points",
+      "typeName": "pointsOut",
+      "valueType": "raw:core:point3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "3D Point",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "inLetTypeName": "centerIn",
+      "isHidden": false,
+      "name": "Center",
+      "type": "variable",
+      "typeName": "center",
+      "valueType": "raw:core:point3D"
+    },
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "radiusIn",
+      "isHidden": false,
+      "name": "Radius",
+      "type": "variable",
+      "typeName": "radius",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "inLetTypeName": "rotationIn",
+      "isHidden": false,
+      "name": "Rotation",
+      "type": "variable",
+      "typeName": "rotation",
+      "valueType": "raw:core:angle3D"
+    },
+    {
+      "defaultValue": 0.5235987755982988,
+      "inLetTypeName": "spacingIn",
+      "info": "The angle between each longitude line and also between each latitude line.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1.0471975511965976,
+        "coreType": "angle",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0.17453292519943295,
+        "coreType": "angle",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Spacing",
+      "type": "variable",
+      "typeName": "spacing",
+      "valueType": "raw:core:angle"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "optimizeIn",
+      "info": "Ignores overlapping points.",
+      "isHidden": false,
+      "name": "Optimize",
+      "type": "variable",
+      "typeName": "optimize",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:point3D:fractionSphere",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/point3D/fractionSphere"
+}

@@ -1,0 +1,314 @@
+{
+  "complexity": "advanced",
+  "docs": "Calibrate a perspective camera from matching 3D and 2D points and live-write updates to a connected camera binding while optimization is running.",
+  "familyName": "3D Spatial",
+  "inLets": [
+    {
+      "capacity": "lex",
+      "direction": "direct",
+      "keyType": "raw:core:point3D",
+      "level": "external",
+      "name": "Points",
+      "typeName": "pointsIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Camera",
+      "typeName": "cameraBindingIn",
+      "valueType": "raw:core:camera",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Render resolution used to convert normalized projection into pixel coordinates.",
+      "level": "external",
+      "name": "Resolution",
+      "typeName": "resolutionIn",
+      "valueType": "raw:core:size",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Maximum optimization iterations.",
+      "level": "external",
+      "name": "Passes",
+      "typeName": "passesIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Early-stop threshold for mean squared reprojection error (pixels²).",
+      "level": "external",
+      "name": "Accuracy",
+      "typeName": "accuracyIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Optimization step size used for each pass.",
+      "level": "external",
+      "name": "Learning Rate",
+      "typeName": "learningRateIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Near clip plane of the camera.",
+      "level": "external",
+      "name": "Near",
+      "typeName": "nearIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Far clip plane of the camera.",
+      "level": "external",
+      "name": "Far",
+      "typeName": "farIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Calibrate",
+      "typeName": "calibrateActionIn",
+      "valueType": "raw:action",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Cancel",
+      "typeName": "cancelActionIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "Calibration",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Pass Count",
+      "typeName": "passCountOut",
+      "valueType": "raw:core:int",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Is Calibrating",
+      "typeName": "isCalibratingOut",
+      "valueType": "raw:core:bool",
+      "way": "out"
+    }
+  ],
+  "parentName": "Camera",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": [
+        1920,
+        1080
+      ],
+      "inLetTypeName": "resolutionIn",
+      "info": "Render resolution used to convert normalized projection into pixel coordinates.",
+      "isHidden": false,
+      "minimumValue": {
+        "constantValue": [
+          1,
+          1
+        ],
+        "coreType": "size",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Resolution",
+      "type": "variable",
+      "typeName": "resolution",
+      "valueType": "raw:core:size"
+    },
+    {
+      "defaultValue": 500,
+      "inLetTypeName": "passesIn",
+      "info": "Maximum optimization iterations.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1000,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Passes",
+      "type": "variable",
+      "typeName": "passes",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "accuracyIn",
+      "info": "Early-stop threshold for mean squared reprojection error (pixels²).",
+      "isHidden": false,
+      "minimumValue": {
+        "constantValue": 0.0001,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Accuracy",
+      "type": "variable",
+      "typeName": "accuracy",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0.05,
+      "inLetTypeName": "learningRateIn",
+      "info": "Optimization step size used for each pass.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 0.1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Learning Rate",
+      "type": "variable",
+      "typeName": "learningRate",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0.001,
+      "inLetTypeName": "nearIn",
+      "info": "Near clip plane of the camera.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1000,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0.001,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Near",
+      "type": "variable",
+      "typeName": "near",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 1000,
+      "inLetTypeName": "farIn",
+      "info": "Far clip plane of the camera.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1000,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0.001,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Far",
+      "type": "variable",
+      "typeName": "far",
+      "valueType": "raw:core:float"
+    },
+    {
+      "isHidden": false,
+      "name": "Calibrate",
+      "type": "action",
+      "typeName": "calibrateAction"
+    },
+    {
+      "isHidden": true,
+      "name": "Cancel",
+      "type": "action",
+      "typeName": "cancelAction"
+    },
+    {
+      "isHidden": true,
+      "name": "Status",
+      "type": "label",
+      "typeName": "status"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Camera",
+    "Calibration",
+    "Calibrate",
+    "Mapping",
+    "3D",
+    "FOV",
+    "Perspective",
+    "Kantan",
+    "Mapper"
+  ],
+  "typePath": "node:spatial:camera:calibration",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/spatial/camera/calibration"
+}

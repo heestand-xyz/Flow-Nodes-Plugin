@@ -1,0 +1,48 @@
+{
+  "complexity": "basic",
+  "docs": "Relay a Vector Point value.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueIn",
+      "valueType": "raw:core:vectorPoint",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Relay",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueOut",
+      "valueType": "raw:core:vectorPoint",
+      "way": "out"
+    }
+  ],
+  "parentName": "Vector Point",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Relay",
+    "Vector",
+    "Bezier",
+    "Nil",
+    "Null"
+  ],
+  "typePath": "node:data:vectorPoint:relay",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/vectorPoint/relay"
+}

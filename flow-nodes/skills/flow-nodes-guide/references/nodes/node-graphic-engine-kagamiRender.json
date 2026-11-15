@@ -1,0 +1,358 @@
+{
+  "complexity": "advanced",
+  "docs": "Render 3D entities, including Gaussian splats, to a graphic in realtime. Provide at least one camera among the entities to render from. Gaussian splats appear in color output and depth-test against opaque geometry, but are currently excluded from depth output.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Entities",
+      "typeName": "entitiesIn",
+      "valueType": "raw:entity",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Resolution",
+      "typeName": "resolutionIn",
+      "valueType": "raw:core:size",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Background Color",
+      "typeName": "backgroundColorIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Dither",
+      "typeName": "ditherIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Maximum number of transparent mesh material layers.",
+      "level": "external",
+      "name": "Opacity Layer Count",
+      "typeName": "opacityLayerCountIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Wireframe",
+      "typeName": "wireframeIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Render opaque scene depth. Gaussian splats are currently excluded. Black is near, white is far.",
+      "level": "external",
+      "name": "Depth",
+      "typeName": "depthIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Normalize the depth based on content, to be more visible.",
+      "level": "external",
+      "name": "Normalize Depth",
+      "typeName": "normalizeDepthIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Size of particles.",
+      "level": "external",
+      "name": "Point Size",
+      "typeName": "pointSizeIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "If multiple cameras exist among the entities, use this to select which camera to render from.",
+      "level": "external",
+      "name": "Camera Index",
+      "typeName": "cameraIndexIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "3D Render",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Engine",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": [
+        1000,
+        1000
+      ],
+      "inLetTypeName": "resolutionIn",
+      "isHidden": false,
+      "name": "Resolution",
+      "type": "variable",
+      "typeName": "resolution",
+      "valueType": "raw:core:size"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "8 Bit",
+        "typeName": "bit8"
+      },
+      "enumCases": [
+        {
+          "name": "8 Bit",
+          "typeName": "bit8"
+        },
+        {
+          "name": "16 Bit",
+          "typeName": "bit16"
+        },
+        {
+          "name": "32 Bit",
+          "typeName": "bit32"
+        }
+      ],
+      "info": "Higher bits will preserve high dynamic range colors.",
+      "isHidden": false,
+      "name": "Bits",
+      "type": "typedEnum",
+      "typeName": "bits"
+    },
+    {
+      "defaultValue": {
+        "blue": 0,
+        "green": 0,
+        "opacity": 0,
+        "red": 0
+      },
+      "inLetTypeName": "backgroundColorIn",
+      "isHidden": false,
+      "name": "Background Color",
+      "type": "variable",
+      "typeName": "backgroundColor",
+      "valueType": "raw:core:color"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "One",
+        "typeName": "one"
+      },
+      "enumCases": [
+        {
+          "name": "One",
+          "typeName": "one"
+        },
+        {
+          "name": "Two",
+          "typeName": "two"
+        },
+        {
+          "name": "Four",
+          "typeName": "four"
+        }
+      ],
+      "isHidden": false,
+      "name": "Sample Count",
+      "type": "typedEnum",
+      "typeName": "sampleCount"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "One",
+        "typeName": "one"
+      },
+      "enumCases": [
+        {
+          "name": "One",
+          "typeName": "one"
+        },
+        {
+          "name": "Two",
+          "typeName": "two"
+        },
+        {
+          "name": "Four",
+          "typeName": "four"
+        }
+      ],
+      "isHidden": false,
+      "name": "Voxel Sample Count",
+      "type": "typedEnum",
+      "typeName": "voxelSampleCount"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "ditherIn",
+      "isHidden": false,
+      "name": "Dither",
+      "type": "variable",
+      "typeName": "dither",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 5,
+      "inLetTypeName": "opacityLayerCountIn",
+      "info": "Maximum number of transparent mesh material layers.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 10,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Opacity Layer Count",
+      "type": "variable",
+      "typeName": "opacityLayerCount",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "wireframeIn",
+      "isHidden": false,
+      "name": "Wireframe",
+      "type": "variable",
+      "typeName": "wireframe",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "depthIn",
+      "info": "Render opaque scene depth. Gaussian splats are currently excluded. Black is near, white is far.",
+      "isHidden": false,
+      "name": "Depth",
+      "type": "variable",
+      "typeName": "depth",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "normalizeDepthIn",
+      "info": "Normalize the depth based on content, to be more visible.",
+      "isHidden": false,
+      "name": "Normalize Depth",
+      "type": "variable",
+      "typeName": "normalizeDepth",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Front",
+        "typeName": "front"
+      },
+      "enumCases": [
+        {
+          "name": "Front",
+          "typeName": "front"
+        },
+        {
+          "name": "Back",
+          "typeName": "back"
+        },
+        {
+          "name": "Both",
+          "typeName": "both"
+        }
+      ],
+      "info": "Specify if the outside or inside of a geometry is visible.",
+      "isHidden": false,
+      "name": "Visibility",
+      "type": "typedEnum",
+      "typeName": "cullMode"
+    },
+    {
+      "defaultValue": 2,
+      "inLetTypeName": "pointSizeIn",
+      "info": "Size of particles.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 3,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Point Size",
+      "type": "variable",
+      "typeName": "pointSize",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "cameraIndexIn",
+      "info": "If multiple cameras exist among the entities, use this to select which camera to render from.",
+      "isHidden": false,
+      "name": "Camera Index",
+      "type": "variable",
+      "typeName": "cameraIndex",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacesTypePaths": [
+    "node:graphic:engine:render"
+  ],
+  "tags": [
+    "3D",
+    "Kagami"
+  ],
+  "typePath": "node:graphic:engine:kagamiRender",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/engine/kagamiRender"
+}

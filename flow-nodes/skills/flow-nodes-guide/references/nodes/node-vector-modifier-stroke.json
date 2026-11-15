@@ -1,0 +1,194 @@
+{
+  "complexity": "basic",
+  "docs": "Create a outline shape from a solid vector shape.",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "in",
+      "valueType": "raw:vector",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Line Width",
+      "typeName": "lineWidthIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Dash Length",
+      "typeName": "dashLengthIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Dash Phase",
+      "typeName": "dashPhaseIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Stroke",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "out",
+      "valueType": "raw:vector",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "lineWidthIn",
+      "isHidden": false,
+      "maximumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "fixed": {
+                    "value": 10
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "fixed": {
+                    "value": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Line Width",
+      "type": "variable",
+      "typeName": "lineWidth",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 10,
+      "info": "Controls the maximum extension of mitered corners before they are converted to a bevel. A higher value preserves sharp angles, while a lower value smooths them out.",
+      "isHidden": false,
+      "maximumValue": {
+        "type": "value",
+        "value": 10,
+        "valueType": {
+          "raw": {
+            "_0": {
+              "core": {
+                "_0": "float"
+              }
+            }
+          }
+        }
+      },
+      "minimumValue": {
+        "type": "value",
+        "value": 0,
+        "valueType": {
+          "raw": {
+            "_0": {
+              "core": {
+                "_0": "float"
+              }
+            }
+          }
+        }
+      },
+      "name": "Miter Limit",
+      "type": "value",
+      "typeName": "miterLimit",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": false,
+      "isHidden": false,
+      "name": "Dash",
+      "type": "value",
+      "typeName": "dash",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "dashLengthIn",
+      "isHidden": false,
+      "minimumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "fixed": {
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Dash Length",
+      "type": "variable",
+      "typeName": "dashLength",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "dashPhaseIn",
+      "isHidden": false,
+      "name": "Dash Phase",
+      "type": "variable",
+      "typeName": "dashPhase",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Line Width",
+    "Border"
+  ],
+  "typePath": "node:vector:modifier:stroke",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/modifier/stroke"
+}

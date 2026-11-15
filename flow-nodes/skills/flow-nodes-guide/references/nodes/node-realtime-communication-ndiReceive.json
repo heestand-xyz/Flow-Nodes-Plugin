@@ -1,0 +1,88 @@
+{
+  "complexity": "advanced",
+  "docs": "Receive realtime graphics on the local network.\n\nNDI® is a registered trademark of Vizrt NDI AB.",
+  "familyName": "Realtime",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Find Sources",
+      "typeName": "findSourcesIn",
+      "valueType": "raw:action",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Active",
+      "typeName": "isActiveIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "links": [
+    {
+      "title": "NDI®",
+      "url": "https://ndi.video/"
+    },
+    {
+      "title": "NDI Tools",
+      "url": "https://ndi.video/tools/"
+    }
+  ],
+  "name": "NDI Receive",
+  "newInAppVersion": "2.2.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Communication",
+  "platforms": [
+    "iOS",
+    "macOS"
+  ],
+  "properties": [
+    {
+      "isHidden": false,
+      "name": "Find Sources",
+      "type": "action",
+      "typeName": "findSources"
+    },
+    {
+      "isHidden": false,
+      "name": "Source",
+      "type": "stringEnum",
+      "typeName": "source"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "isActiveIn",
+      "info": "When activated, receiving of video frames will start.",
+      "isHidden": false,
+      "name": "Active",
+      "type": "variable",
+      "typeName": "isActive",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Signal",
+    "Network",
+    "Video",
+    "Stream"
+  ],
+  "typePath": "node:realtime:communication:ndiReceive",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/realtime/communication/ndiReceive"
+}

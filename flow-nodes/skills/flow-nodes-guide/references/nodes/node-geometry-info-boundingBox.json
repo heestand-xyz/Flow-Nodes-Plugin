@@ -1,0 +1,44 @@
+{
+  "complexity": "advanced",
+  "docs": "Measure the bounding frame of a Geometry.",
+  "familyName": "3D Geometry",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Geometry",
+      "typeName": "geometryIn",
+      "valueType": "raw:geometry",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Bounding Box",
+  "newInAppVersion": "2.7.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Frame",
+      "typeName": "frameOut",
+      "valueType": "raw:core:rect3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Info",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [
+    "node:geometry:info:relay"
+  ],
+  "tags": [],
+  "typePath": "node:geometry:info:boundingBox",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/geometry/info/boundingBox"
+}

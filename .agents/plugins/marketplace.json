@@ -1,0 +1,20 @@
+{
+  "name": "flow-nodes",
+  "interface": {
+    "displayName": "Flow Nodes"
+  },
+  "plugins": [
+    {
+      "name": "flow-nodes",
+      "source": {
+        "source": "local",
+        "path": "./flow-nodes"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creativity"
+    }
+  ]
+}

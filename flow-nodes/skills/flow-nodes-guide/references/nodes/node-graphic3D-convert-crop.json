@@ -1,0 +1,303 @@
+{
+  "complexity": "basic",
+  "docs": "",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "From Left",
+      "typeName": "fromLeftIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "From Right",
+      "typeName": "fromRightIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "From Top",
+      "typeName": "fromTopIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "From Bottom",
+      "typeName": "fromBottomIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "From Far",
+      "typeName": "fromFarIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "From Near",
+      "typeName": "fromNearIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Crop",
+  "newInAppVersion": "1.0.1",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Convert",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "fromLeftIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "From Left",
+      "type": "variable",
+      "typeName": "fromLeft",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "fromRightIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "From Right",
+      "type": "variable",
+      "typeName": "fromRight",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "fromTopIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "From Top",
+      "type": "variable",
+      "typeName": "fromTop",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "fromBottomIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "From Bottom",
+      "type": "variable",
+      "typeName": "fromBottom",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "fromFarIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "From Far",
+      "type": "variable",
+      "typeName": "fromFar",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "fromNearIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "From Near",
+      "type": "variable",
+      "typeName": "fromNear",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Fit",
+        "typeName": "fit"
+      },
+      "enumCases": [
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        },
+        {
+          "name": "Fit",
+          "typeName": "fit"
+        },
+        {
+          "name": "Fill",
+          "typeName": "fill"
+        },
+        {
+          "name": "Fixed",
+          "typeName": "fixed"
+        }
+      ],
+      "isHidden": false,
+      "name": "Placement",
+      "type": "stringEnum",
+      "typeName": "placement"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Linear",
+        "typeName": "linear"
+      },
+      "enumCases": [
+        {
+          "name": "Linear",
+          "typeName": "linear"
+        },
+        {
+          "name": "Lanczos",
+          "typeName": "lanczos"
+        },
+        {
+          "name": "Bilinear",
+          "typeName": "bilinear"
+        },
+        {
+          "name": "Pixelated",
+          "typeName": "pixelated"
+        }
+      ],
+      "isHidden": false,
+      "name": "Interpolation",
+      "type": "stringEnum",
+      "typeName": "interpolation"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:graphic3D:convert:crop",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/convert/crop"
+}

@@ -1,0 +1,69 @@
+{
+  "complexity": "advanced",
+  "docs": "An icosahedron is one of the Platonic solids, meaning all faces are the same size, and it has perfect symmetry.",
+  "familyName": "3D Geometry",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Radius",
+      "typeName": "radiusIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Icosahedron",
+  "newInAppVersion": "1.3.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Geometry",
+      "typeName": "geometryOut",
+      "valueType": "raw:geometry",
+      "way": "out"
+    }
+  ],
+  "parentName": "Shape",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "radiusIn",
+      "info": "The radius on Y axis.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 0.5,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Radius",
+      "type": "variable",
+      "typeName": "radius",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:geometry:shape:icosahedron",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/geometry/shape/icosahedron"
+}

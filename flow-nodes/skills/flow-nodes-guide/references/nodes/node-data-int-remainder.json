@@ -1,0 +1,71 @@
+{
+  "complexity": "advanced",
+  "docs": "Modulus operation.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "in",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Divider",
+      "typeName": "dividerIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Remainder",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Remainder",
+      "typeName": "out",
+      "valueType": "raw:core:int",
+      "way": "out"
+    }
+  ],
+  "parentName": "Int",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 2,
+      "inLetTypeName": "dividerIn",
+      "isHidden": false,
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Divider",
+      "type": "variable",
+      "typeName": "divider",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Modulo"
+  ],
+  "typePath": "node:data:int:remainder",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/int/remainder"
+}

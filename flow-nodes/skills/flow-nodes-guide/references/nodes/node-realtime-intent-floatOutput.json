@@ -1,0 +1,36 @@
+{
+  "complexity": "basic",
+  "docs": "Send a float value when the Flow Nodes Node Float Output Intent runs. Use the intent with the action button on iPhone or the Shortcuts app.",
+  "familyName": "Realtime",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Float Output",
+  "newInAppVersion": "4.0.0",
+  "outLets": [],
+  "parentName": "Intent",
+  "platforms": [
+    "iOS",
+    "macOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Shortcuts",
+    "Output",
+    "Siri",
+    "Float"
+  ],
+  "typePath": "node:realtime:intent:floatOutput",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/realtime/intent/floatOutput"
+}

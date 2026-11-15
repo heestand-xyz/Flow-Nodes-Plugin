@@ -1,0 +1,127 @@
+{
+  "complexity": "advanced",
+  "docs": "Blend a list of Graphics.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphics",
+      "typeName": "graphicsIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "List Blend",
+  "newInAppVersion": "2.7.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Array Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Add",
+        "typeName": "add"
+      },
+      "enumCases": [
+        {
+          "name": "Over",
+          "typeName": "over"
+        },
+        {
+          "name": "Under",
+          "typeName": "under"
+        },
+        {
+          "name": "Screen",
+          "typeName": "screen"
+        },
+        {
+          "name": "Lighten",
+          "typeName": "lighten"
+        },
+        {
+          "name": "Darken",
+          "typeName": "darken"
+        },
+        {
+          "name": "Add",
+          "typeName": "add"
+        },
+        {
+          "name": "Add with Alpha",
+          "typeName": "addWithAlpha"
+        },
+        {
+          "name": "Multiply",
+          "typeName": "multiply"
+        },
+        {
+          "name": "Difference",
+          "typeName": "difference"
+        },
+        {
+          "name": "Difference with Alpha",
+          "typeName": "differenceWithAlpha"
+        },
+        {
+          "name": "Subtract",
+          "typeName": "subtract"
+        },
+        {
+          "name": "Subtract with Alpha",
+          "typeName": "subtractWithAlpha"
+        },
+        {
+          "name": "Maximum",
+          "typeName": "maximum"
+        },
+        {
+          "name": "Minimum",
+          "typeName": "minimum"
+        },
+        {
+          "name": "Gamma",
+          "typeName": "gamma"
+        },
+        {
+          "name": "Power",
+          "typeName": "power"
+        },
+        {
+          "name": "Divide",
+          "typeName": "divide"
+        },
+        {
+          "name": "Average",
+          "typeName": "average"
+        }
+      ],
+      "isHidden": false,
+      "name": "Blend Mode",
+      "type": "typedEnum",
+      "typeName": "blendMode"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:graphic:arrayEffect:listBlend",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/arrayEffect/listBlend"
+}

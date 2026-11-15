@@ -1,0 +1,54 @@
+{
+  "complexity": "basic",
+  "docs": "Store a list of vectors.",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Clear",
+      "typeName": "clearIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "List State",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Vectors",
+      "typeName": "vectorsBindingOut",
+      "valueType": "raw:vector",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "info": "Removes all the stored content from the node.",
+      "isHidden": false,
+      "name": "Clear",
+      "type": "action",
+      "typeName": "clear"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "Array",
+    "SVG"
+  ],
+  "typePath": "node:vector:resource:listState",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/resource/listState"
+}

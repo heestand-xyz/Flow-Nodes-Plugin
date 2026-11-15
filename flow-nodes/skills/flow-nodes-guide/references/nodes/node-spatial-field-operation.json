@@ -1,0 +1,93 @@
+{
+  "complexity": "basic",
+  "docs": "Apply a math operation on a tag in a field.",
+  "familyName": "3D Spatial",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Field",
+      "typeName": "fieldIn",
+      "valueType": "raw:field",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueIn",
+      "valueType": "generic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Operation",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Field",
+      "typeName": "fieldOut",
+      "valueType": "raw:field",
+      "way": "out"
+    }
+  ],
+  "parentName": "Field",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Multiply",
+        "typeName": "multiply"
+      },
+      "enumCases": [
+        {
+          "name": "Add",
+          "typeName": "add"
+        },
+        {
+          "name": "Subtract",
+          "typeName": "subtract"
+        },
+        {
+          "name": "Multiply",
+          "typeName": "multiply"
+        },
+        {
+          "name": "Divide",
+          "typeName": "divide"
+        },
+        {
+          "name": "Power",
+          "typeName": "power"
+        }
+      ],
+      "isHidden": false,
+      "name": "Operation",
+      "type": "typedEnum",
+      "typeName": "operation"
+    },
+    {
+      "info": "The tag to operate on in the field.",
+      "isHidden": false,
+      "name": "Tag",
+      "type": "item",
+      "typeName": "tagSelection"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Math"
+  ],
+  "typePath": "node:spatial:field:operation",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/spatial/field/operation"
+}

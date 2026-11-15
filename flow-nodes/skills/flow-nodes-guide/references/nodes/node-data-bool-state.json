@@ -1,0 +1,43 @@
+{
+  "complexity": "basic",
+  "docs": "Store a Bool.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "State",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Is On",
+      "typeName": "out",
+      "valueType": "raw:core:bool",
+      "way": "out"
+    }
+  ],
+  "parentName": "Bool",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": false,
+      "isHidden": false,
+      "name": "Is On",
+      "type": "value",
+      "typeName": "isOn",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store"
+  ],
+  "typePath": "node:data:bool:state",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/bool/state"
+}

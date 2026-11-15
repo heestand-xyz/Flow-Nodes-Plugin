@@ -1,0 +1,42 @@
+{
+  "complexity": "advanced",
+  "docs": "Relay a list of 3D Sizes. This node has no effect. Tho useful to define a type when wiring to generics.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Values",
+      "typeName": "in",
+      "valueType": "raw:core:size3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "List Relay",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Values",
+      "typeName": "out",
+      "valueType": "raw:core:size3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "3D Size",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:size3D:listRelay",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/size3D/listRelay"
+}

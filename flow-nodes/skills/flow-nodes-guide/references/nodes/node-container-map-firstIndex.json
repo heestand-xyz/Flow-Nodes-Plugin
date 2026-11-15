@@ -1,0 +1,60 @@
+{
+  "complexity": "advanced",
+  "docs": "Find the first index of a value in a list that matches a condition.",
+  "familyName": "Container",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Array",
+      "typeName": "arrayIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "internal",
+      "name": "Element Is First",
+      "typeName": "elementIsFirstIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "First Index",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "First Index",
+      "typeName": "indexFirstOut",
+      "valueType": "raw:core:int",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "internal",
+      "name": "Element",
+      "typeName": "elementOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Map",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:container:map:firstIndex",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/container/map/firstIndex"
+}

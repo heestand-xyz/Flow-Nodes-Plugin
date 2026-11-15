@@ -1,0 +1,42 @@
+{
+  "complexity": "advanced",
+  "docs": "",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Points",
+      "typeName": "pointsIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Area",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "out",
+      "valueType": "raw:vector",
+      "way": "out"
+    }
+  ],
+  "parentName": "Shape",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:vector:shape:area",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/shape/area"
+}

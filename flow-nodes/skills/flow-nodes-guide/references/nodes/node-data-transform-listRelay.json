@@ -1,0 +1,42 @@
+{
+  "complexity": "advanced",
+  "docs": "Relay a list of Transforms. This node has no effect. Tho useful to define a type when wiring to generics.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Values",
+      "typeName": "in",
+      "valueType": "raw:core:transform",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "List Relay",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Values",
+      "typeName": "out",
+      "valueType": "raw:core:transform",
+      "way": "out"
+    }
+  ],
+  "parentName": "Transform",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:transform:listRelay",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/transform/listRelay"
+}

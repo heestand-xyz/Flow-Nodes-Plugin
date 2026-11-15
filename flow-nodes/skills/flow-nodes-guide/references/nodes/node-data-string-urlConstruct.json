@@ -1,0 +1,119 @@
+{
+  "complexity": "basic",
+  "docs": "Construct a URL from a scheme, host, path components, query components, and an optional fragment.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Path",
+      "typeName": "pathIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "lex",
+      "direction": "direct",
+      "keyType": "raw:core:string",
+      "level": "external",
+      "name": "Query Components",
+      "typeName": "queryComponentsIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The URL scheme, such as https.",
+      "level": "external",
+      "name": "Scheme",
+      "typeName": "schemeIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The host or domain name.",
+      "level": "external",
+      "name": "Host",
+      "typeName": "hostIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "An optional URL fragment without the leading #.",
+      "level": "external",
+      "name": "Fragment",
+      "typeName": "fragmentIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "URL Construct",
+  "newInAppVersion": "27.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "URL",
+      "typeName": "urlOut",
+      "valueType": "raw:core:string",
+      "way": "out"
+    }
+  ],
+  "parentName": "String",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": "https",
+      "inLetTypeName": "schemeIn",
+      "info": "The URL scheme, such as https.",
+      "isHidden": false,
+      "name": "Scheme",
+      "type": "variable",
+      "typeName": "scheme",
+      "valueType": "raw:core:string"
+    },
+    {
+      "defaultValue": "flownodes.app",
+      "inLetTypeName": "hostIn",
+      "info": "The host or domain name.",
+      "isHidden": false,
+      "name": "Host",
+      "type": "variable",
+      "typeName": "host",
+      "valueType": "raw:core:string"
+    },
+    {
+      "defaultValue": "",
+      "inLetTypeName": "fragmentIn",
+      "info": "An optional URL fragment without the leading #.",
+      "isHidden": false,
+      "name": "Fragment",
+      "type": "variable",
+      "typeName": "fragment",
+      "valueType": "raw:core:string"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "URL",
+    "Link",
+    "Query",
+    "Path",
+    "Web"
+  ],
+  "typePath": "node:data:string:urlConstruct",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/string/urlConstruct"
+}

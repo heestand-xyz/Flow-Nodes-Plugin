@@ -1,0 +1,45 @@
+{
+  "complexity": "advanced",
+  "docs": "Relay a View. This node has no effect. Tho useful to define a type when wiring to generics.",
+  "familyName": "Interface",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewIn",
+      "valueType": "raw:view",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Relay",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewOut",
+      "valueType": "raw:view",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Nil",
+    "Null"
+  ],
+  "typePath": "node:interface:modifier:relay",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/interface/modifier/relay"
+}

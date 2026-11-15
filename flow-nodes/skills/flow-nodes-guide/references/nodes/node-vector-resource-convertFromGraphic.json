@@ -1,0 +1,194 @@
+{
+  "complexity": "basic",
+  "docs": "Detects contours of an image and traces a vector shape.",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The amount by which to adjust the image contrast. Contour detection works best with high-contrast images. The default value of this property is 2.0, which doubles the image contrast to achieve the most accurate results.",
+      "level": "external",
+      "name": "Contrast Adjustment",
+      "typeName": "contrastAdjustmentIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Automatically detect the contrast pivot according to image intensity.",
+      "level": "external",
+      "name": "Auto Contrast Pivot",
+      "typeName": "autoContrastPivotIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The pixel value to use as a pivot for the contrast. Ranged from 0.0 to 1.0. The default value is 0.5, which indicates the pixel center.",
+      "level": "external",
+      "name": "Contrast Pivot",
+      "typeName": "contrastPivotIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Indicates whether the request detects a dark object on a light background to aid in detection.",
+      "level": "external",
+      "name": "Detects Dark on Light",
+      "typeName": "detectsDarkOnLightIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The maximum image dimension to use for contour detection. Contour detection is computationally intensive. To improve performance, the input image is scaled down, while maintaining its aspect ratio, such that its maximum dimension is the value of this property. The image is never scaled up.",
+      "level": "external",
+      "name": "Maximum Image Dimension",
+      "typeName": "maximumImageDimensionIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Convert from Graphic",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "vectorOut",
+      "valueType": "raw:vector",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 2,
+      "inLetTypeName": "contrastAdjustmentIn",
+      "info": "The amount by which to adjust the image contrast. Contour detection works best with high-contrast images. The default value of this property is 2.0, which doubles the image contrast to achieve the most accurate results.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 3,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Contrast Adjustment",
+      "type": "variable",
+      "typeName": "contrastAdjustment",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "autoContrastPivotIn",
+      "info": "Automatically detect the contrast pivot according to image intensity.",
+      "isHidden": false,
+      "name": "Auto Contrast Pivot",
+      "type": "variable",
+      "typeName": "autoContrastPivot",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "contrastPivotIn",
+      "info": "The pixel value to use as a pivot for the contrast. Ranged from 0.0 to 1.0. The default value is 0.5, which indicates the pixel center.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Contrast Pivot",
+      "type": "variable",
+      "typeName": "contrastPivot",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "detectsDarkOnLightIn",
+      "info": "Indicates whether the request detects a dark object on a light background to aid in detection.",
+      "isHidden": false,
+      "name": "Detects Dark on Light",
+      "type": "variable",
+      "typeName": "detectsDarkOnLight",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 512,
+      "inLetTypeName": "maximumImageDimensionIn",
+      "info": "The maximum image dimension to use for contour detection. Contour detection is computationally intensive. To improve performance, the input image is scaled down, while maintaining its aspect ratio, such that its maximum dimension is the value of this property. The image is never scaled up.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1024,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 64,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Maximum Image Dimension",
+      "type": "variable",
+      "typeName": "maximumImageDimension",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Trace",
+    "Contour"
+  ],
+  "typePath": "node:vector:resource:convertFromGraphic",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/resource/convertFromGraphic"
+}

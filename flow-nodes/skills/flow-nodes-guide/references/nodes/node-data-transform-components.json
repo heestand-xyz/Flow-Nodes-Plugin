@@ -1,0 +1,60 @@
+{
+  "complexity": "advanced",
+  "docs": "Get the position, scale, and rotation components of a Transform.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "in",
+      "valueType": "raw:core:transform",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Components",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Position",
+      "typeName": "positionOut",
+      "valueType": "raw:core:point",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Scale",
+      "typeName": "scaleOut",
+      "valueType": "raw:core:size",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Rotation",
+      "typeName": "rotationOut",
+      "valueType": "raw:core:angle",
+      "way": "out"
+    }
+  ],
+  "parentName": "Transform",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:data:transform:components",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/transform/components"
+}

@@ -1,0 +1,52 @@
+{
+  "complexity": "basic",
+  "docs": "Store a 3D graphic.",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Clear",
+      "typeName": "clearIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "State",
+  "newInAppVersion": "1.3.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "3D Graphic",
+      "typeName": "graphic3DBindingOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "isHidden": false,
+      "name": "Clear",
+      "type": "action",
+      "typeName": "clear"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "Voxel"
+  ],
+  "typePath": "node:graphic3D:resource:state",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/resource/state"
+}

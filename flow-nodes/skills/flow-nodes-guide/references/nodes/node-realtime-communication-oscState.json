@@ -1,0 +1,178 @@
+{
+  "complexity": "advanced",
+  "docs": "Send and receive OSC messages. To see the received value; connect the generic outlet to a relay node with the expected value type.",
+  "familyName": "Realtime",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "OSC Address",
+      "typeName": "oscAddressIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Remote IP Address",
+      "typeName": "ipAddressIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Port In",
+      "typeName": "inPortIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Port Out",
+      "typeName": "outPortIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "OSC State",
+  "newInAppVersion": "1.2.3",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "supportedGenericRawTypes": [
+        "core:angle3D",
+        "core:bool",
+        "core:color",
+        "core:date",
+        "core:float",
+        "core:int",
+        "core:point",
+        "core:point3D",
+        "core:rect",
+        "core:rect3D",
+        "core:size",
+        "core:size3D",
+        "core:string"
+      ],
+      "typeName": "valueOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Communication",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "info": "After linking is started, send a signal from your source to automatically connect.",
+      "isHidden": false,
+      "name": "Link",
+      "type": "action",
+      "typeName": "link"
+    },
+    {
+      "isHidden": true,
+      "name": "Link Status",
+      "type": "label",
+      "typeName": "linkStatus"
+    },
+    {
+      "defaultValue": "/flow-nodes/value",
+      "inLetTypeName": "oscAddressIn",
+      "isHidden": false,
+      "name": "OSC Address",
+      "type": "variable",
+      "typeName": "oscAddress",
+      "valueType": "raw:core:string"
+    },
+    {
+      "isHidden": false,
+      "name": "IP Address (This Device)",
+      "type": "label",
+      "typeName": "thisDeviceIPAddress"
+    },
+    {
+      "defaultValue": "localhost",
+      "inLetTypeName": "ipAddressIn",
+      "isHidden": false,
+      "name": "Remote IP Address",
+      "type": "variable",
+      "typeName": "ipAddress",
+      "valueType": "raw:core:string"
+    },
+    {
+      "defaultValue": 7000,
+      "inLetTypeName": "inPortIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 10000,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Port In",
+      "type": "variable",
+      "typeName": "inPort",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": 8000,
+      "inLetTypeName": "outPortIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 10000,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Port Out",
+      "type": "variable",
+      "typeName": "outPort",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Listen",
+    "Send",
+    "Receive",
+    "Signal",
+    "Network"
+  ],
+  "typePath": "node:realtime:communication:oscState",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/realtime/communication/oscState"
+}

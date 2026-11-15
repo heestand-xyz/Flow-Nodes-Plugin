@@ -1,0 +1,47 @@
+{
+  "complexity": "basic",
+  "docs": "Store a list of 3D Vector Points.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "List State",
+  "newInAppVersion": "4.1.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Values",
+      "typeName": "valuesOut",
+      "valueType": "raw:core:vectorPoint3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "3D Vector Point",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValues": [],
+      "isHidden": false,
+      "name": "Values",
+      "type": "valueArray",
+      "typeName": "values",
+      "valueType": "raw:core:vectorPoint3D"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "Array",
+    "3D",
+    "Vector",
+    "Bezier"
+  ],
+  "typePath": "node:data:vectorPoint3D:listState",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/vectorPoint3D/listState"
+}

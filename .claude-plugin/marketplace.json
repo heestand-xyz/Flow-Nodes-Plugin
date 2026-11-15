@@ -1,0 +1,13 @@
+{
+  "name": "flow-nodes",
+  "owner": {
+    "name": "Portobello Studio"
+  },
+  "plugins": [
+    {
+      "name": "flow-nodes",
+      "source": "./flow-nodes",
+      "description": "Learn Flow Nodes and build flows with precise node, property, and wire guidance from bundled documentation."
+    }
+  ]
+}

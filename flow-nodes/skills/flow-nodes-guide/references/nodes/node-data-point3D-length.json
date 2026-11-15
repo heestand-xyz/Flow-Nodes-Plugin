@@ -1,0 +1,68 @@
+{
+  "complexity": "basic",
+  "docs": "Distance between two 3D points.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Target",
+      "typeName": "targetIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Reference",
+      "typeName": "referenceIn",
+      "valueType": "raw:core:point3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Length",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Length",
+      "typeName": "lengthOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    }
+  ],
+  "parentName": "3D Point",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "inLetTypeName": "referenceIn",
+      "isHidden": false,
+      "name": "Reference",
+      "type": "variable",
+      "typeName": "reference",
+      "valueType": "raw:core:point3D"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Distance",
+    "Hypotenuse"
+  ],
+  "typePath": "node:data:point3D:length",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/point3D/length"
+}

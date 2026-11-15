@@ -1,0 +1,46 @@
+{
+  "complexity": "basic",
+  "docs": "Store a list of Vector Points.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "List State",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Values",
+      "typeName": "valuesOut",
+      "valueType": "raw:core:vectorPoint",
+      "way": "out"
+    }
+  ],
+  "parentName": "Vector Point",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValues": [],
+      "isHidden": false,
+      "name": "Values",
+      "type": "valueArray",
+      "typeName": "values",
+      "valueType": "raw:core:vectorPoint"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "Array",
+    "Vector",
+    "Bezier"
+  ],
+  "typePath": "node:data:vectorPoint:listState",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/vectorPoint/listState"
+}

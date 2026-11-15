@@ -1,0 +1,83 @@
+{
+  "complexity": "basic",
+  "docs": "Convert a Graphic into a 3D Graphic with a width, height, or depth of one voxel along the selected axis. Binding edits to the single slice update the source Graphic.",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Convert from Graphic",
+  "newInAppVersion": "27.1.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "internal",
+      "name": "3D Graphic",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "3D Graphic",
+      "typeName": "graphic3DBindingOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Z",
+        "typeName": "z"
+      },
+      "enumCases": [
+        {
+          "name": "X",
+          "typeName": "x"
+        },
+        {
+          "name": "Y",
+          "typeName": "y"
+        },
+        {
+          "name": "Z",
+          "typeName": "z"
+        }
+      ],
+      "info": "The axis with a size of one voxel. The other two dimensions match the source graphic.",
+      "isHidden": false,
+      "name": "Axis",
+      "type": "typedEnum",
+      "typeName": "axis"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "2D",
+    "3D",
+    "Image",
+    "Volume",
+    "Slice"
+  ],
+  "typePath": "node:graphic3D:resource:convertFromGraphic",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/resource/convertFromGraphic"
+}

@@ -1,0 +1,80 @@
+{
+  "complexity": "basic",
+  "docs": "Adjust the levels of a Color.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "in",
+      "valueType": "raw:core:color",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Opacity",
+      "typeName": "opacityIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Opacity",
+  "newInAppVersion": "1.4.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "raw:core:color",
+      "way": "out"
+    }
+  ],
+  "parentName": "Color",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "opacityIn",
+      "info": "Adjust the alpha component.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Opacity",
+      "type": "variable",
+      "typeName": "opacity",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Alpha"
+  ],
+  "typePath": "node:data:color:opacity",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/color/opacity"
+}

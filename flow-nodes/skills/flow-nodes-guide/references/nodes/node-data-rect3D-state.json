@@ -1,0 +1,55 @@
+{
+  "complexity": "basic",
+  "docs": "Store a 3D Rect.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "State",
+  "newInAppVersion": "1.7.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "raw:core:rect3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "3D Rect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "origin": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "size": {
+          "depth": 1,
+          "height": 1,
+          "width": 1
+        }
+      },
+      "isHidden": false,
+      "name": "Value",
+      "type": "value",
+      "typeName": "value",
+      "valueType": "raw:core:rect3D"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "Frame"
+  ],
+  "typePath": "node:data:rect3D:state",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/rect3D/state"
+}

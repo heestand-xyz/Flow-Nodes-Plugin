@@ -1,0 +1,273 @@
+{
+  "complexity": "basic",
+  "docs": "Lazily arranges multiple views in a vertical grid.",
+  "familyName": "Interface",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Views",
+      "typeName": "viewsIn",
+      "valueType": "raw:view",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The number of columns.",
+      "level": "external",
+      "name": "Count",
+      "typeName": "countIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The fixed size or minimum flexible size of each item.",
+      "level": "external",
+      "name": "Minimum",
+      "typeName": "minimumIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The maximum flexible or adaptive item size.",
+      "level": "external",
+      "name": "Maximum",
+      "typeName": "maximumIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Item Spacing",
+      "typeName": "itemSpacingIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The spacing between grid items on the scrolling axis.",
+      "level": "external",
+      "name": "Row Spacing",
+      "typeName": "spacingIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Vertical",
+  "newInAppVersion": "27.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewOut",
+      "valueType": "raw:view",
+      "way": "out"
+    }
+  ],
+  "parentName": "Grid",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 2,
+      "inLetTypeName": "countIn",
+      "info": "The number of columns.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 10,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Count",
+      "type": "variable",
+      "typeName": "count",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Flexible",
+        "typeName": "flexible"
+      },
+      "enumCases": [
+        {
+          "name": "Fixed",
+          "typeName": "fixed"
+        },
+        {
+          "name": "Flexible",
+          "typeName": "flexible"
+        },
+        {
+          "name": "Adaptive",
+          "typeName": "adaptive"
+        }
+      ],
+      "isHidden": false,
+      "name": "Item Size",
+      "type": "typedEnum",
+      "typeName": "itemSize"
+    },
+    {
+      "defaultValue": 10,
+      "inLetTypeName": "minimumIn",
+      "info": "The fixed size or minimum flexible size of each item.",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": 1000,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Minimum",
+      "type": "variable",
+      "typeName": "minimum",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 1000,
+      "inLetTypeName": "maximumIn",
+      "info": "The maximum flexible or adaptive item size.",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": 10000,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Maximum",
+      "type": "variable",
+      "typeName": "maximum",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 8,
+      "inLetTypeName": "itemSpacingIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Item Spacing",
+      "type": "variable",
+      "typeName": "itemSpacing",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Center",
+        "typeName": "center"
+      },
+      "enumCases": [
+        {
+          "name": "Leading",
+          "typeName": "leading"
+        },
+        {
+          "name": "Center",
+          "typeName": "center"
+        },
+        {
+          "name": "Trailing",
+          "typeName": "trailing"
+        }
+      ],
+      "isHidden": false,
+      "name": "Alignment",
+      "type": "typedEnum",
+      "typeName": "alignment"
+    },
+    {
+      "defaultValue": 8,
+      "inLetTypeName": "spacingIn",
+      "info": "The spacing between grid items on the scrolling axis.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Row Spacing",
+      "type": "variable",
+      "typeName": "spacing",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Lazy",
+    "Grid",
+    "Columns"
+  ],
+  "typePath": "node:interface:grid:vertical",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/interface/grid/vertical"
+}

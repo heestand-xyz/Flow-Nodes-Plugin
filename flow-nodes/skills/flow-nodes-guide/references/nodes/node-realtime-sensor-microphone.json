@@ -1,0 +1,67 @@
+{
+  "complexity": "basic",
+  "docs": "Microphone audio levels.",
+  "familyName": "Realtime",
+  "inLets": [],
+  "isPro": false,
+  "name": "Microphone",
+  "newInAppVersion": "1.2.3",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    }
+  ],
+  "parentName": "Sensor",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "isHidden": true,
+      "name": "Authorize Microphone Access",
+      "type": "action",
+      "typeName": "authorize"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Normalized Power",
+        "typeName": "amplitude"
+      },
+      "enumCases": [
+        {
+          "name": "Normalized Power",
+          "typeName": "amplitude"
+        },
+        {
+          "name": "Average Power",
+          "typeName": "averagePower"
+        },
+        {
+          "name": "Peak Power",
+          "typeName": "peakPower"
+        }
+      ],
+      "isHidden": false,
+      "name": "Data Type",
+      "type": "typedEnum",
+      "typeName": "dataType"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Audio",
+    "Sound",
+    "Listen"
+  ],
+  "typePath": "node:realtime:sensor:microphone",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/realtime/sensor/microphone"
+}

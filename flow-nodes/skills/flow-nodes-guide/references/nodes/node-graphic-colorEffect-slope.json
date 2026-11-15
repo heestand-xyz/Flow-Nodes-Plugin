@@ -1,0 +1,146 @@
+{
+  "complexity": "advanced",
+  "docs": "Calculate the slope between neighboring pixels by generating a normal map. 16 or 32 bit recommended.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Amplitude",
+      "typeName": "amplitudeIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Origin Color",
+      "typeName": "originColorIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Slope",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Color Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "amplitudeIn",
+      "isHidden": false,
+      "maximumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "fixed": {
+                    "value": 100
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "fixed": {
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Amplitude",
+      "type": "variable",
+      "typeName": "amplitude",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": {
+        "blue": 0.5,
+        "green": 0.5,
+        "opacity": 1,
+        "red": 0.5
+      },
+      "inLetTypeName": "originColorIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": {
+          "blue": 1,
+          "green": 1,
+          "opacity": 1,
+          "red": 1
+        },
+        "coreType": "color",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": {
+          "blue": 0,
+          "green": 0,
+          "opacity": 0,
+          "red": 0
+        },
+        "coreType": "color",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Origin Color",
+      "type": "variable",
+      "typeName": "originColor",
+      "valueType": "raw:core:color"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Normal Map"
+  ],
+  "typePath": "node:graphic:colorEffect:slope",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/colorEffect/slope"
+}

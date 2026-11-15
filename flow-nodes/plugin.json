@@ -1,0 +1,63 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "flow-nodes",
+  "version": "0.1.1",
+  "description": "Learn Flow Nodes and build flows with precise node, property, and wire guidance from bundled documentation.",
+  "author": {
+    "name": "Portobello Studio"
+  },
+  "homepage": "https://flownodes.app",
+  "keywords": [
+    "Flow Nodes",
+    "visual programming",
+    "node graphs",
+    "graphics",
+    "video",
+    "3D",
+    "JavaScript",
+    "Metal"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Flow Nodes",
+        "shortDescription": "Learn the app. Wire your flow.",
+        "longDescription": "Get help using Flow Nodes on iPhone, iPad, Mac, and Vision Pro. Learn the Canvas, properties, folders, instances, and playback; choose nodes and follow step-by-step wiring plans with exact port names and types. Explore graphics, video, 3D, interactive interfaces, lists, JavaScript scripts, and Metal shaders. Answers use bundled articles and a structured node catalog, including platform availability and replacement nodes. This plugin provides guidance and does not connect to or edit your running app. Some nodes in the separate Flow Nodes app require existing Pro access. The plugin has no purchases.",
+        "developerName": "Portobello Studio",
+        "websiteURL": "https://flownodes.app",
+        "category": "Creativity",
+        "capabilities": [],
+        "defaultPrompt": [
+          "Help me get started with Flow Nodes and build my first flow.",
+          "Show me exactly how to wire a slider to control an image's blur.",
+          "Help me understand why two nodes in my flow will not connect."
+        ],
+        "logo": "./assets/icon.png",
+        "composerIcon": "./assets/icon.png",
+        "logoDark": "./assets/icon-dark.png",
+        "composerIconDark": "./assets/icon-dark.png"
+      },
+      "review": {
+        "prompts": [
+          "I'm new to Flow Nodes. How do I create a flow and connect two nodes?",
+          "Show me how to make a slider control the blur radius of an image.",
+          "How can I scrub a video with a slider?",
+          "Explain the wires inside an Edit map and how I return the edited element.",
+          "How do I render a cube? Where does the camera connect?",
+          "Write a Script node that reads a Float State called Speed and doubles its Value.",
+          "Write a Metal shader that displays the UV coordinates.",
+          "What is the difference between copying a flow and using an instance?",
+          "Why can I not plug a list directly into this single-value inlet?",
+          "Create those nodes in my running Flow Nodes app."
+        ],
+        "commerce": false,
+        "commerce_description": "This plugin provides documentation and guidance. It does not sell products, process payments, or initiate subscriptions. Pro availability in the separate Flow Nodes app is described only when relevant to a user's requested workflow."
+      },
+      "publication": {
+        "countries": [],
+        "release_notes": "Standalone repository packaging for both hosts, with a shared knowledge bundle, synchronized manifests, public snapshot integrity metadata, and original light and dark app icons."
+      }
+    }
+  },
+  "repository": "https://github.com/heestand-xyz/Flow-Nodes-Plugin"
+}

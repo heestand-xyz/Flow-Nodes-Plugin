@@ -1,0 +1,236 @@
+{
+  "complexity": "basic",
+  "docs": "A keyframe time and easing.",
+  "familyName": "Animation",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Time",
+      "typeName": "timeIn",
+      "valueType": "raw:core:duration",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Ease In Time Offset",
+      "typeName": "timeEaseInTimeOffsetIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Ease In Value Offset",
+      "typeName": "timeEaseInValueOffsetIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Ease Out Time Offset",
+      "typeName": "timeEaseOutTimeOffsetIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Ease Out Value Offset",
+      "typeName": "timeEaseOutValueOffsetIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Keyframe",
+  "newInAppVersion": "2.4.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Keyframe",
+      "typeName": "keyframeOut",
+      "valueType": "raw:core:keyframe",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "timeIn",
+      "isHidden": false,
+      "name": "Time",
+      "type": "variable",
+      "typeName": "time",
+      "valueType": "raw:core:duration"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Linear",
+        "typeName": "linear"
+      },
+      "enumCases": [
+        {
+          "name": "Linear",
+          "typeName": "linear"
+        },
+        {
+          "name": "Smooth",
+          "typeName": "smooth"
+        },
+        {
+          "name": "Bezier",
+          "typeName": "bezier"
+        }
+      ],
+      "isHidden": false,
+      "name": "Ease In",
+      "type": "typedEnum",
+      "typeName": "timeEaseIn"
+    },
+    {
+      "defaultValue": 0.3333333333333333,
+      "inLetTypeName": "timeEaseInTimeOffsetIn",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Ease In Time Offset",
+      "type": "variable",
+      "typeName": "timeEaseInTimeOffset",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0.3333333333333333,
+      "inLetTypeName": "timeEaseInValueOffsetIn",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": -1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Ease In Value Offset",
+      "type": "variable",
+      "typeName": "timeEaseInValueOffset",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Linear",
+        "typeName": "linear"
+      },
+      "enumCases": [
+        {
+          "name": "Linear",
+          "typeName": "linear"
+        },
+        {
+          "name": "Smooth",
+          "typeName": "smooth"
+        },
+        {
+          "name": "Bezier",
+          "typeName": "bezier"
+        }
+      ],
+      "isHidden": false,
+      "name": "Ease Out",
+      "type": "typedEnum",
+      "typeName": "timeEaseOut"
+    },
+    {
+      "defaultValue": 0.3333333333333333,
+      "inLetTypeName": "timeEaseOutTimeOffsetIn",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Ease Out Time Offset",
+      "type": "variable",
+      "typeName": "timeEaseOutTimeOffset",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0.3333333333333333,
+      "inLetTypeName": "timeEaseOutValueOffsetIn",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": -1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Ease Out Value Offset",
+      "type": "variable",
+      "typeName": "timeEaseOutValueOffset",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:animation:resource:keyframe",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/animation/resource/keyframe"
+}

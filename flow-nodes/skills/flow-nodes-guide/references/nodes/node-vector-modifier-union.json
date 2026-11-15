@@ -1,0 +1,42 @@
+{
+  "complexity": "advanced",
+  "docs": "Union a list of Vectors together.",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vectors",
+      "typeName": "in",
+      "valueType": "raw:vector",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Union",
+  "newInAppVersion": "1.7.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "out",
+      "valueType": "raw:vector",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:vector:modifier:union",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/modifier/union"
+}

@@ -1,0 +1,141 @@
+{
+  "complexity": "advanced",
+  "docs": "Run values through a feedback loop over time.",
+  "familyName": "Container",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Initial",
+      "typeName": "initialIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "internal",
+      "name": "Result",
+      "typeName": "resultIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Delay",
+      "typeName": "secondsIn",
+      "valueType": "raw:core:duration",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Mix",
+      "typeName": "mixIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Reset",
+      "typeName": "resetIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Feedback",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "internal",
+      "name": "Result",
+      "typeName": "resultOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Map",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "secondsIn",
+      "info": "Throttle the feedback loop.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 10,
+        "coreType": "duration",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "duration",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Delay",
+      "type": "variable",
+      "typeName": "seconds",
+      "valueType": "raw:core:duration"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "mixIn",
+      "info": "Blend the initial value into the loop, from 0.0 (loop) to 1.0 (initial).",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Mix",
+      "type": "variable",
+      "typeName": "mix",
+      "valueType": "raw:core:float"
+    },
+    {
+      "info": "Samples the initial value.",
+      "isHidden": false,
+      "name": "Reset",
+      "type": "action",
+      "typeName": "reset"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Time",
+    "Loop"
+  ],
+  "typePath": "node:container:map:feedback",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/container/map/feedback"
+}

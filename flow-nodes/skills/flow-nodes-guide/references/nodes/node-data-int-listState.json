@@ -1,0 +1,44 @@
+{
+  "complexity": "advanced",
+  "docs": "Store a list of Ints.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "List State",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Values",
+      "typeName": "out",
+      "valueType": "raw:core:int",
+      "way": "out"
+    }
+  ],
+  "parentName": "Int",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValues": [],
+      "isHidden": false,
+      "name": "Values",
+      "type": "valueArray",
+      "typeName": "values",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "Array"
+  ],
+  "typePath": "node:data:int:listState",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/int/listState"
+}

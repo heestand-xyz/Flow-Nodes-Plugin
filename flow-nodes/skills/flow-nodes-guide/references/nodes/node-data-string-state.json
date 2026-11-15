@@ -1,0 +1,35 @@
+{
+  "complexity": "basic",
+  "docs": "Store a String.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "State",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Text",
+      "typeName": "out",
+      "valueType": "raw:core:string",
+      "way": "out"
+    }
+  ],
+  "parentName": "String",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "Text"
+  ],
+  "typePath": "node:data:string:state",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/string/state"
+}

@@ -1,0 +1,67 @@
+{
+  "complexity": "advanced",
+  "docs": "Save a keyed list of downstream source values to a destination upstream, when the save action is triggered.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "lex",
+      "direction": "direct",
+      "keyType": "generic",
+      "level": "external",
+      "name": "Source",
+      "typeName": "valueIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "lex",
+      "direction": "binding",
+      "keyType": "generic",
+      "level": "external",
+      "name": "Destination",
+      "typeName": "stateIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Save",
+      "typeName": "actionIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Keyed List Save",
+  "newInAppVersion": "27.0.0",
+  "outLets": [],
+  "parentName": "Generic",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "info": "Save the source keyed list values to the destination upstream.",
+      "isHidden": false,
+      "name": "Save",
+      "type": "action",
+      "typeName": "action"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Write",
+    "Persist",
+    "Sync",
+    "Transfer",
+    "Key",
+    "Dictionary"
+  ],
+  "typePath": "node:general:generic:keyedListSave",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/generic/keyedListSave"
+}

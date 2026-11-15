@@ -1,0 +1,79 @@
+{
+  "complexity": "advanced",
+  "docs": "Write JavaScript to connect and calculate values. Run the code manually or enable Live to update when inputs change.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Code",
+      "typeName": "codeIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Live",
+      "typeName": "isLiveIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Run",
+      "typeName": "runIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "links": [
+    {
+      "title": "Guide",
+      "url": "https://flownodes.notion.site/Script-Guide-27f9a07f8bd980e9acc4f80c576b82c9"
+    },
+    {
+      "title": "Reference",
+      "url": "https://flownodes.notion.site/Script-Reference-2629a07f8bd980969391fa86435755e3"
+    }
+  ],
+  "name": "Script",
+  "newInAppVersion": "1.0.0",
+  "outLets": [],
+  "parentName": "Code",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "isHidden": false,
+      "name": "Run",
+      "type": "action",
+      "typeName": "run"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "isLiveIn",
+      "info": "Auto run the script when any auto wired value changes.",
+      "isHidden": false,
+      "name": "Live",
+      "type": "variable",
+      "typeName": "isLive",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "JavaScript"
+  ],
+  "typePath": "node:general:code:script",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/code/script"
+}

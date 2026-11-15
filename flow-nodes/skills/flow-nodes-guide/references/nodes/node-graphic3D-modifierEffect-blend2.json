@@ -1,0 +1,320 @@
+{
+  "complexity": "basic",
+  "docs": "Blend two 3D graphics. Placement controls scaling, and alignment positions the modifier volume on all three axes. The output keeps the first volume's resolution.",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "leadingGraphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Modifier Graphic 3D",
+      "typeName": "trailingGraphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Blend",
+  "newInAppVersion": "27.1.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Add",
+        "typeName": "add"
+      },
+      "enumCases": [
+        {
+          "name": "Over",
+          "typeName": "over"
+        },
+        {
+          "name": "Over with Alpha",
+          "typeName": "overWithAlpha"
+        },
+        {
+          "name": "Under",
+          "typeName": "under"
+        },
+        {
+          "name": "Screen",
+          "typeName": "screen"
+        },
+        {
+          "name": "Lighten",
+          "typeName": "lighten"
+        },
+        {
+          "name": "Darken",
+          "typeName": "darken"
+        },
+        {
+          "name": "Darken without Alpha",
+          "typeName": "darkenWithoutAlpha"
+        },
+        {
+          "name": "Add",
+          "typeName": "add"
+        },
+        {
+          "name": "Add with Alpha",
+          "typeName": "addWithAlpha"
+        },
+        {
+          "name": "Multiply",
+          "typeName": "multiply"
+        },
+        {
+          "name": "Multiply without Alpha",
+          "typeName": "multiplyWithoutAlpha"
+        },
+        {
+          "name": "Difference",
+          "typeName": "difference"
+        },
+        {
+          "name": "Difference with Alpha",
+          "typeName": "differenceWithAlpha"
+        },
+        {
+          "name": "Subtract",
+          "typeName": "subtract"
+        },
+        {
+          "name": "Subtract with Alpha",
+          "typeName": "subtractWithAlpha"
+        },
+        {
+          "name": "Maximum",
+          "typeName": "maximum"
+        },
+        {
+          "name": "Minimum",
+          "typeName": "minimum"
+        },
+        {
+          "name": "Gamma",
+          "typeName": "gamma"
+        },
+        {
+          "name": "Power",
+          "typeName": "power"
+        },
+        {
+          "name": "Divide",
+          "typeName": "divide"
+        },
+        {
+          "name": "Average",
+          "typeName": "average"
+        },
+        {
+          "name": "Cosine",
+          "typeName": "cosine"
+        },
+        {
+          "name": "Inside",
+          "typeName": "inside"
+        },
+        {
+          "name": "Outside",
+          "typeName": "outside"
+        },
+        {
+          "name": "Exclusive Or",
+          "typeName": "exclusiveOr"
+        }
+      ],
+      "isHidden": false,
+      "name": "Blending Mode",
+      "type": "typedEnum",
+      "typeName": "blendingMode"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Fill",
+        "typeName": "fill"
+      },
+      "enumCases": [
+        {
+          "name": "Fixed",
+          "typeName": "fixed"
+        },
+        {
+          "name": "Fit",
+          "typeName": "fit"
+        },
+        {
+          "name": "Fill",
+          "typeName": "fill"
+        },
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        }
+      ],
+      "isHidden": false,
+      "name": "Placement",
+      "type": "typedEnum",
+      "typeName": "placement"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Center",
+        "typeName": "center"
+      },
+      "enumCases": [
+        {
+          "name": "Far Top Leading",
+          "typeName": "farTopLeading"
+        },
+        {
+          "name": "Far Top",
+          "typeName": "farTop"
+        },
+        {
+          "name": "Far Top Trailing",
+          "typeName": "farTopTrailing"
+        },
+        {
+          "name": "Far Leading",
+          "typeName": "farLeading"
+        },
+        {
+          "name": "Far",
+          "typeName": "far"
+        },
+        {
+          "name": "Far Trailing",
+          "typeName": "farTrailing"
+        },
+        {
+          "name": "Far Bottom Leading",
+          "typeName": "farBottomLeading"
+        },
+        {
+          "name": "Far Bottom",
+          "typeName": "farBottom"
+        },
+        {
+          "name": "Far Bottom Trailing",
+          "typeName": "farBottomTrailing"
+        },
+        {
+          "name": "Top Leading",
+          "typeName": "topLeading"
+        },
+        {
+          "name": "Top",
+          "typeName": "top"
+        },
+        {
+          "name": "Top Trailing",
+          "typeName": "topTrailing"
+        },
+        {
+          "name": "Leading",
+          "typeName": "leading"
+        },
+        {
+          "name": "Center",
+          "typeName": "center"
+        },
+        {
+          "name": "Trailing",
+          "typeName": "trailing"
+        },
+        {
+          "name": "Bottom Leading",
+          "typeName": "bottomLeading"
+        },
+        {
+          "name": "Bottom",
+          "typeName": "bottom"
+        },
+        {
+          "name": "Bottom Trailing",
+          "typeName": "bottomTrailing"
+        },
+        {
+          "name": "Near Top Leading",
+          "typeName": "nearTopLeading"
+        },
+        {
+          "name": "Near Top",
+          "typeName": "nearTop"
+        },
+        {
+          "name": "Near Top Trailing",
+          "typeName": "nearTopTrailing"
+        },
+        {
+          "name": "Near Leading",
+          "typeName": "nearLeading"
+        },
+        {
+          "name": "Near",
+          "typeName": "near"
+        },
+        {
+          "name": "Near Trailing",
+          "typeName": "nearTrailing"
+        },
+        {
+          "name": "Near Bottom Leading",
+          "typeName": "nearBottomLeading"
+        },
+        {
+          "name": "Near Bottom",
+          "typeName": "nearBottom"
+        },
+        {
+          "name": "Near Bottom Trailing",
+          "typeName": "nearBottomTrailing"
+        }
+      ],
+      "isHidden": false,
+      "name": "Alignment",
+      "type": "typedEnum",
+      "typeName": "alignment"
+    }
+  ],
+  "replacesTypePaths": [
+    "node:graphic3D:modifierEffect:blend"
+  ],
+  "tags": [
+    "Blend",
+    "Composite",
+    "Volume",
+    "3D",
+    "Alignment"
+  ],
+  "typePath": "node:graphic3D:modifierEffect:blend2",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/modifierEffect/blend2"
+}

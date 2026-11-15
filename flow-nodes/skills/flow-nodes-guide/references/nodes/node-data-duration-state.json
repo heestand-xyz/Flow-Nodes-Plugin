@@ -1,0 +1,43 @@
+{
+  "complexity": "basic",
+  "docs": "Store a Duration.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "State",
+  "newInAppVersion": "2.2.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Duration",
+      "typeName": "out",
+      "valueType": "raw:core:duration",
+      "way": "out"
+    }
+  ],
+  "parentName": "Duration",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 1,
+      "isHidden": false,
+      "name": "Duration",
+      "type": "value",
+      "typeName": "duration",
+      "valueType": "raw:core:duration"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store"
+  ],
+  "typePath": "node:data:duration:state",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/duration/state"
+}

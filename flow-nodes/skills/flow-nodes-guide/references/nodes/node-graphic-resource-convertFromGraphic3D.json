@@ -1,0 +1,169 @@
+{
+  "complexity": "advanced",
+  "docs": "Convert a 3D graphic to a 2D graphic using trace, add, or average methods.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "3D Graphic",
+      "typeName": "graphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Alpha cutoff used when tracing the projected graphic.",
+      "level": "external",
+      "name": "Alpha Threshold",
+      "typeName": "alphaThresholdIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Brightness multiplier used when adding slices together.",
+      "level": "external",
+      "name": "Brightness",
+      "typeName": "brightnessIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Convert from 3D Graphic",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Average",
+        "typeName": "average"
+      },
+      "enumCases": [
+        {
+          "name": "Trace",
+          "typeName": "trace"
+        },
+        {
+          "name": "Add",
+          "typeName": "add"
+        },
+        {
+          "name": "Average",
+          "typeName": "average"
+        }
+      ],
+      "info": "Select the projection style used to convert the 3D graphic to a 2D graphic.",
+      "isHidden": false,
+      "name": "Style",
+      "type": "typedEnum",
+      "typeName": "style"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Z",
+        "typeName": "z"
+      },
+      "enumCases": [
+        {
+          "name": "X",
+          "typeName": "x"
+        },
+        {
+          "name": "Y",
+          "typeName": "y"
+        },
+        {
+          "name": "Z",
+          "typeName": "z"
+        }
+      ],
+      "info": "Pick the axis to project along when converting to 2D.",
+      "isHidden": false,
+      "name": "Axis",
+      "type": "typedEnum",
+      "typeName": "axis"
+    },
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "alphaThresholdIn",
+      "info": "Alpha cutoff used when tracing the projected graphic.",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Alpha Threshold",
+      "type": "variable",
+      "typeName": "alphaThreshold",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "brightnessIn",
+      "info": "Brightness multiplier used when adding slices together.",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Brightness",
+      "type": "variable",
+      "typeName": "brightness",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Graphic3D",
+    "Convert",
+    "Projection"
+  ],
+  "typePath": "node:graphic:resource:convertFromGraphic3D",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/resource/convertFromGraphic3D"
+}

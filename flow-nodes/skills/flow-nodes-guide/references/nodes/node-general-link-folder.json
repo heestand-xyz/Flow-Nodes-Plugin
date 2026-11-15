@@ -1,0 +1,106 @@
+{
+  "complexity": "advanced",
+  "docs": "Link to an external folder.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "On upstream signals, files in the linked folder can be overwritten, when allowed.",
+      "level": "external",
+      "name": "Allow Write to Folder",
+      "typeName": "allowWriteIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Folder",
+  "newInAppVersion": "4.2.0",
+  "outLets": [
+    {
+      "capacity": "lex",
+      "direction": "binding",
+      "keyType": "raw:core:string",
+      "level": "external",
+      "name": "Files",
+      "typeName": "filesOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Link",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "isHidden": true,
+      "name": "Link",
+      "type": "item",
+      "typeName": "bookmarkLink"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "String",
+        "typeName": "string"
+      },
+      "enumCases": [
+        {
+          "name": "String",
+          "typeName": "string"
+        },
+        {
+          "name": "Graphic",
+          "typeName": "graphic"
+        },
+        {
+          "name": "3D Graphic",
+          "typeName": "graphic3D"
+        },
+        {
+          "name": "Geometry",
+          "typeName": "geometry"
+        },
+        {
+          "name": "Vector",
+          "typeName": "vector"
+        },
+        {
+          "name": "Video",
+          "typeName": "video"
+        },
+        {
+          "name": "Field",
+          "typeName": "field"
+        }
+      ],
+      "info": "Only files in the folder of this type will be available in the lex outlet.",
+      "isHidden": false,
+      "name": "File Type",
+      "type": "typedEnum",
+      "typeName": "fileType"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "allowWriteIn",
+      "info": "On upstream signals, files in the linked folder can be overwritten, when allowed.",
+      "isHidden": false,
+      "name": "Allow Write to Folder",
+      "type": "variable",
+      "typeName": "allowWrite",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "URL",
+    "Paths",
+    "Files"
+  ],
+  "typePath": "node:general:link:folder",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/link/folder"
+}

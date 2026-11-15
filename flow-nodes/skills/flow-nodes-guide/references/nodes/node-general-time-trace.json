@@ -1,0 +1,204 @@
+{
+  "complexity": "advanced",
+  "docs": "Trace values from the inlet into a list in the outlet over time.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "in",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Active",
+      "typeName": "isActiveIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Time",
+      "typeName": "secondsIn",
+      "valueType": "raw:core:duration",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Count",
+      "typeName": "countIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Sample Rate",
+      "typeName": "sampleRateIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Display Link",
+      "typeName": "displayLinkIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Trace",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Values",
+      "typeName": "out",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Time",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": true,
+      "inLetTypeName": "isActiveIn",
+      "isHidden": false,
+      "name": "Active",
+      "type": "variable",
+      "typeName": "isActive",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Time",
+        "typeName": "time"
+      },
+      "enumCases": [
+        {
+          "name": "Time",
+          "typeName": "time"
+        },
+        {
+          "name": "Count",
+          "typeName": "count"
+        }
+      ],
+      "isHidden": false,
+      "name": "Method",
+      "type": "typedEnum",
+      "typeName": "method"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "secondsIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 10,
+        "coreType": "duration",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "duration",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Time",
+      "type": "variable",
+      "typeName": "seconds",
+      "valueType": "raw:core:duration"
+    },
+    {
+      "defaultValue": 100,
+      "inLetTypeName": "countIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Count",
+      "type": "variable",
+      "typeName": "count",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "displayLinkIn",
+      "isHidden": false,
+      "name": "Display Link",
+      "type": "variable",
+      "typeName": "displayLink",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 30,
+      "inLetTypeName": "sampleRateIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 60,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Sample Rate",
+      "type": "variable",
+      "typeName": "sampleRate",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Seconds",
+    "Trail"
+  ],
+  "typePath": "node:general:time:trace",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/time/trace"
+}

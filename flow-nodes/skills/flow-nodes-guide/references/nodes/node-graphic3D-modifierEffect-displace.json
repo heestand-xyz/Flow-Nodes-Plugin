@@ -1,0 +1,210 @@
+{
+  "complexity": "basic",
+  "docs": "Displace the first graphic with the seconds graphics red (x), green (y) and blue (z) colors.",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "leadingGraphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Modifier Graphic 3D",
+      "typeName": "trailingGraphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Offset",
+      "typeName": "offsetIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Origin",
+      "typeName": "originIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Displace",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic 3D",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "offsetIn",
+      "isHidden": false,
+      "maximumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "fixed": {
+                    "value": 1
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "coreType": "float",
+        "mode": {
+          "spatial": {
+            "_0": {
+              "components": [
+                {
+                  "fixed": {
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "type": "variable"
+      },
+      "name": "Offset",
+      "type": "variable",
+      "typeName": "offset",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": {
+        "blue": 0.5,
+        "green": 0.5,
+        "opacity": 1,
+        "red": 0.5
+      },
+      "inLetTypeName": "originIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": {
+          "blue": 1,
+          "green": 1,
+          "opacity": 1,
+          "red": 1
+        },
+        "coreType": "color",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": {
+          "blue": 0,
+          "green": 0,
+          "opacity": 0,
+          "red": 0
+        },
+        "coreType": "color",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Origin",
+      "type": "variable",
+      "typeName": "origin",
+      "valueType": "raw:core:color"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Fill",
+        "typeName": "fill"
+      },
+      "enumCases": [
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        },
+        {
+          "name": "Fit",
+          "typeName": "fit"
+        },
+        {
+          "name": "Fill",
+          "typeName": "fill"
+        },
+        {
+          "name": "Fixed",
+          "typeName": "fixed"
+        }
+      ],
+      "isHidden": false,
+      "name": "Placement",
+      "type": "stringEnum",
+      "typeName": "placement"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Stretch",
+        "typeName": "stretch"
+      },
+      "enumCases": [
+        {
+          "name": "Zero",
+          "typeName": "zero"
+        },
+        {
+          "name": "Loop",
+          "typeName": "loop"
+        },
+        {
+          "name": "Mirror",
+          "typeName": "mirror"
+        },
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        }
+      ],
+      "info": "Voxels outside the main bounds will use the extend mode when sampled. This will mainly affect voxels on the edges.",
+      "isHidden": false,
+      "name": "Extend Mode",
+      "type": "stringEnum",
+      "typeName": "extendMode"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:graphic3D:modifierEffect:displace",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/modifierEffect/displace"
+}

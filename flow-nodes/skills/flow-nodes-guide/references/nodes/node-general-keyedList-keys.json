@@ -1,0 +1,65 @@
+{
+  "complexity": "basic",
+  "docs": "Extract keys from a keyed list.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "lex",
+      "direction": "direct",
+      "keyType": "generic",
+      "level": "external",
+      "name": "Values",
+      "typeName": "valuesIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Reverse Order",
+      "typeName": "reverseOrderIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Keys",
+  "newInAppVersion": "4.3.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Keys",
+      "typeName": "keysOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Keyed List",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": false,
+      "inLetTypeName": "reverseOrderIn",
+      "isHidden": false,
+      "name": "Reverse Order",
+      "type": "variable",
+      "typeName": "reverseOrder",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Key",
+    "Dictionary"
+  ],
+  "typePath": "node:general:keyedList:keys",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/keyedList/keys"
+}

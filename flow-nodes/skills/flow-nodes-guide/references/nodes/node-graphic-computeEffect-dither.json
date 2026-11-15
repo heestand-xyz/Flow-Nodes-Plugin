@@ -1,0 +1,122 @@
+{
+  "complexity": "advanced",
+  "docs": "Dither a graphic with different algorithms.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Input",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Amount of color steps between 2 and 256. A lower level results in more contrast.",
+      "level": "external",
+      "name": "Levels",
+      "typeName": "levelsIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Monochrome will use the red channel.",
+      "level": "external",
+      "name": "Monochrome",
+      "typeName": "monochromeIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Dither",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Output",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Compute Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Atkinson",
+        "typeName": "atkinson"
+      },
+      "enumCases": [
+        {
+          "name": "Floyd–Steinberg",
+          "typeName": "floydSteinberg"
+        },
+        {
+          "name": "Atkinson",
+          "typeName": "atkinson"
+        }
+      ],
+      "info": "Floyd–Steinberg creates bold, high-contrast patterns, while Atkinson gives a softer, more textured feel.",
+      "isHidden": false,
+      "name": "Style",
+      "type": "typedEnum",
+      "typeName": "style"
+    },
+    {
+      "defaultValue": 2,
+      "inLetTypeName": "levelsIn",
+      "info": "Amount of color steps between 2 and 256. A lower level results in more contrast.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 256,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 2,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Levels",
+      "type": "variable",
+      "typeName": "levels",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "monochromeIn",
+      "info": "Monochrome will use the red channel.",
+      "isHidden": false,
+      "name": "Monochrome",
+      "type": "variable",
+      "typeName": "monochrome",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Random"
+  ],
+  "typePath": "node:graphic:computeEffect:dither",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/computeEffect/dither"
+}

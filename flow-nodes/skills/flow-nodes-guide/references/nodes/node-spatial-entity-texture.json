@@ -1,0 +1,55 @@
+{
+  "complexity": "basic",
+  "docs": "Apply a material to a spatial entity, such as a geometry or mesh field.",
+  "familyName": "3D Spatial",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Entity",
+      "typeName": "entityIn",
+      "valueType": "raw:entity",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Material",
+      "typeName": "materialIn",
+      "valueType": "raw:material",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Texture",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Entity",
+      "typeName": "entityOut",
+      "valueType": "raw:entity",
+      "way": "out"
+    }
+  ],
+  "parentName": "Entity",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Material",
+    "Surface",
+    "3D"
+  ],
+  "typePath": "node:spatial:entity:texture",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/spatial/entity/texture"
+}

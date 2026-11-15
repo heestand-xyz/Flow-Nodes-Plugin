@@ -1,0 +1,82 @@
+{
+  "complexity": "basic",
+  "docs": "Interpolate keyframes over time.",
+  "familyName": "Animation",
+  "inLets": [
+    {
+      "capacity": "lex",
+      "direction": "binding",
+      "keyType": "raw:core:keyframe",
+      "level": "external",
+      "name": "Keyframes",
+      "typeName": "keyframesIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Time",
+      "typeName": "timeIn",
+      "valueType": "raw:core:duration",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Duration",
+      "typeName": "durationIn",
+      "valueType": "raw:core:duration",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "Timeline",
+  "newInAppVersion": "2.4.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "timeIn",
+      "isHidden": false,
+      "name": "Time",
+      "type": "variable",
+      "typeName": "time",
+      "valueType": "raw:core:duration"
+    },
+    {
+      "defaultValue": 10,
+      "inLetTypeName": "durationIn",
+      "isHidden": false,
+      "name": "Duration",
+      "type": "variable",
+      "typeName": "duration",
+      "valueType": "raw:core:duration"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Keyframes"
+  ],
+  "typePath": "node:animation:resource:interpolate",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/animation/resource/interpolate"
+}

@@ -1,0 +1,63 @@
+{
+  "complexity": "advanced",
+  "docs": "Link to an external file.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "On upstream signals, the linked file will be overwritten, when allowed.",
+      "level": "external",
+      "name": "Allow Write to File",
+      "typeName": "allowWriteIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "File",
+  "newInAppVersion": "4.2.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "File",
+      "typeName": "fileOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Link",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "isHidden": true,
+      "name": "Link",
+      "type": "item",
+      "typeName": "bookmarkLink"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "allowWriteIn",
+      "info": "On upstream signals, the linked file will be overwritten, when allowed.",
+      "isHidden": false,
+      "name": "Allow Write to File",
+      "type": "variable",
+      "typeName": "allowWrite",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "URL",
+    "Path"
+  ],
+  "typePath": "node:general:link:file",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/link/file"
+}

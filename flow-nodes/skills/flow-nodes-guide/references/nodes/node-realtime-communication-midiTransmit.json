@@ -1,0 +1,197 @@
+{
+  "complexity": "basic",
+  "docs": "Send MIDI notes.",
+  "familyName": "Realtime",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Active",
+      "typeName": "isOnIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Note",
+      "typeName": "noteIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Velocity",
+      "typeName": "velocityIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Channel",
+      "typeName": "channelIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Group",
+      "typeName": "groupIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "MIDI Transmit",
+  "newInAppVersion": "1.2.3",
+  "outLets": [],
+  "parentName": "Communication",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": true,
+      "info": "Sends to all outputs if active.",
+      "isHidden": false,
+      "name": "Auto Target",
+      "type": "value",
+      "typeName": "autoTarget",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "isHidden": false,
+      "name": "Target",
+      "type": "stringEnum",
+      "typeName": "target"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "isOnIn",
+      "isHidden": false,
+      "name": "Active",
+      "type": "variable",
+      "typeName": "isOn",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 60,
+      "inLetTypeName": "noteIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 127,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Note",
+      "type": "variable",
+      "typeName": "note",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "velocityIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Velocity",
+      "type": "variable",
+      "typeName": "velocity",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "channelIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 16,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Channel",
+      "type": "variable",
+      "typeName": "channel",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "groupIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 16,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Group",
+      "type": "variable",
+      "typeName": "group",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Send",
+    "Signal",
+    "Network"
+  ],
+  "typePath": "node:realtime:communication:midiTransmit",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/realtime/communication/midiTransmit"
+}

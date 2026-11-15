@@ -1,0 +1,110 @@
+{
+  "complexity": "basic",
+  "docs": "Mix two values by cross-fading the values. Slerp is used with quaternions and lerp with all other values.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Leading",
+      "typeName": "leadingIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Trailing",
+      "typeName": "trailingIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Fraction",
+      "typeName": "fractionIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Smooth",
+      "typeName": "smoothIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Mix",
+  "newInAppVersion": "2.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "out",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Math",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "fractionIn",
+      "info": "A value from 0.0 (leading) to 1.0 (trailing).",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Fraction",
+      "type": "variable",
+      "typeName": "fraction",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "smoothIn",
+      "info": "Apply smoothness with a cosine curve.",
+      "isHidden": false,
+      "name": "Smooth",
+      "type": "variable",
+      "typeName": "smooth",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Lerp",
+    "Slerp",
+    "Crossfade"
+  ],
+  "typePath": "node:general:math:mix",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/math/mix"
+}

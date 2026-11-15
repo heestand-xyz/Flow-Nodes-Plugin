@@ -1,0 +1,106 @@
+{
+  "complexity": "basic",
+  "docs": "Clamp a core value between optional minimum and maximum bounds.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Minimum",
+      "typeName": "minimumIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Maximum",
+      "typeName": "maximumIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Enable the minimum clamp.",
+      "level": "external",
+      "name": "Clamp Minimum",
+      "typeName": "clampMinimumIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Enable the maximum clamp.",
+      "level": "external",
+      "name": "Clamp Maximum",
+      "typeName": "clampMaximumIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Clamp",
+  "newInAppVersion": "4.3.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Math",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": true,
+      "inLetTypeName": "clampMinimumIn",
+      "info": "Enable the minimum clamp.",
+      "isHidden": false,
+      "name": "Clamp Minimum",
+      "type": "variable",
+      "typeName": "clampMinimum",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "clampMaximumIn",
+      "info": "Enable the maximum clamp.",
+      "isHidden": false,
+      "name": "Clamp Maximum",
+      "type": "variable",
+      "typeName": "clampMaximum",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Limit",
+    "Bounds",
+    "Min",
+    "Max"
+  ],
+  "typePath": "node:general:math:clamp",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/math/clamp"
+}

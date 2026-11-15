@@ -1,0 +1,70 @@
+{
+  "complexity": "basic",
+  "docs": "Select a value from the inlet list at an index.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "List",
+      "typeName": "listIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Index",
+      "typeName": "indexIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Select",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Item",
+      "typeName": "itemOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "List",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "indexIn",
+      "info": "The position of the selected item. The first value is at index 0.",
+      "isHidden": false,
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Index",
+      "type": "variable",
+      "typeName": "index",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:general:list:select",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/list/select"
+}

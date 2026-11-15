@@ -1,0 +1,80 @@
+# General nodes
+
+Read the linked JSON for exact ports and properties. Prefer visible replacements for new flows.
+
+- **Code / Script** — Pro. [JSON](../nodes/node-general-code-script.json) · `node:general:code:script`. Write JavaScript to connect and calculate values. Run the code manually or enable Live to update when inputs change.
+- **Code / Shader** — Pro. [JSON](../nodes/node-general-code-shader.json) · `node:general:code:shader`. Write Metal code to create graphics and visual effects. The graphic live updates when connected inputs change.
+- **Display / Window** — Free. [JSON](../nodes/node-general-display-window.json) · `node:general:display:window`. Display a value in a window.
+- **Generic / Auto Save** — Free. [JSON](../nodes/node-general-generic-autoSave.json) · `node:general:generic:autoSave`. Automatically save a downstream source value to a destination upstream, when the source value or connections changes.
+- **Generic / Combine Latest** — Free. [JSON](../nodes/node-general-generic-combineLatest.json) · `node:general:generic:combineLatest`. Combines the two values, outputting the latest changed value.
+- **Generic / Compare** — Free. [JSON](../nodes/node-general-generic-compare.json) · `node:general:generic:compare`. Compare two inlets with each other.
+- **Generic / Convert** — Free. [JSON](../nodes/node-general-generic-manualConvert.json) · `node:general:generic:manualConvert`. Manually convert from one type to another.
+- **Generic / Convert List** — Free. [JSON](../nodes/node-general-generic-manualConvertList.json) · `node:general:generic:manualConvertList`. Manually convert every value in a list from one type to another.
+- **Generic / Convert from List** — Free. [JSON](../nodes/node-general-generic-manualConvertFromList.json) · `node:general:generic:manualConvertFromList`. Manually combine a list of component values into one value.
+- **Generic / Convert to List** — Free. [JSON](../nodes/node-general-generic-manualConvertToList.json) · `node:general:generic:manualConvertToList`. Manually convert one value into a list of component values.
+- **Generic / Counter** — Free. [JSON](../nodes/node-general-generic-counter.json) · `node:general:generic:counter`. Connect a Float or Int State node to the Value inlet, to increment or decrement via actions.
+- **Generic / Filter** — Free. [JSON](../nodes/node-general-generic-filter.json) · `node:general:generic:filter`. Filter values from a list of allowed values.
+- **Generic / Keyed List Auto Save** — Free. [JSON](../nodes/node-general-generic-keyedListAutoSave.json) · `node:general:generic:keyedListAutoSave`. Automatically save a keyed list of downstream source values to a destination upstream, when the source values or connections changes.
+- **Generic / Keyed List Save** — Free. [JSON](../nodes/node-general-generic-keyedListSave.json) · `node:general:generic:keyedListSave`. Save a keyed list of downstream source values to a destination upstream, when the save action is triggered.
+- **Generic / List Auto Save** — Free. [JSON](../nodes/node-general-generic-listAutoSave.json) · `node:general:generic:listAutoSave`. Automatically save a downstream source values to a destination upstream, when the source values or connections changes.
+- **Generic / List Save** — Free. [JSON](../nodes/node-general-generic-listSave.json) · `node:general:generic:listSave`. Save a list of values. Connect the destination inlet to a List State Node
+- **Generic / On Change** — Free. [JSON](../nodes/node-general-generic-onChange.json) · `node:general:generic:onChange`. Trigger an action on change of a value.
+- **Generic / Random** — Free. [JSON](../nodes/node-general-generic-random.json) · `node:general:generic:random`. Generate a random value. To see the value connect the outlet to a relay or other node.
+- **Generic / Save** — Free. [JSON](../nodes/node-general-generic-save.json) · `node:general:generic:save`. Save a value. Connect the destination inlet to a State Node.
+- **Generic / Trigger** — Free. [JSON](../nodes/node-general-generic-trigger.json) · `node:general:generic:trigger`. Trigger an action when a bool goes from false to true.
+- **Generic / URL Request** — Pro. [JSON](../nodes/node-general-generic-urlRequest.json) · `node:general:generic:urlRequest`. Fetch data from the internet. To see the data, connect a String or Graphic node.
+- **Intelligence / Chat** — Free. [JSON](../nodes/node-general-intelligence-chat.json) · `node:general:intelligence:chat`. Chat with a model. Requires OS 26 or higher and an eligible device with Apple Intelligence activated. Powered by Foundation Models.
+- **Intelligence / Generate** — Free. [JSON](../nodes/node-general-intelligence-generate.json) · `node:general:intelligence:generate`. Generate a type from a prompt. Connect the Generable inlet to a State node to save the output. Requires OS 26 or higher and an eligible device with Apple Intelligence activated. Powered by Foundation Models.
+- **Intelligence / Generate List** — Free. [JSON](../nodes/node-general-intelligence-generateList.json) · `node:general:intelligence:generateList`. Generate a list of types from a prompt. Connect the Generables inlet to a List State node to save the output. Requires OS 26 or higher and an eligible device with Apple Intelligence activated. Powered by Foundation Models.
+- **Intelligence / Image Generate** — Free. [JSON](../nodes/node-general-intelligence-imageGenerate.json) · `node:general:intelligence:imageGenerate`. Generate a type from a prompt and image. Connect the Generable inlet to a State node to save the output. Requires OS 27 or higher and an eligible device with Apple Intelligence activated. Powered by Foundation Models.
+- **Intelligence / Image Playground** — Free. [JSON](../nodes/node-general-intelligence-imagePlayground.json) · `node:general:intelligence:imagePlayground`. Open Image Playground with a concept and an optional source graphic. Make sure to wire in a State Graphic node to Result, to see the image result.
+- **Keyed List / Enumerate** — Free. [JSON](../nodes/node-general-keyedList-enumerate.json) · `node:general:keyedList:enumerate`. Create a keyed list by using each value's index as its key.
+- **Keyed List / Key Insert** — Free. [JSON](../nodes/node-general-keyedList-keyInsert.json) · `node:general:keyedList:keyInsert`. Insert or replace a source value in a keyed list at the provided key.
+- **Keyed List / Key Select** — Free. [JSON](../nodes/node-general-keyedList-select.json) · `node:general:keyedList:select`. Select a value from a keyed list by key.
+- **Keyed List / Keyed List Relay** — Free. [JSON](../nodes/node-general-keyedList-relay.json) · `node:general:keyedList:relay`. Relay a keyed list of values. This node has no effect. Tho useful when merging multiple keyed lists.
+- **Keyed List / Keys** — Free. [JSON](../nodes/node-general-keyedList-keys.json) · `node:general:keyedList:keys`. Extract keys from a keyed list.
+- **Keyed List / Range Enumerate** — Free. [JSON](../nodes/node-general-keyedList-rangeEnumerate.json) · `node:general:keyedList:rangeEnumerate`. Keyed list with evenly spaced float keys from Low to High, including both endpoints.
+- **Keyed List / Unique Keys with Values** — Free. [JSON](../nodes/node-general-keyedList-uniqueKeysWithValues.json) · `node:general:keyedList:uniqueKeysWithValues`. Create a keyed list from unique keys and matching values.
+- **Keyed List / Values** — Free. [JSON](../nodes/node-general-keyedList-values.json) · `node:general:keyedList:values`. Extract values from a keyed list.
+- **Link / File** — Free. [JSON](../nodes/node-general-link-file.json) · `node:general:link:file`. Link to an external file.
+- **Link / Folder** — Free. [JSON](../nodes/node-general-link-folder.json) · `node:general:link:folder`. Link to an external folder.
+- **List / Append** — Free. [JSON](../nodes/node-general-list-append.json) · `node:general:list:append`. Add a value from the second inlet into the bottom of the list of the first inlet. (The first inlet can be connected to a List State Node.)
+- **List / Average** — Free. [JSON](../nodes/node-general-list-average.json) · `node:general:list:average`. Averages all values in a list into one value.
+- **List / Count** — Free. [JSON](../nodes/node-general-list-count.json) · `node:general:list:count`. Count the number of values in a list.
+- **List / Duplicate** — Free. [JSON](../nodes/node-general-list-duplicate.json) · `node:general:list:duplicate`. Duplicate one value from the inlet to a list in the outlet.
+- **List / Indices** — Free. [JSON](../nodes/node-general-list-indices.json) · `node:general:list:indices`. Outputs the zero-based indices of the list elements.
+- **List / Insert** — Free. [JSON](../nodes/node-general-list-insert.json) · `node:general:list:insert`. Insert a value from the second inlet into the list of the first inlet. (The first inlet can be connected to a List State Node.)
+- **List / Move** — Free. [JSON](../nodes/node-general-list-move.json) · `node:general:list:move`. Move a value from the source index to the target index in the list of the first inlet. (The inlet can be connected to a List State Node.)
+- **List / Remove** — Free. [JSON](../nodes/node-general-list-remove.json) · `node:general:list:remove`. Remove one value from the inlet. (The inlet can be connected to a List State Node.)
+- **List / Remove All** — Free. [JSON](../nodes/node-general-list-removeAll.json) · `node:general:list:removeAll`. Remove all values from the inlet. (The inlet can be connected to a List State Node.)
+- **List / Select** — Free. [JSON](../nodes/node-general-list-select.json) · `node:general:list:select`. Select a value from the inlet list at an index.
+- **List / Transition** — Free. [JSON](../nodes/node-general-list-transition.json) · `node:general:list:transition`. Transition between multiple values, two at a time, with a fraction.
+- **Math / Clamp** — Free. [JSON](../nodes/node-general-math-clamp.json) · `node:general:math:clamp`. Clamp a core value between optional minimum and maximum bounds.
+- **Math / Expression** — Pro. [JSON](../nodes/node-general-math-expression.json) · `node:general:math:expression`. Evaluate math expressions.
+- **Math / Float Expression** — Free. [JSON](../nodes/node-general-math-floatExpression.json) · `node:general:math:floatExpression`. Evaluate a math expression with a single float that can be accessed with the hard coded variable name: `value`.
+- **Math / List Operation** — Free. [JSON](../nodes/node-general-math-listOperation.json) · `node:general:math:listOperation`. Math operation on a list of values of the same type.
+- **Math / Maximum** — Free. [JSON](../nodes/node-general-math-maximum.json) · `node:general:math:maximum`. Return the maximum value from a list of values.
+- **Math / Minimum** — Free. [JSON](../nodes/node-general-math-minimum.json) · `node:general:math:minimum`. Return the minimum value from a list of values.
+- **Math / Mix** — Free. [JSON](../nodes/node-general-math-mix.json) · `node:general:math:mix`. Mix two values by cross-fading the values. Slerp is used with quaternions and lerp with all other values.
+- **Math / Operation** — Free. [JSON](../nodes/node-general-math-operation.json) · `node:general:math:operation`. Math operation on two values of the same type.
+- **Math / Range** — Free. [JSON](../nodes/node-general-math-range.json) · `node:general:math:range`. Range a value from low / high to a new low / high.
+- **Math / Round** — Free. [JSON](../nodes/node-general-math-round.json) · `node:general:math:round`. Round, round up or round down a value.
+- **Math / Time Operation** — Free. [JSON](../nodes/node-general-math-timeOperation.json) · `node:general:math:timeOperation`. Math time operation on the current and last value.
+- **Phase / App** — Free. [JSON](../nodes/node-general-phase-app.json) · `node:general:phase:app`. Read the current app foreground and active schene phases.
+- **Phase / Flow** — Free. [JSON](../nodes/node-general-phase-flow.json) · `node:general:phase:flow`. Trigger an action when the flow has opened.
+- **Signal / Gate** — Free. [JSON](../nodes/node-general-signal-gate.json) · `node:general:signal:gate`. Passes action signals while the gate is enabled and drops them while it is disabled.
+- **Signal / Merge** — Free. [JSON](../nodes/node-general-signal-merge.json) · `node:general:signal:merge`. Merges multiple action signals into one action signal.
+- **Time / Alarm** — Free. [JSON](../nodes/node-general-time-alarm.json) · `node:general:time:alarm`. Schedule an action at a specific time. See a count down with a duration to the scheduled time.
+- **Time / Clock** — Free. [JSON](../nodes/node-general-time-clock.json) · `node:general:time:clock`. The current time.
+- **Time / Debounce** — Free. [JSON](../nodes/node-general-time-debounce.json) · `node:general:time:debounce`. Sends the latest value after no new values arrive for the duration.
+- **Time / Delay** — Free. [JSON](../nodes/node-general-time-delay.json) · `node:general:time:delay`. Delay a value over time.
+- **Time / Freeze** — Free. [JSON](../nodes/node-general-time-freeze.json) · `node:general:time:freeze`. Retains the latest value while frozen.
+- **Time / Playback** — Free. [JSON](../nodes/node-general-time-playback.json) · `node:general:time:playback`. Control playback of a time. Connect the time inlet upstream to a State node to further connect to other nodes downstream.
+- **Time / Smooth** — Free. [JSON](../nodes/node-general-time-smooth.json) · `node:general:time:smooth`. Smooth a value over time.
+- **Time / Stopwatch** — Free; deprecated; replacement node:general:time:stopwatch2. [JSON](../nodes/node-general-time-stopwatch.json) · `node:general:time:stopwatch`. Counts in seconds up from zero.
+- **Time / Stopwatch** — Free. [JSON](../nodes/node-general-time-stopwatch2.json) · `node:general:time:stopwatch2`. Counts up from zero.
+- **Time / Throttle** — Free. [JSON](../nodes/node-general-time-throttle.json) · `node:general:time:throttle`. Sends the first value immediately, then limit values to one per duration.
+- **Time / Timer** — Free; deprecated; replacement node:general:time:timer2. [JSON](../nodes/node-general-time-timer.json) · `node:general:time:timer`. Count down by a specified duration. When zero is reached an action will be sent.
+- **Time / Timer** — Free. [JSON](../nodes/node-general-time-timer2.json) · `node:general:time:timer2`. Count down by a specified duration. When zero is reached an action will be sent. Optionally repeat the timer.
+- **Time / Trace** — Free. [JSON](../nodes/node-general-time-trace.json) · `node:general:time:trace`. Trace values from the inlet into a list in the outlet over time.
+- **Time / Trace On Change** — Free. [JSON](../nodes/node-general-time-traceOnChange.json) · `node:general:time:traceOnChange`. Trace values into a list on every signal, value change, or hash change. Limit the history with Max Count or empty it with Clear.

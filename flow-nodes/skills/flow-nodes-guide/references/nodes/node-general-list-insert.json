@@ -1,0 +1,85 @@
+{
+  "complexity": "advanced",
+  "docs": "Insert a value from the second inlet into the list of the first inlet. (The first inlet can be connected to a List State Node.)",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Destination",
+      "typeName": "listIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Source",
+      "typeName": "valueIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Index",
+      "typeName": "indexIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Insert",
+      "typeName": "actionIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Insert",
+  "newInAppVersion": "1.0.0",
+  "outLets": [],
+  "parentName": "List",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "indexIn",
+      "info": "The position in the list to add the value. The first position is 0.",
+      "isHidden": false,
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Index",
+      "type": "variable",
+      "typeName": "index",
+      "valueType": "raw:core:int"
+    },
+    {
+      "info": "Add the value to the list at the index.",
+      "isHidden": false,
+      "name": "Insert",
+      "type": "action",
+      "typeName": "action"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:general:list:insert",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/list/insert"
+}

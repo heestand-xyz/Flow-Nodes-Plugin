@@ -1,0 +1,61 @@
+{
+  "complexity": "advanced",
+  "docs": "Clone a geometry with transforms.",
+  "familyName": "3D Geometry",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Geometry",
+      "typeName": "geometryIn",
+      "valueType": "raw:geometry",
+      "way": "in"
+    },
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Transforms",
+      "typeName": "transformsIn",
+      "valueType": "raw:core:transform3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "links": [
+    {
+      "title": "Guide",
+      "url": "https://flownodes.notion.site/3D-Clones-Guide-27f9a07f8bd9804fa559dcd14d72ded8"
+    }
+  ],
+  "name": "Clones",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Geometry",
+      "typeName": "geometryOut",
+      "valueType": "raw:geometry",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacedByTypePath": "node:spatial:entity:cloneTransform",
+  "replacesTypePaths": [],
+  "tags": [
+    "Copy",
+    "Instance"
+  ],
+  "typePath": "node:geometry:resource:clones",
+  "isVisible": false,
+  "sourceRoute": "/docs/nodes/geometry/resource/clones"
+}

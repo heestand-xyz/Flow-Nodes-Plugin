@@ -1,0 +1,107 @@
+{
+  "complexity": "basic",
+  "docs": "Counts up from zero.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Running",
+      "typeName": "isRunningIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Fractional",
+      "typeName": "isFractionalIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Speed",
+      "typeName": "speedIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Reset",
+      "typeName": "resetIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Stopwatch",
+  "newInAppVersion": "2.4.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Time",
+      "typeName": "timeOut",
+      "valueType": "raw:core:duration",
+      "way": "out"
+    }
+  ],
+  "parentName": "Time",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": false,
+      "inLetTypeName": "isRunningIn",
+      "isHidden": false,
+      "name": "Running",
+      "type": "variable",
+      "typeName": "isRunning",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "isFractionalIn",
+      "isHidden": false,
+      "name": "Fractional",
+      "type": "variable",
+      "typeName": "isFractional",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "speedIn",
+      "isHidden": false,
+      "name": "Speed",
+      "type": "variable",
+      "typeName": "speed",
+      "valueType": "raw:core:float"
+    },
+    {
+      "isHidden": false,
+      "name": "Reset",
+      "type": "action",
+      "typeName": "reset"
+    }
+  ],
+  "replacesTypePaths": [
+    "node:general:time:stopwatch"
+  ],
+  "tags": [
+    "Seconds"
+  ],
+  "typePath": "node:general:time:stopwatch2",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/time/stopwatch2"
+}

@@ -1,0 +1,60 @@
+{
+  "complexity": "advanced",
+  "docs": "Filter values in a list. If the condition is true, the value will be included in the final list.",
+  "familyName": "Container",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Array",
+      "typeName": "arrayIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "internal",
+      "name": "Element Filter",
+      "typeName": "elementFilterIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Filter",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Filtered Element",
+      "typeName": "arrayFilterOut",
+      "valueType": "generic",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "internal",
+      "name": "Element",
+      "typeName": "elementOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Map",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:container:map:filter",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/container/map/filter"
+}

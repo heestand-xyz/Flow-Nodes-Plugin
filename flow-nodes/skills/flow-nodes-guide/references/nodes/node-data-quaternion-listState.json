@@ -1,0 +1,44 @@
+{
+  "complexity": "advanced",
+  "docs": "Store a list of Quaternions. Used for 3D rotations.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "List State",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Quaternions",
+      "typeName": "out",
+      "valueType": "raw:core:quaternion",
+      "way": "out"
+    }
+  ],
+  "parentName": "Quaternion",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValues": [],
+      "isHidden": false,
+      "name": "Quaternions",
+      "type": "valueArray",
+      "typeName": "quaternions",
+      "valueType": "raw:core:quaternion"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "Array"
+  ],
+  "typePath": "node:data:quaternion:listState",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/quaternion/listState"
+}

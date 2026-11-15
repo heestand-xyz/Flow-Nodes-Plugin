@@ -1,0 +1,58 @@
+{
+  "complexity": "basic",
+  "docs": "Clone a spatial entity using multiple 3D transforms.",
+  "familyName": "3D Spatial",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Entity",
+      "typeName": "entityIn",
+      "valueType": "raw:entity",
+      "way": "in"
+    },
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Transforms",
+      "typeName": "transformsIn",
+      "valueType": "raw:core:transform3D",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "Clone Transform",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Entity",
+      "typeName": "entityOut",
+      "valueType": "raw:entity",
+      "way": "out"
+    }
+  ],
+  "parentName": "Entity",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [
+    "node:geometry:resource:clones"
+  ],
+  "tags": [
+    "Clone",
+    "Transform",
+    "Instance",
+    "Copy"
+  ],
+  "typePath": "node:spatial:entity:cloneTransform",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/spatial/entity/cloneTransform"
+}

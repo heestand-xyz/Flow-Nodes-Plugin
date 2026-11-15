@@ -1,0 +1,67 @@
+{
+  "complexity": "basic",
+  "docs": "Retains the latest value while frozen.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Retains the last received value while enabled.",
+      "level": "external",
+      "name": "Frozen",
+      "typeName": "frozenIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Freeze",
+  "newInAppVersion": "27.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Time",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": false,
+      "inLetTypeName": "frozenIn",
+      "info": "Retains the last received value while enabled.",
+      "isHidden": false,
+      "name": "Frozen",
+      "type": "variable",
+      "typeName": "frozen",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Hold",
+    "Pause",
+    "Cache"
+  ],
+  "typePath": "node:general:time:freeze",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/time/freeze"
+}

@@ -1,0 +1,60 @@
+{
+  "complexity": "advanced",
+  "docs": "Check if all the values in the list inlet satisfy some condition. Only when all of the inner value inlets are true, the final outlet will be true.",
+  "familyName": "Container",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Array In",
+      "typeName": "arrayIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "internal",
+      "name": "Element Satisfy In",
+      "typeName": "elementSatisfyIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "All Satisfy",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "All Satisfied",
+      "typeName": "arraySatisfyOut",
+      "valueType": "raw:core:bool",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "internal",
+      "name": "Element Out",
+      "typeName": "elementOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Map",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:container:map:allSatisfy",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/container/map/allSatisfy"
+}

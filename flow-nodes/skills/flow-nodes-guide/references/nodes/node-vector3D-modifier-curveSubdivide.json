@@ -1,0 +1,85 @@
+{
+  "complexity": "basic",
+  "docs": "Convert 3D vector curves into line segments by subdividing each curve.",
+  "familyName": "3D Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "3D Vector",
+      "typeName": "vectorIn",
+      "valueType": "raw:vector3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The number of line segments used for each curve.",
+      "level": "external",
+      "name": "Subdivisions",
+      "typeName": "subdivisionsIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Curve Subdivide",
+  "newInAppVersion": "4.3.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "3D Vector",
+      "typeName": "vectorOut",
+      "valueType": "raw:vector3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 10,
+      "inLetTypeName": "subdivisionsIn",
+      "info": "The number of line segments used for each curve.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 20,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Subdivisions",
+      "type": "variable",
+      "typeName": "subdivisions",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Curve",
+    "Subdivide",
+    "Lines",
+    "Quantize",
+    "3D"
+  ],
+  "typePath": "node:vector3D:modifier:curveSubdivide",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector3D/modifier/curveSubdivide"
+}

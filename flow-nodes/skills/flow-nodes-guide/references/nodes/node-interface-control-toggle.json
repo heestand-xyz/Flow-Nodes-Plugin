@@ -1,0 +1,55 @@
+{
+  "complexity": "basic",
+  "docs": "An on / off switch.",
+  "familyName": "Interface",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Is On",
+      "typeName": "isOnIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Toggle",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewOut",
+      "valueType": "raw:view",
+      "way": "out"
+    }
+  ],
+  "parentName": "Control",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": false,
+      "inLetTypeName": "isOnIn",
+      "isHidden": false,
+      "name": "Is On",
+      "type": "variable",
+      "typeName": "isOn",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Interaction",
+    "Switch"
+  ],
+  "typePath": "node:interface:control:toggle",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/interface/control/toggle"
+}

@@ -1,0 +1,206 @@
+{
+  "complexity": "basic",
+  "docs": "Connect a Float or Int State node to the Value inlet, to increment or decrement via actions.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The step value to increment or decrement the value by. If the Value inlet is connected to a State, keep this value above or at 1.0",
+      "level": "external",
+      "name": "Step Value",
+      "typeName": "stepValueIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Limit the value to a range between a lower and a upper bound.",
+      "level": "external",
+      "name": "Limit",
+      "typeName": "limitIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The minimum value the counter can go to.",
+      "level": "external",
+      "name": "Lower Bound",
+      "typeName": "lowerBoundIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The maximum value the counter can go to.",
+      "level": "external",
+      "name": "Upper Bound",
+      "typeName": "upperBoundIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Loop when reaching the lower or upper bound limit.",
+      "level": "external",
+      "name": "Loop",
+      "typeName": "loopIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Don't allow the value to go to the lower bound. If active, the value will always be upper than the lower bound.",
+      "level": "external",
+      "name": "Loop Before Lower Bound",
+      "typeName": "loopBeforeLowerBoundIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Don't allow the value to go to the upper bound. If active, the value will always be lower than the upper bound.",
+      "level": "external",
+      "name": "Loop Before Upper Bound",
+      "typeName": "loopBeforeUpperBoundIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Increment",
+      "typeName": "incrementIn",
+      "valueType": "raw:action",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Decrement",
+      "typeName": "decrementIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Counter",
+  "newInAppVersion": "3.1.0",
+  "outLets": [],
+  "parentName": "Generic",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "stepValueIn",
+      "info": "The step value to increment or decrement the value by. If the Value inlet is connected to a State, keep this value above or at 1.0",
+      "isHidden": false,
+      "name": "Step Value",
+      "type": "variable",
+      "typeName": "stepValue",
+      "valueType": "raw:core:float"
+    },
+    {
+      "isHidden": false,
+      "name": "Increment",
+      "type": "action",
+      "typeName": "increment"
+    },
+    {
+      "isHidden": false,
+      "name": "Decrement",
+      "type": "action",
+      "typeName": "decrement"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "limitIn",
+      "info": "Limit the value to a range between a lower and a upper bound.",
+      "isHidden": false,
+      "name": "Limit",
+      "type": "variable",
+      "typeName": "limit",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "lowerBoundIn",
+      "info": "The minimum value the counter can go to.",
+      "isHidden": true,
+      "name": "Lower Bound",
+      "type": "variable",
+      "typeName": "lowerBound",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 10,
+      "inLetTypeName": "upperBoundIn",
+      "info": "The maximum value the counter can go to.",
+      "isHidden": true,
+      "name": "Upper Bound",
+      "type": "variable",
+      "typeName": "upperBound",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "loopIn",
+      "info": "Loop when reaching the lower or upper bound limit.",
+      "isHidden": true,
+      "name": "Loop",
+      "type": "variable",
+      "typeName": "loop",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "loopBeforeLowerBoundIn",
+      "info": "Don't allow the value to go to the lower bound. If active, the value will always be upper than the lower bound.",
+      "isHidden": true,
+      "name": "Loop Before Lower Bound",
+      "type": "variable",
+      "typeName": "loopBeforeLowerBound",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": true,
+      "inLetTypeName": "loopBeforeUpperBoundIn",
+      "info": "Don't allow the value to go to the upper bound. If active, the value will always be lower than the upper bound.",
+      "isHidden": true,
+      "name": "Loop Before Upper Bound",
+      "type": "variable",
+      "typeName": "loopBeforeUpperBound",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Increment",
+    "Decrement"
+  ],
+  "typePath": "node:general:generic:counter",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/generic/counter"
+}

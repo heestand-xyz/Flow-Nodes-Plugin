@@ -1,0 +1,44 @@
+{
+  "complexity": "advanced",
+  "docs": "Store a list of 3D Points.",
+  "familyName": "Data",
+  "inLets": [],
+  "isPro": false,
+  "name": "List State",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Values",
+      "typeName": "out",
+      "valueType": "raw:core:point3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "3D Point",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValues": [],
+      "isHidden": false,
+      "name": "Values",
+      "type": "valueArray",
+      "typeName": "values",
+      "valueType": "raw:core:point3D"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Store",
+    "Array"
+  ],
+  "typePath": "node:data:point3D:listState",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/point3D/listState"
+}

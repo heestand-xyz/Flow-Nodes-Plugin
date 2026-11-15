@@ -1,0 +1,74 @@
+{
+  "complexity": "advanced",
+  "docs": "Edit the values of a keyed list and output them as a list.",
+  "familyName": "Container",
+  "inLets": [
+    {
+      "capacity": "lex",
+      "direction": "binding",
+      "keyType": "generic",
+      "level": "external",
+      "name": "Values",
+      "typeName": "valuesInIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "internal",
+      "name": "Value",
+      "typeName": "valueInIn",
+      "valueType": "generic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Leading Keyed Edit",
+  "newInAppVersion": "27.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "internal",
+      "name": "Key",
+      "typeName": "keyOutOut",
+      "valueType": "generic",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "internal",
+      "name": "Value",
+      "typeName": "valueOutOut",
+      "valueType": "generic",
+      "way": "out"
+    },
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Values",
+      "typeName": "valuesOutOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Map",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Keyed",
+    "List",
+    "Edit"
+  ],
+  "typePath": "node:container:map:leadingKeyedEdit",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/container/map/leadingKeyedEdit"
+}

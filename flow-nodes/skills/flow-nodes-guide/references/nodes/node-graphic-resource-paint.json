@@ -1,0 +1,585 @@
+{
+  "complexity": "basic",
+  "docs": "Paint with various brushes like circle, gradient, line, and sample a another graphic. Paint is passed upstream to a State Graphic node via the source inlet. Switch between release and live paint mode. Sample over time. Interpolate between points for a more accurate path. Control active and location of the paint via inlets. Overlay a reference graphic with opacity.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Source",
+      "typeName": "sourceIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Active",
+      "typeName": "activeIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Location",
+      "typeName": "locationIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Brush Sample",
+      "typeName": "brushSampleIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Reference",
+      "typeName": "referenceIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Resolution",
+      "typeName": "resolutionIn",
+      "valueType": "raw:core:size",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Brush Color",
+      "typeName": "brushColorIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Brush Radius",
+      "typeName": "brushRadiusIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Brush Gamma",
+      "typeName": "brushGammaIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Brush Line Width",
+      "typeName": "brushLineWidthIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Brush Angle",
+      "typeName": "brushAngleIn",
+      "valueType": "raw:core:angle",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "When active, the brush will interpolate between points. (Not supported when in sampling over time in live mode)",
+      "level": "external",
+      "name": "Interpolate",
+      "typeName": "interpolateIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The amount of brush sub points to draw one point when interpolating from the last point.",
+      "level": "external",
+      "name": "Interpolation Count",
+      "typeName": "interpolationCountIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Background Color",
+      "typeName": "backgroundColorIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Reference Opacity",
+      "typeName": "referenceOpacityIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The brush will be sampled over time, as often as possible.",
+      "level": "external",
+      "name": "Sample over Time",
+      "typeName": "sampleOverTimeIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Clear",
+      "typeName": "clearIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "Paint",
+  "newInAppVersion": "3.2.0",
+  "outLets": [],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": [
+        1000,
+        1000
+      ],
+      "inLetTypeName": "resolutionIn",
+      "isHidden": false,
+      "name": "Resolution",
+      "type": "variable",
+      "typeName": "resolution",
+      "valueType": "raw:core:size"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "8 Bit",
+        "typeName": "bit8"
+      },
+      "enumCases": [
+        {
+          "name": "8 Bit",
+          "typeName": "bit8"
+        },
+        {
+          "name": "16 Bit",
+          "typeName": "bit16"
+        },
+        {
+          "name": "32 Bit",
+          "typeName": "bit32"
+        }
+      ],
+      "isHidden": false,
+      "name": "Bits",
+      "type": "typedEnum",
+      "typeName": "bits"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Release",
+        "typeName": "release"
+      },
+      "enumCases": [
+        {
+          "name": "Release",
+          "typeName": "release"
+        },
+        {
+          "name": "Live",
+          "typeName": "live"
+        }
+      ],
+      "info": "In live mode, the source will be updated continuously, and in release mode the source will only apply the path once the brush is released.",
+      "isHidden": false,
+      "name": "Paint Mode",
+      "type": "typedEnum",
+      "typeName": "paintMode"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Add",
+        "typeName": "add"
+      },
+      "enumCases": [
+        {
+          "name": "Over",
+          "typeName": "over"
+        },
+        {
+          "name": "Over with Alpha",
+          "typeName": "overWithAlpha"
+        },
+        {
+          "name": "Under",
+          "typeName": "under"
+        },
+        {
+          "name": "Screen",
+          "typeName": "screen"
+        },
+        {
+          "name": "Lighten",
+          "typeName": "lighten"
+        },
+        {
+          "name": "Darken",
+          "typeName": "darken"
+        },
+        {
+          "name": "Darken without Alpha",
+          "typeName": "darkenWithoutAlpha"
+        },
+        {
+          "name": "Add",
+          "typeName": "add"
+        },
+        {
+          "name": "Add with Alpha",
+          "typeName": "addWithAlpha"
+        },
+        {
+          "name": "Multiply",
+          "typeName": "multiply"
+        },
+        {
+          "name": "Multiply without Alpha",
+          "typeName": "multiplyWithoutAlpha"
+        },
+        {
+          "name": "Difference",
+          "typeName": "difference"
+        },
+        {
+          "name": "Difference with Alpha",
+          "typeName": "differenceWithAlpha"
+        },
+        {
+          "name": "Subtract",
+          "typeName": "subtract"
+        },
+        {
+          "name": "Subtract with Alpha",
+          "typeName": "subtractWithAlpha"
+        },
+        {
+          "name": "Maximum",
+          "typeName": "maximum"
+        },
+        {
+          "name": "Minimum",
+          "typeName": "minimum"
+        },
+        {
+          "name": "Gamma",
+          "typeName": "gamma"
+        },
+        {
+          "name": "Power",
+          "typeName": "power"
+        },
+        {
+          "name": "Divide",
+          "typeName": "divide"
+        },
+        {
+          "name": "Average",
+          "typeName": "average"
+        },
+        {
+          "name": "Cosine",
+          "typeName": "cosine"
+        },
+        {
+          "name": "Inside",
+          "typeName": "inside"
+        },
+        {
+          "name": "Outside",
+          "typeName": "outside"
+        },
+        {
+          "name": "Exclusive Or",
+          "typeName": "exclusiveOr"
+        }
+      ],
+      "isHidden": false,
+      "name": "Blend Mode",
+      "type": "typedEnum",
+      "typeName": "blendMode"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Circle",
+        "typeName": "circle"
+      },
+      "enumCases": [
+        {
+          "name": "Circle",
+          "typeName": "circle"
+        },
+        {
+          "name": "Gradient",
+          "typeName": "gradient"
+        },
+        {
+          "name": "Line",
+          "typeName": "line"
+        },
+        {
+          "name": "Sample",
+          "typeName": "sample"
+        }
+      ],
+      "isHidden": false,
+      "name": "Brush Mode",
+      "type": "typedEnum",
+      "typeName": "brushMode"
+    },
+    {
+      "defaultValue": {
+        "blue": 1,
+        "green": 1,
+        "opacity": 1,
+        "red": 1
+      },
+      "inLetTypeName": "brushColorIn",
+      "isHidden": false,
+      "name": "Brush Color",
+      "type": "variable",
+      "typeName": "brushColor",
+      "valueType": "raw:core:color"
+    },
+    {
+      "defaultValue": 50,
+      "inLetTypeName": "brushRadiusIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Brush Radius",
+      "type": "variable",
+      "typeName": "brushRadius",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "brushGammaIn",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Brush Gamma",
+      "type": "variable",
+      "typeName": "brushGamma",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 5,
+      "inLetTypeName": "brushLineWidthIn",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": 10,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Brush Line Width",
+      "type": "variable",
+      "typeName": "brushLineWidth",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "brushAngleIn",
+      "isHidden": true,
+      "name": "Brush Angle",
+      "type": "variable",
+      "typeName": "brushAngle",
+      "valueType": "raw:core:angle"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "interpolateIn",
+      "info": "When active, the brush will interpolate between points. (Not supported when in sampling over time in live mode)",
+      "isHidden": false,
+      "name": "Interpolate",
+      "type": "variable",
+      "typeName": "interpolate",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 2,
+      "inLetTypeName": "interpolationCountIn",
+      "info": "The amount of brush sub points to draw one point when interpolating from the last point.",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": 10,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 2,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Interpolation Count",
+      "type": "variable",
+      "typeName": "interpolationCount",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": {
+        "blue": 0,
+        "green": 0,
+        "opacity": 0,
+        "red": 0
+      },
+      "inLetTypeName": "backgroundColorIn",
+      "isHidden": false,
+      "name": "Background Color",
+      "type": "variable",
+      "typeName": "backgroundColor",
+      "valueType": "raw:core:color"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Fit",
+        "typeName": "fit"
+      },
+      "enumCases": [
+        {
+          "name": "Fixed",
+          "typeName": "fixed"
+        },
+        {
+          "name": "Fit",
+          "typeName": "fit"
+        },
+        {
+          "name": "Fill",
+          "typeName": "fill"
+        },
+        {
+          "name": "Stretch",
+          "typeName": "stretch"
+        }
+      ],
+      "isHidden": false,
+      "name": "Reference Placement",
+      "type": "typedEnum",
+      "typeName": "referencePlacement"
+    },
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "referenceOpacityIn",
+      "isHidden": false,
+      "name": "Reference Opacity",
+      "type": "variable",
+      "typeName": "referenceOpacity",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "sampleOverTimeIn",
+      "info": "The brush will be sampled over time, as often as possible.",
+      "isHidden": false,
+      "name": "Sample over Time",
+      "type": "variable",
+      "typeName": "sampleOverTime",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "info": "Remove all vector paths from the vector inlet.",
+      "isHidden": false,
+      "name": "Clear",
+      "type": "action",
+      "typeName": "clear"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Painter",
+    "Path",
+    "Draw",
+    "Drawing",
+    "Brush"
+  ],
+  "typePath": "node:graphic:resource:paint",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/resource/paint"
+}

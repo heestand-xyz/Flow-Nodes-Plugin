@@ -1,0 +1,327 @@
+{
+  "complexity": "basic",
+  "docs": "Create a vector path from a String.",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The text content used to generate the vector path.",
+      "level": "external",
+      "name": "Text",
+      "typeName": "textIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The size of the font in points.",
+      "level": "external",
+      "name": "Font Size",
+      "typeName": "fontSizeIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The extra space between each character.",
+      "level": "external",
+      "name": "Kerning",
+      "typeName": "kerningIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Samples curves as points and fills in character self-intersections.",
+      "level": "external",
+      "name": "Normalize",
+      "typeName": "normalizeIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The space between each sample point.",
+      "level": "external",
+      "name": "Normalize Sample Spacing",
+      "typeName": "normalizeSampleSpacingIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The accuracy of curves.",
+      "level": "external",
+      "name": "Normalize Curve Subdivisions",
+      "typeName": "normalizeCurveSubdivisionsIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Text",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "vectorOut",
+      "valueType": "raw:vector",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": "",
+      "inLetTypeName": "textIn",
+      "info": "The text content used to generate the vector path.",
+      "isHidden": false,
+      "name": "Text",
+      "type": "variable",
+      "typeName": "text",
+      "valueType": "raw:core:string"
+    },
+    {
+      "defaultValue": 15,
+      "inLetTypeName": "fontSizeIn",
+      "info": "The size of the font in points.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 100,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Font Size",
+      "type": "variable",
+      "typeName": "fontSize",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Regular",
+        "typeName": "regular"
+      },
+      "enumCases": [
+        {
+          "name": "Regular",
+          "typeName": "regular"
+        },
+        {
+          "name": "Serif",
+          "typeName": "serif"
+        },
+        {
+          "name": "Rounded",
+          "typeName": "rounded"
+        },
+        {
+          "name": "Monospaced",
+          "typeName": "monospaced"
+        }
+      ],
+      "info": "The design style applied to the font.",
+      "isHidden": false,
+      "name": "Font Design",
+      "type": "typedEnum",
+      "typeName": "fontDesign"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Regular",
+        "typeName": "regular"
+      },
+      "enumCases": [
+        {
+          "name": "Ultra Light",
+          "typeName": "ultraLight"
+        },
+        {
+          "name": "Thin",
+          "typeName": "thin"
+        },
+        {
+          "name": "Light",
+          "typeName": "light"
+        },
+        {
+          "name": "Regular",
+          "typeName": "regular"
+        },
+        {
+          "name": "Medium",
+          "typeName": "medium"
+        },
+        {
+          "name": "Semibold",
+          "typeName": "semibold"
+        },
+        {
+          "name": "Bold",
+          "typeName": "bold"
+        },
+        {
+          "name": "Heavy",
+          "typeName": "heavy"
+        },
+        {
+          "name": "Black",
+          "typeName": "black"
+        }
+      ],
+      "info": "The weight applied to the font.",
+      "isHidden": false,
+      "name": "Font Weight",
+      "type": "typedEnum",
+      "typeName": "fontWeight"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Leading",
+        "typeName": "leading"
+      },
+      "enumCases": [
+        {
+          "name": "Leading",
+          "typeName": "leading"
+        },
+        {
+          "name": "Center",
+          "typeName": "center"
+        },
+        {
+          "name": "Trailing",
+          "typeName": "trailing"
+        }
+      ],
+      "info": "Aligns each line within the widest line.",
+      "isHidden": false,
+      "name": "Multiline Alignment",
+      "type": "typedEnum",
+      "typeName": "multilineAlignment"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "kerningIn",
+      "info": "The extra space between each character.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 10,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": -10,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Kerning",
+      "type": "variable",
+      "typeName": "kerning",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": false,
+      "inLetTypeName": "normalizeIn",
+      "info": "Samples curves as points and fills in character self-intersections.",
+      "isHidden": false,
+      "name": "Normalize",
+      "type": "variable",
+      "typeName": "normalize",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "normalizeSampleSpacingIn",
+      "info": "The space between each sample point.",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0.1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Normalize Sample Spacing",
+      "type": "variable",
+      "typeName": "normalizeSampleSpacing",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 20,
+      "inLetTypeName": "normalizeCurveSubdivisionsIn",
+      "info": "The accuracy of curves.",
+      "isHidden": true,
+      "maximumValue": {
+        "constantValue": 30,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 10,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Normalize Curve Subdivisions",
+      "type": "variable",
+      "typeName": "normalizeCurveSubdivisions",
+      "valueType": "raw:core:int"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Font",
+    "Typography",
+    "Monospaced",
+    "Serif",
+    "Sans-serif"
+  ],
+  "typePath": "node:vector:resource:text",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/resource/text"
+}

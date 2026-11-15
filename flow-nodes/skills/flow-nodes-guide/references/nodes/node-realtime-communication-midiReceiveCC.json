@@ -1,0 +1,178 @@
+{
+  "complexity": "advanced",
+  "docs": "Receive MIDI control changes.",
+  "familyName": "Realtime",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Control",
+      "typeName": "controlIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Channel",
+      "typeName": "channelIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Group",
+      "typeName": "groupIn",
+      "valueType": "raw:core:int",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "MIDI Receive CC",
+  "newInAppVersion": "1.2.3",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Value",
+      "typeName": "valueOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    }
+  ],
+  "parentName": "Communication",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": true,
+      "info": "Listens to all inputs if active.",
+      "isHidden": false,
+      "name": "Auto Source",
+      "type": "value",
+      "typeName": "autoSource",
+      "valueType": "raw:core:bool"
+    },
+    {
+      "isHidden": true,
+      "name": "Source",
+      "type": "stringEnum",
+      "typeName": "source"
+    },
+    {
+      "info": "After linking is started, send a signal from your source to learn that MIDI signature.",
+      "isHidden": false,
+      "name": "Link",
+      "type": "action",
+      "typeName": "link"
+    },
+    {
+      "isHidden": true,
+      "name": "Link Status",
+      "type": "label",
+      "typeName": "linkStatus"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "controlIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 127,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Control",
+      "type": "variable",
+      "typeName": "control",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "channelIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 16,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Channel",
+      "type": "variable",
+      "typeName": "channel",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "groupIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 16,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 1,
+        "coreType": "int",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Group",
+      "type": "variable",
+      "typeName": "group",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": false,
+      "info": "14 Bit CCs are constructed by two CC signals (MSB + LSB) for higher resolution.",
+      "isHidden": false,
+      "name": "14 Bit",
+      "type": "value",
+      "typeName": "as14Bit",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Listen",
+    "Signal",
+    "Network",
+    "Control Change"
+  ],
+  "typePath": "node:realtime:communication:midiReceiveCC",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/realtime/communication/midiReceiveCC"
+}

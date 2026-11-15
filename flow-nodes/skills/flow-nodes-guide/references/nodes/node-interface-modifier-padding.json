@@ -1,0 +1,119 @@
+{
+  "complexity": "basic",
+  "docs": "Add padding to a view.",
+  "familyName": "Interface",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewIn",
+      "valueType": "raw:view",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Padding",
+      "typeName": "paddingIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Padding",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewOut",
+      "valueType": "raw:view",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 16,
+      "inLetTypeName": "paddingIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 32,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Padding",
+      "type": "variable",
+      "typeName": "padding",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "All",
+        "typeName": "all"
+      },
+      "enumCases": [
+        {
+          "name": "All",
+          "typeName": "all"
+        },
+        {
+          "name": "Top",
+          "typeName": "top"
+        },
+        {
+          "name": "Bottom",
+          "typeName": "bottom"
+        },
+        {
+          "name": "Leading",
+          "typeName": "leading"
+        },
+        {
+          "name": "Trailing",
+          "typeName": "trailing"
+        },
+        {
+          "name": "Horizontal",
+          "typeName": "horizontal"
+        },
+        {
+          "name": "Vertical",
+          "typeName": "vertical"
+        }
+      ],
+      "isHidden": false,
+      "name": "Edge",
+      "type": "typedEnum",
+      "typeName": "edge"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Margin"
+  ],
+  "typePath": "node:interface:modifier:padding",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/interface/modifier/padding"
+}

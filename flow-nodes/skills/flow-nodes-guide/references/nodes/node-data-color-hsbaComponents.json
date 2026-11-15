@@ -1,0 +1,74 @@
+{
+  "complexity": "basic",
+  "docs": "Get the hue, saturation, brightness and alpha Float components of a Color.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "in",
+      "valueType": "raw:core:color",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "HSBA Components",
+  "newInAppVersion": "2.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Hue",
+      "typeName": "hueOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Saturation",
+      "typeName": "saturationOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Brightness",
+      "typeName": "brightnessOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Alpha",
+      "typeName": "alphaOut",
+      "valueType": "raw:core:float",
+      "way": "out"
+    }
+  ],
+  "parentName": "Color",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "HSV",
+    "Hue",
+    "Saturation",
+    "Brightness"
+  ],
+  "typePath": "node:data:color:hsbaComponents",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/color/hsbaComponents"
+}

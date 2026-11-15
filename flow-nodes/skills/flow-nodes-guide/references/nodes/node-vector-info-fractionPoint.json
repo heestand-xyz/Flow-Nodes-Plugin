@@ -1,0 +1,135 @@
+{
+  "complexity": "advanced",
+  "docs": "Get the location of a point on a path of a shape. The fraction should be between zero and one.",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "in",
+      "valueType": "raw:vector",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Offset Fraction",
+      "typeName": "offsetFractionIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Size",
+      "typeName": "sizeIn",
+      "valueType": "raw:core:size",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Fraction Point",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Point",
+      "typeName": "out",
+      "valueType": "raw:core:point",
+      "way": "out"
+    }
+  ],
+  "parentName": "Info",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "offsetFractionIn",
+      "info": "Set the value to 0.5 to get the center point along the path.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Offset Fraction",
+      "type": "variable",
+      "typeName": "offsetFraction",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 20,
+      "info": "The accuracy of curves. A higher value will take longer to process tho will result in more precision.",
+      "isHidden": false,
+      "maximumValue": {
+        "type": "value",
+        "value": 100,
+        "valueType": {
+          "raw": {
+            "_0": {
+              "core": {
+                "_0": "int"
+              }
+            }
+          }
+        }
+      },
+      "minimumValue": {
+        "type": "value",
+        "value": 10,
+        "valueType": {
+          "raw": {
+            "_0": {
+              "core": {
+                "_0": "int"
+              }
+            }
+          }
+        }
+      },
+      "name": "Curve Subdivisions",
+      "type": "value",
+      "typeName": "curveSubdivisions",
+      "valueType": "raw:core:int"
+    },
+    {
+      "defaultValue": [
+        1000,
+        1000
+      ],
+      "inLetTypeName": "sizeIn",
+      "info": "The canvas size. It's passed upstream. It is used to define the size of flexible sized shapes. This value is ignored when using fixed layout.",
+      "isHidden": false,
+      "name": "Size",
+      "type": "variable",
+      "typeName": "size",
+      "valueType": "raw:core:size"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:vector:info:fractionPoint",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/info/fractionPoint"
+}

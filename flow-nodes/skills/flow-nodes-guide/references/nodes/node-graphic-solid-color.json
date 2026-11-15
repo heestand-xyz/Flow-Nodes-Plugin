@@ -1,0 +1,151 @@
+{
+  "complexity": "basic",
+  "docs": "A plain solid color, filling the area.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Color",
+      "typeName": "colorIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Color",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Solid",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": [
+        1000,
+        1000
+      ],
+      "isHidden": false,
+      "maximumValue": {
+        "type": "value",
+        "value": [
+          10000,
+          10000
+        ],
+        "valueType": {
+          "raw": {
+            "_0": {
+              "core": {
+                "_0": "size"
+              }
+            }
+          }
+        }
+      },
+      "minimumValue": {
+        "type": "value",
+        "value": [
+          1,
+          1
+        ],
+        "valueType": {
+          "raw": {
+            "_0": {
+              "core": {
+                "_0": "size"
+              }
+            }
+          }
+        }
+      },
+      "name": "Resolution",
+      "type": "value",
+      "typeName": "resolution",
+      "valueType": "raw:core:size"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "8 Bit",
+        "typeName": "bit8"
+      },
+      "enumCases": [
+        {
+          "name": "8 Bit",
+          "typeName": "bit8"
+        },
+        {
+          "name": "16 Bit",
+          "typeName": "bit16"
+        },
+        {
+          "name": "32 Bit",
+          "typeName": "bit32"
+        }
+      ],
+      "isHidden": false,
+      "name": "Bits",
+      "type": "typedEnum",
+      "typeName": "bits"
+    },
+    {
+      "defaultValue": {
+        "blue": 1,
+        "green": 1,
+        "opacity": 1,
+        "red": 1
+      },
+      "inLetTypeName": "colorIn",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": {
+          "blue": 1,
+          "green": 1,
+          "opacity": 1,
+          "red": 1
+        },
+        "coreType": "color",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": {
+          "blue": 0,
+          "green": 0,
+          "opacity": 0,
+          "red": 0
+        },
+        "coreType": "color",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Color",
+      "type": "variable",
+      "typeName": "color",
+      "valueType": "raw:core:color"
+    }
+  ],
+  "replacedByTypePath": "node:graphic:solid:color2",
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:graphic:solid:color",
+  "isVisible": false,
+  "sourceRoute": "/docs/nodes/graphic/solid/color"
+}

@@ -1,0 +1,45 @@
+{
+  "complexity": "advanced",
+  "docs": "Relay a video. This node has no effect. Tho useful to define a type when wiring to generics.",
+  "familyName": "Video",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Video",
+      "typeName": "in",
+      "valueType": "raw:video",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Relay",
+  "newInAppVersion": "1.5.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Video",
+      "typeName": "out",
+      "valueType": "raw:video",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Nil",
+    "Null"
+  ],
+  "typePath": "node:video:modifier:relay",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/video/modifier/relay"
+}

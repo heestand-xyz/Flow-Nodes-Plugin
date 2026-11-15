@@ -1,0 +1,75 @@
+{
+  "complexity": "basic",
+  "docs": "Clone a vector path with multiple transforms and combine the transformed clones into a single vector path.",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "vectorIn",
+      "valueType": "raw:vector",
+      "way": "in"
+    },
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "Transforms",
+      "typeName": "transformsIn",
+      "valueType": "raw:core:transform",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Union",
+      "typeName": "unionIn",
+      "valueType": "raw:core:bool",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "Clone Transform",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "vectorOut",
+      "valueType": "raw:vector",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": false,
+      "inLetTypeName": "unionIn",
+      "isHidden": false,
+      "name": "Union",
+      "type": "variable",
+      "typeName": "union",
+      "valueType": "raw:core:bool"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Clone",
+    "Transform",
+    "Instance",
+    "Copy"
+  ],
+  "typePath": "node:vector:modifier:cloneTransform",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/modifier/cloneTransform"
+}

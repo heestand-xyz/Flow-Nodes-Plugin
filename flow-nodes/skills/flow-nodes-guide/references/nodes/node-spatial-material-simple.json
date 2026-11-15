@@ -1,0 +1,72 @@
+{
+  "complexity": "basic",
+  "docs": "Creates a simple material based on a tint color and an optional graphic.",
+  "familyName": "3D Spatial",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Tint",
+      "typeName": "colorIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Simple",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Material",
+      "typeName": "materialOut",
+      "valueType": "raw:material",
+      "way": "out"
+    }
+  ],
+  "parentName": "Material",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "blue": 1,
+        "green": 1,
+        "opacity": 1,
+        "red": 1
+      },
+      "inLetTypeName": "colorIn",
+      "isHidden": false,
+      "name": "Tint",
+      "type": "variable",
+      "typeName": "color",
+      "valueType": "raw:core:color"
+    }
+  ],
+  "replacesTypePaths": [
+    "node:geometry:material:simple"
+  ],
+  "tags": [
+    "Material",
+    "3D",
+    "Render"
+  ],
+  "typePath": "node:spatial:material:simple",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/spatial/material/simple"
+}

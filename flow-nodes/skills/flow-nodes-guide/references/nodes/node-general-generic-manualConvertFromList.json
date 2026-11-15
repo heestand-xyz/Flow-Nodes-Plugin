@@ -1,0 +1,172 @@
+{
+  "complexity": "advanced",
+  "docs": "Manually combine a list of component values into one value.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "List",
+      "typeName": "fromIn",
+      "valueType": "generic",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Convert from List",
+  "newInAppVersion": "27.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Value",
+      "typeName": "toOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Generic",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Auto Generic",
+        "typeName": "generic"
+      },
+      "enumCases": [
+        {
+          "name": "Auto Generic",
+          "typeName": "generic"
+        },
+        {
+          "name": "String",
+          "typeName": "string"
+        },
+        {
+          "name": "Bool",
+          "typeName": "bool"
+        },
+        {
+          "name": "Int",
+          "typeName": "int"
+        },
+        {
+          "name": "Float",
+          "typeName": "float"
+        },
+        {
+          "name": "Point",
+          "typeName": "point"
+        },
+        {
+          "name": "3D Point",
+          "typeName": "point3D"
+        },
+        {
+          "name": "Angle",
+          "typeName": "angle"
+        },
+        {
+          "name": "3D Angle",
+          "typeName": "angle3D"
+        },
+        {
+          "name": "Vertex",
+          "typeName": "vertex"
+        },
+        {
+          "name": "Color",
+          "typeName": "color"
+        },
+        {
+          "name": "Date",
+          "typeName": "date"
+        },
+        {
+          "name": "Duration",
+          "typeName": "duration"
+        }
+      ],
+      "isHidden": false,
+      "name": "Type In",
+      "type": "typedEnum",
+      "typeName": "fromType"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Auto Generic",
+        "typeName": "generic"
+      },
+      "enumCases": [
+        {
+          "name": "Auto Generic",
+          "typeName": "generic"
+        },
+        {
+          "name": "Point",
+          "typeName": "point"
+        },
+        {
+          "name": "3D Point",
+          "typeName": "point3D"
+        },
+        {
+          "name": "Size",
+          "typeName": "size"
+        },
+        {
+          "name": "3D Size",
+          "typeName": "size3D"
+        },
+        {
+          "name": "Rect",
+          "typeName": "rect"
+        },
+        {
+          "name": "3D Rect",
+          "typeName": "rect3D"
+        },
+        {
+          "name": "3D Angle",
+          "typeName": "angle3D"
+        },
+        {
+          "name": "Vertex",
+          "typeName": "vertex"
+        },
+        {
+          "name": "Color",
+          "typeName": "color"
+        },
+        {
+          "name": "Vector Point",
+          "typeName": "vectorPoint"
+        },
+        {
+          "name": "3D Vector Point",
+          "typeName": "vectorPoint3D"
+        }
+      ],
+      "isHidden": false,
+      "name": "Type Out",
+      "type": "typedEnum",
+      "typeName": "toType"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "List",
+    "Type",
+    "Conversion",
+    "Components"
+  ],
+  "typePath": "node:general:generic:manualConvertFromList",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/generic/manualConvertFromList"
+}

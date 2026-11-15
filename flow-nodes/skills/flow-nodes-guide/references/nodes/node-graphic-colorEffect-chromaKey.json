@@ -1,0 +1,236 @@
+{
+  "complexity": "basic",
+  "docs": "Green screen background removal.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Color",
+      "typeName": "colorIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Range",
+      "typeName": "rangeIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Softness",
+      "typeName": "softnessIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Edge Desaturation",
+      "typeName": "edgeDesaturationIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Alpha Crop",
+      "typeName": "alphaCropIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": true,
+  "name": "Chroma Key",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Graphic",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Color Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "blue": 0,
+        "green": 1,
+        "opacity": 1,
+        "red": 0
+      },
+      "inLetTypeName": "colorIn",
+      "info": "Key color to remove.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": {
+          "blue": 1,
+          "green": 1,
+          "opacity": 1,
+          "red": 1
+        },
+        "coreType": "color",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": {
+          "blue": 0,
+          "green": 0,
+          "opacity": 0,
+          "red": 0
+        },
+        "coreType": "color",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Color",
+      "type": "variable",
+      "typeName": "color",
+      "valueType": "raw:core:color"
+    },
+    {
+      "defaultValue": 0.1,
+      "inLetTypeName": "rangeIn",
+      "info": "Hue range of the key color.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Range",
+      "type": "variable",
+      "typeName": "range",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0.1,
+      "inLetTypeName": "softnessIn",
+      "info": "Smooths the alpha mask.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Softness",
+      "type": "variable",
+      "typeName": "softness",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "edgeDesaturationIn",
+      "info": "A higher value makes the edges of the alpha mask more monochrome.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Edge Desaturation",
+      "type": "variable",
+      "typeName": "edgeDesaturation",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "alphaCropIn",
+      "info": "Clip semi transparent pixels.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 1,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Alpha Crop",
+      "type": "variable",
+      "typeName": "alphaCrop",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Green Screen",
+    "Background Removal"
+  ],
+  "typePath": "node:graphic:colorEffect:chromaKey",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/colorEffect/chromaKey"
+}

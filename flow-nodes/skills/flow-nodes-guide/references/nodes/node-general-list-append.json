@@ -1,0 +1,58 @@
+{
+  "complexity": "basic",
+  "docs": "Add a value from the second inlet into the bottom of the list of the first inlet. (The first inlet can be connected to a List State Node.)",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Destination",
+      "typeName": "listIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Source",
+      "typeName": "valueIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Append",
+      "typeName": "actionIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Append",
+  "newInAppVersion": "1.0.0",
+  "outLets": [],
+  "parentName": "List",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "info": "Add the value to the end of the list.",
+      "isHidden": false,
+      "name": "Append",
+      "type": "action",
+      "typeName": "action"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:general:list:append",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/list/append"
+}

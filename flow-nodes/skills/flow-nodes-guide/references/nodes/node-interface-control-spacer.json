@@ -1,0 +1,69 @@
+{
+  "complexity": "basic",
+  "docs": "Add spacing between views in a stack.",
+  "familyName": "Interface",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "binding",
+      "level": "external",
+      "name": "Minimum Length",
+      "typeName": "minLengthIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Spacer",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewOut",
+      "valueType": "raw:view",
+      "way": "out"
+    }
+  ],
+  "parentName": "Control",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": 8,
+      "inLetTypeName": "minLengthIn",
+      "info": "The minimum length the spacer will be if the content is compact.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 16,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Minimum Length",
+      "type": "variable",
+      "typeName": "minLength",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:interface:control:spacer",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/interface/control/spacer"
+}

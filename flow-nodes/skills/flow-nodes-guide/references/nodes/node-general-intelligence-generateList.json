@@ -1,0 +1,151 @@
+{
+  "complexity": "basic",
+  "docs": "Generate a list of types from a prompt. Connect the Generables inlet to a List State node to save the output. Requires OS 26 or higher and an eligible device with Apple Intelligence activated. Powered by Foundation Models.",
+  "familyName": "General",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "binding",
+      "level": "external",
+      "name": "Generables",
+      "supportedGenericRawTypes": [
+        "core:angle",
+        "core:angle3D",
+        "core:bool",
+        "core:color",
+        "core:date",
+        "core:duration",
+        "core:float",
+        "core:int",
+        "core:keyframe",
+        "core:point",
+        "core:point3D",
+        "core:quaternion",
+        "core:rect",
+        "core:rect3D",
+        "core:size",
+        "core:size3D",
+        "core:string",
+        "core:transform",
+        "core:transform3D",
+        "core:vertex"
+      ],
+      "typeName": "generablesIn",
+      "valueType": "generic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Define the model’s intended behavior on prompts. (Optional)",
+      "level": "external",
+      "name": "Instructions",
+      "typeName": "instructionsIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "A text describing what to generate.",
+      "level": "external",
+      "name": "Prompt",
+      "typeName": "promptIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "Temperature controls randomness in model responses: values below 1.0 make answers more confident and focused; values above 1.0 increase creativity and variety. This value should be between 0.0 and 2.0.",
+      "level": "external",
+      "name": "Temperature",
+      "typeName": "temperatureIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Generate",
+      "typeName": "generateIn",
+      "valueType": "raw:action",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Generate List",
+  "newInAppVersion": "3.0.0",
+  "outLets": [],
+  "parentName": "Intelligence",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": "",
+      "inLetTypeName": "instructionsIn",
+      "info": "Define the model’s intended behavior on prompts. (Optional)",
+      "isHidden": false,
+      "name": "Instructions",
+      "type": "variable",
+      "typeName": "instructions",
+      "valueType": "raw:core:string"
+    },
+    {
+      "defaultValue": "",
+      "inLetTypeName": "promptIn",
+      "info": "A text describing what to generate.",
+      "isHidden": false,
+      "name": "Prompt",
+      "type": "variable",
+      "typeName": "prompt",
+      "valueType": "raw:core:string"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "temperatureIn",
+      "info": "Temperature controls randomness in model responses: values below 1.0 make answers more confident and focused; values above 1.0 increase creativity and variety. This value should be between 0.0 and 2.0.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 2,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Temperature",
+      "type": "variable",
+      "typeName": "temperature",
+      "valueType": "raw:core:float"
+    },
+    {
+      "isHidden": false,
+      "name": "Generate",
+      "type": "action",
+      "typeName": "generate"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "AI",
+    "Apple Intelligence",
+    "Foundation Models",
+    "Prompt"
+  ],
+  "typePath": "node:general:intelligence:generateList",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/general/intelligence/generateList"
+}

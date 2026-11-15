@@ -1,0 +1,135 @@
+{
+  "complexity": "basic",
+  "docs": "Stack 3D graphics side by side, from leading to trailing. Align the other two axes and set the spacing between volumes in voxels.",
+  "familyName": "3D Graphic",
+  "inLets": [
+    {
+      "capacity": "multi",
+      "direction": "direct",
+      "level": "external",
+      "name": "3D Graphics",
+      "typeName": "graphicsIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The gap between each graphic, in voxels.",
+      "level": "external",
+      "name": "Spacing",
+      "typeName": "spacingIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Horizontal",
+  "newInAppVersion": "27.1.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "3D Graphic",
+      "typeName": "graphic3DOut",
+      "valueType": "raw:graphic3D",
+      "way": "out"
+    }
+  ],
+  "parentName": "Stack",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Center",
+        "typeName": "center"
+      },
+      "enumCases": [
+        {
+          "name": "Top",
+          "typeName": "top"
+        },
+        {
+          "name": "Center",
+          "typeName": "center"
+        },
+        {
+          "name": "Bottom",
+          "typeName": "bottom"
+        }
+      ],
+      "info": "Alignment on the vertical axis.",
+      "isHidden": false,
+      "name": "Vertical Alignment",
+      "type": "typedEnum",
+      "typeName": "verticalAlignment"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Center",
+        "typeName": "center"
+      },
+      "enumCases": [
+        {
+          "name": "Far",
+          "typeName": "far"
+        },
+        {
+          "name": "Center",
+          "typeName": "center"
+        },
+        {
+          "name": "Near",
+          "typeName": "near"
+        }
+      ],
+      "info": "Alignment on the depth axis.",
+      "isHidden": false,
+      "name": "Depth Alignment",
+      "type": "typedEnum",
+      "typeName": "depthAlignment"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "spacingIn",
+      "info": "The gap between each graphic, in voxels.",
+      "isHidden": false,
+      "maximumValue": {
+        "constantValue": 10,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Spacing",
+      "type": "variable",
+      "typeName": "spacing",
+      "valueType": "raw:core:float"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Stack",
+    "Horizontal",
+    "Volume",
+    "3D",
+    "Spacing"
+  ],
+  "typePath": "node:graphic3D:stack:horizontal",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic3D/stack/horizontal"
+}

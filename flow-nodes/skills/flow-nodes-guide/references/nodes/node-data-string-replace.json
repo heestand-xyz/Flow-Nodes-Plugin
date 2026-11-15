@@ -1,0 +1,58 @@
+{
+  "complexity": "basic",
+  "docs": "Replace occurrences in a string with another string.",
+  "familyName": "Data",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Text",
+      "typeName": "textIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    },
+    {
+      "capacity": "lex",
+      "direction": "direct",
+      "keyType": "raw:core:string",
+      "level": "external",
+      "name": "Replacements",
+      "typeName": "replacementsIn",
+      "valueType": "raw:core:string",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Replace",
+  "newInAppVersion": "2.6.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Text",
+      "typeName": "textOut",
+      "valueType": "raw:core:string",
+      "way": "out"
+    }
+  ],
+  "parentName": "String",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [],
+  "replacesTypePaths": [],
+  "tags": [
+    "Overwrite",
+    "Swap",
+    "Substitute",
+    "Reassign",
+    "Rewrite"
+  ],
+  "typePath": "node:data:string:replace",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/data/string/replace"
+}

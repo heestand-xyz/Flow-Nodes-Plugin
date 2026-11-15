@@ -1,0 +1,111 @@
+{
+  "complexity": "basic",
+  "docs": "",
+  "familyName": "Vector",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "in",
+      "valueType": "raw:vector",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Translation",
+      "typeName": "translationIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Scale",
+      "typeName": "scaleIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Rotation",
+      "typeName": "rotationIn",
+      "valueType": "raw:core:angle",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Transform",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Vector",
+      "typeName": "out",
+      "valueType": "raw:vector",
+      "way": "out"
+    }
+  ],
+  "parentName": "Modifier",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultVariableMode": "spatial",
+      "inLetTypeName": "translationIn",
+      "isHidden": false,
+      "name": "Translation",
+      "type": "variable",
+      "typeName": "translation",
+      "valueType": "raw:core:point"
+    },
+    {
+      "defaultValue": 1,
+      "inLetTypeName": "scaleIn",
+      "isHidden": false,
+      "minimumValue": {
+        "constantValue": 0,
+        "coreType": "float",
+        "mode": {
+          "constant": {}
+        },
+        "type": "variable"
+      },
+      "name": "Scale",
+      "type": "variable",
+      "typeName": "scale",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": 0,
+      "inLetTypeName": "rotationIn",
+      "isHidden": false,
+      "name": "Rotation",
+      "type": "variable",
+      "typeName": "rotation",
+      "valueType": "raw:core:angle"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Position",
+    "Offset",
+    "Translation",
+    "Scale",
+    "Rotation"
+  ],
+  "typePath": "node:vector:modifier:transform",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/vector/modifier/transform"
+}

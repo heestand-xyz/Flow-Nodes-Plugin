@@ -1,0 +1,128 @@
+{
+  "complexity": "advanced",
+  "docs": "Fill an area of a graphic with a color.",
+  "familyName": "Graphic",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Input",
+      "typeName": "graphicIn",
+      "valueType": "raw:graphic",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Location",
+      "typeName": "locationIn",
+      "valueType": "raw:core:point",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Threshold",
+      "typeName": "thresholdIn",
+      "valueType": "raw:core:float",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Fill",
+      "typeName": "fillColorIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Background",
+      "typeName": "backgroundColorIn",
+      "valueType": "raw:core:color",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Flood Fill",
+  "newInAppVersion": "3.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Output",
+      "typeName": "graphicOut",
+      "valueType": "raw:graphic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Compute Effect",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": [
+        0,
+        0
+      ],
+      "inLetTypeName": "locationIn",
+      "isHidden": false,
+      "name": "Location",
+      "type": "variable",
+      "typeName": "location",
+      "valueType": "raw:core:point"
+    },
+    {
+      "defaultValue": 0.5,
+      "inLetTypeName": "thresholdIn",
+      "isHidden": false,
+      "name": "Threshold",
+      "type": "variable",
+      "typeName": "threshold",
+      "valueType": "raw:core:float"
+    },
+    {
+      "defaultValue": {
+        "blue": 1,
+        "green": 1,
+        "opacity": 1,
+        "red": 1
+      },
+      "inLetTypeName": "fillColorIn",
+      "isHidden": false,
+      "name": "Fill",
+      "type": "variable",
+      "typeName": "fillColor",
+      "valueType": "raw:core:color"
+    },
+    {
+      "defaultValue": {
+        "blue": 0,
+        "green": 0,
+        "opacity": 1,
+        "red": 0
+      },
+      "inLetTypeName": "backgroundColorIn",
+      "isHidden": false,
+      "name": "Background",
+      "type": "variable",
+      "typeName": "backgroundColor",
+      "valueType": "raw:core:color"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:graphic:computeEffect:floodFill",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/graphic/computeEffect/floodFill"
+}

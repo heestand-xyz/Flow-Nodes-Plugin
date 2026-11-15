@@ -1,0 +1,74 @@
+{
+  "complexity": "advanced",
+  "docs": "Convert a 3D Graphic to a Field with colored particles.",
+  "familyName": "3D Spatial",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "3D Graphic",
+      "typeName": "graphic3DIn",
+      "valueType": "raw:graphic3D",
+      "way": "in"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "info": "The 3d frame where the 3d graphic will be placed. The 3d graphic will stretch to the frame.",
+      "level": "external",
+      "name": "Frame",
+      "typeName": "frameIn",
+      "valueType": "raw:core:rect3D",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Convert from 3D Graphic",
+  "newInAppVersion": "4.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Field",
+      "typeName": "fieldOut",
+      "valueType": "raw:field",
+      "way": "out"
+    }
+  ],
+  "parentName": "Field",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultValue": {
+        "origin": {
+          "x": -0.5,
+          "y": -0.5,
+          "z": -0.5
+        },
+        "size": {
+          "depth": 1,
+          "height": 1,
+          "width": 1
+        }
+      },
+      "inLetTypeName": "frameIn",
+      "info": "The 3d frame where the 3d graphic will be placed. The 3d graphic will stretch to the frame.",
+      "isHidden": false,
+      "name": "Frame",
+      "type": "variable",
+      "typeName": "frame",
+      "valueType": "raw:core:rect3D"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [],
+  "typePath": "node:spatial:field:convertFromGraphic3D",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/spatial/field/convertFromGraphic3D"
+}

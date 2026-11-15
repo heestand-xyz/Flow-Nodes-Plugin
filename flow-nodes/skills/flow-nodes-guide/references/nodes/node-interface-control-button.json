@@ -1,0 +1,88 @@
+{
+  "complexity": "basic",
+  "docs": "A button. To change the appearance, wire a view inlet.",
+  "familyName": "Interface",
+  "inLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewIn",
+      "valueType": "raw:view",
+      "way": "in"
+    }
+  ],
+  "isPro": false,
+  "name": "Button",
+  "newInAppVersion": "1.0.0",
+  "outLets": [
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "View",
+      "typeName": "viewOut",
+      "valueType": "raw:view",
+      "way": "out"
+    },
+    {
+      "capacity": "mono",
+      "direction": "direct",
+      "level": "external",
+      "name": "Action",
+      "typeName": "actionOut",
+      "valueType": "raw:action",
+      "way": "out"
+    }
+  ],
+  "parentName": "Control",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "defaultEnumCase": {
+        "name": "Regular",
+        "typeName": "regular"
+      },
+      "enumCases": [
+        {
+          "name": "Regular",
+          "typeName": "regular"
+        },
+        {
+          "name": "Plain",
+          "typeName": "plain"
+        },
+        {
+          "name": "Bordered",
+          "typeName": "bordered"
+        },
+        {
+          "name": "Bordered Prominent",
+          "typeName": "borderedProminent"
+        },
+        {
+          "name": "Borderless",
+          "typeName": "borderless"
+        }
+      ],
+      "isHidden": false,
+      "name": "Style",
+      "type": "typedEnum",
+      "typeName": "style"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Interaction",
+    "Tap",
+    "Click"
+  ],
+  "typePath": "node:interface:control:button",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/interface/control/button"
+}

@@ -1,0 +1,145 @@
+{
+  "complexity": "basic",
+  "docs": "Stored keyframes with values of a type.",
+  "familyName": "Animation",
+  "inLets": [],
+  "isPro": false,
+  "name": "Keyframes State",
+  "newInAppVersion": "27.0.0",
+  "outLets": [
+    {
+      "capacity": "lex",
+      "direction": "binding",
+      "keyType": "raw:core:keyframe",
+      "level": "external",
+      "name": "Keyframes",
+      "typeName": "keyframesOut",
+      "valueType": "generic",
+      "way": "out"
+    }
+  ],
+  "parentName": "Resource",
+  "platforms": [
+    "iOS",
+    "macOS",
+    "visionOS"
+  ],
+  "properties": [
+    {
+      "info": "Keyframes with values.",
+      "isHidden": false,
+      "name": "State",
+      "type": "item",
+      "typeName": "keyframeState"
+    },
+    {
+      "defaultEnumCase": {
+        "name": "Float",
+        "typeName": "float"
+      },
+      "enumCases": [
+        {
+          "name": "String",
+          "typeName": "string"
+        },
+        {
+          "name": "Bool",
+          "typeName": "bool"
+        },
+        {
+          "name": "Int",
+          "typeName": "int"
+        },
+        {
+          "name": "Float",
+          "typeName": "float"
+        },
+        {
+          "name": "Point",
+          "typeName": "point"
+        },
+        {
+          "name": "3D Point",
+          "typeName": "point3D"
+        },
+        {
+          "name": "Size",
+          "typeName": "size"
+        },
+        {
+          "name": "3D Size",
+          "typeName": "size3D"
+        },
+        {
+          "name": "Rect",
+          "typeName": "rect"
+        },
+        {
+          "name": "3D Rect",
+          "typeName": "rect3D"
+        },
+        {
+          "name": "Angle",
+          "typeName": "angle"
+        },
+        {
+          "name": "3D Angle",
+          "typeName": "angle3D"
+        },
+        {
+          "name": "Quaternion",
+          "typeName": "quaternion"
+        },
+        {
+          "name": "Transform",
+          "typeName": "transform"
+        },
+        {
+          "name": "3D Transform",
+          "typeName": "transform3D"
+        },
+        {
+          "name": "Vertex",
+          "typeName": "vertex"
+        },
+        {
+          "name": "Color",
+          "typeName": "color"
+        },
+        {
+          "name": "Date",
+          "typeName": "date"
+        },
+        {
+          "name": "Duration",
+          "typeName": "duration"
+        },
+        {
+          "name": "Keyframe",
+          "typeName": "keyframe"
+        },
+        {
+          "name": "Vector Point",
+          "typeName": "vectorPoint"
+        },
+        {
+          "name": "3D Vector Point",
+          "typeName": "vectorPoint3D"
+        }
+      ],
+      "info": "The value type of the stored keyframes. Changing the type clears the stored keyframes.",
+      "isHidden": false,
+      "name": "Type",
+      "type": "typedEnum",
+      "typeName": "coreType"
+    }
+  ],
+  "replacesTypePaths": [],
+  "tags": [
+    "Keyframes",
+    "Timeline"
+  ],
+  "typePath": "node:animation:resource:keyframesState",
+  "isVisible": true,
+  "sourceRoute": "/docs/nodes/animation/resource/keyframesState"
+}
