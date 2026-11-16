@@ -1,9 +1,9 @@
 {
   "name": "flow-nodes",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Learn Flow Nodes and build flows with precise node, property, and wire guidance from bundled documentation.",
   "author": {
-    "name": "Portobello Studio"
+    "name": "Anton Heestand"
   },
   "homepage": "https://flownodes.app",
   "keywords": [
@@ -17,5 +17,6 @@
     "Metal"
   ],
   "repository": "https://github.com/heestand-xyz/Flow-Nodes-Plugin",
+  "license": "MIT",
   "displayName": "Flow Nodes"
 }

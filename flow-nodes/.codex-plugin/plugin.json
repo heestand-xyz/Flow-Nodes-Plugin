@@ -1,9 +1,9 @@
 {
   "name": "flow-nodes",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Learn Flow Nodes and build flows with precise node, property, and wire guidance from bundled documentation.",
   "author": {
-    "name": "Portobello Studio"
+    "name": "Anton Heestand"
   },
   "homepage": "https://flownodes.app",
   "keywords": [
@@ -17,12 +17,13 @@
     "Metal"
   ],
   "repository": "https://github.com/heestand-xyz/Flow-Nodes-Plugin",
+  "license": "MIT",
   "skills": "./skills/",
   "interface": {
     "displayName": "Flow Nodes",
     "shortDescription": "Learn the app. Wire your flow.",
     "longDescription": "Get help using Flow Nodes on iPhone, iPad, Mac, and Vision Pro. Learn the Canvas, properties, folders, instances, and playback; choose nodes and follow step-by-step wiring plans with exact port names and types. Explore graphics, video, 3D, interactive interfaces, lists, JavaScript scripts, and Metal shaders. Answers use bundled articles and a structured node catalog, including platform availability and replacement nodes. This plugin provides guidance and does not connect to or edit your running app. Some nodes in the separate Flow Nodes app require existing Pro access. The plugin has no purchases.",
-    "developerName": "Portobello Studio",
+    "developerName": "Anton Heestand",
     "websiteURL": "https://flownodes.app",
     "category": "Creativity",
     "capabilities": [],

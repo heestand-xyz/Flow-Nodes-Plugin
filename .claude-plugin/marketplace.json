@@ -1,8 +1,9 @@
 {
   "name": "flow-nodes",
   "owner": {
-    "name": "Portobello Studio"
+    "name": "Anton Heestand"
   },
+  "description": "Learn Flow Nodes and build flows with precise node, property, and wire guidance from bundled documentation.",
   "plugins": [
     {
       "name": "flow-nodes",

@@ -1,10 +1,11 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "flow-nodes",
-  "version": "0.1.1",
+  "version": "0.1.2",
+  "license": "MIT",
   "description": "Learn Flow Nodes and build flows with precise node, property, and wire guidance from bundled documentation.",
   "author": {
-    "name": "Portobello Studio"
+    "name": "Anton Heestand"
   },
   "homepage": "https://flownodes.app",
   "keywords": [
@@ -23,7 +24,7 @@
         "displayName": "Flow Nodes",
         "shortDescription": "Learn the app. Wire your flow.",
         "longDescription": "Get help using Flow Nodes on iPhone, iPad, Mac, and Vision Pro. Learn the Canvas, properties, folders, instances, and playback; choose nodes and follow step-by-step wiring plans with exact port names and types. Explore graphics, video, 3D, interactive interfaces, lists, JavaScript scripts, and Metal shaders. Answers use bundled articles and a structured node catalog, including platform availability and replacement nodes. This plugin provides guidance and does not connect to or edit your running app. Some nodes in the separate Flow Nodes app require existing Pro access. The plugin has no purchases.",
-        "developerName": "Portobello Studio",
+        "developerName": "Anton Heestand",
         "websiteURL": "https://flownodes.app",
         "category": "Creativity",
         "capabilities": [],
@@ -55,7 +56,7 @@
       },
       "publication": {
         "countries": [],
-        "release_notes": "Standalone repository packaging for both hosts, with a shared knowledge bundle, synchronized manifests, public snapshot integrity metadata, and original light and dark app icons."
+        "release_notes": "Added MIT licensing for the plugin only, excluding the Flow Nodes app and app icons. All installation packages include the license and scope notice. Updated the publisher to Anton Heestand."
       }
     }
   },

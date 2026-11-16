@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 — Prepared for testing
+
+- Added MIT licensing for the plugin, excluding the Flow Nodes app and app icons.
+- Included the license and scope notice in all three installation packages.
+- Updated the publisher to Anton Heestand.
+
 ## 0.1.1 — Prepared for testing
 
 - Added installation packages for Codex, Claude Code, and Claude chat.

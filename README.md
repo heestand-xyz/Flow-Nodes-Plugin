@@ -29,3 +29,5 @@ claude plugin install flow-nodes@flow-nodes
 ```
 
 For ZIP downloads and chat uploads, see the [installation guide](Installation.md).
+
+[MIT licensed](LICENSE) for the plugin only. The Flow Nodes app and app icons are excluded.
