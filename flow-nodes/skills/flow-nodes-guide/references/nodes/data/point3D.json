@@ -1,0 +1,1115 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Data",
+  "parentName": "3D Point",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Get the x, y and z Float components of a 3D Point.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Components",
+      "newInAppVersion": "1.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "X",
+          "typeName": "xOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Y",
+          "typeName": "yOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Z",
+          "typeName": "zOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Point",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:point3D:components",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/point3D/components"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Construct a 3D Point from x, y and z floats.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "X",
+          "typeName": "xIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Y",
+          "typeName": "yIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Z",
+          "typeName": "zIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Construct",
+      "newInAppVersion": "1.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:point3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Point",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:point3D:construct",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/point3D/construct"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A grid of points. Based on a spacing and offset.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Frame",
+          "typeName": "frameIn",
+          "valueType": "raw:core:rect3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Spacing",
+          "typeName": "spacingIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Offset",
+          "typeName": "offsetIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Fraction Grid",
+      "newInAppVersion": "2.6.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Points",
+          "typeName": "pointsOut",
+          "valueType": "raw:core:point3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Point",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "origin": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "size": {
+              "depth": 1,
+              "height": 1,
+              "width": 1
+            }
+          },
+          "inLetTypeName": "frameIn",
+          "isHidden": false,
+          "name": "Frame",
+          "type": "variable",
+          "typeName": "frame",
+          "valueType": "raw:core:rect3D"
+        },
+        {
+          "defaultValue": {
+            "x": 0.5,
+            "y": 0.5,
+            "z": 0.5
+          },
+          "inLetTypeName": "spacingIn",
+          "isHidden": false,
+          "name": "Spacing",
+          "type": "variable",
+          "typeName": "spacing",
+          "valueType": "raw:core:point3D"
+        },
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "inLetTypeName": "offsetIn",
+          "isHidden": false,
+          "name": "Offset",
+          "type": "variable",
+          "typeName": "offset",
+          "valueType": "raw:core:point3D"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:point3D:fractionGrid",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/point3D/fractionGrid"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A line of points. Based on a spacing and offset.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Leading",
+          "typeName": "leadingIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Trailing",
+          "typeName": "trailingIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Spacing",
+          "typeName": "spacingIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Offset",
+          "typeName": "offsetIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Fraction Line",
+      "newInAppVersion": "2.6.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Points",
+          "typeName": "pointsOut",
+          "valueType": "raw:core:point3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Point",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 0.5,
+            "z": 0
+          },
+          "inLetTypeName": "leadingIn",
+          "isHidden": false,
+          "name": "Leading",
+          "type": "variable",
+          "typeName": "leading",
+          "valueType": "raw:core:point3D"
+        },
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": -0.5,
+            "z": 0
+          },
+          "inLetTypeName": "trailingIn",
+          "isHidden": false,
+          "name": "Trailing",
+          "type": "variable",
+          "typeName": "trailing",
+          "valueType": "raw:core:point3D"
+        },
+        {
+          "defaultValue": 0.5,
+          "inLetTypeName": "spacingIn",
+          "isHidden": false,
+          "name": "Spacing",
+          "type": "variable",
+          "typeName": "spacing",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "offsetIn",
+          "isHidden": false,
+          "name": "Offset",
+          "type": "variable",
+          "typeName": "offset",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:point3D:fractionLine",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/point3D/fractionLine"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A circle of points. Based on a spacing and offset.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Center",
+          "typeName": "centerIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Radius",
+          "typeName": "radiusIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Rotation",
+          "typeName": "rotationIn",
+          "valueType": "raw:core:angle3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The angle between each longitude line and also between each latitude line.",
+          "level": "external",
+          "name": "Spacing",
+          "typeName": "spacingIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Ignores overlapping points.",
+          "level": "external",
+          "name": "Optimize",
+          "typeName": "optimizeIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Fraction Sphere",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Points",
+          "typeName": "pointsOut",
+          "valueType": "raw:core:point3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Point",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "inLetTypeName": "centerIn",
+          "isHidden": false,
+          "name": "Center",
+          "type": "variable",
+          "typeName": "center",
+          "valueType": "raw:core:point3D"
+        },
+        {
+          "defaultValue": 0.5,
+          "inLetTypeName": "radiusIn",
+          "isHidden": false,
+          "name": "Radius",
+          "type": "variable",
+          "typeName": "radius",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "inLetTypeName": "rotationIn",
+          "isHidden": false,
+          "name": "Rotation",
+          "type": "variable",
+          "typeName": "rotation",
+          "valueType": "raw:core:angle3D"
+        },
+        {
+          "defaultValue": 0.5235987755982988,
+          "inLetTypeName": "spacingIn",
+          "info": "The angle between each longitude line and also between each latitude line.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1.0471975511965976,
+            "coreType": "angle",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0.17453292519943295,
+            "coreType": "angle",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Spacing",
+          "type": "variable",
+          "typeName": "spacing",
+          "valueType": "raw:core:angle"
+        },
+        {
+          "defaultValue": true,
+          "inLetTypeName": "optimizeIn",
+          "info": "Ignores overlapping points.",
+          "isHidden": false,
+          "name": "Optimize",
+          "type": "variable",
+          "typeName": "optimize",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:point3D:fractionSphere",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/point3D/fractionSphere"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A grid of points.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Frame",
+          "typeName": "frameIn",
+          "valueType": "raw:core:rect3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "X Count",
+          "typeName": "xCountIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Y Count",
+          "typeName": "yCountIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Z Count",
+          "typeName": "zCountIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Grid",
+      "newInAppVersion": "2.6.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Points",
+          "typeName": "pointsOut",
+          "valueType": "raw:core:point3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Point",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "origin": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "size": {
+              "depth": 1,
+              "height": 1,
+              "width": 1
+            }
+          },
+          "inLetTypeName": "frameIn",
+          "isHidden": false,
+          "name": "Frame",
+          "type": "variable",
+          "typeName": "frame",
+          "valueType": "raw:core:rect3D"
+        },
+        {
+          "defaultValue": 2,
+          "inLetTypeName": "xCountIn",
+          "isHidden": false,
+          "name": "X Count",
+          "type": "variable",
+          "typeName": "xCount",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 2,
+          "inLetTypeName": "yCountIn",
+          "isHidden": false,
+          "name": "Y Count",
+          "type": "variable",
+          "typeName": "yCount",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 2,
+          "inLetTypeName": "zCountIn",
+          "isHidden": false,
+          "name": "Z Count",
+          "type": "variable",
+          "typeName": "zCount",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:point3D:grid",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/point3D/grid"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Distance between two 3D points.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Target",
+          "typeName": "targetIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reference",
+          "typeName": "referenceIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Length",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Length",
+          "typeName": "lengthOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Point",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "inLetTypeName": "referenceIn",
+          "isHidden": false,
+          "name": "Reference",
+          "type": "variable",
+          "typeName": "reference",
+          "valueType": "raw:core:point3D"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Distance",
+        "Hypotenuse"
+      ],
+      "typePath": "node:data:point3D:length",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/point3D/length"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A line of points.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Leading",
+          "typeName": "leadingIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Trailing",
+          "typeName": "trailingIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Count",
+          "typeName": "countIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Line",
+      "newInAppVersion": "2.6.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Points",
+          "typeName": "pointsOut",
+          "valueType": "raw:core:point3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Point",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 0.5,
+            "z": 0
+          },
+          "inLetTypeName": "leadingIn",
+          "isHidden": false,
+          "name": "Leading",
+          "type": "variable",
+          "typeName": "leading",
+          "valueType": "raw:core:point3D"
+        },
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": -0.5,
+            "z": 0
+          },
+          "inLetTypeName": "trailingIn",
+          "isHidden": false,
+          "name": "Trailing",
+          "type": "variable",
+          "typeName": "trailing",
+          "valueType": "raw:core:point3D"
+        },
+        {
+          "defaultValue": 2,
+          "inLetTypeName": "countIn",
+          "isHidden": false,
+          "name": "Count",
+          "type": "variable",
+          "typeName": "count",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:point3D:line",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/point3D/line"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a list of 3D Points. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "in",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:point3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Point",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:point3D:listRelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/point3D/listRelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of 3D Points.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:point3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Point",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValues": [],
+          "isHidden": false,
+          "name": "Values",
+          "type": "valueArray",
+          "typeName": "values",
+          "valueType": "raw:core:point3D"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array"
+      ],
+      "typePath": "node:data:point3D:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/point3D/listState"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a 3D Point. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:point3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Point",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:data:point3D:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/point3D/relay"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A circle of points.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Center",
+          "typeName": "centerIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Radius",
+          "typeName": "radiusIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Rotation",
+          "typeName": "rotationIn",
+          "valueType": "raw:core:angle3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Longitude",
+          "level": "external",
+          "name": "Horizontal Count",
+          "typeName": "hCountIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Latitude",
+          "level": "external",
+          "name": "Vertical Count",
+          "typeName": "vCountIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Ignores overlapping points.",
+          "level": "external",
+          "name": "Optimize",
+          "typeName": "optimizeIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Sphere",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Points",
+          "typeName": "pointsOut",
+          "valueType": "raw:core:point3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Point",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "inLetTypeName": "centerIn",
+          "isHidden": false,
+          "name": "Center",
+          "type": "variable",
+          "typeName": "center",
+          "valueType": "raw:core:point3D"
+        },
+        {
+          "defaultValue": 0.5,
+          "inLetTypeName": "radiusIn",
+          "isHidden": false,
+          "name": "Radius",
+          "type": "variable",
+          "typeName": "radius",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "inLetTypeName": "rotationIn",
+          "isHidden": false,
+          "name": "Rotation",
+          "type": "variable",
+          "typeName": "rotation",
+          "valueType": "raw:core:angle3D"
+        },
+        {
+          "defaultValue": 24,
+          "inLetTypeName": "hCountIn",
+          "info": "Longitude",
+          "isHidden": false,
+          "name": "Horizontal Count",
+          "type": "variable",
+          "typeName": "hCount",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 12,
+          "inLetTypeName": "vCountIn",
+          "info": "Latitude",
+          "isHidden": false,
+          "name": "Vertical Count",
+          "type": "variable",
+          "typeName": "vCount",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": true,
+          "inLetTypeName": "optimizeIn",
+          "info": "Ignores overlapping points.",
+          "isHidden": false,
+          "name": "Optimize",
+          "type": "variable",
+          "typeName": "optimize",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:point3D:sphere",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/point3D/sphere"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a 3D Point.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:point3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Point",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "isHidden": false,
+          "name": "Value",
+          "type": "value",
+          "typeName": "value",
+          "valueType": "raw:core:point3D"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store"
+      ],
+      "typePath": "node:data:point3D:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/point3D/state"
+    }
+  ]
+}

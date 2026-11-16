@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Data",
+  "parentName": "Vertex",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Get the position, normal, texture coordinate, and color components of a Vertex.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:vertex",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Components",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Position",
+          "typeName": "positionOut",
+          "valueType": "raw:core:point3D",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Normal",
+          "typeName": "normalOut",
+          "valueType": "raw:core:point3D",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Texture Coordinate",
+          "typeName": "texcoordOut",
+          "valueType": "raw:core:point",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Color",
+          "typeName": "colorOut",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Vertex",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:vertex:components",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/vertex/components"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Construct a Vetex from position, normal, texture coordinate, and color.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Position",
+          "typeName": "positionIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Normal",
+          "typeName": "normalIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Texture Coordinate",
+          "typeName": "texcoordIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Color",
+          "typeName": "colorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Construct",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:vertex",
+          "way": "out"
+        }
+      ],
+      "parentName": "Vertex",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:vertex:construct",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/vertex/construct"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a list of Vertices. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "in",
+          "valueType": "raw:core:vertex",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Relay",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:vertex",
+          "way": "out"
+        }
+      ],
+      "parentName": "Vertex",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:vertex:listRelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/vertex/listRelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of Vertices\t.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Vertices",
+          "typeName": "out",
+          "valueType": "raw:core:vertex",
+          "way": "out"
+        }
+      ],
+      "parentName": "Vertex",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValues": [],
+          "isHidden": false,
+          "name": "Vertices",
+          "type": "valueArray",
+          "typeName": "vertices",
+          "valueType": "raw:core:vertex"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array"
+      ],
+      "typePath": "node:data:vertex:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/vertex/listState"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Polygon from Vertices.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Vertices",
+          "typeName": "verticesIn",
+          "valueType": "raw:core:vertex",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Polygon from Vertices",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Polygon",
+          "typeName": "polygonOut",
+          "valueType": "raw:polygon",
+          "way": "out"
+        }
+      ],
+      "parentName": "Vertex",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:vertex:polygonFromVertices",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/vertex/polygonFromVertices"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a Vertex. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:vertex",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:vertex",
+          "way": "out"
+        }
+      ],
+      "parentName": "Vertex",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:data:vertex:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/vertex/relay"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a Vertex.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Vertex",
+          "typeName": "out",
+          "valueType": "raw:core:vertex",
+          "way": "out"
+        }
+      ],
+      "parentName": "Vertex",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "color": {
+              "blue": 1,
+              "green": 1,
+              "opacity": 1,
+              "red": 1
+            },
+            "normal": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "texcoord": [
+              0,
+              0
+            ]
+          },
+          "isHidden": false,
+          "name": "Vertex",
+          "type": "value",
+          "typeName": "vertex",
+          "valueType": "raw:core:vertex"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store"
+      ],
+      "typePath": "node:data:vertex:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/vertex/state"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Vertices from a Polygon.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Polygon",
+          "typeName": "polygonIn",
+          "valueType": "raw:polygon",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Vertices from Polygon",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Vertices",
+          "typeName": "verticesOut",
+          "valueType": "raw:core:vertex",
+          "way": "out"
+        }
+      ],
+      "parentName": "Vertex",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:vertex:verticesFromPolygon",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/vertex/verticesFromPolygon"
+    }
+  ]
+}

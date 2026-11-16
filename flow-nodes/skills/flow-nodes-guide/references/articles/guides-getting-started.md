@@ -16,19 +16,19 @@ The general direction of data flow is downstream, left to right. Tho in “doubl
 
 ## State
 
-Value or data is stored in State nodes. When editing properties in some nodes, the input double wires update upstream. In this case a State node is needed to store the value. Use the [Save](../nodes/node-general-generic-save.json) node to update a value on demand.
+Value or data is stored in State nodes. When editing properties in some nodes, the input double wires update upstream. In this case a State node is needed to store the value. Use the [Save](../nodes/general/generic.json) (`node:general:generic:save`) node to update a value on demand.
 
 ![Getting Started — step 3](https://flownodes.app/docs/media/guides-getting-started/media-03.png)
 
 ## List State
 
-Values can also be stored in List State nodes. To dynamically edit a list there are nodes like [List Save](../nodes/node-general-generic-listSave.json), [Insert](../nodes/node-general-list-insert.json), [Append](../nodes/node-general-list-append.json), [Remove](../nodes/node-general-list-remove.json) and [Remove All](../nodes/node-general-list-removeAll.json).
+Values can also be stored in List State nodes. To dynamically edit a list there are nodes like [List Save](../nodes/general/generic.json) (`node:general:generic:listSave`), [Insert](../nodes/general/list.json) (`node:general:list:insert`), [Append](../nodes/general/list.json) (`node:general:list:append`), [Remove](../nodes/general/list.json) (`node:general:list:remove`) and [Remove All](../nodes/general/list.json) (`node:general:list:removeAll`).
 
 ![Getting Started — step 4](https://flownodes.app/docs/media/guides-getting-started/media-04.png)
 
 ## Convert
 
-When connecting from an outlet of a specific type, to an inlet of another type, sometimes a hidden auto-convert node is created, represented with a multi colored wire. There is also a manual [Convert](../nodes/node-general-generic-manualConvert.json) node, to “hard code” the conversion type.
+When connecting from an outlet of a specific type, to an inlet of another type, sometimes a hidden auto-convert node is created, represented with a multi colored wire. There is also a manual [Convert](../nodes/general/generic.json) (`node:general:generic:manualConvert`) node, to “hard code” the conversion type.
 
 ![Getting Started — step 5](https://flownodes.app/docs/media/guides-getting-started/media-05.png)
 

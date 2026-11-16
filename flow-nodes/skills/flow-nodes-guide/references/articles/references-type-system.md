@@ -89,7 +89,7 @@ Light-weight types.
 
 # Auto Conversion
 
-When wiring from one outlet with a specific type to another inlet with another type, if possible a auto conversion wire will be created to convert the value. There is also a manual [Convert](../nodes/node-general-generic-manualConvert.json). For some conversion a specific node is created, example: Convert from Vector to Graphic.
+When wiring from one outlet with a specific type to another inlet with another type, if possible a auto conversion wire will be created to convert the value. There is also a manual [Convert](../nodes/general/generic.json) (`node:general:generic:manualConvert`). For some conversion a specific node is created, example: Convert from Vector to Graphic.
 
 > **Tip**
 >

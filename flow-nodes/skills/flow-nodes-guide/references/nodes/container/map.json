@@ -1,0 +1,1964 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Container",
+  "parentName": "Map",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Check if all the values in the list inlet satisfy some condition. Only when all of the inner value inlets are true, the final outlet will be true.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Array In",
+          "typeName": "arrayIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Element Satisfy In",
+          "typeName": "elementSatisfyIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "All Satisfy",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "All Satisfied",
+          "typeName": "arraySatisfyOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Element Out",
+          "typeName": "elementOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:container:map:allSatisfy",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/allSatisfy"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Check if the list inlet contains some value. If one of the inner values inlet is true, the final outlet will also be true.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Array",
+          "typeName": "arrayIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Element Contains",
+          "typeName": "elementContainsIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Contains",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Contains",
+          "typeName": "arrayContainsOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Element",
+          "typeName": "elementOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Exists"
+      ],
+      "typePath": "node:container:map:contains",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/contains"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Edit each element in the list inlet.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Array In",
+          "typeName": "arrayIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Element In",
+          "typeName": "elementIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Edit",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Array Out",
+          "typeName": "arrayOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Element Out",
+          "typeName": "elementOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacedByTypePath": "node:container:map:edit2",
+      "replacesTypePaths": [],
+      "tags": [
+        "For",
+        "Each"
+      ],
+      "typePath": "node:container:map:edit",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/container/map/edit"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Edit each element in the list inlet. Includes an internal Index outlet for the current element index.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Array In",
+          "typeName": "arrayInIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Element In",
+          "typeName": "elementInIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Edit",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Element Out",
+          "typeName": "elementOutOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Index",
+          "typeName": "indexOutOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Array Out",
+          "typeName": "arrayOutOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [
+        "node:container:map:edit"
+      ],
+      "tags": [
+        "For",
+        "Each",
+        "Loop"
+      ],
+      "typePath": "node:container:map:edit2",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/edit2"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Run values through a feedback loop over time.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Initial",
+          "typeName": "initialIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Result",
+          "typeName": "resultIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Delay",
+          "typeName": "secondsIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Mix",
+          "typeName": "mixIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reset",
+          "typeName": "resetIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Feedback",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Result",
+          "typeName": "resultOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "secondsIn",
+          "info": "Throttle the feedback loop.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Delay",
+          "type": "variable",
+          "typeName": "seconds",
+          "valueType": "raw:core:duration"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "mixIn",
+          "info": "Blend the initial value into the loop, from 0.0 (loop) to 1.0 (initial).",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Mix",
+          "type": "variable",
+          "typeName": "mix",
+          "valueType": "raw:core:float"
+        },
+        {
+          "info": "Samples the initial value.",
+          "isHidden": false,
+          "name": "Reset",
+          "type": "action",
+          "typeName": "reset"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Time",
+        "Loop"
+      ],
+      "typePath": "node:container:map:feedback",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/feedback"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Filter values in a list. If the condition is true, the value will be included in the final list.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Array",
+          "typeName": "arrayIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Element Filter",
+          "typeName": "elementFilterIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Filter",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Filtered Element",
+          "typeName": "arrayFilterOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Element",
+          "typeName": "elementOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:container:map:filter",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/filter"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Find the first value in a list that matches a condition.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Array",
+          "typeName": "arrayIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Element Is First",
+          "typeName": "elementIsFirstIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "First",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "First Element",
+          "typeName": "elementFirstOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Element",
+          "typeName": "elementOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:container:map:first",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/first"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Find the first index of a value in a list that matches a condition.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Array",
+          "typeName": "arrayIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Element Is First",
+          "typeName": "elementIsFirstIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "First Index",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "First Index",
+          "typeName": "indexFirstOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Element",
+          "typeName": "elementOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:container:map:firstIndex",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/firstIndex"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Group nodes together for organization.",
+      "familyName": "Container",
+      "inLets": [],
+      "isPro": false,
+      "name": "Group",
+      "newInAppVersion": "1.0.0",
+      "outLets": [],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:container:map:group",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/group"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Edit key and value in keyed list.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "lex",
+          "direction": "binding",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Values",
+          "typeName": "inputValuesIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Key",
+          "typeName": "inputKeyIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Value",
+          "typeName": "inputValueIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Keyed Edit",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Key",
+          "typeName": "outputKeyOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Value",
+          "typeName": "outputValueOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "lex",
+          "direction": "binding",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Values",
+          "typeName": "outputValuesOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:container:map:keyedEdit",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/keyedEdit"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Reduce a keyed list to one value in sorted key order. Combine Key, Element, and Previous Result inside the loop, then connect the result to Next Result. Initial supplies the first Previous Result and is returned when the keyed list is empty.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "lex",
+          "direction": "direct",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Initial",
+          "typeName": "elementInitialIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Next Result",
+          "typeName": "elementResultIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Keyed Reduce",
+      "newInAppVersion": "27.2.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Previous Result",
+          "typeName": "elementResultOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Key",
+          "typeName": "keyOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Element",
+          "typeName": "elementOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reduced",
+          "typeName": "elementReducedOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Combine",
+        "Dictionary",
+        "Accumulate",
+        "Fold"
+      ],
+      "typePath": "node:container:map:keyedReduce",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/keyedReduce"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Edit the values of a keyed list and output them as a list.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "lex",
+          "direction": "binding",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesInIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Value",
+          "typeName": "valueInIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Leading Keyed Edit",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Key",
+          "typeName": "keyOutOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Value",
+          "typeName": "valueOutOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesOutOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Keyed",
+        "List",
+        "Edit"
+      ],
+      "typePath": "node:container:map:leadingKeyedEdit",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/leadingKeyedEdit"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Loop through a flow.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Count",
+          "typeName": "countIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Element In",
+          "typeName": "elementIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Loop",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Index",
+          "typeName": "indexOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Array Out",
+          "typeName": "arrayOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "countIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Count",
+          "type": "variable",
+          "typeName": "count",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "For"
+      ],
+      "typePath": "node:container:map:loop",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/loop"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Reduce a list inlet down to one value outlet. Combine the two values in the reduce loop. Note that the initial value is used as the previous result in the first run of the loop.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Array",
+          "typeName": "arrayIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Initial",
+          "typeName": "elementInitialIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Next Result",
+          "typeName": "elementResultIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Reduce",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Previous Result",
+          "typeName": "elementResultOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Element",
+          "typeName": "elementOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reduced",
+          "typeName": "elementReducedOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Combine"
+      ],
+      "typePath": "node:container:map:reduce",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/reduce"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Edit a slice of elements in the list inlet. The slice count defines how many elements to edit.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Array In",
+          "typeName": "arrayIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Element In",
+          "typeName": "elementIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Slice Count",
+          "typeName": "sliceCountIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Slice Edit",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Array Out",
+          "typeName": "arrayOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Elements Out",
+          "typeName": "elementsOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "sliceCountIn",
+          "isHidden": false,
+          "name": "Slice Count",
+          "type": "variable",
+          "typeName": "sliceCount",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "For",
+        "Each",
+        "Chunk"
+      ],
+      "typePath": "node:container:map:sliceEdit",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/sliceEdit"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Sort an array by comparing pairs of elements inside the map. Provide a Leading First decision to determine ordering, with optional order reversal.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Leading First",
+          "typeName": "leadingFirstIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Sort",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Leading",
+          "typeName": "leadingValueOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Trailing",
+          "typeName": "trailingValueOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Sorted Values",
+          "typeName": "sortedValuesOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Ascending",
+            "typeName": "ascending"
+          },
+          "enumCases": [
+            {
+              "name": "Ascending",
+              "typeName": "ascending"
+            },
+            {
+              "name": "Descending",
+              "typeName": "descending"
+            }
+          ],
+          "info": "Controls whether the sorted output is ascending or descending relative to the Leading First comparison results.",
+          "isHidden": false,
+          "name": "Order",
+          "type": "typedEnum",
+          "typeName": "sortOrder"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Sort",
+        "Array",
+        "Order",
+        "Map"
+      ],
+      "typePath": "node:container:map:sort",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/sort"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Build a tool that can be used in chat intelligence node.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Name",
+          "typeName": "toolNameIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Description",
+          "typeName": "toolDescriptionIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Tool",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Tool",
+          "typeName": "toolOut",
+          "valueType": "raw:tool",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": "",
+          "inLetTypeName": "toolNameIn",
+          "isHidden": false,
+          "name": "Name",
+          "type": "variable",
+          "typeName": "toolName",
+          "valueType": "raw:core:string"
+        },
+        {
+          "defaultValue": "",
+          "inLetTypeName": "toolDescriptionIn",
+          "isHidden": false,
+          "name": "Description",
+          "type": "variable",
+          "typeName": "toolDescription",
+          "valueType": "raw:core:string"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "AI",
+        "Prompt"
+      ],
+      "typePath": "node:container:map:tool",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/tool"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Edit a list while assigning keys and output it as a keyed list.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesInIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Key",
+          "typeName": "keyInIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Value",
+          "typeName": "valueInIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Trailing Keyed Edit",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Value",
+          "typeName": "valueOutOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "lex",
+          "direction": "binding",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesOutOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Keyed",
+        "List",
+        "Edit"
+      ],
+      "typePath": "node:container:map:trailingKeyedEdit",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/trailingKeyedEdit"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Recursively create a tree structure.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Seed",
+          "typeName": "seedIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Branches",
+          "typeName": "branchesIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The number of generations to create branches. Keep in mind that a high value, above 5, may cause performance issues.",
+          "level": "external",
+          "name": "Generations",
+          "typeName": "generationCountIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Tree",
+      "newInAppVersion": "2.8.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Branch",
+          "typeName": "branchOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Generation",
+          "typeName": "generationIndexOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Tree",
+          "typeName": "treeOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 3,
+          "inLetTypeName": "generationCountIn",
+          "info": "The number of generations to create branches. Keep in mind that a high value, above 5, may cause performance issues.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 5,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Generations",
+          "type": "variable",
+          "typeName": "generationCount",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Recursive"
+      ],
+      "typePath": "node:container:map:tree",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/tree"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Edit a graphic by modifying unit UV coordinates. The final external outlet remaps the external inlet with the internal inlet's colors. The red channel is x and the green channel is y. Black color is the top left pixel and yellow color is the bottom right pixel.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Source",
+          "typeName": "sourceIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "UV Remap",
+          "typeName": "uvRemapIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "UV Edit",
+      "newInAppVersion": "4.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "UV",
+          "typeName": "uvOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Remap",
+          "typeName": "remapOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Zero",
+            "typeName": "transparent"
+          },
+          "enumCases": [
+            {
+              "name": "Zero",
+              "typeName": "transparent"
+            },
+            {
+              "name": "Loop",
+              "typeName": "loop"
+            },
+            {
+              "name": "Mirror",
+              "typeName": "mirror"
+            },
+            {
+              "name": "Stretch",
+              "typeName": "stretch"
+            }
+          ],
+          "info": "Controls how pixels outside the sampled area are resolved during remapping.",
+          "isHidden": false,
+          "name": "Extend Mode",
+          "type": "typedEnum",
+          "typeName": "extendMode"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Graphic",
+        "Coordinate",
+        "Remap"
+      ],
+      "typePath": "node:container:map:uvEdit",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/uvEdit"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Edit each frame in a video.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Source",
+          "typeName": "sourceIn",
+          "valueType": "raw:video",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Destination",
+          "typeName": "destinationIn",
+          "valueType": "raw:video",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Render",
+          "typeName": "renderIn",
+          "valueType": "raw:action",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Cancel",
+          "typeName": "cancelIn",
+          "valueType": "raw:action",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Frame",
+          "typeName": "frameIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "links": [
+        {
+          "title": "Docs",
+          "url": "https://flownodes.notion.site/20a9a07f8bd9809394aae6ece4cf2500"
+        }
+      ],
+      "name": "Video Edit",
+      "newInAppVersion": "1.5.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Frame",
+          "typeName": "frameOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Frame Index",
+          "typeName": "frameIndexOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Fraction",
+          "typeName": "fractionOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Rendering",
+          "typeName": "isRenderingOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Frame Index",
+          "typeName": "renderingIndexOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Fraction",
+          "typeName": "renderingFractionOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "isHidden": false,
+          "name": "Start Render",
+          "type": "action",
+          "typeName": "startRender"
+        },
+        {
+          "isHidden": true,
+          "name": "Cancel Render",
+          "type": "action",
+          "typeName": "cancelRender"
+        },
+        {
+          "isHidden": true,
+          "name": "Render Status",
+          "type": "label",
+          "typeName": "renderStatus"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Movie"
+      ],
+      "typePath": "node:container:map:videoEdit",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/videoEdit"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Record a video frame by frame with graphics. The speed at which the video is recorded is not the same as the final output. The recording graphics might be faster or slower depending on how heavy the mapped nodes are, this node records as fast as possible. The final video will have the specified frame rate. The destination inlet is used to save the final video. Typically wire in an empty state video node.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Destination",
+          "typeName": "destinationIn",
+          "valueType": "raw:video",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Source",
+          "typeName": "sourceIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The time duration of the video.",
+          "level": "external",
+          "name": "Duration",
+          "typeName": "durationIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Frames per second.",
+          "level": "external",
+          "name": "Frame Rate",
+          "typeName": "frameRateIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Record",
+          "typeName": "recordIn",
+          "valueType": "raw:action",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Cancel",
+          "typeName": "cancelIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Video Record",
+      "newInAppVersion": "4.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Frame Index",
+          "typeName": "frameIndexOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Frame Time",
+          "typeName": "frameTimeOut",
+          "valueType": "raw:core:duration",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "Frame Fraction",
+          "typeName": "frameFractionOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "durationIn",
+          "info": "The time duration of the video.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 60,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Duration",
+          "type": "variable",
+          "typeName": "duration",
+          "valueType": "raw:core:duration"
+        },
+        {
+          "defaultValue": 30,
+          "inLetTypeName": "frameRateIn",
+          "info": "Frames per second.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 60,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 10,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Frame Rate",
+          "type": "variable",
+          "typeName": "frameRate",
+          "valueType": "raw:core:float"
+        },
+        {
+          "info": "Once recording starts, frames will be record one by one.",
+          "isHidden": false,
+          "name": "Record",
+          "type": "action",
+          "typeName": "record"
+        },
+        {
+          "isHidden": true,
+          "name": "Cancel",
+          "type": "action",
+          "typeName": "cancel"
+        },
+        {
+          "isHidden": true,
+          "name": "Status",
+          "type": "label",
+          "typeName": "status"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:container:map:videoRecord",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/videoRecord"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Combine two lists to one list.",
+      "familyName": "Container",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Leading",
+          "typeName": "leadingListIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Trailing",
+          "typeName": "trailingListIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Zipped",
+          "typeName": "zippedValueIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Zip Edit",
+      "newInAppVersion": "2.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Leading",
+          "typeName": "leadingValueOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "internal",
+          "name": "Trailing",
+          "typeName": "trailingValueOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Zipped",
+          "typeName": "zippedListOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Map",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Merge",
+        "Combine"
+      ],
+      "typePath": "node:container:map:zipEdit",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/container/map/zipEdit"
+    }
+  ]
+}

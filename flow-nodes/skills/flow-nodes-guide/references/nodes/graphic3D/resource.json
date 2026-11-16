@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "familyName": "3D Graphic",
+  "parentName": "Resource",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Convert a Graphic into a 3D Graphic with a width, height, or depth of one voxel along the selected axis. Binding edits to the single slice update the source Graphic.",
+      "familyName": "3D Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Convert from Graphic",
+      "newInAppVersion": "27.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "internal",
+          "name": "3D Graphic",
+          "typeName": "graphic3DOut",
+          "valueType": "raw:graphic3D",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "3D Graphic",
+          "typeName": "graphic3DBindingOut",
+          "valueType": "raw:graphic3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Z",
+            "typeName": "z"
+          },
+          "enumCases": [
+            {
+              "name": "X",
+              "typeName": "x"
+            },
+            {
+              "name": "Y",
+              "typeName": "y"
+            },
+            {
+              "name": "Z",
+              "typeName": "z"
+            }
+          ],
+          "info": "The axis with a size of one voxel. The other two dimensions match the source graphic.",
+          "isHidden": false,
+          "name": "Axis",
+          "type": "typedEnum",
+          "typeName": "axis"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "2D",
+        "3D",
+        "Image",
+        "Volume",
+        "Slice"
+      ],
+      "typePath": "node:graphic3D:resource:convertFromGraphic",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic3D/resource/convertFromGraphic"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Information about details of a 3D graphic.",
+      "familyName": "3D Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Graphic",
+          "typeName": "in",
+          "valueType": "raw:graphic3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Metadata",
+      "newInAppVersion": "1.5.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Resolution",
+          "typeName": "resolutionOut",
+          "valueType": "raw:core:size3D",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Bit Depth",
+          "typeName": "bitsOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Information",
+        "Details"
+      ],
+      "typePath": "node:graphic3D:resource:metadata",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic3D/resource/metadata"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a 3D graphic.",
+      "familyName": "3D Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Clear",
+          "typeName": "clearIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "1.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "3D Graphic",
+          "typeName": "graphic3DBindingOut",
+          "valueType": "raw:graphic3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "isHidden": false,
+          "name": "Clear",
+          "type": "action",
+          "typeName": "clear"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Voxel"
+      ],
+      "typePath": "node:graphic3D:resource:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic3D/resource/state"
+    }
+  ]
+}

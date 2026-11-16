@@ -1,0 +1,616 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Graphic",
+  "parentName": "System",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Every pixel in the first input graphic will become a particle in the output graphic. Red is x, green is y, and blue is scale if channel scale is on. Optionally second input graphic will be used to color each particle. Keep the resolutions of the two graphic inputs the same. Note that to have particles in locations below zero (zero is in the center), the input graphic needs to be in 16 bit or higher.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Locations",
+          "typeName": "locationsIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Colors",
+          "typeName": "colorsIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Rotation",
+          "typeName": "resolutionIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Scale",
+          "typeName": "scaleIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Color",
+          "typeName": "colorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Background Color",
+          "typeName": "backgroundColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "links": [
+        {
+          "title": "Guide",
+          "url": "https://flownodes.notion.site/Pixel-Particles-27e9a07f8bd98030bb4ff94099e03de9"
+        }
+      ],
+      "name": "Pixel Particles",
+      "newInAppVersion": "2.2.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "System",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "resolutionIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": [
+              2000,
+              2000
+            ],
+            "coreType": "size",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": [
+              1,
+              1
+            ],
+            "coreType": "size",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Resolution",
+          "type": "variable",
+          "typeName": "resolution",
+          "valueType": "raw:core:size"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "8 Bit",
+            "typeName": "bit8"
+          },
+          "enumCases": [
+            {
+              "name": "8 Bit",
+              "typeName": "bit8"
+            },
+            {
+              "name": "16 Bit",
+              "typeName": "bit16"
+            },
+            {
+              "name": "32 Bit",
+              "typeName": "bit32"
+            }
+          ],
+          "isHidden": false,
+          "name": "Bits",
+          "type": "typedEnum",
+          "typeName": "bits"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "scaleIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Scale",
+          "type": "variable",
+          "typeName": "scale",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": false,
+          "info": "If active, the blue channel of the first graphic inlet will be multiplied with the scale property for each particle.",
+          "isHidden": false,
+          "name": "Channel Scale",
+          "type": "value",
+          "typeName": "channelScale",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": {
+            "blue": 1,
+            "green": 1,
+            "opacity": 1,
+            "red": 1
+          },
+          "inLetTypeName": "colorIn",
+          "info": "This color will be used when the colors graphic is not connected.",
+          "isHidden": false,
+          "name": "Color",
+          "type": "variable",
+          "typeName": "color",
+          "valueType": "raw:core:color"
+        },
+        {
+          "defaultValue": {
+            "blue": 0,
+            "green": 0,
+            "opacity": 1,
+            "red": 0
+          },
+          "inLetTypeName": "backgroundColorIn",
+          "isHidden": false,
+          "name": "Background Color",
+          "type": "variable",
+          "typeName": "backgroundColor",
+          "valueType": "raw:core:color"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "UV"
+      ],
+      "typePath": "node:graphic:system:pixelParticles",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/system/pixelParticles"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Instance Graphics at specific locations with scale, rotation and opacity. The instance system will loop over the inputs if they don't have the same count.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphics",
+          "typeName": "graphicsIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Transforms",
+          "typeName": "transformsIn",
+          "valueType": "raw:core:transform",
+          "way": "in"
+        },
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Tints",
+          "typeName": "tintsIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Resolution",
+          "typeName": "resolutionIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Global Scale",
+          "typeName": "globalScaleIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Global Tint",
+          "typeName": "globalTintIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Background Color",
+          "typeName": "backgroundColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Sprites",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "System",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "resolutionIn",
+          "isHidden": false,
+          "name": "Resolution",
+          "type": "variable",
+          "typeName": "resolution",
+          "valueType": "raw:core:size"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "8 Bit",
+            "typeName": "bit8"
+          },
+          "enumCases": [
+            {
+              "name": "8 Bit",
+              "typeName": "bit8"
+            },
+            {
+              "name": "16 Bit",
+              "typeName": "bit16"
+            },
+            {
+              "name": "32 Bit",
+              "typeName": "bit32"
+            }
+          ],
+          "isHidden": false,
+          "name": "Bits",
+          "type": "typedEnum",
+          "typeName": "bits"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Center",
+            "typeName": "center"
+          },
+          "enumCases": [
+            {
+              "name": "Top Leading",
+              "typeName": "topLeading"
+            },
+            {
+              "name": "Top",
+              "typeName": "top"
+            },
+            {
+              "name": "Top Trailing",
+              "typeName": "topTrailing"
+            },
+            {
+              "name": "Leading",
+              "typeName": "leading"
+            },
+            {
+              "name": "Center",
+              "typeName": "center"
+            },
+            {
+              "name": "Trailing",
+              "typeName": "trailing"
+            },
+            {
+              "name": "Bottom Leading",
+              "typeName": "bottomLeading"
+            },
+            {
+              "name": "Bottom",
+              "typeName": "bottom"
+            },
+            {
+              "name": "Bottom Trailing",
+              "typeName": "bottomTrailing"
+            }
+          ],
+          "isHidden": false,
+          "name": "Alignment",
+          "type": "typedEnum",
+          "typeName": "alignment"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Fit",
+            "typeName": "fit"
+          },
+          "enumCases": [
+            {
+              "name": "Fixed",
+              "typeName": "fixed"
+            },
+            {
+              "name": "Fit",
+              "typeName": "fit"
+            },
+            {
+              "name": "Fill",
+              "typeName": "fill"
+            },
+            {
+              "name": "Stretch",
+              "typeName": "stretch"
+            }
+          ],
+          "isHidden": false,
+          "name": "Placement",
+          "type": "typedEnum",
+          "typeName": "placement"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Add",
+            "typeName": "add"
+          },
+          "enumCases": [
+            {
+              "name": "Over",
+              "typeName": "over"
+            },
+            {
+              "name": "Over with Alpha",
+              "typeName": "overWithAlpha"
+            },
+            {
+              "name": "Under",
+              "typeName": "under"
+            },
+            {
+              "name": "Screen",
+              "typeName": "screen"
+            },
+            {
+              "name": "Lighten",
+              "typeName": "lighten"
+            },
+            {
+              "name": "Darken",
+              "typeName": "darken"
+            },
+            {
+              "name": "Darken without Alpha",
+              "typeName": "darkenWithoutAlpha"
+            },
+            {
+              "name": "Add",
+              "typeName": "add"
+            },
+            {
+              "name": "Add with Alpha",
+              "typeName": "addWithAlpha"
+            },
+            {
+              "name": "Multiply",
+              "typeName": "multiply"
+            },
+            {
+              "name": "Multiply without Alpha",
+              "typeName": "multiplyWithoutAlpha"
+            },
+            {
+              "name": "Difference",
+              "typeName": "difference"
+            },
+            {
+              "name": "Difference with Alpha",
+              "typeName": "differenceWithAlpha"
+            },
+            {
+              "name": "Subtract",
+              "typeName": "subtract"
+            },
+            {
+              "name": "Subtract with Alpha",
+              "typeName": "subtractWithAlpha"
+            },
+            {
+              "name": "Maximum",
+              "typeName": "maximum"
+            },
+            {
+              "name": "Minimum",
+              "typeName": "minimum"
+            },
+            {
+              "name": "Gamma",
+              "typeName": "gamma"
+            },
+            {
+              "name": "Power",
+              "typeName": "power"
+            },
+            {
+              "name": "Divide",
+              "typeName": "divide"
+            },
+            {
+              "name": "Average",
+              "typeName": "average"
+            },
+            {
+              "name": "Cosine",
+              "typeName": "cosine"
+            },
+            {
+              "name": "Inside",
+              "typeName": "inside"
+            },
+            {
+              "name": "Outside",
+              "typeName": "outside"
+            },
+            {
+              "name": "Exclusive Or",
+              "typeName": "exclusiveOr"
+            }
+          ],
+          "isHidden": false,
+          "name": "Blending Mode",
+          "type": "typedEnum",
+          "typeName": "blendingMode"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Zero",
+            "typeName": "transparent"
+          },
+          "enumCases": [
+            {
+              "name": "Zero",
+              "typeName": "transparent"
+            },
+            {
+              "name": "Loop",
+              "typeName": "loop"
+            },
+            {
+              "name": "Mirror",
+              "typeName": "mirror"
+            },
+            {
+              "name": "Stretch",
+              "typeName": "stretch"
+            }
+          ],
+          "isHidden": false,
+          "name": "Extend Mode",
+          "type": "typedEnum",
+          "typeName": "extendMode"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "globalScaleIn",
+          "isHidden": false,
+          "name": "Global Scale",
+          "type": "variable",
+          "typeName": "globalScale",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": {
+            "blue": 1,
+            "green": 1,
+            "opacity": 1,
+            "red": 1
+          },
+          "inLetTypeName": "globalTintIn",
+          "isHidden": false,
+          "name": "Global Tint",
+          "type": "variable",
+          "typeName": "globalTint",
+          "valueType": "raw:core:color"
+        },
+        {
+          "defaultValue": {
+            "blue": 0,
+            "green": 0,
+            "opacity": 0,
+            "red": 0
+          },
+          "inLetTypeName": "backgroundColorIn",
+          "isHidden": false,
+          "name": "Background Color",
+          "type": "variable",
+          "typeName": "backgroundColor",
+          "valueType": "raw:core:color"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Instances",
+        "Clones",
+        "Transform",
+        "Copies",
+        "Samples"
+      ],
+      "typePath": "node:graphic:system:sprites",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/system/sprites"
+    }
+  ]
+}

@@ -6,7 +6,7 @@ Source route: `/docs/guides/pixel-particles`. Media is not bundled; public route
 
 > This guide was made on Mac, tho it’s also compatible with iPhone, iPad and Vision Pro.
 
-> This guide requires the [Pixel Particles](../nodes/node-graphic-system-pixelParticles.json) that is available in the Visuals & Effects bundle.
+> This guide requires the [Pixel Particles](../nodes/graphic/system.json) (`node:graphic:system:pixelParticles`) that is available in the Visuals & Effects bundle.
 
 Create 1’000’000 particles via a graphic with resolution 1’000 x 1’000.  
 
@@ -30,7 +30,7 @@ Note that there is a connection error. This is expected. We need to provide pixe
 
 One pixel becomes one particle, Red is X and Green is Y. So to spread out the particles in a grid we will use two gradients to create a “UV” map.
 
-Start by adding a [Gradient](../nodes/node-graphic-solid-gradient.json):
+Start by adding a [Gradient](../nodes/graphic/solid.json) (`node:graphic:solid:gradient`):
 
 ![Pixel Particles — step 5](https://flownodes.app/docs/media/guides-pixel-particles/media-05.png)
 
@@ -60,7 +60,7 @@ Connect the blended gradients to the Pixel Particles node:
 
 The grid is offset, this is because the colors go from 0.0 to 1.0 in X & Y, tho the center is zero.
 
-To offset pixel particles, we use an exposure offset with a [Levels](../nodes/node-graphic-colorEffect-levels.json). Offset by `-0.5`:
+To offset pixel particles, we use an exposure offset with a [Levels](../nodes/graphic/colorEffect.json) (`node:graphic:colorEffect:levels`). Offset by `-0.5`:
 
 ![Pixel Particles — step 11](https://flownodes.app/docs/media/guides-pixel-particles/media-11.png)
 
@@ -70,7 +70,7 @@ Now the grid should show, tho it’s a bit bright, so lower the alpha in the Pix
 
 ## The Wave - Noise
 
-Add a [Noise](../nodes/node-graphic-solid-noise.json) and enable the Color property:
+Add a [Noise](../nodes/graphic/solid.json) (`node:graphic:solid:noise`) and enable the Color property:
 
 ![Pixel Particles — step 13](https://flownodes.app/docs/media/guides-pixel-particles/media-13.png)
 
@@ -80,13 +80,13 @@ Make sure it’s 32 bit:
 
 ## The Wave - Cross
 
-Add a [Cross](../nodes/node-graphic-modifierEffect-cross.json) and connect the blended gradients with the noise:
+Add a [Cross](../nodes/graphic/modifierEffect.json) (`node:graphic:modifierEffect:cross`) and connect the blended gradients with the noise:
 
 ![Pixel Particles — step 15](https://flownodes.app/docs/media/guides-pixel-particles/media-15.png)
 
 ## Animation - Stopwatch
 
-Add a [Stopwatch](../nodes/node-general-time-stopwatch2.json) and connect it to the Depth Offset of the Noise:
+Add a [Stopwatch](../nodes/general/time.json) (`node:general:time:stopwatch2`) and connect it to the Depth Offset of the Noise:
 
 ![Pixel Particles — step 16](https://flownodes.app/docs/media/guides-pixel-particles/media-16.png)
 

@@ -22,7 +22,7 @@ This guide will show you how to render, animate and post process some cloned cub
 
 Start by creating a Cube geometry node.
 
-[Cube](../nodes/node-geometry-shape-cube2.json)
+[Cube](../nodes/geometry/shape.json) (`node:geometry:shape:cube2`)
 
 ## Clone the Cube
 
@@ -40,9 +40,9 @@ And finally connect the nodes.
 >
 > Clone Transform is pro node and requires Pro access (a subscription or Lifetime unlock).
 
-[Grid](../nodes/node-data-point3D-grid.json)
+[Grid](../nodes/data/point3D.json) (`node:data:point3D:grid`)
 
-[Clone Transform](../nodes/node-spatial-entity-cloneTransform.json)
+[Clone Transform](../nodes/spatial/entity.json) (`node:spatial:entity:cloneTransform`)
 
 ## Render the Cubes
 
@@ -50,11 +50,11 @@ And finally connect the nodes.
 
 In this step we add the 3D Render node and connect the cloned cubes. The render node requires a camera, so add a perspective camera and a directional light.
 
-[3D Render](../nodes/node-graphic-engine-kagamiRender.json)
+[3D Render](../nodes/graphic/engine.json) (`node:graphic:engine:kagamiRender`)
 
-[Perspective](../nodes/node-spatial-camera-perspective.json)
+[Perspective](../nodes/spatial/camera.json) (`node:spatial:camera:perspective`)
 
-[Directional](../nodes/node-spatial-light-directional.json)
+[Directional](../nodes/spatial/light.json) (`node:spatial:light:directional`)
 
 ## Post Processing
 
@@ -62,7 +62,7 @@ In this step we add the 3D Render node and connect the cloned cubes. The render 
 
 Add a Levels node and invert the graphic, and adjust brightness and contrast as needed.
 
-[Levels](../nodes/node-graphic-colorEffect-levels.json)
+[Levels](../nodes/graphic/colorEffect.json) (`node:graphic:colorEffect:levels`)
 
 ## Animate the Camera
 
@@ -70,11 +70,11 @@ Add a Levels node and invert the graphic, and adjust brightness and contrast as 
 
 To animate the camera we can use a Wave node (X axis), along with a float state (Z axis), that we can connect to a Construct 3D Point node.
 
-[Wave](../nodes/node-realtime-modulator-wave.json)
+[Wave](../nodes/realtime/modulator.json) (`node:realtime:modulator:wave`)
 
 Then we can use that 3D point as position for the camera and make use of a Look At node to orient the camera towards the center. (Make sure connect the 3D point to Eye and set the Target to 0.0 the Z axis).
 
-[Look At](../nodes/node-data-quaternion-lookAt.json)
+[Look At](../nodes/data/quaternion.json) (`node:data:quaternion:lookAt`)
 
 ## Final Render
 

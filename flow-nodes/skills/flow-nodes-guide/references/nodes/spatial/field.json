@@ -1,0 +1,1933 @@
+{
+  "schemaVersion": 1,
+  "familyName": "3D Spatial",
+  "parentName": "Field",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Displace a field with a sampled color from a 3D graphic.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldIn",
+          "valueType": "raw:field",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Graphic",
+          "typeName": "graphic3DIn",
+          "valueType": "raw:graphic3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "A base constant added to the displacement. Useful with multiply operation.",
+          "level": "external",
+          "name": "Base",
+          "typeName": "baseIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The 3D frame used to sample luma from the 3D graphic.",
+          "level": "external",
+          "name": "Frame",
+          "typeName": "frameIn",
+          "valueType": "raw:core:rect3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Color Displace",
+      "newInAppVersion": "4.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Add",
+            "typeName": "add"
+          },
+          "enumCases": [
+            {
+              "name": "Add",
+              "typeName": "add"
+            },
+            {
+              "name": "Subtract",
+              "typeName": "subtract"
+            },
+            {
+              "name": "Multiply",
+              "typeName": "multiply"
+            },
+            {
+              "name": "Divide",
+              "typeName": "divide"
+            }
+          ],
+          "info": "How to apply the color to the tag.",
+          "isHidden": false,
+          "name": "Operation",
+          "type": "typedEnum",
+          "typeName": "operation"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "baseIn",
+          "info": "A base constant added to the displacement. Useful with multiply operation.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Base",
+          "type": "variable",
+          "typeName": "base",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": {
+            "origin": {
+              "x": -0.5,
+              "y": -0.5,
+              "z": -0.5
+            },
+            "size": {
+              "depth": 1,
+              "height": 1,
+              "width": 1
+            }
+          },
+          "inLetTypeName": "frameIn",
+          "info": "The 3D frame used to sample luma from the 3D graphic.",
+          "isHidden": false,
+          "name": "Frame",
+          "type": "variable",
+          "typeName": "frame",
+          "valueType": "raw:core:rect3D"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Zero",
+            "typeName": "transparent"
+          },
+          "enumCases": [
+            {
+              "name": "Zero",
+              "typeName": "transparent"
+            },
+            {
+              "name": "Loop",
+              "typeName": "loop"
+            },
+            {
+              "name": "Mirror",
+              "typeName": "mirror"
+            },
+            {
+              "name": "Stretch",
+              "typeName": "stretch"
+            }
+          ],
+          "info": "Controls how the 3D graphic is sampled outside the frame.",
+          "isHidden": false,
+          "name": "Extend Mode",
+          "type": "typedEnum",
+          "typeName": "extendMode"
+        },
+        {
+          "info": "The tag to displace in the field.",
+          "isHidden": false,
+          "name": "Tag",
+          "type": "item",
+          "typeName": "tagSelection"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Luma",
+        "Displace",
+        "Graphic3D",
+        "Operation"
+      ],
+      "typePath": "node:spatial:field:colorDisplace",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/colorDisplace"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Connect matching particles from two fields into line mesh particles. Each source particle pair becomes one line with two points.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Leading",
+          "typeName": "leadingIn",
+          "valueType": "raw:field",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Trailing",
+          "typeName": "trailingIn",
+          "valueType": "raw:field",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Connect Lines",
+      "newInAppVersion": "4.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Lines",
+        "Connect",
+        "Pair",
+        "Mesh"
+      ],
+      "typePath": "node:spatial:field:connectLines",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/connectLines"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Define a field with a repeating constant number.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Count",
+          "typeName": "countIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "A default repeating float component.",
+          "level": "external",
+          "name": "Component",
+          "typeName": "componentIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Constant",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 1000,
+          "inLetTypeName": "countIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1000000,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Count",
+          "type": "variable",
+          "typeName": "count",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "componentIn",
+          "info": "A default repeating float component.",
+          "isHidden": false,
+          "name": "Component",
+          "type": "variable",
+          "typeName": "component",
+          "valueType": "raw:core:float"
+        },
+        {
+          "info": "The tags the field contains.",
+          "isHidden": false,
+          "name": "Tags",
+          "type": "item",
+          "typeName": "tags"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:spatial:field:constant",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/constant"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Convert a 3D Graphic to a Field with colored particles.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Graphic",
+          "typeName": "graphic3DIn",
+          "valueType": "raw:graphic3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The 3d frame where the 3d graphic will be placed. The 3d graphic will stretch to the frame.",
+          "level": "external",
+          "name": "Frame",
+          "typeName": "frameIn",
+          "valueType": "raw:core:rect3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Convert from 3D Graphic",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "origin": {
+              "x": -0.5,
+              "y": -0.5,
+              "z": -0.5
+            },
+            "size": {
+              "depth": 1,
+              "height": 1,
+              "width": 1
+            }
+          },
+          "inLetTypeName": "frameIn",
+          "info": "The 3d frame where the 3d graphic will be placed. The 3d graphic will stretch to the frame.",
+          "isHidden": false,
+          "name": "Frame",
+          "type": "variable",
+          "typeName": "frame",
+          "valueType": "raw:core:rect3D"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:spatial:field:convertFromGraphic3D",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/convertFromGraphic3D"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Convert a geometry or mesh-backed field to particles.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Mesh",
+          "typeName": "fieldIn",
+          "valueType": "raw:field",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Convert to Particles",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Particles",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Convert",
+        "Geometry",
+        "Mesh",
+        "Particles"
+      ],
+      "typePath": "node:spatial:field:convertToParticles",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/convertToParticles"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A grid of positions in a field based on spacing and offset.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The bounding frame of the grid.",
+          "level": "external",
+          "name": "Frame",
+          "typeName": "frameIn",
+          "valueType": "raw:core:rect3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Spacing between points per axis.",
+          "level": "external",
+          "name": "Spacing",
+          "typeName": "spacingIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "A fractional offset inside the frame.",
+          "level": "external",
+          "name": "Offset",
+          "typeName": "offsetIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Fraction Grid",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "origin": {
+              "x": -0.5,
+              "y": -0.5,
+              "z": -0.5
+            },
+            "size": {
+              "depth": 1,
+              "height": 1,
+              "width": 1
+            }
+          },
+          "inLetTypeName": "frameIn",
+          "info": "The bounding frame of the grid.",
+          "isHidden": false,
+          "name": "Frame",
+          "type": "variable",
+          "typeName": "frame",
+          "valueType": "raw:core:rect3D"
+        },
+        {
+          "defaultValue": {
+            "x": 0.1,
+            "y": 0.1,
+            "z": 0.1
+          },
+          "inLetTypeName": "spacingIn",
+          "info": "Spacing between points per axis.",
+          "isHidden": false,
+          "name": "Spacing",
+          "type": "variable",
+          "typeName": "spacing",
+          "valueType": "raw:core:point3D"
+        },
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "inLetTypeName": "offsetIn",
+          "info": "A fractional offset inside the frame.",
+          "isHidden": false,
+          "name": "Offset",
+          "type": "variable",
+          "typeName": "offset",
+          "valueType": "raw:core:point3D"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Particles"
+      ],
+      "typePath": "node:spatial:field:fractionGrid",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/fractionGrid"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A grid of positions in a field.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The bounding frame of the grid.",
+          "level": "external",
+          "name": "Frame",
+          "typeName": "frameIn",
+          "valueType": "raw:core:rect3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The number of points on the x-axis.",
+          "level": "external",
+          "name": "X Count",
+          "typeName": "xCountIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The number of points on the y-axis.",
+          "level": "external",
+          "name": "Y Count",
+          "typeName": "yCountIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The number of points on the z-axis.",
+          "level": "external",
+          "name": "Z Count",
+          "typeName": "zCountIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Grid",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "origin": {
+              "x": -0.5,
+              "y": -0.5,
+              "z": -0.5
+            },
+            "size": {
+              "depth": 1,
+              "height": 1,
+              "width": 1
+            }
+          },
+          "inLetTypeName": "frameIn",
+          "info": "The bounding frame of the grid.",
+          "isHidden": false,
+          "name": "Frame",
+          "type": "variable",
+          "typeName": "frame",
+          "valueType": "raw:core:rect3D"
+        },
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "xCountIn",
+          "info": "The number of points on the x-axis.",
+          "isHidden": false,
+          "name": "X Count",
+          "type": "variable",
+          "typeName": "xCount",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "yCountIn",
+          "info": "The number of points on the y-axis.",
+          "isHidden": false,
+          "name": "Y Count",
+          "type": "variable",
+          "typeName": "yCount",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "zCountIn",
+          "info": "The number of points on the z-axis.",
+          "isHidden": false,
+          "name": "Z Count",
+          "type": "variable",
+          "typeName": "zCount",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Particles"
+      ],
+      "typePath": "node:spatial:field:grid",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/grid"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Combine two tags from a field into a single position tag, creating lines between them. Outputs mesh particles with line index pairs.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldIn",
+          "valueType": "raw:field",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Lines",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "The tag to use as line start positions. For Gaussian splats, use Position and a custom 3D endpoint tag.",
+          "isHidden": false,
+          "name": "Leading Tag",
+          "type": "item",
+          "typeName": "leadingTagSelection"
+        },
+        {
+          "info": "The tag to use as line end positions. For Gaussian splats, use Position and a custom 3D endpoint tag.",
+          "isHidden": false,
+          "name": "Trailing Tag",
+          "type": "item",
+          "typeName": "trailingTagSelection"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Lines",
+        "Connect",
+        "Pair",
+        "Mesh",
+        "Plexus"
+      ],
+      "typePath": "node:spatial:field:lines",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/lines"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Apply a list operation between two field tags.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Fields",
+          "typeName": "fieldsIn",
+          "valueType": "raw:field",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Operation",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "The tag to operate on in the leading field. The tag to operate on in the trailing field.",
+          "isHidden": false,
+          "name": "Tag",
+          "type": "item",
+          "typeName": "tagSelection"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Add",
+            "typeName": "add"
+          },
+          "enumCases": [
+            {
+              "name": "Add",
+              "typeName": "add"
+            },
+            {
+              "name": "Subtract",
+              "typeName": "subtract"
+            },
+            {
+              "name": "Multiply",
+              "typeName": "multiply"
+            },
+            {
+              "name": "Divide",
+              "typeName": "divide"
+            }
+          ],
+          "info": "The list operation to apply between the tags.",
+          "isHidden": false,
+          "name": "Operation",
+          "type": "typedEnum",
+          "typeName": "operation"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Add",
+        "Subtract",
+        "Multiply",
+        "Divide"
+      ],
+      "typePath": "node:spatial:field:listOperation",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/listOperation"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Apply noise to a tag in a field.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldIn",
+          "valueType": "raw:field",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "An offset in 4th dimension.",
+          "level": "external",
+          "name": "Motion",
+          "typeName": "motionIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Deterministic randomness. (0 or above)",
+          "level": "external",
+          "name": "Seed",
+          "typeName": "seedIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The complexity of the noise. A lower value is more smooth and a higher value is more random. (1 to 10)",
+          "level": "external",
+          "name": "Octaves",
+          "typeName": "octavesIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Scales the position before sampling noise. (0 to 2)",
+          "level": "external",
+          "name": "Scale",
+          "typeName": "scaleIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Source Noise",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "motionIn",
+          "info": "An offset in 4th dimension.",
+          "isHidden": false,
+          "name": "Motion",
+          "type": "variable",
+          "typeName": "motion",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "seedIn",
+          "info": "Deterministic randomness. (0 or above)",
+          "isHidden": false,
+          "name": "Seed",
+          "type": "variable",
+          "typeName": "seed",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "octavesIn",
+          "info": "The complexity of the noise. A lower value is more smooth and a higher value is more random. (1 to 10)",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Octaves",
+          "type": "variable",
+          "typeName": "octaves",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "scaleIn",
+          "info": "Scales the position before sampling noise. (0 to 2)",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Scale",
+          "type": "variable",
+          "typeName": "scale",
+          "valueType": "raw:core:float"
+        },
+        {
+          "info": "The tag to apply noise to in the field.",
+          "isHidden": false,
+          "name": "Tag",
+          "type": "item",
+          "typeName": "tagSelection"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Random"
+      ],
+      "typePath": "node:spatial:field:noise",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/noise"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Displace a field with noise.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldIn",
+          "valueType": "raw:field",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "A base constant added to the displacement. Useful with multiply operation.",
+          "level": "external",
+          "name": "Base",
+          "typeName": "baseIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "How far the displacement will affect the field.",
+          "level": "external",
+          "name": "Distance",
+          "typeName": "distanceIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "An offset in 4th dimension.",
+          "level": "external",
+          "name": "Motion",
+          "typeName": "motionIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Deterministic randomness. (0 or above)",
+          "level": "external",
+          "name": "Seed",
+          "typeName": "seedIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The complexity of the noise. A lower value is more smooth and a higher value is more random. (1 to 10)",
+          "level": "external",
+          "name": "Octaves",
+          "typeName": "octavesIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Scales the position before sampling noise. (0 to 2)",
+          "level": "external",
+          "name": "Scale",
+          "typeName": "scaleIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Noise Displace",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Add",
+            "typeName": "add"
+          },
+          "enumCases": [
+            {
+              "name": "Add",
+              "typeName": "add"
+            },
+            {
+              "name": "Subtract",
+              "typeName": "subtract"
+            },
+            {
+              "name": "Multiply",
+              "typeName": "multiply"
+            },
+            {
+              "name": "Divide",
+              "typeName": "divide"
+            }
+          ],
+          "info": "How to apply the noise to the tag.",
+          "isHidden": false,
+          "name": "Operation",
+          "type": "typedEnum",
+          "typeName": "operation"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "baseIn",
+          "info": "A base constant added to the displacement. Useful with multiply operation.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Base",
+          "type": "variable",
+          "typeName": "base",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "distanceIn",
+          "info": "How far the displacement will affect the field.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Distance",
+          "type": "variable",
+          "typeName": "distance",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "motionIn",
+          "info": "An offset in 4th dimension.",
+          "isHidden": false,
+          "name": "Motion",
+          "type": "variable",
+          "typeName": "motion",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "seedIn",
+          "info": "Deterministic randomness. (0 or above)",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 100,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Seed",
+          "type": "variable",
+          "typeName": "seed",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "octavesIn",
+          "info": "The complexity of the noise. A lower value is more smooth and a higher value is more random. (1 to 10)",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Octaves",
+          "type": "variable",
+          "typeName": "octaves",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "scaleIn",
+          "info": "Scales the position before sampling noise. (0 to 2)",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Scale",
+          "type": "variable",
+          "typeName": "scale",
+          "valueType": "raw:core:float"
+        },
+        {
+          "info": "The tag to apply noise to in the field.",
+          "isHidden": false,
+          "name": "Tag",
+          "type": "item",
+          "typeName": "tagSelection"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Random",
+        "Displace"
+      ],
+      "typePath": "node:spatial:field:noiseDisplace",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/noiseDisplace"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Compute normals of a mesh field.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldIn",
+          "valueType": "raw:field",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "When on, normals are averaged across shared vertices for smooth shading. When off, each triangle uses its face normal for flat shading.",
+          "level": "external",
+          "name": "Is Smooth",
+          "typeName": "isSmoothIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Smooth shading angle threshold.",
+          "level": "external",
+          "name": "Angle Threshold",
+          "typeName": "angleThresholdIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Normals",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": true,
+          "inLetTypeName": "isSmoothIn",
+          "info": "When on, normals are averaged across shared vertices for smooth shading. When off, each triangle uses its face normal for flat shading.",
+          "isHidden": false,
+          "name": "Is Smooth",
+          "type": "variable",
+          "typeName": "isSmooth",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": 3.141592653589793,
+          "inLetTypeName": "angleThresholdIn",
+          "info": "Smooth shading angle threshold.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 3.141592653589793,
+            "coreType": "angle",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "angle",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Angle Threshold",
+          "type": "variable",
+          "typeName": "angleThreshold",
+          "valueType": "raw:core:angle"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Surface",
+        "Lighting",
+        "Shading"
+      ],
+      "typePath": "node:spatial:field:normals",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/normals"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Apply a math operation on a tag in a field.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldIn",
+          "valueType": "raw:field",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Operation",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Multiply",
+            "typeName": "multiply"
+          },
+          "enumCases": [
+            {
+              "name": "Add",
+              "typeName": "add"
+            },
+            {
+              "name": "Subtract",
+              "typeName": "subtract"
+            },
+            {
+              "name": "Multiply",
+              "typeName": "multiply"
+            },
+            {
+              "name": "Divide",
+              "typeName": "divide"
+            },
+            {
+              "name": "Power",
+              "typeName": "power"
+            }
+          ],
+          "isHidden": false,
+          "name": "Operation",
+          "type": "typedEnum",
+          "typeName": "operation"
+        },
+        {
+          "info": "The tag to operate on in the field.",
+          "isHidden": false,
+          "name": "Tag",
+          "type": "item",
+          "typeName": "tagSelection"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Math"
+      ],
+      "typePath": "node:spatial:field:operation",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/operation"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Create a particle field from a list of 3D points.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Points",
+          "typeName": "pointsIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Particles from Points",
+      "newInAppVersion": "4.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Points",
+        "Particles",
+        "Position",
+        "Field"
+      ],
+      "typePath": "node:spatial:field:particlesFromPoints",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/particlesFromPoints"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Find the nearest distance in each particle in the field. A proximity and distance tag will be added to a new field. This node can be used to create the plexus effect when combined with the Lines Field node.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldIn",
+          "valueType": "raw:field",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The offset from nearest or furthest point. `0` is the first nearest or furthest point, get the next nearest or furthest point by passing `1`.",
+          "level": "external",
+          "name": "Offset",
+          "typeName": "offsetIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Proximity",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Near",
+            "typeName": "near"
+          },
+          "enumCases": [
+            {
+              "name": "Near",
+              "typeName": "near"
+            },
+            {
+              "name": "Far",
+              "typeName": "far"
+            }
+          ],
+          "isHidden": false,
+          "name": "Distance",
+          "type": "typedEnum",
+          "typeName": "distance"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "offsetIn",
+          "info": "The offset from nearest or furthest point. `0` is the first nearest or furthest point, get the next nearest or furthest point by passing `1`.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Offset",
+          "type": "variable",
+          "typeName": "offset",
+          "valueType": "raw:core:int"
+        },
+        {
+          "info": "The tag to calculate the distance in the field.",
+          "isHidden": false,
+          "name": "Tag",
+          "type": "item",
+          "typeName": "tagSelection"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Plexus",
+        "Network",
+        "Distance"
+      ],
+      "typePath": "node:spatial:field:proximity",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/proximity"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Copy a tag from a source field into a target field. Requires matching particle count.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Source",
+          "typeName": "sourceIn",
+          "valueType": "raw:field",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Target",
+          "typeName": "targetIn",
+          "valueType": "raw:field",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Metal shader snippet, to reassign the field values.\nPosition to color: `target = float4(source.xyz, 1.0);`.\nColor to position: `target = float3(source);`.",
+          "level": "external",
+          "name": "Code",
+          "typeName": "codeIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Reassign",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Tag to read from the source field.",
+          "isHidden": false,
+          "name": "Source Tag",
+          "type": "item",
+          "typeName": "sourceTagSelection"
+        },
+        {
+          "info": "Tag to write in the target field.",
+          "isHidden": false,
+          "name": "Target Tag",
+          "type": "item",
+          "typeName": "targetTagSelection"
+        },
+        {
+          "defaultValue": "target = source;",
+          "inLetTypeName": "codeIn",
+          "info": "Metal shader snippet, to reassign the field values.\nPosition to color: `target = float4(source.xyz, 1.0);`.\nColor to position: `target = float3(source);`.",
+          "isHidden": false,
+          "name": "Code",
+          "type": "variable",
+          "typeName": "code",
+          "valueType": "raw:core:string"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Assign",
+        "Transfer",
+        "Field",
+        "Remap"
+      ],
+      "typePath": "node:spatial:field:reassign",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/reassign"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a field.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Clear",
+          "typeName": "clearIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldBindingOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Removes the stored field from the node.",
+          "isHidden": false,
+          "name": "Clear",
+          "type": "action",
+          "typeName": "clear"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Particles",
+        "Mesh"
+      ],
+      "typePath": "node:spatial:field:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/state"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Transform a field in 3D space.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldIn",
+          "valueType": "raw:field",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Transform positions and normals, or Gaussian splat shapes and directional appearance. Gaussian scale must be nonzero on every axis.",
+          "level": "external",
+          "name": "Transform",
+          "typeName": "transformIn",
+          "valueType": "raw:core:transform3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Transform",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "position": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "rotation": {
+              "w": 1,
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "scale": {
+              "depth": 1,
+              "height": 1,
+              "width": 1
+            }
+          },
+          "inLetTypeName": "transformIn",
+          "info": "Transform positions and normals, or Gaussian splat shapes and directional appearance. Gaussian scale must be nonzero on every axis.",
+          "isHidden": false,
+          "name": "Transform",
+          "type": "variable",
+          "typeName": "transform",
+          "valueType": "raw:core:transform3D"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Move",
+        "Translate",
+        "Rotate",
+        "Scale"
+      ],
+      "typePath": "node:spatial:field:transform",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/transform"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Creates line mesh particles from a geometry by connecting each polygon vertex to the next vertex and closing the final edge.",
+      "familyName": "3D Spatial",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryIn",
+          "valueType": "raw:geometry",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Wireframe",
+      "newInAppVersion": "4.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Field",
+          "typeName": "fieldOut",
+          "valueType": "raw:field",
+          "way": "out"
+        }
+      ],
+      "parentName": "Field",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Wireframe",
+        "Geometry",
+        "Lines",
+        "Mesh"
+      ],
+      "typePath": "node:spatial:field:wireframe",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/spatial/field/wireframe"
+    }
+  ]
+}

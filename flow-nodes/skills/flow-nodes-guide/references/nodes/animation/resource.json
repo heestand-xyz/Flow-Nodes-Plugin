@@ -1,0 +1,729 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Animation",
+  "parentName": "Resource",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Interpolate keyframes over time.",
+      "familyName": "Animation",
+      "inLets": [
+        {
+          "capacity": "lex",
+          "direction": "binding",
+          "keyType": "raw:core:keyframe",
+          "level": "external",
+          "name": "Keyframes",
+          "typeName": "keyframesIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Time",
+          "typeName": "timeIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Duration",
+          "typeName": "durationIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Timeline",
+      "newInAppVersion": "2.4.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "timeIn",
+          "isHidden": false,
+          "name": "Time",
+          "type": "variable",
+          "typeName": "time",
+          "valueType": "raw:core:duration"
+        },
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "durationIn",
+          "isHidden": false,
+          "name": "Duration",
+          "type": "variable",
+          "typeName": "duration",
+          "valueType": "raw:core:duration"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Keyframes"
+      ],
+      "typePath": "node:animation:resource:interpolate",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/animation/resource/interpolate"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A keyframe time and easing.",
+      "familyName": "Animation",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Time",
+          "typeName": "timeIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Ease In Time Offset",
+          "typeName": "timeEaseInTimeOffsetIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Ease In Value Offset",
+          "typeName": "timeEaseInValueOffsetIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Ease Out Time Offset",
+          "typeName": "timeEaseOutTimeOffsetIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Ease Out Value Offset",
+          "typeName": "timeEaseOutValueOffsetIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Keyframe",
+      "newInAppVersion": "2.4.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Keyframe",
+          "typeName": "keyframeOut",
+          "valueType": "raw:core:keyframe",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "timeIn",
+          "isHidden": false,
+          "name": "Time",
+          "type": "variable",
+          "typeName": "time",
+          "valueType": "raw:core:duration"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Linear",
+            "typeName": "linear"
+          },
+          "enumCases": [
+            {
+              "name": "Linear",
+              "typeName": "linear"
+            },
+            {
+              "name": "Smooth",
+              "typeName": "smooth"
+            },
+            {
+              "name": "Bezier",
+              "typeName": "bezier"
+            }
+          ],
+          "isHidden": false,
+          "name": "Ease In",
+          "type": "typedEnum",
+          "typeName": "timeEaseIn"
+        },
+        {
+          "defaultValue": 0.3333333333333333,
+          "inLetTypeName": "timeEaseInTimeOffsetIn",
+          "isHidden": true,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Ease In Time Offset",
+          "type": "variable",
+          "typeName": "timeEaseInTimeOffset",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0.3333333333333333,
+          "inLetTypeName": "timeEaseInValueOffsetIn",
+          "isHidden": true,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": -1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Ease In Value Offset",
+          "type": "variable",
+          "typeName": "timeEaseInValueOffset",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Linear",
+            "typeName": "linear"
+          },
+          "enumCases": [
+            {
+              "name": "Linear",
+              "typeName": "linear"
+            },
+            {
+              "name": "Smooth",
+              "typeName": "smooth"
+            },
+            {
+              "name": "Bezier",
+              "typeName": "bezier"
+            }
+          ],
+          "isHidden": false,
+          "name": "Ease Out",
+          "type": "typedEnum",
+          "typeName": "timeEaseOut"
+        },
+        {
+          "defaultValue": 0.3333333333333333,
+          "inLetTypeName": "timeEaseOutTimeOffsetIn",
+          "isHidden": true,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Ease Out Time Offset",
+          "type": "variable",
+          "typeName": "timeEaseOutTimeOffset",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0.3333333333333333,
+          "inLetTypeName": "timeEaseOutValueOffsetIn",
+          "isHidden": true,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": -1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Ease Out Value Offset",
+          "type": "variable",
+          "typeName": "timeEaseOutValueOffset",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:animation:resource:keyframe",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/animation/resource/keyframe"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Stored keyframes with values of a type.",
+      "familyName": "Animation",
+      "inLets": [],
+      "isPro": false,
+      "name": "Keyframes State",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "lex",
+          "direction": "binding",
+          "keyType": "raw:core:keyframe",
+          "level": "external",
+          "name": "Keyframes",
+          "typeName": "keyframesOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Keyframes with values.",
+          "isHidden": false,
+          "name": "State",
+          "type": "item",
+          "typeName": "keyframeState"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Float",
+            "typeName": "float"
+          },
+          "enumCases": [
+            {
+              "name": "String",
+              "typeName": "string"
+            },
+            {
+              "name": "Bool",
+              "typeName": "bool"
+            },
+            {
+              "name": "Int",
+              "typeName": "int"
+            },
+            {
+              "name": "Float",
+              "typeName": "float"
+            },
+            {
+              "name": "Point",
+              "typeName": "point"
+            },
+            {
+              "name": "3D Point",
+              "typeName": "point3D"
+            },
+            {
+              "name": "Size",
+              "typeName": "size"
+            },
+            {
+              "name": "3D Size",
+              "typeName": "size3D"
+            },
+            {
+              "name": "Rect",
+              "typeName": "rect"
+            },
+            {
+              "name": "3D Rect",
+              "typeName": "rect3D"
+            },
+            {
+              "name": "Angle",
+              "typeName": "angle"
+            },
+            {
+              "name": "3D Angle",
+              "typeName": "angle3D"
+            },
+            {
+              "name": "Quaternion",
+              "typeName": "quaternion"
+            },
+            {
+              "name": "Transform",
+              "typeName": "transform"
+            },
+            {
+              "name": "3D Transform",
+              "typeName": "transform3D"
+            },
+            {
+              "name": "Vertex",
+              "typeName": "vertex"
+            },
+            {
+              "name": "Color",
+              "typeName": "color"
+            },
+            {
+              "name": "Date",
+              "typeName": "date"
+            },
+            {
+              "name": "Duration",
+              "typeName": "duration"
+            },
+            {
+              "name": "Keyframe",
+              "typeName": "keyframe"
+            },
+            {
+              "name": "Vector Point",
+              "typeName": "vectorPoint"
+            },
+            {
+              "name": "3D Vector Point",
+              "typeName": "vectorPoint3D"
+            }
+          ],
+          "info": "The value type of the stored keyframes. Changing the type clears the stored keyframes.",
+          "isHidden": false,
+          "name": "Type",
+          "type": "typedEnum",
+          "typeName": "coreType"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Keyframes",
+        "Timeline"
+      ],
+      "typePath": "node:animation:resource:keyframesState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/animation/resource/keyframesState"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "A waveform is represented by a keyed list of keyframes with Float values. Combine multiple waveforms to create a complex wave. Animatable with the Interpolate node.",
+      "familyName": "Animation",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Value at the beginning.",
+          "level": "external",
+          "name": "Leading",
+          "typeName": "leadingIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Value at the end.",
+          "level": "external",
+          "name": "Trailing",
+          "typeName": "trailingIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Start Time",
+          "typeName": "startTimeIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Duration",
+          "typeName": "durationIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Frames per second.",
+          "level": "external",
+          "name": "Frame Rate",
+          "typeName": "frameRateIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Easing Iterations",
+          "typeName": "easingIterationsIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Include Ending Frame",
+          "typeName": "includeEndingFrameIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Waveform",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "lex",
+          "direction": "direct",
+          "keyType": "raw:core:keyframe",
+          "level": "external",
+          "name": "Waveform",
+          "typeName": "waveformOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "leadingIn",
+          "info": "Value at the beginning.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Leading",
+          "type": "variable",
+          "typeName": "leading",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "trailingIn",
+          "info": "Value at the end.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Trailing",
+          "type": "variable",
+          "typeName": "trailing",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "startTimeIn",
+          "isHidden": false,
+          "name": "Start Time",
+          "type": "variable",
+          "typeName": "startTime",
+          "valueType": "raw:core:duration"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "durationIn",
+          "isHidden": false,
+          "name": "Duration",
+          "type": "variable",
+          "typeName": "duration",
+          "valueType": "raw:core:duration"
+        },
+        {
+          "defaultValue": 60,
+          "inLetTypeName": "frameRateIn",
+          "info": "Frames per second.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 120,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Frame Rate",
+          "type": "variable",
+          "typeName": "frameRate",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Linear",
+            "typeName": "linear"
+          },
+          "enumCases": [
+            {
+              "name": "Linear",
+              "typeName": "linear"
+            },
+            {
+              "name": "Ease In",
+              "typeName": "easeIn"
+            },
+            {
+              "name": "Ease Out",
+              "typeName": "easeOut"
+            },
+            {
+              "name": "Ease In Out",
+              "typeName": "easeInOut"
+            }
+          ],
+          "isHidden": false,
+          "name": "Easing",
+          "type": "typedEnum",
+          "typeName": "easing"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "easingIterationsIn",
+          "isHidden": true,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Easing Iterations",
+          "type": "variable",
+          "typeName": "easingIterations",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": true,
+          "inLetTypeName": "includeEndingFrameIn",
+          "isHidden": false,
+          "name": "Include Ending Frame",
+          "type": "variable",
+          "typeName": "includeEndingFrame",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:animation:resource:waveform",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/animation/resource/waveform"
+    }
+  ]
+}

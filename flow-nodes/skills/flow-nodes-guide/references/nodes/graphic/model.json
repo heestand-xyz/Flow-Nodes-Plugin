@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Graphic",
+  "parentName": "Model",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Detect a number with the MNIST machine learning model.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Number",
+      "newInAppVersion": "3.2.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Number",
+          "typeName": "numberOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Probability",
+          "typeName": "probabilityOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Model",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "MNIST",
+        "Machine Learning",
+        "ML"
+      ],
+      "typePath": "node:graphic:model:number",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/model/number"
+    }
+  ]
+}

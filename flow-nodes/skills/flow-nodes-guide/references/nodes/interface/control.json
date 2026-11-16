@@ -1,0 +1,635 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Interface",
+  "parentName": "Control",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "A button. To change the appearance, wire a view inlet.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Button",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Action",
+          "typeName": "actionOut",
+          "valueType": "raw:action",
+          "way": "out"
+        }
+      ],
+      "parentName": "Control",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Regular",
+            "typeName": "regular"
+          },
+          "enumCases": [
+            {
+              "name": "Regular",
+              "typeName": "regular"
+            },
+            {
+              "name": "Plain",
+              "typeName": "plain"
+            },
+            {
+              "name": "Bordered",
+              "typeName": "bordered"
+            },
+            {
+              "name": "Bordered Prominent",
+              "typeName": "borderedProminent"
+            },
+            {
+              "name": "Borderless",
+              "typeName": "borderless"
+            }
+          ],
+          "isHidden": false,
+          "name": "Style",
+          "type": "typedEnum",
+          "typeName": "style"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Interaction",
+        "Tap",
+        "Click"
+      ],
+      "typePath": "node:interface:control:button",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/control/button"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A solid color. This can be used as a background.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Color",
+          "typeName": "colorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Color",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Control",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "blue": 1,
+            "green": 1,
+            "opacity": 1,
+            "red": 1
+          },
+          "inLetTypeName": "colorIn",
+          "isHidden": false,
+          "name": "Color",
+          "type": "variable",
+          "typeName": "color",
+          "valueType": "raw:core:color"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Solid"
+      ],
+      "typePath": "node:interface:control:color",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/control/color"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A color picker control. Tapping the button opens up a native color picker. The selected color can be save in Color State node.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Color",
+          "typeName": "colorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Color Picker",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Control",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "blue": 1,
+            "green": 1,
+            "opacity": 1,
+            "red": 1
+          },
+          "inLetTypeName": "colorIn",
+          "isHidden": false,
+          "name": "Color",
+          "type": "variable",
+          "typeName": "color",
+          "valueType": "raw:core:color"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:interface:control:colorPicker",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/control/colorPicker"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A date picker control. Tapping the button opens up a native date picker. The selected date can be save in Date State node.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Date",
+          "typeName": "dateIn",
+          "valueType": "raw:core:date",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Include Time",
+          "typeName": "includeTimeIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Date Picker",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Control",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "dateIn",
+          "isHidden": false,
+          "name": "Date",
+          "type": "variable",
+          "typeName": "date",
+          "valueType": "raw:core:date"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "includeTimeIn",
+          "isHidden": false,
+          "name": "Include Time",
+          "type": "variable",
+          "typeName": "includeTime",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:interface:control:datePicker",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/control/datePicker"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Pick a value from a list of string options.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Options",
+          "typeName": "optionsIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Option",
+          "typeName": "lastPickedIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Index",
+          "typeName": "lastPickedIndexIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Picker",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Control",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Menu",
+            "typeName": "menu"
+          },
+          "enumCases": [
+            {
+              "name": "Menu",
+              "typeName": "menu"
+            },
+            {
+              "name": "Segmented",
+              "typeName": "segmented"
+            }
+          ],
+          "info": "Choose between menu and segmented presentations.",
+          "isHidden": false,
+          "name": "Style",
+          "type": "typedEnum",
+          "typeName": "style"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "picker",
+        "menu",
+        "segmented"
+      ],
+      "typePath": "node:interface:control:picker",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/control/picker"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A slider with a range from minimum to maximum.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Minimum",
+          "typeName": "minimumIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Maximum",
+          "typeName": "maximumIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Slider",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Control",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "valueIn",
+          "isHidden": false,
+          "name": "Value",
+          "type": "variable",
+          "typeName": "value",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "minimumIn",
+          "isHidden": false,
+          "name": "Minimum",
+          "type": "variable",
+          "typeName": "minimum",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "maximumIn",
+          "isHidden": false,
+          "name": "Maximum",
+          "type": "variable",
+          "typeName": "maximum",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Interaction"
+      ],
+      "typePath": "node:interface:control:slider",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/control/slider"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Add spacing between views in a stack.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Minimum Length",
+          "typeName": "minLengthIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Spacer",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Control",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 8,
+          "inLetTypeName": "minLengthIn",
+          "info": "The minimum length the spacer will be if the content is compact.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 16,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Minimum Length",
+          "type": "variable",
+          "typeName": "minLength",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:interface:control:spacer",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/control/spacer"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Increment an Int by stepping up or down. Connect this node upstream to a State node to modify it’s value.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Stepper",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Control",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "valueIn",
+          "isHidden": false,
+          "name": "Value",
+          "type": "variable",
+          "typeName": "value",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Increment"
+      ],
+      "typePath": "node:interface:control:stepper",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/control/stepper"
+    },
+    {
+      "complexity": "basic",
+      "docs": "An on / off switch.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Is On",
+          "typeName": "isOnIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Toggle",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Control",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isOnIn",
+          "isHidden": false,
+          "name": "Is On",
+          "type": "variable",
+          "typeName": "isOn",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Interaction",
+        "Switch"
+      ],
+      "typePath": "node:interface:control:toggle",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/control/toggle"
+    }
+  ]
+}

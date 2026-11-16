@@ -32,14 +32,14 @@ Source route: `/docs/faq`. Media is not bundled; public route availability must 
 - What is the **requirements** to use the **AI** chat and nodes?
   - The device needs to have support for Apple Intelligence.
 - How to **play** a **video**?
-  - Use the new [Player](../nodes/node-video-resource-player.json) node by wiring in a [State](../nodes/node-video-resource-state.json) node.
+  - Use the new [Player](../nodes/video/resource.json) (`node:video:resource:player`) node by wiring in a [State](../nodes/video/resource.json) (`node:video:resource:state`) node.
 - How to **edit** a **video**?
-  - To edit each frame with the same graphic effect, use the [Video Edit](../nodes/node-container-map-videoEdit.json) node.
+  - To edit each frame with the same graphic effect, use the [Video Edit](../nodes/container/map.json) (`node:container:map:videoEdit`) node.
 - How to *manually* **seek** a **video**?
-  - Use the [Sample](../nodes/node-video-resource-sample.json) node. It takes a frame index as input. Find the frame count with the [Metadata](../nodes/node-video-resource-metadata.json) node. Use a [Slider](../nodes/node-interface-control-slider.json) node along with a math [Operation](../nodes/node-general-math-operation.json) node to calculate the frame index.
+  - Use the [Sample](../nodes/video/resource.json) (`node:video:resource:sample`) node. It takes a frame index as input. Find the frame count with the [Metadata](../nodes/video/resource.json) (`node:video:resource:metadata`) node. Use a [Slider](../nodes/interface/control.json) (`node:interface:control:slider`) node along with a math [Operation](../nodes/general/math.json) (`node:general:math:operation`) node to calculate the frame index.
     [Video Guide](guides-video.md)
 - How to **record** a **video**?
-  - Use the record video node action on graphic nodes, or the [Record](../nodes/node-video-resource-record.json) node to create a video from a live stream of Graphics.
+  - Use the record video node action on graphic nodes, or the [Record](../nodes/video/resource.json) (`node:video:resource:record`) node to create a video from a live stream of Graphics.
 - How to **import** an **image**?
   - Drag and drop an image onto the canvas or import at the top of the node creation panel.
 - When importing, what is **State node** asset vs file **Link node**?
@@ -49,11 +49,11 @@ Source route: `/docs/faq`. Media is not bundled; public route availability must 
 - How to **export** an **image**?
   - Open the node context menu by tapping the title or the three dots icon on iOS & visionOS, or right click on macOS, then export to Photos or Files.
 - How do I blend two images with a **blending mode**?
-  - Two Graphics can be blended with the [Blend](../nodes/node-graphic-modifierEffect-blend.json) node.
+  - Two Graphics can be blended with the [Blend](../nodes/graphic/modifierEffect.json) (`node:graphic:modifierEffect:blend`) node.
 - How to **animate** inlets and properties?
-  - Use the [Stopwatch](../nodes/node-general-time-stopwatch2.json) node or the `time()` script.
+  - Use the [Stopwatch](../nodes/general/time.json) (`node:general:time:stopwatch2`) node or the `time()` script.
 - How to do **math** operations?
-  - Use the [Operation](../nodes/node-general-math-operation.json) or [List Operation](../nodes/node-general-math-listOperation.json) nodes.
+  - Use the [Operation](../nodes/general/math.json) (`node:general:math:operation`) or [List Operation](../nodes/general/math.json) (`node:general:math:listOperation`) nodes.
 - What are the keyboard shortcuts to play and pause time?
   - Play `Cmd + I`
   - Pause `Cmd + O`

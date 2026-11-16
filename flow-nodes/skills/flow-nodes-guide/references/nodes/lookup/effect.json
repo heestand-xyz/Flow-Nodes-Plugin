@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Lookup",
+  "parentName": "Effect",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Apply a lookup to a graphic.",
+      "familyName": "Lookup",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Lookup",
+          "typeName": "lookupIn",
+          "valueType": "raw:lookup",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Apply",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "LUT",
+        "Lookup",
+        "Color",
+        "Grade"
+      ],
+      "typePath": "node:lookup:effect:apply",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/lookup/effect/apply"
+    }
+  ]
+}

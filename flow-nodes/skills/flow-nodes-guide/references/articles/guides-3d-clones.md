@@ -12,7 +12,7 @@ Create a grid of cubes rotated with a look at quaternion (3D rotation).
 >
 > Flow Nodes version 4 has new Clone Transform nodes, that use GPU instancing.
 >
-> [Clone Transform](../nodes/node-spatial-entity-cloneTransform.json)
+> [Clone Transform](../nodes/spatial/entity.json) (`node:spatial:entity:cloneTransform`)
 
 ![3D Clones — step 1](https://flownodes.app/docs/media/guides-3d-clones/media-01.png)
 
@@ -22,7 +22,7 @@ Start with a new flow:
 
 ## Cube
 
-Add a [Cube](../nodes/node-geometry-shape-cube.json) node:
+Add a [Cube](../nodes/geometry/shape.json) (`node:geometry:shape:cube`) node:
 
 ![3D Clones — step 3](https://flownodes.app/docs/media/guides-3d-clones/media-03.png)
 
@@ -32,13 +32,13 @@ Set it’s size to `0.1` in all axis:
 
 ## Grid
 
-Add a 3D Point [Grid](../nodes/node-data-point3D-grid.json) node, and set it’s origin to `-0.5` in all axis and set the count to `5` in all axis.
+Add a 3D Point [Grid](../nodes/data/point3D.json) (`node:data:point3D:grid`) node, and set it’s origin to `-0.5` in all axis and set the count to `5` in all axis.
 
 ![3D Clones — step 5](https://flownodes.app/docs/media/guides-3d-clones/media-05.png)
 
 ## Clones
 
-Add a [Clones](../nodes/node-geometry-resource-clones.json) Geometry node and connect the cube and the grid:
+Add a [Clones](../nodes/geometry/resource.json) (`node:geometry:resource:clones`) Geometry node and connect the cube and the grid:
 
 ![3D Clones — step 6](https://flownodes.app/docs/media/guides-3d-clones/media-06.png)
 
@@ -50,7 +50,7 @@ Add an Edit map node and wire in the grid 3D points:
 
 ![3D Clones — step 7](https://flownodes.app/docs/media/guides-3d-clones/media-07.png)
 
-Add a [Look At](../nodes/node-data-quaternion-lookAt.json) node and connect the Point 3D wire to the target:
+Add a [Look At](../nodes/data/quaternion.json) (`node:data:quaternion:lookAt`) node and connect the Point 3D wire to the target:
 
 ![3D Clones — step 8](https://flownodes.app/docs/media/guides-3d-clones/media-08.png)
 
@@ -78,7 +78,7 @@ Here’s the final 3D Geometry:
 
 > **Tip**
 >
-> **Tip:** If you want to animate the 3d rotation, use the [Mix](../nodes/node-general-math-mix.json) node, it will use Spherical Linear Interpolation (slerp) to cross fade two Quaternions.
+> **Tip:** If you want to animate the 3d rotation, use the [Mix](../nodes/general/math.json) (`node:general:math:mix`) node, it will use Spherical Linear Interpolation (slerp) to cross fade two Quaternions.
 
 Here’s the final flow file:
 

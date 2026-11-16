@@ -1,0 +1,1945 @@
+{
+  "schemaVersion": 1,
+  "familyName": "General",
+  "parentName": "Generic",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Automatically save a downstream source value to a destination upstream, when the source value or connections changes.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Source",
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Destination",
+          "typeName": "stateIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Auto Save",
+      "newInAppVersion": "4.0.0",
+      "outLets": [],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Write",
+        "Persist",
+        "Sync",
+        "Transfer",
+        "Auto"
+      ],
+      "typePath": "node:general:generic:autoSave",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/autoSave"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Combines the two values, outputting the latest changed value.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Leading",
+          "typeName": "leadingIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Trailing",
+          "typeName": "trailingIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Combine Latest",
+      "newInAppVersion": "2.2.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Latest",
+          "typeName": "latestOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Signal",
+        "Merge"
+      ],
+      "typePath": "node:general:generic:combineLatest",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/combineLatest"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Compare two inlets with each other.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Leading",
+          "typeName": "leadingIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Trailing",
+          "typeName": "trailingIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Compare",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Result",
+          "typeName": "resultOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        }
+      ],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Equal",
+            "typeName": "equal"
+          },
+          "enumCases": [
+            {
+              "name": "Equal",
+              "typeName": "equal"
+            },
+            {
+              "name": "Not Equal",
+              "typeName": "notEqual"
+            },
+            {
+              "name": "Greater",
+              "typeName": "greater"
+            },
+            {
+              "name": "Less",
+              "typeName": "less"
+            },
+            {
+              "name": "Greater or Equal",
+              "typeName": "greaterOrEqual"
+            },
+            {
+              "name": "Less or Equal",
+              "typeName": "lessOrEqual"
+            }
+          ],
+          "isHidden": false,
+          "name": "Comparison",
+          "type": "typedEnum",
+          "typeName": "comparison"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Equal",
+        "Not Equal",
+        "Greater",
+        "Less",
+        "Greater or Equal",
+        "Less or Equal"
+      ],
+      "typePath": "node:general:generic:compare",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/compare"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Connect a Float or Int State node to the Value inlet, to increment or decrement via actions.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The step value to increment or decrement the value by. If the Value inlet is connected to a State, keep this value above or at 1.0",
+          "level": "external",
+          "name": "Step Value",
+          "typeName": "stepValueIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Limit the value to a range between a lower and a upper bound.",
+          "level": "external",
+          "name": "Limit",
+          "typeName": "limitIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The minimum value the counter can go to.",
+          "level": "external",
+          "name": "Lower Bound",
+          "typeName": "lowerBoundIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The maximum value the counter can go to.",
+          "level": "external",
+          "name": "Upper Bound",
+          "typeName": "upperBoundIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Loop when reaching the lower or upper bound limit.",
+          "level": "external",
+          "name": "Loop",
+          "typeName": "loopIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Don't allow the value to go to the lower bound. If active, the value will always be upper than the lower bound.",
+          "level": "external",
+          "name": "Loop Before Lower Bound",
+          "typeName": "loopBeforeLowerBoundIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Don't allow the value to go to the upper bound. If active, the value will always be lower than the upper bound.",
+          "level": "external",
+          "name": "Loop Before Upper Bound",
+          "typeName": "loopBeforeUpperBoundIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Increment",
+          "typeName": "incrementIn",
+          "valueType": "raw:action",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Decrement",
+          "typeName": "decrementIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Counter",
+      "newInAppVersion": "3.1.0",
+      "outLets": [],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "stepValueIn",
+          "info": "The step value to increment or decrement the value by. If the Value inlet is connected to a State, keep this value above or at 1.0",
+          "isHidden": false,
+          "name": "Step Value",
+          "type": "variable",
+          "typeName": "stepValue",
+          "valueType": "raw:core:float"
+        },
+        {
+          "isHidden": false,
+          "name": "Increment",
+          "type": "action",
+          "typeName": "increment"
+        },
+        {
+          "isHidden": false,
+          "name": "Decrement",
+          "type": "action",
+          "typeName": "decrement"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "limitIn",
+          "info": "Limit the value to a range between a lower and a upper bound.",
+          "isHidden": false,
+          "name": "Limit",
+          "type": "variable",
+          "typeName": "limit",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "lowerBoundIn",
+          "info": "The minimum value the counter can go to.",
+          "isHidden": true,
+          "name": "Lower Bound",
+          "type": "variable",
+          "typeName": "lowerBound",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "upperBoundIn",
+          "info": "The maximum value the counter can go to.",
+          "isHidden": true,
+          "name": "Upper Bound",
+          "type": "variable",
+          "typeName": "upperBound",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "loopIn",
+          "info": "Loop when reaching the lower or upper bound limit.",
+          "isHidden": true,
+          "name": "Loop",
+          "type": "variable",
+          "typeName": "loop",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "loopBeforeLowerBoundIn",
+          "info": "Don't allow the value to go to the lower bound. If active, the value will always be upper than the lower bound.",
+          "isHidden": true,
+          "name": "Loop Before Lower Bound",
+          "type": "variable",
+          "typeName": "loopBeforeLowerBound",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": true,
+          "inLetTypeName": "loopBeforeUpperBoundIn",
+          "info": "Don't allow the value to go to the upper bound. If active, the value will always be lower than the upper bound.",
+          "isHidden": true,
+          "name": "Loop Before Upper Bound",
+          "type": "variable",
+          "typeName": "loopBeforeUpperBound",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Increment",
+        "Decrement"
+      ],
+      "typePath": "node:general:generic:counter",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/counter"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Filter values from a list of allowed values.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Filter",
+          "typeName": "allowedValuesIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Filter",
+      "newInAppVersion": "2.9.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Funnel"
+      ],
+      "typePath": "node:general:generic:filter",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/filter"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Automatically save a keyed list of downstream source values to a destination upstream, when the source values or connections changes.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "lex",
+          "direction": "direct",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Source",
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "lex",
+          "direction": "binding",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Destination",
+          "typeName": "stateIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Keyed List Auto Save",
+      "newInAppVersion": "27.0.0",
+      "outLets": [],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Write",
+        "Persist",
+        "Sync",
+        "Transfer",
+        "Auto",
+        "Key",
+        "Dictionary"
+      ],
+      "typePath": "node:general:generic:keyedListAutoSave",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/keyedListAutoSave"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Save a keyed list of downstream source values to a destination upstream, when the save action is triggered.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "lex",
+          "direction": "direct",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Source",
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "lex",
+          "direction": "binding",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Destination",
+          "typeName": "stateIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Save",
+          "typeName": "actionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Keyed List Save",
+      "newInAppVersion": "27.0.0",
+      "outLets": [],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Save the source keyed list values to the destination upstream.",
+          "isHidden": false,
+          "name": "Save",
+          "type": "action",
+          "typeName": "action"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Write",
+        "Persist",
+        "Sync",
+        "Transfer",
+        "Key",
+        "Dictionary"
+      ],
+      "typePath": "node:general:generic:keyedListSave",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/keyedListSave"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Automatically save a downstream source values to a destination upstream, when the source values or connections changes.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Source",
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Destination",
+          "typeName": "stateIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Auto Save",
+      "newInAppVersion": "4.0.0",
+      "outLets": [],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Write",
+        "Persist",
+        "Sync",
+        "Transfer",
+        "Auto"
+      ],
+      "typePath": "node:general:generic:listAutoSave",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/listAutoSave"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Save a list of values. Connect the destination inlet to a List State Node",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Destination",
+          "typeName": "stateIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Source",
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Save",
+          "typeName": "actionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Save",
+      "newInAppVersion": "1.0.0",
+      "outLets": [],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Save the downstream source values to the destination upstream.",
+          "isHidden": false,
+          "name": "Save",
+          "type": "action",
+          "typeName": "action"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Write",
+        "Persist",
+        "Sync",
+        "Transfer"
+      ],
+      "typePath": "node:general:generic:listSave",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/listSave"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Manually convert from one type to another.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "fromIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Convert",
+      "newInAppVersion": "2.7.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "toOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Auto Generic",
+            "typeName": "generic"
+          },
+          "enumCases": [
+            {
+              "name": "Auto Generic",
+              "typeName": "generic"
+            },
+            {
+              "name": "String",
+              "typeName": "string"
+            },
+            {
+              "name": "Bool",
+              "typeName": "bool"
+            },
+            {
+              "name": "Int",
+              "typeName": "int"
+            },
+            {
+              "name": "Float",
+              "typeName": "float"
+            },
+            {
+              "name": "Point",
+              "typeName": "point"
+            },
+            {
+              "name": "3D Point",
+              "typeName": "point3D"
+            },
+            {
+              "name": "Size",
+              "typeName": "size"
+            },
+            {
+              "name": "3D Size",
+              "typeName": "size3D"
+            },
+            {
+              "name": "Rect",
+              "typeName": "rect"
+            },
+            {
+              "name": "3D Rect",
+              "typeName": "rect3D"
+            },
+            {
+              "name": "Angle",
+              "typeName": "angle"
+            },
+            {
+              "name": "3D Angle",
+              "typeName": "angle3D"
+            },
+            {
+              "name": "Quaternion",
+              "typeName": "quaternion"
+            },
+            {
+              "name": "Transform",
+              "typeName": "transform"
+            },
+            {
+              "name": "3D Transform",
+              "typeName": "transform3D"
+            },
+            {
+              "name": "Vertex",
+              "typeName": "vertex"
+            },
+            {
+              "name": "Color",
+              "typeName": "color"
+            },
+            {
+              "name": "Date",
+              "typeName": "date"
+            },
+            {
+              "name": "Duration",
+              "typeName": "duration"
+            },
+            {
+              "name": "Keyframe",
+              "typeName": "keyframe"
+            },
+            {
+              "name": "Vector Point",
+              "typeName": "vectorPoint"
+            },
+            {
+              "name": "3D Vector Point",
+              "typeName": "vectorPoint3D"
+            }
+          ],
+          "isHidden": false,
+          "name": "Type In",
+          "type": "typedEnum",
+          "typeName": "fromType"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Auto Generic",
+            "typeName": "generic"
+          },
+          "enumCases": [
+            {
+              "name": "Auto Generic",
+              "typeName": "generic"
+            },
+            {
+              "name": "String",
+              "typeName": "string"
+            },
+            {
+              "name": "Bool",
+              "typeName": "bool"
+            },
+            {
+              "name": "Int",
+              "typeName": "int"
+            },
+            {
+              "name": "Float",
+              "typeName": "float"
+            },
+            {
+              "name": "Point",
+              "typeName": "point"
+            },
+            {
+              "name": "3D Point",
+              "typeName": "point3D"
+            },
+            {
+              "name": "Size",
+              "typeName": "size"
+            },
+            {
+              "name": "3D Size",
+              "typeName": "size3D"
+            },
+            {
+              "name": "Rect",
+              "typeName": "rect"
+            },
+            {
+              "name": "3D Rect",
+              "typeName": "rect3D"
+            },
+            {
+              "name": "Angle",
+              "typeName": "angle"
+            },
+            {
+              "name": "3D Angle",
+              "typeName": "angle3D"
+            },
+            {
+              "name": "Quaternion",
+              "typeName": "quaternion"
+            },
+            {
+              "name": "Transform",
+              "typeName": "transform"
+            },
+            {
+              "name": "3D Transform",
+              "typeName": "transform3D"
+            },
+            {
+              "name": "Vertex",
+              "typeName": "vertex"
+            },
+            {
+              "name": "Color",
+              "typeName": "color"
+            },
+            {
+              "name": "Date",
+              "typeName": "date"
+            },
+            {
+              "name": "Duration",
+              "typeName": "duration"
+            },
+            {
+              "name": "Keyframe",
+              "typeName": "keyframe"
+            },
+            {
+              "name": "Vector Point",
+              "typeName": "vectorPoint"
+            },
+            {
+              "name": "3D Vector Point",
+              "typeName": "vectorPoint3D"
+            }
+          ],
+          "isHidden": false,
+          "name": "Type Out",
+          "type": "typedEnum",
+          "typeName": "toType"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Type",
+        "Conversion",
+        "Cast"
+      ],
+      "typePath": "node:general:generic:manualConvert",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/manualConvert"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Manually combine a list of component values into one value.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "List",
+          "typeName": "fromIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Convert from List",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "toOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Auto Generic",
+            "typeName": "generic"
+          },
+          "enumCases": [
+            {
+              "name": "Auto Generic",
+              "typeName": "generic"
+            },
+            {
+              "name": "String",
+              "typeName": "string"
+            },
+            {
+              "name": "Bool",
+              "typeName": "bool"
+            },
+            {
+              "name": "Int",
+              "typeName": "int"
+            },
+            {
+              "name": "Float",
+              "typeName": "float"
+            },
+            {
+              "name": "Point",
+              "typeName": "point"
+            },
+            {
+              "name": "3D Point",
+              "typeName": "point3D"
+            },
+            {
+              "name": "Angle",
+              "typeName": "angle"
+            },
+            {
+              "name": "3D Angle",
+              "typeName": "angle3D"
+            },
+            {
+              "name": "Vertex",
+              "typeName": "vertex"
+            },
+            {
+              "name": "Color",
+              "typeName": "color"
+            },
+            {
+              "name": "Date",
+              "typeName": "date"
+            },
+            {
+              "name": "Duration",
+              "typeName": "duration"
+            }
+          ],
+          "isHidden": false,
+          "name": "Type In",
+          "type": "typedEnum",
+          "typeName": "fromType"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Auto Generic",
+            "typeName": "generic"
+          },
+          "enumCases": [
+            {
+              "name": "Auto Generic",
+              "typeName": "generic"
+            },
+            {
+              "name": "Point",
+              "typeName": "point"
+            },
+            {
+              "name": "3D Point",
+              "typeName": "point3D"
+            },
+            {
+              "name": "Size",
+              "typeName": "size"
+            },
+            {
+              "name": "3D Size",
+              "typeName": "size3D"
+            },
+            {
+              "name": "Rect",
+              "typeName": "rect"
+            },
+            {
+              "name": "3D Rect",
+              "typeName": "rect3D"
+            },
+            {
+              "name": "3D Angle",
+              "typeName": "angle3D"
+            },
+            {
+              "name": "Vertex",
+              "typeName": "vertex"
+            },
+            {
+              "name": "Color",
+              "typeName": "color"
+            },
+            {
+              "name": "Vector Point",
+              "typeName": "vectorPoint"
+            },
+            {
+              "name": "3D Vector Point",
+              "typeName": "vectorPoint3D"
+            }
+          ],
+          "isHidden": false,
+          "name": "Type Out",
+          "type": "typedEnum",
+          "typeName": "toType"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "List",
+        "Type",
+        "Conversion",
+        "Components"
+      ],
+      "typePath": "node:general:generic:manualConvertFromList",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/manualConvertFromList"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Manually convert every value in a list from one type to another.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "List",
+          "typeName": "fromIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Convert List",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "List",
+          "typeName": "toOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Auto Generic",
+            "typeName": "generic"
+          },
+          "enumCases": [
+            {
+              "name": "Auto Generic",
+              "typeName": "generic"
+            },
+            {
+              "name": "String",
+              "typeName": "string"
+            },
+            {
+              "name": "Bool",
+              "typeName": "bool"
+            },
+            {
+              "name": "Int",
+              "typeName": "int"
+            },
+            {
+              "name": "Float",
+              "typeName": "float"
+            },
+            {
+              "name": "Point",
+              "typeName": "point"
+            },
+            {
+              "name": "3D Point",
+              "typeName": "point3D"
+            },
+            {
+              "name": "Size",
+              "typeName": "size"
+            },
+            {
+              "name": "3D Size",
+              "typeName": "size3D"
+            },
+            {
+              "name": "Rect",
+              "typeName": "rect"
+            },
+            {
+              "name": "3D Rect",
+              "typeName": "rect3D"
+            },
+            {
+              "name": "Angle",
+              "typeName": "angle"
+            },
+            {
+              "name": "3D Angle",
+              "typeName": "angle3D"
+            },
+            {
+              "name": "Quaternion",
+              "typeName": "quaternion"
+            },
+            {
+              "name": "Transform",
+              "typeName": "transform"
+            },
+            {
+              "name": "3D Transform",
+              "typeName": "transform3D"
+            },
+            {
+              "name": "Vertex",
+              "typeName": "vertex"
+            },
+            {
+              "name": "Color",
+              "typeName": "color"
+            },
+            {
+              "name": "Date",
+              "typeName": "date"
+            },
+            {
+              "name": "Duration",
+              "typeName": "duration"
+            },
+            {
+              "name": "Keyframe",
+              "typeName": "keyframe"
+            },
+            {
+              "name": "Vector Point",
+              "typeName": "vectorPoint"
+            },
+            {
+              "name": "3D Vector Point",
+              "typeName": "vectorPoint3D"
+            }
+          ],
+          "isHidden": false,
+          "name": "Type In",
+          "type": "typedEnum",
+          "typeName": "fromType"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Auto Generic",
+            "typeName": "generic"
+          },
+          "enumCases": [
+            {
+              "name": "Auto Generic",
+              "typeName": "generic"
+            },
+            {
+              "name": "String",
+              "typeName": "string"
+            },
+            {
+              "name": "Bool",
+              "typeName": "bool"
+            },
+            {
+              "name": "Int",
+              "typeName": "int"
+            },
+            {
+              "name": "Float",
+              "typeName": "float"
+            },
+            {
+              "name": "Point",
+              "typeName": "point"
+            },
+            {
+              "name": "3D Point",
+              "typeName": "point3D"
+            },
+            {
+              "name": "Size",
+              "typeName": "size"
+            },
+            {
+              "name": "3D Size",
+              "typeName": "size3D"
+            },
+            {
+              "name": "Rect",
+              "typeName": "rect"
+            },
+            {
+              "name": "3D Rect",
+              "typeName": "rect3D"
+            },
+            {
+              "name": "Angle",
+              "typeName": "angle"
+            },
+            {
+              "name": "3D Angle",
+              "typeName": "angle3D"
+            },
+            {
+              "name": "Quaternion",
+              "typeName": "quaternion"
+            },
+            {
+              "name": "Transform",
+              "typeName": "transform"
+            },
+            {
+              "name": "3D Transform",
+              "typeName": "transform3D"
+            },
+            {
+              "name": "Vertex",
+              "typeName": "vertex"
+            },
+            {
+              "name": "Color",
+              "typeName": "color"
+            },
+            {
+              "name": "Date",
+              "typeName": "date"
+            },
+            {
+              "name": "Duration",
+              "typeName": "duration"
+            },
+            {
+              "name": "Keyframe",
+              "typeName": "keyframe"
+            },
+            {
+              "name": "Vector Point",
+              "typeName": "vectorPoint"
+            },
+            {
+              "name": "3D Vector Point",
+              "typeName": "vectorPoint3D"
+            }
+          ],
+          "isHidden": false,
+          "name": "Type Out",
+          "type": "typedEnum",
+          "typeName": "toType"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "List",
+        "Type",
+        "Conversion",
+        "Cast"
+      ],
+      "typePath": "node:general:generic:manualConvertList",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/manualConvertList"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Manually convert one value into a list of component values.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "fromIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Convert to List",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "List",
+          "typeName": "toOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Auto Generic",
+            "typeName": "generic"
+          },
+          "enumCases": [
+            {
+              "name": "Auto Generic",
+              "typeName": "generic"
+            },
+            {
+              "name": "Point",
+              "typeName": "point"
+            },
+            {
+              "name": "3D Point",
+              "typeName": "point3D"
+            },
+            {
+              "name": "Size",
+              "typeName": "size"
+            },
+            {
+              "name": "3D Size",
+              "typeName": "size3D"
+            },
+            {
+              "name": "Rect",
+              "typeName": "rect"
+            },
+            {
+              "name": "3D Rect",
+              "typeName": "rect3D"
+            },
+            {
+              "name": "3D Angle",
+              "typeName": "angle3D"
+            },
+            {
+              "name": "Vertex",
+              "typeName": "vertex"
+            },
+            {
+              "name": "Color",
+              "typeName": "color"
+            },
+            {
+              "name": "Vector Point",
+              "typeName": "vectorPoint"
+            },
+            {
+              "name": "3D Vector Point",
+              "typeName": "vectorPoint3D"
+            }
+          ],
+          "isHidden": false,
+          "name": "Type In",
+          "type": "typedEnum",
+          "typeName": "fromType"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Auto Generic",
+            "typeName": "generic"
+          },
+          "enumCases": [
+            {
+              "name": "Auto Generic",
+              "typeName": "generic"
+            },
+            {
+              "name": "String",
+              "typeName": "string"
+            },
+            {
+              "name": "Bool",
+              "typeName": "bool"
+            },
+            {
+              "name": "Int",
+              "typeName": "int"
+            },
+            {
+              "name": "Float",
+              "typeName": "float"
+            },
+            {
+              "name": "Point",
+              "typeName": "point"
+            },
+            {
+              "name": "3D Point",
+              "typeName": "point3D"
+            },
+            {
+              "name": "Angle",
+              "typeName": "angle"
+            },
+            {
+              "name": "3D Angle",
+              "typeName": "angle3D"
+            },
+            {
+              "name": "Vertex",
+              "typeName": "vertex"
+            },
+            {
+              "name": "Color",
+              "typeName": "color"
+            },
+            {
+              "name": "Date",
+              "typeName": "date"
+            },
+            {
+              "name": "Duration",
+              "typeName": "duration"
+            }
+          ],
+          "isHidden": false,
+          "name": "Type Out",
+          "type": "typedEnum",
+          "typeName": "toType"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "List",
+        "Type",
+        "Conversion",
+        "Components"
+      ],
+      "typePath": "node:general:generic:manualConvertToList",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/manualConvertToList"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Trigger an action on change of a value.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "On Change",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:action",
+          "way": "out"
+        }
+      ],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Signal",
+            "typeName": "signal"
+          },
+          "enumCases": [
+            {
+              "name": "Signal",
+              "typeName": "signal"
+            },
+            {
+              "name": "Value",
+              "typeName": "value"
+            },
+            {
+              "name": "Hash",
+              "typeName": "hash"
+            }
+          ],
+          "info": "Signal is sent whenever anything upstream changes. Value is only sent when the new value is different from the old value. Hash is sent when the representation of the value changes, this mode is more optimized than the value mode.",
+          "isHidden": false,
+          "name": "Mode",
+          "type": "typedEnum",
+          "typeName": "mode"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Trigger",
+        "Signal",
+        "Action"
+      ],
+      "typePath": "node:general:generic:onChange",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/onChange"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Generate a random value. To see the value connect the outlet to a relay or other node.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Randomize",
+          "typeName": "randomizeIn",
+          "valueType": "raw:action",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Minimum",
+          "typeName": "minimumIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Maximum",
+          "typeName": "maximumIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Random",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "supportedGenericRawTypes": [
+            "core:angle",
+            "core:angle3D",
+            "core:bool",
+            "core:camera",
+            "core:color",
+            "core:duration",
+            "core:float",
+            "core:int",
+            "core:keyframe",
+            "core:light",
+            "core:point",
+            "core:point3D",
+            "core:quaternion",
+            "core:rect",
+            "core:rect3D",
+            "core:size",
+            "core:size3D",
+            "core:string",
+            "core:transform",
+            "core:transform3D",
+            "core:vectorPoint",
+            "core:vectorPoint3D",
+            "core:vertex"
+          ],
+          "typeName": "out",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Will randomize the output to a value between the minimum and maximum values.",
+          "isHidden": false,
+          "name": "Randomize",
+          "type": "action",
+          "typeName": "randomize"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "minimumIn",
+          "isHidden": false,
+          "name": "Minimum",
+          "type": "variable",
+          "typeName": "minimum",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "maximumIn",
+          "isHidden": false,
+          "name": "Maximum",
+          "type": "variable",
+          "typeName": "maximum",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:general:generic:random",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/random"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Save a value. Connect the destination inlet to a State Node.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Destination",
+          "typeName": "stateIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Source",
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Save",
+          "typeName": "actionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Save",
+      "newInAppVersion": "1.0.0",
+      "outLets": [],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Save the downstream source value to the destination upstream.",
+          "isHidden": false,
+          "name": "Save",
+          "type": "action",
+          "typeName": "action"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Write",
+        "Persist",
+        "Sync",
+        "Transfer"
+      ],
+      "typePath": "node:general:generic:save",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/save"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Trigger an action when a bool goes from false to true.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Trigger",
+          "typeName": "triggerIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Trigger",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Action",
+          "typeName": "actionOut",
+          "valueType": "raw:action",
+          "way": "out"
+        }
+      ],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Action"
+      ],
+      "typePath": "node:general:generic:trigger",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/trigger"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Fetch data from the internet. To see the data, connect a String or Graphic node.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Data",
+          "supportedGenericRawTypes": [
+            "core:string",
+            "graphic"
+          ],
+          "typeName": "dataIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "URL",
+          "typeName": "urlIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Request",
+          "typeName": "requestIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "URL Request",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Requesting",
+          "typeName": "requestingOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Status",
+          "typeName": "statusOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Error",
+          "typeName": "errorOut",
+          "valueType": "raw:core:string",
+          "way": "out"
+        }
+      ],
+      "parentName": "Generic",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": "",
+          "inLetTypeName": "urlIn",
+          "info": "A web url starting with http:// or https://",
+          "isHidden": false,
+          "name": "URL",
+          "type": "variable",
+          "typeName": "url",
+          "valueType": "raw:core:string"
+        },
+        {
+          "isHidden": false,
+          "name": "Request",
+          "type": "action",
+          "typeName": "request"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "API",
+        "URL",
+        "Request",
+        "Web",
+        "http",
+        "https",
+        "Download",
+        "Fetch",
+        "Internet",
+        "Network"
+      ],
+      "typePath": "node:general:generic:urlRequest",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/generic/urlRequest"
+    }
+  ]
+}

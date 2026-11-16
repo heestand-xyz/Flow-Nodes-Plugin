@@ -1,0 +1,1579 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Interface",
+  "parentName": "Modifier",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Block a view from receiving interaction. This modifier won’t affect the view’s appearance.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Enabled",
+          "typeName": "enabledIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Allows Hit Testing",
+      "newInAppVersion": "1.5.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "enabledIn",
+          "isHidden": false,
+          "name": "Enabled",
+          "type": "variable",
+          "typeName": "enabled",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Interaction",
+        "Tap",
+        "Touch",
+        "Click"
+      ],
+      "typePath": "node:interface:modifier:allowsHitTesting",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/allowsHitTesting"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Constrain a view to an aspect ratio using fit or fill.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Ratio",
+          "typeName": "ratioIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Size",
+          "typeName": "sizeIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Aspect Ratio",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Float",
+            "typeName": "float"
+          },
+          "enumCases": [
+            {
+              "name": "Float",
+              "typeName": "float"
+            },
+            {
+              "name": "Size",
+              "typeName": "size"
+            }
+          ],
+          "info": "The float type is a `width / height` ratio.",
+          "isHidden": false,
+          "name": "Aspect Type",
+          "type": "typedEnum",
+          "typeName": "aspectType"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "ratioIn",
+          "isHidden": true,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0.5,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Ratio",
+          "type": "variable",
+          "typeName": "ratio",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": [
+            1,
+            1
+          ],
+          "inLetTypeName": "sizeIn",
+          "isHidden": true,
+          "maximumValue": {
+            "constantValue": [
+              2,
+              2
+            ],
+            "coreType": "size",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": [
+              0.5,
+              0.5
+            ],
+            "coreType": "size",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Size",
+          "type": "variable",
+          "typeName": "size",
+          "valueType": "raw:core:size"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Fit",
+            "typeName": "fit"
+          },
+          "enumCases": [
+            {
+              "name": "Fit",
+              "typeName": "fit"
+            },
+            {
+              "name": "Fill",
+              "typeName": "fill"
+            }
+          ],
+          "isHidden": false,
+          "name": "Content Mode",
+          "type": "typedEnum",
+          "typeName": "contentMode"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "ratio",
+        "fit",
+        "fill"
+      ],
+      "typePath": "node:interface:modifier:aspectRatio",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/aspectRatio"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Blur a view.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Radius",
+          "typeName": "radiusIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Blur",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "radiusIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 20,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Radius",
+          "type": "variable",
+          "typeName": "radius",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:interface:modifier:blur",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/blur"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Add a simple rectanlge around a view.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Color",
+          "typeName": "colorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Border",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "blue": 0.5,
+            "green": 0.5,
+            "opacity": 1,
+            "red": 0.5
+          },
+          "inLetTypeName": "colorIn",
+          "isHidden": false,
+          "name": "Color",
+          "type": "variable",
+          "typeName": "color",
+          "valueType": "raw:core:color"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:interface:modifier:border",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/border"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Clip content outside of the view’s bounds.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Clip",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Mask"
+      ],
+      "typePath": "node:interface:modifier:clip",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/clip"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Mask a view with rounded corners.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Corner Radius",
+          "typeName": "cornerRadiusIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Clip Shape",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Rectangle",
+            "typeName": "rectangle"
+          },
+          "enumCases": [
+            {
+              "name": "Circle",
+              "typeName": "circle"
+            },
+            {
+              "name": "Capsule",
+              "typeName": "capsule"
+            },
+            {
+              "name": "Rectangle",
+              "typeName": "rectangle"
+            }
+          ],
+          "isHidden": false,
+          "name": "Shape",
+          "type": "typedEnum",
+          "typeName": "clipShape"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "cornerRadiusIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 32,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Corner Radius",
+          "type": "variable",
+          "typeName": "cornerRadius",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Mask",
+        "Corner Radius"
+      ],
+      "typePath": "node:interface:modifier:clipShape",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/clipShape"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Mask a view with a vector shape.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Clip",
+          "typeName": "vectorIn",
+          "valueType": "raw:vector",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Clip Vector",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Mask",
+        "Shape"
+      ],
+      "typePath": "node:interface:modifier:clipVector",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/clipVector"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Color text and shapes.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Color",
+          "typeName": "colorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Color",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "blue": 0.5,
+            "green": 0.5,
+            "opacity": 1,
+            "red": 0.5
+          },
+          "inLetTypeName": "colorIn",
+          "isHidden": false,
+          "name": "Color",
+          "type": "variable",
+          "typeName": "color",
+          "valueType": "raw:core:color"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Foreground Color"
+      ],
+      "typePath": "node:interface:modifier:color",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/color"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Disable interaction on a view.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Disabled",
+          "typeName": "disabledIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Disabled",
+      "newInAppVersion": "1.5.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": true,
+          "inLetTypeName": "disabledIn",
+          "isHidden": false,
+          "name": "Disabled",
+          "type": "variable",
+          "typeName": "disabled",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Interaction",
+        "Tap",
+        "Touch",
+        "Click"
+      ],
+      "typePath": "node:interface:modifier:disabled",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/disabled"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Set a size of a view.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Size",
+          "typeName": "sizeIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Frame",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": [
+            100,
+            100
+          ],
+          "inLetTypeName": "sizeIn",
+          "isHidden": false,
+          "name": "Size",
+          "type": "variable",
+          "typeName": "size",
+          "valueType": "raw:core:size"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Fixed",
+            "typeName": "fixed"
+          },
+          "enumCases": [
+            {
+              "name": "Auto",
+              "typeName": "auto"
+            },
+            {
+              "name": "Fixed",
+              "typeName": "fixed"
+            },
+            {
+              "name": "Minimum",
+              "typeName": "minimum"
+            },
+            {
+              "name": "Maximum",
+              "typeName": "maximum"
+            },
+            {
+              "name": "Ideal",
+              "typeName": "ideal"
+            }
+          ],
+          "info": "When auto, the width will be based on the container.",
+          "isHidden": false,
+          "name": "Width Framing",
+          "type": "typedEnum",
+          "typeName": "widthFraming"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Fixed",
+            "typeName": "fixed"
+          },
+          "enumCases": [
+            {
+              "name": "Auto",
+              "typeName": "auto"
+            },
+            {
+              "name": "Fixed",
+              "typeName": "fixed"
+            },
+            {
+              "name": "Minimum",
+              "typeName": "minimum"
+            },
+            {
+              "name": "Maximum",
+              "typeName": "maximum"
+            },
+            {
+              "name": "Ideal",
+              "typeName": "ideal"
+            }
+          ],
+          "info": "When auto, the height will be based on the container.",
+          "isHidden": false,
+          "name": "Height Framing",
+          "type": "typedEnum",
+          "typeName": "heightFraming"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Size"
+      ],
+      "typePath": "node:interface:modifier:frame",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/frame"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Read the position and size of a view.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Size",
+          "typeName": "sizeIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Origin",
+          "typeName": "originIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Geometry Reader",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacedByTypePath": "node:interface:modifier:geometryReader2",
+      "replacesTypePaths": [],
+      "tags": [
+        "Position",
+        "Size"
+      ],
+      "typePath": "node:interface:modifier:geometryReader",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/interface/modifier/geometryReader"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Read the frame (origin and size) of a view relative to coordinate space.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Frame",
+          "typeName": "frameIn",
+          "valueType": "raw:core:rect",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Add a Coordinate Space node downstream to reference its frame.",
+          "level": "external",
+          "name": "Coordinate Space Name",
+          "typeName": "coordinateSpaceNameIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Geometry Reader",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Local",
+            "typeName": "local"
+          },
+          "enumCases": [
+            {
+              "name": "Local",
+              "typeName": "local"
+            },
+            {
+              "name": "Global",
+              "typeName": "global"
+            },
+            {
+              "name": "Named",
+              "typeName": "named"
+            }
+          ],
+          "isHidden": false,
+          "name": "Coordinate Space",
+          "type": "typedEnum",
+          "typeName": "coordinateSpace"
+        },
+        {
+          "defaultValue": "",
+          "inLetTypeName": "coordinateSpaceNameIn",
+          "info": "Add a Coordinate Space node downstream to reference its frame.",
+          "isHidden": true,
+          "name": "Coordinate Space Name",
+          "type": "variable",
+          "typeName": "coordinateSpaceName",
+          "valueType": "raw:core:string"
+        }
+      ],
+      "replacesTypePaths": [
+        "node:interface:modifier:geometryReader"
+      ],
+      "tags": [
+        "Position",
+        "Size",
+        "Frame"
+      ],
+      "typePath": "node:interface:modifier:geometryReader2",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/geometryReader2"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Offset a view.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Offset",
+          "typeName": "offsetIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Offset",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": [
+            0,
+            0
+          ],
+          "inLetTypeName": "offsetIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": [
+              100,
+              100
+            ],
+            "coreType": "point",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": [
+              -100,
+              -100
+            ],
+            "coreType": "point",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Offset",
+          "type": "variable",
+          "typeName": "offset",
+          "valueType": "raw:core:point"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Position"
+      ],
+      "typePath": "node:interface:modifier:offset",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/offset"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Add transparency to a view.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Opacity",
+          "typeName": "opacityIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Opacity",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "opacityIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Opacity",
+          "type": "variable",
+          "typeName": "opacity",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Alpha",
+        "Transparency",
+        "Translucent"
+      ],
+      "typePath": "node:interface:modifier:opacity",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/opacity"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Add padding to a view.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Padding",
+          "typeName": "paddingIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Padding",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 16,
+          "inLetTypeName": "paddingIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 32,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Padding",
+          "type": "variable",
+          "typeName": "padding",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "All",
+            "typeName": "all"
+          },
+          "enumCases": [
+            {
+              "name": "All",
+              "typeName": "all"
+            },
+            {
+              "name": "Top",
+              "typeName": "top"
+            },
+            {
+              "name": "Bottom",
+              "typeName": "bottom"
+            },
+            {
+              "name": "Leading",
+              "typeName": "leading"
+            },
+            {
+              "name": "Trailing",
+              "typeName": "trailing"
+            },
+            {
+              "name": "Horizontal",
+              "typeName": "horizontal"
+            },
+            {
+              "name": "Vertical",
+              "typeName": "vertical"
+            }
+          ],
+          "isHidden": false,
+          "name": "Edge",
+          "type": "typedEnum",
+          "typeName": "edge"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Margin"
+      ],
+      "typePath": "node:interface:modifier:padding",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/padding"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Place a view at a specific position.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Position",
+          "typeName": "positionIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Position",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": [
+            0,
+            0
+          ],
+          "inLetTypeName": "positionIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": [
+              1000,
+              1000
+            ],
+            "coreType": "point",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": [
+              0,
+              0
+            ],
+            "coreType": "point",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Position",
+          "type": "variable",
+          "typeName": "position",
+          "valueType": "raw:core:point"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:interface:modifier:position",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/position"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a View. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:interface:modifier:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/relay"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Apply a drop shadow or glow.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Color",
+          "typeName": "colorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Radius",
+          "typeName": "radiusIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Offset",
+          "typeName": "offsetIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Shadow",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "blue": 0,
+            "green": 0,
+            "opacity": 1,
+            "red": 0
+          },
+          "inLetTypeName": "colorIn",
+          "isHidden": false,
+          "name": "Color",
+          "type": "variable",
+          "typeName": "color",
+          "valueType": "raw:core:color"
+        },
+        {
+          "defaultValue": 16,
+          "inLetTypeName": "radiusIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 32,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Radius",
+          "type": "variable",
+          "typeName": "radius",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": [
+            0,
+            0
+          ],
+          "inLetTypeName": "offsetIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": [
+              100,
+              100
+            ],
+            "coreType": "point",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": [
+              -100,
+              -100
+            ],
+            "coreType": "point",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Offset",
+          "type": "variable",
+          "typeName": "offset",
+          "valueType": "raw:core:point"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Glow"
+      ],
+      "typePath": "node:interface:modifier:shadow",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/modifier/shadow"
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "familyName": "General",
+  "parentName": "Code",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Write JavaScript to connect and calculate values. Run the code manually or enable Live to update when inputs change.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Code",
+          "typeName": "codeIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Live",
+          "typeName": "isLiveIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Run",
+          "typeName": "runIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "links": [
+        {
+          "title": "Guide",
+          "url": "https://flownodes.notion.site/Script-Guide-27f9a07f8bd980e9acc4f80c576b82c9"
+        },
+        {
+          "title": "Reference",
+          "url": "https://flownodes.notion.site/Script-Reference-2629a07f8bd980969391fa86435755e3"
+        }
+      ],
+      "name": "Script",
+      "newInAppVersion": "1.0.0",
+      "outLets": [],
+      "parentName": "Code",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "isHidden": false,
+          "name": "Run",
+          "type": "action",
+          "typeName": "run"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isLiveIn",
+          "info": "Auto run the script when any auto wired value changes.",
+          "isHidden": false,
+          "name": "Live",
+          "type": "variable",
+          "typeName": "isLive",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "JavaScript"
+      ],
+      "typePath": "node:general:code:script",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/code/script"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Write Metal code to create graphics and visual effects. The graphic live updates when connected inputs change.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Code",
+          "typeName": "codeIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Resolution",
+          "typeName": "resolutionIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "links": [
+        {
+          "title": "Guide",
+          "url": "https://flownodes.notion.site/Shader-Guide-27f9a07f8bd980429f80f94afbbb1591"
+        },
+        {
+          "title": "Reference",
+          "url": "https://flownodes.notion.site/Shader-Reference-27f9a07f8bd98031bf09e6c8bd1ff6d0"
+        },
+        {
+          "title": "Metal Specification",
+          "url": "https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf"
+        }
+      ],
+      "name": "Shader",
+      "newInAppVersion": "2.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Code",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "resolutionIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": [
+              10000,
+              10000
+            ],
+            "coreType": "size",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": [
+              1,
+              1
+            ],
+            "coreType": "size",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Resolution",
+          "type": "variable",
+          "typeName": "resolution",
+          "valueType": "raw:core:size"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "8 Bit",
+            "typeName": "bit8"
+          },
+          "enumCases": [
+            {
+              "name": "8 Bit",
+              "typeName": "bit8"
+            },
+            {
+              "name": "16 Bit",
+              "typeName": "bit16"
+            },
+            {
+              "name": "32 Bit",
+              "typeName": "bit32"
+            }
+          ],
+          "info": "Color depth. 16 and 32 bit have higher precision and support colors below black and above white. Set to a higher value to render XDR colors on supported displays.",
+          "isHidden": false,
+          "name": "Bits",
+          "type": "typedEnum",
+          "typeName": "bits"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Zero",
+            "typeName": "transparent"
+          },
+          "enumCases": [
+            {
+              "name": "Zero",
+              "typeName": "transparent"
+            },
+            {
+              "name": "Loop",
+              "typeName": "loop"
+            },
+            {
+              "name": "Mirror",
+              "typeName": "mirror"
+            },
+            {
+              "name": "Stretch",
+              "typeName": "stretch"
+            }
+          ],
+          "info": "Pixels outside the main bounds will use the extend mode when sampled.",
+          "isHidden": false,
+          "name": "Extend Mode",
+          "type": "typedEnum",
+          "typeName": "extend"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Metal",
+        "Fragment"
+      ],
+      "typePath": "node:general:code:shader",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/code/shader"
+    }
+  ]
+}

@@ -1,0 +1,1618 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Realtime",
+  "parentName": "Communication",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Connectivity of WiFi and cellular network status with IP address information.",
+      "familyName": "Realtime",
+      "inLets": [],
+      "isPro": false,
+      "name": "Connectivity",
+      "newInAppVersion": "1.2.3",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Online",
+          "typeName": "isOnlineOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "WiFi",
+          "typeName": "isOnWiFiOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Cellular",
+          "typeName": "isOnCellularOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "IP Address",
+          "typeName": "ipAddressOut",
+          "valueType": "raw:core:string",
+          "way": "out"
+        }
+      ],
+      "parentName": "Communication",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "WiFi",
+        "Cellular",
+        "IP Address"
+      ],
+      "typePath": "node:realtime:communication:connectivity",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/communication/connectivity"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Receive MIDI notes.",
+      "familyName": "Realtime",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Channel",
+          "typeName": "channelIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Group",
+          "typeName": "groupIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Clear",
+          "typeName": "clearIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "MIDI Receive",
+      "newInAppVersion": "1.2.3",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Active",
+          "typeName": "isOnOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Octave",
+          "typeName": "octaveOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Note",
+          "typeName": "noteIndexOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Note Name",
+          "typeName": "noteNameOut",
+          "valueType": "raw:core:string",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Velocity",
+          "typeName": "velocityOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Communication",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": true,
+          "info": "Listens to all inputs if active.",
+          "isHidden": false,
+          "name": "Auto Source",
+          "type": "value",
+          "typeName": "autoSource",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "isHidden": true,
+          "name": "Source",
+          "type": "stringEnum",
+          "typeName": "source"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "channelIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 16,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Channel",
+          "type": "variable",
+          "typeName": "channel",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "groupIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 16,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Group",
+          "type": "variable",
+          "typeName": "group",
+          "valueType": "raw:core:int"
+        },
+        {
+          "isHidden": false,
+          "name": "Clear",
+          "type": "action",
+          "typeName": "clear"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Listen",
+        "Signal",
+        "Network"
+      ],
+      "typePath": "node:realtime:communication:midiReceive",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/communication/midiReceive"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Receive MIDI control changes.",
+      "familyName": "Realtime",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Control",
+          "typeName": "controlIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Channel",
+          "typeName": "channelIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Group",
+          "typeName": "groupIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "MIDI Receive CC",
+      "newInAppVersion": "1.2.3",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Communication",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": true,
+          "info": "Listens to all inputs if active.",
+          "isHidden": false,
+          "name": "Auto Source",
+          "type": "value",
+          "typeName": "autoSource",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "isHidden": true,
+          "name": "Source",
+          "type": "stringEnum",
+          "typeName": "source"
+        },
+        {
+          "info": "After linking is started, send a signal from your source to learn that MIDI signature.",
+          "isHidden": false,
+          "name": "Link",
+          "type": "action",
+          "typeName": "link"
+        },
+        {
+          "isHidden": true,
+          "name": "Link Status",
+          "type": "label",
+          "typeName": "linkStatus"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "controlIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 127,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Control",
+          "type": "variable",
+          "typeName": "control",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "channelIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 16,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Channel",
+          "type": "variable",
+          "typeName": "channel",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "groupIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 16,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Group",
+          "type": "variable",
+          "typeName": "group",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": false,
+          "info": "14 Bit CCs are constructed by two CC signals (MSB + LSB) for higher resolution.",
+          "isHidden": false,
+          "name": "14 Bit",
+          "type": "value",
+          "typeName": "as14Bit",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Listen",
+        "Signal",
+        "Network",
+        "Control Change"
+      ],
+      "typePath": "node:realtime:communication:midiReceiveCC",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/communication/midiReceiveCC"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Receive a list of MIDI control changes.",
+      "familyName": "Realtime",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "First Control",
+          "typeName": "firstControlIndexIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Control Count",
+          "typeName": "controlCountIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Channel",
+          "typeName": "channelIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Group",
+          "typeName": "groupIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "MIDI Receive List CC",
+      "newInAppVersion": "1.2.3",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Communication",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": true,
+          "info": "Listens to all inputs if active.",
+          "isHidden": false,
+          "name": "Auto Source",
+          "type": "value",
+          "typeName": "autoSource",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "isHidden": true,
+          "name": "Source",
+          "type": "stringEnum",
+          "typeName": "source"
+        },
+        {
+          "info": "After linking is started, send a signal from your source to learn that MIDI signature. Send a signal on the first control of the array of controls you want to link.",
+          "isHidden": false,
+          "name": "Link",
+          "type": "action",
+          "typeName": "link"
+        },
+        {
+          "isHidden": true,
+          "name": "Link Status",
+          "type": "label",
+          "typeName": "linkStatus"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "firstControlIndexIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 127,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "First Control",
+          "type": "variable",
+          "typeName": "firstControlIndex",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 8,
+          "inLetTypeName": "controlCountIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 128,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Control Count",
+          "type": "variable",
+          "typeName": "controlCount",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "channelIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 16,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Channel",
+          "type": "variable",
+          "typeName": "channel",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "groupIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 16,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Group",
+          "type": "variable",
+          "typeName": "group",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": false,
+          "info": "14 Bit CCs are constructed by two CC signals (MSB + LSB) for higher resolution.",
+          "isHidden": false,
+          "name": "14 Bit",
+          "type": "value",
+          "typeName": "as14Bit",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Listen",
+        "Signal",
+        "Network",
+        "Control Change"
+      ],
+      "typePath": "node:realtime:communication:midiReceiveListCC",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/communication/midiReceiveListCC"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Send MIDI notes.",
+      "familyName": "Realtime",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Active",
+          "typeName": "isOnIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Note",
+          "typeName": "noteIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Velocity",
+          "typeName": "velocityIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Channel",
+          "typeName": "channelIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Group",
+          "typeName": "groupIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "MIDI Transmit",
+      "newInAppVersion": "1.2.3",
+      "outLets": [],
+      "parentName": "Communication",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": true,
+          "info": "Sends to all outputs if active.",
+          "isHidden": false,
+          "name": "Auto Target",
+          "type": "value",
+          "typeName": "autoTarget",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "isHidden": false,
+          "name": "Target",
+          "type": "stringEnum",
+          "typeName": "target"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isOnIn",
+          "isHidden": false,
+          "name": "Active",
+          "type": "variable",
+          "typeName": "isOn",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": 60,
+          "inLetTypeName": "noteIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 127,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Note",
+          "type": "variable",
+          "typeName": "note",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 0.5,
+          "inLetTypeName": "velocityIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Velocity",
+          "type": "variable",
+          "typeName": "velocity",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "channelIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 16,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Channel",
+          "type": "variable",
+          "typeName": "channel",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "groupIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 16,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Group",
+          "type": "variable",
+          "typeName": "group",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Send",
+        "Signal",
+        "Network"
+      ],
+      "typePath": "node:realtime:communication:midiTransmit",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/communication/midiTransmit"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Send MIDI control changes.",
+      "familyName": "Realtime",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Control",
+          "typeName": "controlIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Channel",
+          "typeName": "channelIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Group",
+          "typeName": "groupIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "MIDI Transmit CC",
+      "newInAppVersion": "1.2.3",
+      "outLets": [],
+      "parentName": "Communication",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": true,
+          "info": "Sends to all outputs if active.",
+          "isHidden": false,
+          "name": "Auto Target",
+          "type": "value",
+          "typeName": "autoTarget",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "isHidden": false,
+          "name": "Target",
+          "type": "stringEnum",
+          "typeName": "target"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "valueIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Value",
+          "type": "variable",
+          "typeName": "value",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "controlIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 127,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Control",
+          "type": "variable",
+          "typeName": "control",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "channelIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 16,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Channel",
+          "type": "variable",
+          "typeName": "channel",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "groupIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 16,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Group",
+          "type": "variable",
+          "typeName": "group",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": false,
+          "info": "14 Bit CCs are constructed by two CC signals (MSB + LSB) for higher resolution. When active, only control between 0 and 31 are supported.",
+          "isHidden": false,
+          "name": "14 Bit",
+          "type": "value",
+          "typeName": "as14Bit",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Send",
+        "Signal",
+        "Network",
+        "Control Change"
+      ],
+      "typePath": "node:realtime:communication:midiTransmitCC",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/communication/midiTransmitCC"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Receive realtime graphics on the local network.\n\nNDI® is a registered trademark of Vizrt NDI AB.",
+      "familyName": "Realtime",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Find Sources",
+          "typeName": "findSourcesIn",
+          "valueType": "raw:action",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Active",
+          "typeName": "isActiveIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "links": [
+        {
+          "title": "NDI®",
+          "url": "https://ndi.video/"
+        },
+        {
+          "title": "NDI Tools",
+          "url": "https://ndi.video/tools/"
+        }
+      ],
+      "name": "NDI Receive",
+      "newInAppVersion": "2.2.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Communication",
+      "platforms": [
+        "iOS",
+        "macOS"
+      ],
+      "properties": [
+        {
+          "isHidden": false,
+          "name": "Find Sources",
+          "type": "action",
+          "typeName": "findSources"
+        },
+        {
+          "isHidden": false,
+          "name": "Source",
+          "type": "stringEnum",
+          "typeName": "source"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isActiveIn",
+          "info": "When activated, receiving of video frames will start.",
+          "isHidden": false,
+          "name": "Active",
+          "type": "variable",
+          "typeName": "isActive",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Signal",
+        "Network",
+        "Video",
+        "Stream"
+      ],
+      "typePath": "node:realtime:communication:ndiReceive",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/communication/ndiReceive"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Send realtime graphics over the local network.\n\nNDI® is a registered trademark of Vizrt NDI AB.",
+      "familyName": "Realtime",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "NDI Name",
+          "typeName": "ndiNameIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Active",
+          "typeName": "isActiveIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "links": [
+        {
+          "title": "NDI®",
+          "url": "https://ndi.video/"
+        },
+        {
+          "title": "NDI Tools",
+          "url": "https://ndi.video/tools/"
+        }
+      ],
+      "name": "NDI Transmit",
+      "newInAppVersion": "2.2.0",
+      "outLets": [],
+      "parentName": "Communication",
+      "platforms": [
+        "iOS",
+        "macOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": "",
+          "inLetTypeName": "ndiNameIn",
+          "info": "The NDI feed name. If changed, please re-activate to see the new name.",
+          "isHidden": false,
+          "name": "NDI Name",
+          "type": "variable",
+          "typeName": "ndiName",
+          "valueType": "raw:core:string"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isActiveIn",
+          "info": "When activated, transmission of video frames will start.",
+          "isHidden": false,
+          "name": "Active",
+          "type": "variable",
+          "typeName": "isActive",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Send",
+        "Signal",
+        "Network",
+        "Video",
+        "Stream"
+      ],
+      "typePath": "node:realtime:communication:ndiTransmit",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/communication/ndiTransmit"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Receive OSC messages. To see the received value; connect the generic outlet to a relay node with the expected value type.",
+      "familyName": "Realtime",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "OSC Address",
+          "typeName": "oscAddressIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Port In",
+          "typeName": "inPortIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "OSC Receive",
+      "newInAppVersion": "1.2.3",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "supportedGenericRawTypes": [
+            "core:angle3D",
+            "core:bool",
+            "core:color",
+            "core:date",
+            "core:float",
+            "core:int",
+            "core:point",
+            "core:point3D",
+            "core:rect",
+            "core:rect3D",
+            "core:size",
+            "core:size3D",
+            "core:string"
+          ],
+          "typeName": "valueOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Communication",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "After linking is started, send a signal from your source to automatically connect.",
+          "isHidden": false,
+          "name": "Link",
+          "type": "action",
+          "typeName": "link"
+        },
+        {
+          "isHidden": true,
+          "name": "Link Status",
+          "type": "label",
+          "typeName": "linkStatus"
+        },
+        {
+          "defaultValue": "/flow-nodes/value",
+          "inLetTypeName": "oscAddressIn",
+          "isHidden": false,
+          "name": "OSC Address",
+          "type": "variable",
+          "typeName": "oscAddress",
+          "valueType": "raw:core:string"
+        },
+        {
+          "isHidden": false,
+          "name": "IP Address (This Device)",
+          "type": "label",
+          "typeName": "thisDeviceIPAddress"
+        },
+        {
+          "defaultValue": 7000,
+          "inLetTypeName": "inPortIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10000,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Port In",
+          "type": "variable",
+          "typeName": "inPort",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Listen",
+        "Signal",
+        "Network"
+      ],
+      "typePath": "node:realtime:communication:oscReceive",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/communication/oscReceive"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Send and receive OSC messages. To see the received value; connect the generic outlet to a relay node with the expected value type.",
+      "familyName": "Realtime",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "OSC Address",
+          "typeName": "oscAddressIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Remote IP Address",
+          "typeName": "ipAddressIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Port In",
+          "typeName": "inPortIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Port Out",
+          "typeName": "outPortIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "OSC State",
+      "newInAppVersion": "1.2.3",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "supportedGenericRawTypes": [
+            "core:angle3D",
+            "core:bool",
+            "core:color",
+            "core:date",
+            "core:float",
+            "core:int",
+            "core:point",
+            "core:point3D",
+            "core:rect",
+            "core:rect3D",
+            "core:size",
+            "core:size3D",
+            "core:string"
+          ],
+          "typeName": "valueOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Communication",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "After linking is started, send a signal from your source to automatically connect.",
+          "isHidden": false,
+          "name": "Link",
+          "type": "action",
+          "typeName": "link"
+        },
+        {
+          "isHidden": true,
+          "name": "Link Status",
+          "type": "label",
+          "typeName": "linkStatus"
+        },
+        {
+          "defaultValue": "/flow-nodes/value",
+          "inLetTypeName": "oscAddressIn",
+          "isHidden": false,
+          "name": "OSC Address",
+          "type": "variable",
+          "typeName": "oscAddress",
+          "valueType": "raw:core:string"
+        },
+        {
+          "isHidden": false,
+          "name": "IP Address (This Device)",
+          "type": "label",
+          "typeName": "thisDeviceIPAddress"
+        },
+        {
+          "defaultValue": "localhost",
+          "inLetTypeName": "ipAddressIn",
+          "isHidden": false,
+          "name": "Remote IP Address",
+          "type": "variable",
+          "typeName": "ipAddress",
+          "valueType": "raw:core:string"
+        },
+        {
+          "defaultValue": 7000,
+          "inLetTypeName": "inPortIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10000,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Port In",
+          "type": "variable",
+          "typeName": "inPort",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 8000,
+          "inLetTypeName": "outPortIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10000,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Port Out",
+          "type": "variable",
+          "typeName": "outPort",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Listen",
+        "Send",
+        "Receive",
+        "Signal",
+        "Network"
+      ],
+      "typePath": "node:realtime:communication:oscState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/communication/oscState"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Send OSC messages.",
+      "familyName": "Realtime",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "supportedGenericRawTypes": [
+            "core:angle3D",
+            "core:bool",
+            "core:color",
+            "core:date",
+            "core:float",
+            "core:int",
+            "core:point",
+            "core:point3D",
+            "core:rect",
+            "core:rect3D",
+            "core:size",
+            "core:size3D",
+            "core:string",
+            "core:vectorPoint",
+            "core:vectorPoint3D"
+          ],
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "OSC Address",
+          "typeName": "oscAddressIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Remote IP Address",
+          "typeName": "ipAddressIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Port Out",
+          "typeName": "outPortIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "OSC Transmit",
+      "newInAppVersion": "1.2.3",
+      "outLets": [],
+      "parentName": "Communication",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": "/flow-nodes/value",
+          "inLetTypeName": "oscAddressIn",
+          "isHidden": false,
+          "name": "OSC Address",
+          "type": "variable",
+          "typeName": "oscAddress",
+          "valueType": "raw:core:string"
+        },
+        {
+          "defaultValue": "localhost",
+          "inLetTypeName": "ipAddressIn",
+          "isHidden": false,
+          "name": "Remote IP Address",
+          "type": "variable",
+          "typeName": "ipAddress",
+          "valueType": "raw:core:string"
+        },
+        {
+          "defaultValue": 8000,
+          "inLetTypeName": "outPortIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10000,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Port Out",
+          "type": "variable",
+          "typeName": "outPort",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Send",
+        "Signal",
+        "Network"
+      ],
+      "typePath": "node:realtime:communication:oscTransmit",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/communication/oscTransmit"
+    }
+  ]
+}

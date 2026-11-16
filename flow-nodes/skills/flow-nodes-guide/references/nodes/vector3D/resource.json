@@ -1,0 +1,621 @@
+{
+  "schemaVersion": 1,
+  "familyName": "3D Vector",
+  "parentName": "Resource",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Construct a 3D Vector from a list of 3D Vector Points.",
+      "familyName": "3D Vector",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Vector Points",
+          "typeName": "pointsIn",
+          "valueType": "raw:core:vectorPoint3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Closed",
+          "typeName": "closedIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Construct",
+      "newInAppVersion": "4.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "3D Vector",
+          "typeName": "vectorPath3DOut",
+          "valueType": "raw:vector3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "closedIn",
+          "isHidden": false,
+          "name": "Closed",
+          "type": "variable",
+          "typeName": "closed",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "3D",
+        "Path",
+        "Points"
+      ],
+      "typePath": "node:vector3D:resource:construct",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector3D/resource/construct"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Convert a 2D Vector path into a unit-sized 3D Vector path.",
+      "familyName": "3D Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "vectorIn",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Mirror Horizontally",
+          "typeName": "mirrorHorizontallyIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Mirror Vertically",
+          "typeName": "mirrorVerticallyIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Scale",
+          "typeName": "scaleIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Convert from Vector",
+      "newInAppVersion": "4.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Vector",
+          "typeName": "vectorOut",
+          "valueType": "raw:vector3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Z",
+            "typeName": "z"
+          },
+          "enumCases": [
+            {
+              "name": "X",
+              "typeName": "x"
+            },
+            {
+              "name": "Y",
+              "typeName": "y"
+            },
+            {
+              "name": "Z",
+              "typeName": "z"
+            }
+          ],
+          "info": "Pick the 3D axis the converted vector faces.",
+          "isHidden": false,
+          "name": "Axis",
+          "type": "typedEnum",
+          "typeName": "axis"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "mirrorHorizontallyIn",
+          "isHidden": false,
+          "name": "Mirror Horizontally",
+          "type": "variable",
+          "typeName": "mirrorHorizontally",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "mirrorVerticallyIn",
+          "isHidden": false,
+          "name": "Mirror Vertically",
+          "type": "variable",
+          "typeName": "mirrorVertically",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "scaleIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Scale",
+          "type": "variable",
+          "typeName": "scale",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "3D",
+        "Path",
+        "Vector"
+      ],
+      "typePath": "node:vector3D:resource:convertFromVector",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector3D/resource/convertFromVector"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Create a 3D vector path from an L-system grammar. Draw forward with F, move forward without drawing with f, use + and - for yaw Z, & and ^ for pitch X, \\ and / for roll Y, and [ ] for branches.",
+      "familyName": "3D Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The initial L-system symbol string.",
+          "level": "external",
+          "name": "Axiom",
+          "typeName": "axiomIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Replacement rules separated by new lines or semicolons.",
+          "level": "external",
+          "name": "Rules",
+          "typeName": "rulesIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The number of times the rules are applied. Warning: this can get heavy fast at higher values.",
+          "level": "external",
+          "name": "Iterations",
+          "typeName": "iterationsIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The starting turtle orientation. Forward is along local Y.",
+          "level": "external",
+          "name": "Initial Rotation",
+          "typeName": "initialRotationIn",
+          "valueType": "raw:core:angle3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The turn amount used by +, -, &, ^, \\, and / symbols.",
+          "level": "external",
+          "name": "Angle",
+          "typeName": "angleIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The distance moved by draw and move symbols.",
+          "level": "external",
+          "name": "Step Length",
+          "typeName": "stepLengthIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Symbols that draw a segment while moving forward.",
+          "level": "external",
+          "name": "Draw Symbols",
+          "typeName": "drawSymbolsIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Symbols that move forward without drawing.",
+          "level": "external",
+          "name": "Move Symbols",
+          "typeName": "moveSymbolsIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Move the generated path so its bounding box is centered on the origin.",
+          "level": "external",
+          "name": "Center",
+          "typeName": "centerIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "L-System",
+      "newInAppVersion": "4.2.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Vector",
+          "typeName": "vectorPath3DOut",
+          "valueType": "raw:vector3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": "F",
+          "inLetTypeName": "axiomIn",
+          "info": "The initial L-system symbol string.",
+          "isHidden": false,
+          "name": "Axiom",
+          "type": "variable",
+          "typeName": "axiom",
+          "valueType": "raw:core:string"
+        },
+        {
+          "defaultValue": "F=F[+F][-F][&F][^F]",
+          "inLetTypeName": "rulesIn",
+          "info": "Replacement rules separated by new lines or semicolons.",
+          "isHidden": false,
+          "name": "Rules",
+          "type": "variable",
+          "typeName": "rules",
+          "valueType": "raw:core:string"
+        },
+        {
+          "defaultValue": 3,
+          "inLetTypeName": "iterationsIn",
+          "info": "The number of times the rules are applied. Warning: this can get heavy fast at higher values.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 6,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Iterations",
+          "type": "variable",
+          "typeName": "iterations",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "inLetTypeName": "initialRotationIn",
+          "info": "The starting turtle orientation. Forward is along local Y.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": {
+              "x": 3.141592653589793,
+              "y": 3.141592653589793,
+              "z": 3.141592653589793
+            },
+            "coreType": "angle3D",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": {
+              "x": -3.141592653589793,
+              "y": -3.141592653589793,
+              "z": -3.141592653589793
+            },
+            "coreType": "angle3D",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Initial Rotation",
+          "type": "variable",
+          "typeName": "initialRotation",
+          "valueType": "raw:core:angle3D"
+        },
+        {
+          "defaultValue": 0.5235987755982988,
+          "inLetTypeName": "angleIn",
+          "info": "The turn amount used by +, -, &, ^, \\, and / symbols.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 3.141592653589793,
+            "coreType": "angle",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "angle",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Angle",
+          "type": "variable",
+          "typeName": "angle",
+          "valueType": "raw:core:angle"
+        },
+        {
+          "defaultValue": 0.1,
+          "inLetTypeName": "stepLengthIn",
+          "info": "The distance moved by draw and move symbols.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Step Length",
+          "type": "variable",
+          "typeName": "stepLength",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": "F",
+          "inLetTypeName": "drawSymbolsIn",
+          "info": "Symbols that draw a segment while moving forward.",
+          "isHidden": false,
+          "name": "Draw Symbols",
+          "type": "variable",
+          "typeName": "drawSymbols",
+          "valueType": "raw:core:string"
+        },
+        {
+          "defaultValue": "f",
+          "inLetTypeName": "moveSymbolsIn",
+          "info": "Symbols that move forward without drawing.",
+          "isHidden": false,
+          "name": "Move Symbols",
+          "type": "variable",
+          "typeName": "moveSymbols",
+          "valueType": "raw:core:string"
+        },
+        {
+          "defaultValue": true,
+          "inLetTypeName": "centerIn",
+          "info": "Move the generated path so its bounding box is centered on the origin.",
+          "isHidden": false,
+          "name": "Center",
+          "type": "variable",
+          "typeName": "center",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "LSystem",
+        "Lindenmayer",
+        "Fractal",
+        "Turtle",
+        "Tree",
+        "3D"
+      ],
+      "typePath": "node:vector3D:resource:lSystem",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector3D/resource/lSystem"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a list of 3D vectors.",
+      "familyName": "3D Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Clear",
+          "typeName": "clearIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "4.1.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "3D Vectors",
+          "typeName": "vectors3DBindingOut",
+          "valueType": "raw:vector3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Removes all the stored 3D vectors from the node.",
+          "isHidden": false,
+          "name": "Clear",
+          "type": "action",
+          "typeName": "clear"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array",
+        "3D",
+        "Splines"
+      ],
+      "typePath": "node:vector3D:resource:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector3D/resource/listState"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a 3D vector.",
+      "familyName": "3D Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Clear",
+          "typeName": "clearIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "4.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "3D Vector",
+          "typeName": "vector3DBindingOut",
+          "valueType": "raw:vector3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Removes the stored 3D vector from the node.",
+          "isHidden": false,
+          "name": "Clear",
+          "type": "action",
+          "typeName": "clear"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "3D",
+        "Path",
+        "Spline"
+      ],
+      "typePath": "node:vector3D:resource:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector3D/resource/state"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "familyName": "3D Geometry",
+  "parentName": "Material",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Apply a simple material to a geometry.",
+      "familyName": "3D Geometry",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryIn",
+          "valueType": "raw:geometry",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Color",
+          "typeName": "colorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Roughness",
+          "typeName": "roughnessIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Metallic",
+          "typeName": "isMetallicIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Simple",
+      "newInAppVersion": "2.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryOut",
+          "valueType": "raw:geometry",
+          "way": "out"
+        }
+      ],
+      "parentName": "Material",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "blue": 1,
+            "green": 1,
+            "opacity": 1,
+            "red": 1
+          },
+          "inLetTypeName": "colorIn",
+          "isHidden": false,
+          "name": "Color",
+          "type": "variable",
+          "typeName": "color",
+          "valueType": "raw:core:color"
+        },
+        {
+          "defaultValue": 0.5,
+          "inLetTypeName": "roughnessIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Roughness",
+          "type": "variable",
+          "typeName": "roughness",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isMetallicIn",
+          "isHidden": false,
+          "name": "Metallic",
+          "type": "variable",
+          "typeName": "isMetallic",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacedByTypePath": "node:spatial:material:simple",
+      "replacesTypePaths": [],
+      "tags": [
+        "Color"
+      ],
+      "typePath": "node:geometry:material:simple",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/geometry/material/simple"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Apply an unlit material to a geometry. This material has no lighting effects. It simply shows the constant color or texture on the geometry.",
+      "familyName": "3D Geometry",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryIn",
+          "valueType": "raw:geometry",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Color",
+          "typeName": "colorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Texture",
+          "typeName": "textureIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Unlit",
+      "newInAppVersion": "2.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryOut",
+          "valueType": "raw:geometry",
+          "way": "out"
+        }
+      ],
+      "parentName": "Material",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "blue": 1,
+            "green": 1,
+            "opacity": 1,
+            "red": 1
+          },
+          "inLetTypeName": "colorIn",
+          "isHidden": false,
+          "name": "Color",
+          "type": "variable",
+          "typeName": "color",
+          "valueType": "raw:core:color"
+        }
+      ],
+      "replacedByTypePath": "node:spatial:material:unlit",
+      "replacesTypePaths": [],
+      "tags": [
+        "Color",
+        "Constant"
+      ],
+      "typePath": "node:geometry:material:unlit",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/geometry/material/unlit"
+    }
+  ]
+}

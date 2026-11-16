@@ -1,6 +1,6 @@
 {
   "name": "flow-nodes",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Learn Flow Nodes and build flows with precise node, property, and wire guidance from bundled documentation.",
   "author": {
     "name": "Anton Heestand"

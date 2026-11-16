@@ -88,7 +88,7 @@ Graphics can be sampled to get the pixel color. Here we’re sampling at `uv` th
 
 ![Resolution and Bits properties](https://flownodes.app/docs/media/shaders-guide/bits-dark.png)
 
-Two important Shader node properties are **Resolution** and **Bits**. Bits is the color depth, 8bit is default and will give 256 steps of luminance per channel. 16bit and 32bit allow a lot more steps per channel, and allow colors to go below black and beyond white. Colors below black or above white can be useful for technical effects or to view XDR colors on supported displays. This can be useful in a [Displace](../nodes/node-graphic-modifierEffect-displace.json) node.
+Two important Shader node properties are **Resolution** and **Bits**. Bits is the color depth, 8bit is default and will give 256 steps of luminance per channel. 16bit and 32bit allow a lot more steps per channel, and allow colors to go below black and beyond white. Colors below black or above white can be useful for technical effects or to view XDR colors on supported displays. This can be useful in a [Displace](../nodes/graphic/modifierEffect.json) (`node:graphic:modifierEffect:displace`) node.
 
 ## Official Docs
 

@@ -7,7 +7,7 @@ Scripts in Flow Nodes are written in JavaScript
 There are two places to write scripts:
 
 - Properties
-- [Script Node](../nodes/node-general-code-script.json)
+- [Script Node](../nodes/general/code.json) (`node:general:code:script`)
 
 ## Node
 

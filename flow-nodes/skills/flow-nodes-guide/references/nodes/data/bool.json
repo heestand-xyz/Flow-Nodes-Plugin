@@ -1,0 +1,419 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Data",
+  "parentName": "Bool",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Switch between two values based on a condition.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Condition",
+          "typeName": "conditionIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "If",
+          "typeName": "ifIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Else",
+          "typeName": "elseIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "If Else",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Bool",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "conditionIn",
+          "isHidden": false,
+          "name": "Condition",
+          "type": "variable",
+          "typeName": "condition",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Condition"
+      ],
+      "typePath": "node:data:bool:ifElse",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/bool/ifElse"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Negate the boolean value.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Is On",
+          "typeName": "in",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Invert",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Is On",
+          "typeName": "out",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        }
+      ],
+      "parentName": "Bool",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Not"
+      ],
+      "typePath": "node:data:bool:invert",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/bool/invert"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a list of Bools. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "in",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        }
+      ],
+      "parentName": "Bool",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:bool:listRelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/bool/listRelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of Bools.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Are On",
+          "typeName": "out",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        }
+      ],
+      "parentName": "Bool",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValues": [],
+          "isHidden": false,
+          "name": "Are On",
+          "type": "valueArray",
+          "typeName": "areOn",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array"
+      ],
+      "typePath": "node:data:bool:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/bool/listState"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Logic gate.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Condition",
+          "typeName": "in",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Logic",
+      "newInAppVersion": "1.5.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        }
+      ],
+      "parentName": "Bool",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "All",
+            "typeName": "all"
+          },
+          "enumCases": [
+            {
+              "name": "All",
+              "typeName": "all"
+            },
+            {
+              "name": "Some",
+              "typeName": "some"
+            },
+            {
+              "name": "None",
+              "typeName": "none"
+            }
+          ],
+          "isHidden": false,
+          "name": "Is True",
+          "type": "typedEnum",
+          "typeName": "logicOperator"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "And",
+        "Or"
+      ],
+      "typePath": "node:data:bool:logic",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/bool/logic"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a Bool. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        }
+      ],
+      "parentName": "Bool",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:data:bool:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/bool/relay"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a Bool.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Is On",
+          "typeName": "out",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        }
+      ],
+      "parentName": "Bool",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "isHidden": false,
+          "name": "Is On",
+          "type": "value",
+          "typeName": "isOn",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store"
+      ],
+      "typePath": "node:data:bool:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/bool/state"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Toggles an upstream Bool when the action is triggered.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Toggle",
+          "typeName": "toggleIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Toggle",
+      "newInAppVersion": "27.0.0",
+      "outLets": [],
+      "parentName": "Bool",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "isHidden": false,
+          "name": "Toggle",
+          "type": "action",
+          "typeName": "toggle"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Boolean",
+        "Action",
+        "Switch"
+      ],
+      "typePath": "node:data:bool:toggle",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/bool/toggle"
+    }
+  ]
+}

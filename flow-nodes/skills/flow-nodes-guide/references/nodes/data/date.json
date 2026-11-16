@@ -1,0 +1,638 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Data",
+  "parentName": "Date",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Split up a date into its components.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Date",
+          "typeName": "in",
+          "valueType": "raw:core:date",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Components",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Year",
+          "typeName": "yearOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Month",
+          "typeName": "monthOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Day",
+          "typeName": "dayOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Hour",
+          "typeName": "hourOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Minute",
+          "typeName": "minuteOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Second",
+          "typeName": "secondOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Millisecond",
+          "typeName": "millisecondOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        }
+      ],
+      "parentName": "Date",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Year",
+        "Month",
+        "Day",
+        "Hour",
+        "Minute",
+        "Second",
+        "Millisecond"
+      ],
+      "typePath": "node:data:date:components",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/date/components"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Create a date from components.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Year",
+          "typeName": "yearIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Month",
+          "typeName": "monthIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Day",
+          "typeName": "dayIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Hour",
+          "typeName": "hourIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Minute",
+          "typeName": "minuteIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Second",
+          "typeName": "secondIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Millisecond",
+          "typeName": "millisecondIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Construct",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Date",
+          "typeName": "out",
+          "valueType": "raw:core:date",
+          "way": "out"
+        }
+      ],
+      "parentName": "Date",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Year",
+        "Month",
+        "Day",
+        "Hour",
+        "Minute",
+        "Second",
+        "Millisecond"
+      ],
+      "typePath": "node:data:date:construct",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/date/construct"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Measure the time distance between two dates in seconds.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reference Date",
+          "typeName": "leadingDateIn",
+          "valueType": "raw:core:date",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Target Date",
+          "typeName": "trailingDateIn",
+          "valueType": "raw:core:date",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Distance",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Seconds",
+          "typeName": "secondsOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Date",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacedByTypePath": "node:data:date:duration",
+      "replacesTypePaths": [],
+      "tags": [
+        "Seconds"
+      ],
+      "typePath": "node:data:date:distance",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/data/date/distance"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Measure the time duration between two dates.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reference Date",
+          "typeName": "leadingDateIn",
+          "valueType": "raw:core:date",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Target Date",
+          "typeName": "trailingDateIn",
+          "valueType": "raw:core:date",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Duration",
+      "newInAppVersion": "2.2.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Duration",
+          "typeName": "durationOut",
+          "valueType": "raw:core:duration",
+          "way": "out"
+        }
+      ],
+      "parentName": "Date",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [
+        "node:data:date:distance"
+      ],
+      "tags": [
+        "Seconds",
+        "Time",
+        "Distance"
+      ],
+      "typePath": "node:data:date:duration",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/date/duration"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Format a date from a string.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Formatted",
+          "typeName": "formattedIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Format",
+          "typeName": "formatIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "links": [
+        {
+          "title": "Date Formats",
+          "url": "https://www.nsdateformatter.com"
+        }
+      ],
+      "name": "Format from String",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Date",
+          "typeName": "dateOut",
+          "valueType": "raw:core:date",
+          "way": "out"
+        }
+      ],
+      "parentName": "Date",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": "yyyy-MM-dd HH:mm:ss",
+          "inLetTypeName": "formatIn",
+          "isHidden": false,
+          "name": "Format",
+          "type": "variable",
+          "typeName": "format",
+          "valueType": "raw:core:string"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Time"
+      ],
+      "typePath": "node:data:date:formatFromString",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/date/formatFromString"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Format a date to a string.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Date",
+          "typeName": "dateIn",
+          "valueType": "raw:core:date",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Format",
+          "typeName": "formatIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "links": [
+        {
+          "title": "Date Formats",
+          "url": "https://www.nsdateformatter.com"
+        }
+      ],
+      "name": "Format to String",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Formatted",
+          "typeName": "formattedOut",
+          "valueType": "raw:core:string",
+          "way": "out"
+        }
+      ],
+      "parentName": "Date",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": "yyyy-MM-dd HH:mm:ss",
+          "inLetTypeName": "formatIn",
+          "isHidden": false,
+          "name": "Format",
+          "type": "variable",
+          "typeName": "format",
+          "valueType": "raw:core:string"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Time"
+      ],
+      "typePath": "node:data:date:formatToString",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/date/formatToString"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a list of Dates. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "in",
+          "valueType": "raw:core:date",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:date",
+          "way": "out"
+        }
+      ],
+      "parentName": "Date",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:date:listRelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/date/listRelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of Dates.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Dates",
+          "typeName": "out",
+          "valueType": "raw:core:date",
+          "way": "out"
+        }
+      ],
+      "parentName": "Date",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValues": [],
+          "isHidden": false,
+          "name": "Dates",
+          "type": "valueArray",
+          "typeName": "dates",
+          "valueType": "raw:core:date"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array"
+      ],
+      "typePath": "node:data:date:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/date/listState"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a Date. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:date",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:date",
+          "way": "out"
+        }
+      ],
+      "parentName": "Date",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:data:date:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/date/relay"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a Date.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Date",
+          "typeName": "out",
+          "valueType": "raw:core:date",
+          "way": "out"
+        }
+      ],
+      "parentName": "Date",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "isHidden": false,
+          "name": "Date",
+          "type": "value",
+          "typeName": "date",
+          "valueType": "raw:core:date"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store"
+      ],
+      "typePath": "node:data:date:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/date/state"
+    }
+  ]
+}

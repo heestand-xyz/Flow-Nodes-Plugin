@@ -1,0 +1,1389 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Data",
+  "parentName": "Color",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Get the hex String and alpha Float components of a Color.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Hex Components",
+      "newInAppVersion": "2.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Hex",
+          "typeName": "hexOut",
+          "valueType": "raw:core:string",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Alpha",
+          "typeName": "alphaOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:color:hexComponents",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/hexComponents"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Construct a Color from a hex String and an alpha Float.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Hex",
+          "typeName": "hexIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Alpha",
+          "typeName": "alphaIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Hex Construct",
+      "newInAppVersion": "2.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:color:hexConstruct",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/hexConstruct"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Get the hue, saturation, brightness and alpha Float components of a Color.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "HSBA Components",
+      "newInAppVersion": "2.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Hue",
+          "typeName": "hueOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Saturation",
+          "typeName": "saturationOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Brightness",
+          "typeName": "brightnessOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Alpha",
+          "typeName": "alphaOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "HSV",
+        "Hue",
+        "Saturation",
+        "Brightness"
+      ],
+      "typePath": "node:data:color:hsbaComponents",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/hsbaComponents"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Construct a Color from hue, saturation, brightness and alpha Floats.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Hue",
+          "typeName": "hueIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Saturation",
+          "typeName": "saturationIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Brightness",
+          "typeName": "brightnessIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Alpha",
+          "typeName": "alphaIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "HSBA Construct",
+      "newInAppVersion": "2.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "HSV",
+        "Hue",
+        "Saturation",
+        "Brightness"
+      ],
+      "typePath": "node:data:color:hsbaConstruct",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/hsbaConstruct"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Find key Colors in a Graphic.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "in",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Count",
+          "typeName": "countIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Minimum Saturation",
+          "typeName": "saturationIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Minimum Brightness",
+          "typeName": "brightnessIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Key",
+      "newInAppVersion": "2.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Colors",
+          "typeName": "out",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "countIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Count",
+          "type": "variable",
+          "typeName": "count",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 0.5,
+          "inLetTypeName": "saturationIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Minimum Saturation",
+          "type": "variable",
+          "typeName": "saturation",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0.5,
+          "inLetTypeName": "brightnessIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Minimum Brightness",
+          "type": "variable",
+          "typeName": "brightness",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:color:key",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/key"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Adjust the levels of a Color.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Brightness",
+          "typeName": "brightnessIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Exposure",
+          "typeName": "exposureIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Inverted",
+          "typeName": "invertedIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Levels",
+      "newInAppVersion": "1.4.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "brightnessIn",
+          "info": "A multiplication of the color.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Brightness",
+          "type": "variable",
+          "typeName": "brightness",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "exposureIn",
+          "info": "An addition of the color.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": -1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Exposure",
+          "type": "variable",
+          "typeName": "exposure",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "invertedIn",
+          "info": "The opposite color.",
+          "isHidden": false,
+          "name": "Inverted",
+          "type": "variable",
+          "typeName": "inverted",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Brightenss",
+        "Exposure",
+        "Invert"
+      ],
+      "typePath": "node:data:color:levels",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/levels"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a list of Colors. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "in",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:color:listRelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/listRelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of Colors.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Colors",
+          "typeName": "out",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValues": [],
+          "isHidden": false,
+          "name": "Colors",
+          "type": "valueArray",
+          "typeName": "colors",
+          "valueType": "raw:core:color"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array",
+        "Colors"
+      ],
+      "typePath": "node:data:color:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/listState"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Adjust the levels of a Color.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Opacity",
+          "typeName": "opacityIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Opacity",
+      "newInAppVersion": "1.4.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "opacityIn",
+          "info": "Adjust the alpha component.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Opacity",
+          "type": "variable",
+          "typeName": "opacity",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Alpha"
+      ],
+      "typePath": "node:data:color:opacity",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/opacity"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Get a pixel Color at a specific position from a Graphic.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "in",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Location",
+          "typeName": "locationIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Pixel",
+      "newInAppVersion": "2.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Colors",
+          "typeName": "out",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": [
+            0,
+            0
+          ],
+          "inLetTypeName": "locationIn",
+          "info": "The pixel location in the Graphic at which to sample the color. Fractional locations are interpolated between the nearest pixels. Zero is top left.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": [
+              1000,
+              1000
+            ],
+            "coreType": "point",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": [
+              0,
+              0
+            ],
+            "coreType": "point",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Location",
+          "type": "variable",
+          "typeName": "location",
+          "valueType": "raw:core:point"
+        }
+      ],
+      "replacedByTypePath": "node:data:color:pixel2",
+      "replacesTypePaths": [],
+      "tags": [
+        "Sample"
+      ],
+      "typePath": "node:data:color:pixel",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/data/color/pixel"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Get a pixel Color at a specific location from a Graphic. Unit coordinates range from zero to one; pixel coordinates use pixel-center indices.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The location in the Graphic at which to sample the color. Fractional locations are interpolated between the nearest pixels.",
+          "level": "external",
+          "name": "Location",
+          "typeName": "locationIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Pixel",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Color",
+          "typeName": "colorOut",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Unit",
+            "typeName": "unit"
+          },
+          "enumCases": [
+            {
+              "name": "Unit",
+              "typeName": "unit"
+            },
+            {
+              "name": "Pixel",
+              "typeName": "pixel"
+            }
+          ],
+          "info": "Choose whether the location is interpreted as normalized unit coordinates or pixel coordinates.",
+          "isHidden": false,
+          "name": "Coordinate Space",
+          "type": "typedEnum",
+          "typeName": "coordinateSpace"
+        },
+        {
+          "defaultValue": [
+            0.5,
+            0.5
+          ],
+          "inLetTypeName": "locationIn",
+          "info": "The location in the Graphic at which to sample the color. Fractional locations are interpolated between the nearest pixels.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": [
+              1,
+              1
+            ],
+            "coreType": "point",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": [
+              0,
+              0
+            ],
+            "coreType": "point",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Location",
+          "type": "variable",
+          "typeName": "location",
+          "valueType": "raw:core:point"
+        }
+      ],
+      "replacesTypePaths": [
+        "node:data:color:pixel"
+      ],
+      "tags": [
+        "Sample"
+      ],
+      "typePath": "node:data:color:pixel2",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/pixel2"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a Color. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:data:color:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/relay"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Get the red, green, blue and alpha Float components of a Color.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "RGBA Components",
+      "newInAppVersion": "2.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Red",
+          "typeName": "redOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Green",
+          "typeName": "greenOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Blue",
+          "typeName": "blueOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Alpha",
+          "typeName": "alphaOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:color:rgbaComponents",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/rgbaComponents"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Construct a Color from red, green, blue and alpha Floats.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Red",
+          "typeName": "redIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Green",
+          "typeName": "greenIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Blue",
+          "typeName": "blueIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Alpha",
+          "typeName": "alphaIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "RGBA Construct",
+      "newInAppVersion": "2.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:color:rgbaConstruct",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/rgbaConstruct"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Shift hue, change saturation and tint.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Color",
+          "typeName": "in",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Hue",
+          "typeName": "hueIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Saturation",
+          "typeName": "saturationIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Brightness",
+          "typeName": "brightnessIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Shift",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Color",
+          "typeName": "out",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "hueIn",
+          "isHidden": false,
+          "name": "Hue",
+          "type": "variable",
+          "typeName": "hue",
+          "valueType": "raw:core:angle"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "saturationIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Saturation",
+          "type": "variable",
+          "typeName": "saturation",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "brightnessIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Brightness",
+          "type": "variable",
+          "typeName": "brightness",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Hue",
+        "Saturation",
+        "Monochrome",
+        "Tint"
+      ],
+      "typePath": "node:data:color:shift",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/shift"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a Color.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Color",
+          "typeName": "out",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "blue": 1,
+            "green": 1,
+            "opacity": 1,
+            "red": 1
+          },
+          "isHidden": false,
+          "name": "Color",
+          "type": "value",
+          "typeName": "color",
+          "valueType": "raw:core:color"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store"
+      ],
+      "typePath": "node:data:color:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/state"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Get a voxel Color at a specific position from a 3D Graphic.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Graphic",
+          "typeName": "graphic3DIn",
+          "valueType": "raw:graphic3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The location in the 3D Graphic at which to sample the color. Fractional locations are interpolated between the nearest voxels.",
+          "level": "external",
+          "name": "Location",
+          "typeName": "locationIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Voxel",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Color",
+          "typeName": "colorOut",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Unit",
+            "typeName": "unit"
+          },
+          "enumCases": [
+            {
+              "name": "Unit",
+              "typeName": "unit"
+            },
+            {
+              "name": "Pixel",
+              "typeName": "pixel"
+            }
+          ],
+          "info": "Choose whether the location is interpreted as normalized unit coordinates or pixel coordinates.",
+          "isHidden": false,
+          "name": "Coordinate Space",
+          "type": "typedEnum",
+          "typeName": "coordinateSpace"
+        },
+        {
+          "defaultValue": {
+            "x": 0.5,
+            "y": 0.5,
+            "z": 0.5
+          },
+          "inLetTypeName": "locationIn",
+          "info": "The location in the 3D Graphic at which to sample the color. Fractional locations are interpolated between the nearest voxels.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "coreType": "point3D",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "coreType": "point3D",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Location",
+          "type": "variable",
+          "typeName": "location",
+          "valueType": "raw:core:point3D"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Sample",
+        "3D",
+        "Voxel"
+      ],
+      "typePath": "node:data:color:voxel",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/color/voxel"
+    }
+  ]
+}

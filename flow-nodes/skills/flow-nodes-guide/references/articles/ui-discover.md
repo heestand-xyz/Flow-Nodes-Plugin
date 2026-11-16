@@ -8,7 +8,7 @@ Discover is a collection of examples, tutorials, and ready-made flows. Use it to
 
 Presets appear in a scrolling grid. They are grouped by category.
 
-Each preset card includes a preview and the actions supported by that preset. 
+Each preset card includes a preview and the actions supported by that preset.
 
 ## Open a preset
 

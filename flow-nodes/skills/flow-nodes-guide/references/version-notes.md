@@ -8,6 +8,8 @@ The node snapshot contains **665 records: 628 visible nodes and 37 deprecated pr
 
 The exported node schema is version 2. The newer articles discuss Variable Arrays in 27.5.0; the schema-2 snapshot does not itself describe a representative Variable Array consumer. Use the articles for that API and do not fabricate new node properties in JSON.
 
+Starting with plugin 0.2.0, the same 665 records are stored in 95 parent files at `nodes/<family>/<parent>.json`. The node catalog and snapshot use schema version 2; each parent file uses wrapper schema version 1 with `familyName`, `parentName`, and a `nodes` array sorted by `typePath`. The catalog's `reference` points to that parent file. Select the exact `typePath` inside it, including when resolving a deprecated node's replacement. This changes reference storage, not the node records or app behavior.
+
 ## Differences that matter
 
 - The FAQ and older Video Guide sometimes name `node:video:resource:sample`. It is replaced by `sample2`. The new Sample has **Seek Mode**, **Seek Time**, **Seek Frame Index**, and **Seek Fraction**. The fractional recipe is simpler for new flows. Player's explicit Seek action is not part of Sample.

@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Realtime",
+  "parentName": "Home",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Control a light in a room in your home. Powered by HomeKit.",
+      "familyName": "Realtime",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Color",
+          "typeName": "colorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Light",
+      "newInAppVersion": "3.0.0",
+      "outLets": [],
+      "parentName": "Home",
+      "platforms": [
+        "iOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "isHidden": true,
+          "name": "Check Authorization",
+          "type": "action",
+          "typeName": "checkAuthorization"
+        },
+        {
+          "isHidden": false,
+          "name": "Home",
+          "type": "stringEnum",
+          "typeName": "home"
+        },
+        {
+          "isHidden": false,
+          "name": "Room",
+          "type": "stringEnum",
+          "typeName": "room"
+        },
+        {
+          "isHidden": false,
+          "name": "Accessory",
+          "type": "stringEnum",
+          "typeName": "accessory"
+        },
+        {
+          "defaultValue": {
+            "blue": 0.5,
+            "green": 0.5,
+            "opacity": 1,
+            "red": 0.5
+          },
+          "inLetTypeName": "colorIn",
+          "isHidden": false,
+          "name": "Color",
+          "type": "variable",
+          "typeName": "color",
+          "valueType": "raw:core:color"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "HomeKit"
+      ],
+      "typePath": "node:realtime:home:light",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/home/light"
+    }
+  ]
+}

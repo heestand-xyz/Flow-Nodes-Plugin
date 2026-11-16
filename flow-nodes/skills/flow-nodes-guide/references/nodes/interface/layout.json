@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Interface",
+  "parentName": "Layout",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Define a named coordinate space that sub views can reference.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The identifier for the coordinate space. This name must be unique in the view hierarchy.",
+          "level": "external",
+          "name": "Name",
+          "typeName": "coordinateSpaceNameIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Coordinate Space",
+      "newInAppVersion": "4.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Layout",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": "",
+          "inLetTypeName": "coordinateSpaceNameIn",
+          "info": "The identifier for the coordinate space. This name must be unique in the view hierarchy.",
+          "isHidden": false,
+          "name": "Name",
+          "type": "variable",
+          "typeName": "coordinateSpaceName",
+          "valueType": "raw:core:string"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:interface:layout:coordinateSpace",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/layout/coordinateSpace"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A scroll view.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Offset",
+          "typeName": "offsetIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Scroll",
+      "newInAppVersion": "2.6.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Layout",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Vertical",
+            "typeName": "vertical"
+          },
+          "enumCases": [
+            {
+              "name": "Vertical",
+              "typeName": "vertical"
+            },
+            {
+              "name": "Horizontal",
+              "typeName": "horizontal"
+            }
+          ],
+          "isHidden": false,
+          "name": "Axis",
+          "type": "typedEnum",
+          "typeName": "axis"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:interface:layout:scroll",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/layout/scroll"
+    }
+  ]
+}

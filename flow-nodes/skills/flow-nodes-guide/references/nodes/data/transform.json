@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Data",
+  "parentName": "Transform",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Get the position, scale, and rotation components of a Transform.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:transform",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Components",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Position",
+          "typeName": "positionOut",
+          "valueType": "raw:core:point",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Scale",
+          "typeName": "scaleOut",
+          "valueType": "raw:core:size",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Rotation",
+          "typeName": "rotationOut",
+          "valueType": "raw:core:angle",
+          "way": "out"
+        }
+      ],
+      "parentName": "Transform",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:transform:components",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/transform/components"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Construct a Transform from position, scale, and rotation.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Position",
+          "typeName": "positionIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Scale",
+          "typeName": "scaleIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Rotation",
+          "typeName": "rotationIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Construct",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:transform",
+          "way": "out"
+        }
+      ],
+      "parentName": "Transform",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:transform:construct",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/transform/construct"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a list of Transforms. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "in",
+          "valueType": "raw:core:transform",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Relay",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:transform",
+          "way": "out"
+        }
+      ],
+      "parentName": "Transform",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:transform:listRelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/transform/listRelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of Transforms.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Transforms",
+          "typeName": "out",
+          "valueType": "raw:core:transform",
+          "way": "out"
+        }
+      ],
+      "parentName": "Transform",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValues": [],
+          "isHidden": false,
+          "name": "Transforms",
+          "type": "valueArray",
+          "typeName": "transforms",
+          "valueType": "raw:core:transform"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array"
+      ],
+      "typePath": "node:data:transform:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/transform/listState"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a Transform. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:transform",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:transform",
+          "way": "out"
+        }
+      ],
+      "parentName": "Transform",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:data:transform:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/transform/relay"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a Transform.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Transform",
+          "typeName": "out",
+          "valueType": "raw:core:transform",
+          "way": "out"
+        }
+      ],
+      "parentName": "Transform",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "position": [
+              0,
+              0
+            ],
+            "rotation": 0,
+            "scale": [
+              1,
+              1
+            ]
+          },
+          "isHidden": false,
+          "name": "Transform",
+          "type": "value",
+          "typeName": "transform",
+          "valueType": "raw:core:transform"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store"
+      ],
+      "typePath": "node:data:transform:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/transform/state"
+    }
+  ]
+}

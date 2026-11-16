@@ -1,0 +1,2538 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Graphic",
+  "parentName": "Color Effect",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Applies ordered Bayer dithering to the image with adjustable strength, levels, and optional monochrome output.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Strength",
+          "typeName": "strengthIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Levels",
+          "typeName": "levelsIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Monochrome",
+          "typeName": "monochromeIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Bayer Dither",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "strengthIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Strength",
+          "type": "variable",
+          "typeName": "strength",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 2,
+          "inLetTypeName": "levelsIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 2,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Levels",
+          "type": "variable",
+          "typeName": "levels",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "monochromeIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": true,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": false,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Monochrome",
+          "type": "variable",
+          "typeName": "monochrome",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:graphic:colorEffect:bayerDither",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/bayerDither"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Mix red, green, blue and alpha channels.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Channel Mix",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Red",
+            "typeName": "red"
+          },
+          "enumCases": [
+            {
+              "name": "Red",
+              "typeName": "red"
+            },
+            {
+              "name": "Green",
+              "typeName": "green"
+            },
+            {
+              "name": "Blue",
+              "typeName": "blue"
+            },
+            {
+              "name": "Alpha",
+              "typeName": "alpha"
+            },
+            {
+              "name": "Zero",
+              "typeName": "zero"
+            },
+            {
+              "name": "One",
+              "typeName": "one"
+            },
+            {
+              "name": "Luminance",
+              "typeName": "luminance"
+            }
+          ],
+          "info": "The source of the red channel.",
+          "isHidden": false,
+          "name": "Red",
+          "type": "stringEnum",
+          "typeName": "red"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Green",
+            "typeName": "green"
+          },
+          "enumCases": [
+            {
+              "name": "Red",
+              "typeName": "red"
+            },
+            {
+              "name": "Green",
+              "typeName": "green"
+            },
+            {
+              "name": "Blue",
+              "typeName": "blue"
+            },
+            {
+              "name": "Alpha",
+              "typeName": "alpha"
+            },
+            {
+              "name": "Zero",
+              "typeName": "zero"
+            },
+            {
+              "name": "One",
+              "typeName": "one"
+            },
+            {
+              "name": "Luminance",
+              "typeName": "luminance"
+            }
+          ],
+          "info": "The source of the green channel.",
+          "isHidden": false,
+          "name": "Green",
+          "type": "stringEnum",
+          "typeName": "green"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Blue",
+            "typeName": "blue"
+          },
+          "enumCases": [
+            {
+              "name": "Red",
+              "typeName": "red"
+            },
+            {
+              "name": "Green",
+              "typeName": "green"
+            },
+            {
+              "name": "Blue",
+              "typeName": "blue"
+            },
+            {
+              "name": "Alpha",
+              "typeName": "alpha"
+            },
+            {
+              "name": "Zero",
+              "typeName": "zero"
+            },
+            {
+              "name": "One",
+              "typeName": "one"
+            },
+            {
+              "name": "Luminance",
+              "typeName": "luminance"
+            }
+          ],
+          "info": "The source of the blue channel.",
+          "isHidden": false,
+          "name": "Blue",
+          "type": "stringEnum",
+          "typeName": "blue"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Alpha",
+            "typeName": "alpha"
+          },
+          "enumCases": [
+            {
+              "name": "Red",
+              "typeName": "red"
+            },
+            {
+              "name": "Green",
+              "typeName": "green"
+            },
+            {
+              "name": "Blue",
+              "typeName": "blue"
+            },
+            {
+              "name": "Alpha",
+              "typeName": "alpha"
+            },
+            {
+              "name": "Zero",
+              "typeName": "zero"
+            },
+            {
+              "name": "One",
+              "typeName": "one"
+            },
+            {
+              "name": "Luminance",
+              "typeName": "luminance"
+            }
+          ],
+          "info": "The source of the alpha channel.",
+          "isHidden": false,
+          "name": "Alpha",
+          "type": "stringEnum",
+          "typeName": "alpha"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Swizzle"
+      ],
+      "typePath": "node:graphic:colorEffect:channelMix",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/channelMix"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Green screen background removal.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Color",
+          "typeName": "colorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Range",
+          "typeName": "rangeIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Softness",
+          "typeName": "softnessIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Edge Desaturation",
+          "typeName": "edgeDesaturationIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Alpha Crop",
+          "typeName": "alphaCropIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Chroma Key",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "blue": 0,
+            "green": 1,
+            "opacity": 1,
+            "red": 0
+          },
+          "inLetTypeName": "colorIn",
+          "info": "Key color to remove.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": {
+              "blue": 1,
+              "green": 1,
+              "opacity": 1,
+              "red": 1
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": {
+              "blue": 0,
+              "green": 0,
+              "opacity": 0,
+              "red": 0
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Color",
+          "type": "variable",
+          "typeName": "color",
+          "valueType": "raw:core:color"
+        },
+        {
+          "defaultValue": 0.1,
+          "inLetTypeName": "rangeIn",
+          "info": "Hue range of the key color.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Range",
+          "type": "variable",
+          "typeName": "range",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0.1,
+          "inLetTypeName": "softnessIn",
+          "info": "Smooths the alpha mask.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Softness",
+          "type": "variable",
+          "typeName": "softness",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0.5,
+          "inLetTypeName": "edgeDesaturationIn",
+          "info": "A higher value makes the edges of the alpha mask more monochrome.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Edge Desaturation",
+          "type": "variable",
+          "typeName": "edgeDesaturation",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0.5,
+          "inLetTypeName": "alphaCropIn",
+          "info": "Clip semi transparent pixels.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Alpha Crop",
+          "type": "variable",
+          "typeName": "alphaCrop",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Green Screen",
+        "Background Removal"
+      ],
+      "typePath": "node:graphic:colorEffect:chromaKey",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/chromaKey"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Apply various styles to colors outside of the set range.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Low",
+          "typeName": "lowIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "High",
+          "typeName": "highIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Include Alpha",
+          "typeName": "includeAlphaIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Clamp",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Relative",
+            "typeName": "relative"
+          },
+          "enumCases": [
+            {
+              "name": "Hold",
+              "typeName": "hold"
+            },
+            {
+              "name": "Loop",
+              "typeName": "loop"
+            },
+            {
+              "name": "Mirror",
+              "typeName": "mirror"
+            },
+            {
+              "name": "Zero",
+              "typeName": "zero"
+            },
+            {
+              "name": "Relative",
+              "typeName": "relative"
+            }
+          ],
+          "isHidden": false,
+          "name": "Style",
+          "type": "stringEnum",
+          "typeName": "style"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "lowIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Low",
+          "type": "variable",
+          "typeName": "low",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "highIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "High",
+          "type": "variable",
+          "typeName": "high",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "includeAlphaIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": true,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": false,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Include Alpha",
+          "type": "variable",
+          "typeName": "includeAlpha",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:graphic:colorEffect:clamp",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/clamp"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Convert between color models.\nFor HSV and the all channel option; hue is red, saturation is green, and value / brightness is blue.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Color Convert",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "RGB to HSV",
+            "typeName": "rgbToHSV"
+          },
+          "enumCases": [
+            {
+              "name": "RGB to HSV",
+              "typeName": "rgbToHSV"
+            },
+            {
+              "name": "HSV to RGB",
+              "typeName": "hsvToRGB"
+            }
+          ],
+          "isHidden": false,
+          "name": "Conversion",
+          "type": "stringEnum",
+          "typeName": "conversion"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "All",
+            "typeName": "all"
+          },
+          "enumCases": [
+            {
+              "name": "All",
+              "typeName": "all"
+            },
+            {
+              "name": "First",
+              "typeName": "first"
+            },
+            {
+              "name": "Second",
+              "typeName": "second"
+            },
+            {
+              "name": "Third",
+              "typeName": "third"
+            }
+          ],
+          "isHidden": false,
+          "name": "Channel",
+          "type": "stringEnum",
+          "typeName": "channel"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "RGB",
+        "HSV",
+        "Channels"
+      ],
+      "typePath": "node:graphic:colorEffect:colorConvert",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/colorConvert"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Map colors with a 2 stop gradient, from background to foreground.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Foreground Color",
+          "typeName": "foregroundColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Background Color",
+          "typeName": "backgroundColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Color Map",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "blue": 1,
+            "green": 1,
+            "opacity": 1,
+            "red": 1
+          },
+          "inLetTypeName": "foregroundColorIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": {
+              "blue": 1,
+              "green": 1,
+              "opacity": 1,
+              "red": 1
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": {
+              "blue": 0,
+              "green": 0,
+              "opacity": 0,
+              "red": 0
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Foreground Color",
+          "type": "variable",
+          "typeName": "foregroundColor",
+          "valueType": "raw:core:color"
+        },
+        {
+          "defaultValue": {
+            "blue": 0,
+            "green": 0,
+            "opacity": 1,
+            "red": 0
+          },
+          "inLetTypeName": "backgroundColorIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": {
+              "blue": 1,
+              "green": 1,
+              "opacity": 1,
+              "red": 1
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": {
+              "blue": 0,
+              "green": 0,
+              "opacity": 0,
+              "red": 0
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Background Color",
+          "type": "variable",
+          "typeName": "backgroundColor",
+          "valueType": "raw:core:color"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:graphic:colorEffect:colorMap",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/colorMap"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Shift colors in a graphic.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Hue",
+          "typeName": "hueIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Saturation",
+          "typeName": "saturationIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Tint Color",
+          "typeName": "tintColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Color Shift",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "hueIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 3.141592653589793,
+            "coreType": "angle",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": -3.141592653589793,
+            "coreType": "angle",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Hue",
+          "type": "variable",
+          "typeName": "hue",
+          "valueType": "raw:core:angle"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "saturationIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Saturation",
+          "type": "variable",
+          "typeName": "saturation",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": {
+            "blue": 1,
+            "green": 1,
+            "opacity": 1,
+            "red": 1
+          },
+          "inLetTypeName": "tintColorIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": {
+              "blue": 1,
+              "green": 1,
+              "opacity": 1,
+              "red": 1
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": {
+              "blue": 0,
+              "green": 0,
+              "opacity": 0,
+              "red": 0
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Tint Color",
+          "type": "variable",
+          "typeName": "tintColor",
+          "valueType": "raw:core:color"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Hue",
+        "Saturation",
+        "Tint"
+      ],
+      "typePath": "node:graphic:colorEffect:colorShift",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/colorShift"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Lookup colors in a gradient based on luminance.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Colors",
+          "typeName": "colorsIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Stops",
+          "typeName": "stopsIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Gamma",
+          "typeName": "gammaIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Gradient Lookup",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "isHidden": false,
+          "name": "Gradient",
+          "type": "item",
+          "typeName": "gradient"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "gammaIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Gamma",
+          "type": "variable",
+          "typeName": "gamma",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacedByTypePath": "node:graphic:colorEffect:gradientLookup2",
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:graphic:colorEffect:gradientLookup",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/gradientLookup"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Creates a gradient from Color Stops, falling back to Gradient when the inlet is disconnected.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "lex",
+          "direction": "direct",
+          "keyType": "raw:core:float",
+          "level": "external",
+          "name": "Color Stops",
+          "typeName": "colorStopsIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Gamma",
+          "typeName": "gammaIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Gradient Lookup",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "isHidden": false,
+          "name": "Gradient",
+          "type": "item",
+          "typeName": "gradient"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "gammaIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Gamma",
+          "type": "variable",
+          "typeName": "gamma",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [
+        "node:graphic:colorEffect:gradientLookup"
+      ],
+      "tags": [
+        "Gradient",
+        "Color Stops"
+      ],
+      "typePath": "node:graphic:colorEffect:gradientLookup2",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/gradientLookup2"
+    },
+    {
+      "complexity": "basic",
+      "docs": "",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Brightness",
+          "typeName": "brightnessIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Darkness",
+          "typeName": "darknessIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Contrast",
+          "typeName": "contrastIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Gamma",
+          "typeName": "gammaIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Inverted",
+          "typeName": "isInvertedIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Smooth",
+          "typeName": "isSmoothIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Opacity",
+          "typeName": "opacityIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Offset",
+          "typeName": "offsetIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Levels",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "brightnessIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Brightness",
+          "type": "variable",
+          "typeName": "brightness",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "darknessIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Darkness",
+          "type": "variable",
+          "typeName": "darkness",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "contrastIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Contrast",
+          "type": "variable",
+          "typeName": "contrast",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "gammaIn",
+          "info": "Adjustment of light.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Gamma",
+          "type": "variable",
+          "typeName": "gamma",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isInvertedIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": true,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": false,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Inverted",
+          "type": "variable",
+          "typeName": "isInverted",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isSmoothIn",
+          "info": "Applies an s-curve of smooth contrast to the graphic. (With a sine curve)",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": true,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": false,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Smooth",
+          "type": "variable",
+          "typeName": "isSmooth",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "opacityIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Opacity",
+          "type": "variable",
+          "typeName": "opacity",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "offsetIn",
+          "info": "Exposure offset. (With addition)",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": -1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Offset",
+          "type": "variable",
+          "typeName": "offset",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Brightness",
+        "Darkness",
+        "Contrast",
+        "Gamma",
+        "Invert",
+        "Opacity"
+      ],
+      "typePath": "node:graphic:colorEffect:levels",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/levels"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Background removal.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Mask",
+          "typeName": "isMaskIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Person Segmentation",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isMaskIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": true,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": false,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Mask",
+          "type": "variable",
+          "typeName": "isMask",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Background Removal"
+      ],
+      "typePath": "node:graphic:colorEffect:personSegmentation",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/personSegmentation"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Lowers the color detail.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Fraction",
+          "typeName": "fractionIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Quantize",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0.25,
+          "inLetTypeName": "fractionIn",
+          "info": "A higher value results in lower quality graphic, and a value approaching zero is closer to the original graphic. The default value of 0.25 results in 4 steps of quantization.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Fraction",
+          "type": "variable",
+          "typeName": "fraction",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:graphic:colorEffect:quantize",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/quantize"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Range a graphics colors from a reference low and high to a target low and high.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reference Low",
+          "typeName": "referenceLowIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reference High",
+          "typeName": "referenceHighIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Target Low",
+          "typeName": "targetLowIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Target High",
+          "typeName": "targetHighIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Include Alpha",
+          "typeName": "includeAlphaIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Range",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "referenceLowIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Reference Low",
+          "type": "variable",
+          "typeName": "referenceLow",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "referenceHighIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Reference High",
+          "type": "variable",
+          "typeName": "referenceHigh",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "targetLowIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Target Low",
+          "type": "variable",
+          "typeName": "targetLow",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "targetHighIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Target High",
+          "type": "variable",
+          "typeName": "targetHigh",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "includeAlphaIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": true,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": false,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Include Alpha",
+          "type": "variable",
+          "typeName": "includeAlpha",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:graphic:colorEffect:range",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/range"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a Graphic. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:graphic:colorEffect:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/relay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Detect attention or objectness of a graphic, as a monochrome heat map.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Keep Resolution",
+          "typeName": "keepResolutionIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Saliency",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Attention",
+            "typeName": "attention"
+          },
+          "enumCases": [
+            {
+              "name": "Attention",
+              "typeName": "attention"
+            },
+            {
+              "name": "Objectness",
+              "typeName": "objectness"
+            }
+          ],
+          "info": "The saliency type defines the strategy used to estimate visual importance in an image, attention for relevance weighting and objectness for detecting potential object regions.",
+          "isHidden": false,
+          "name": "Saliency Type",
+          "type": "stringEnum",
+          "typeName": "saliencyType"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "keepResolutionIn",
+          "info": "Keep the same resolution as the input, by scaling up the output.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": true,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": false,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Keep Resolution",
+          "type": "variable",
+          "typeName": "keepResolution",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Attention",
+        "Objectness",
+        "Heat Map"
+      ],
+      "typePath": "node:graphic:colorEffect:saliency",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/saliency"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Calculate the slope between neighboring pixels by generating a normal map. 16 or 32 bit recommended.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Amplitude",
+          "typeName": "amplitudeIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Origin Color",
+          "typeName": "originColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Slope",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "amplitudeIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "fixed": {
+                        "value": 100
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "fixed": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "Amplitude",
+          "type": "variable",
+          "typeName": "amplitude",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": {
+            "blue": 0.5,
+            "green": 0.5,
+            "opacity": 1,
+            "red": 0.5
+          },
+          "inLetTypeName": "originColorIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": {
+              "blue": 1,
+              "green": 1,
+              "opacity": 1,
+              "red": 1
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": {
+              "blue": 0,
+              "green": 0,
+              "opacity": 0,
+              "red": 0
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Origin Color",
+          "type": "variable",
+          "typeName": "originColor",
+          "valueType": "raw:core:color"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Normal Map"
+      ],
+      "typePath": "node:graphic:colorEffect:slope",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/slope"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Divide the graphic into two regions: one with a value below the threshold (background), and one with a value above (foreground).",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Fraction",
+          "typeName": "fractionIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Foreground Color",
+          "typeName": "foregroundColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Background Color",
+          "typeName": "backgroundColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Threshold",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Color Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0.5,
+          "inLetTypeName": "fractionIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Fraction",
+          "type": "variable",
+          "typeName": "fraction",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": {
+            "blue": 1,
+            "green": 1,
+            "opacity": 1,
+            "red": 1
+          },
+          "inLetTypeName": "foregroundColorIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": {
+              "blue": 1,
+              "green": 1,
+              "opacity": 1,
+              "red": 1
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": {
+              "blue": 0,
+              "green": 0,
+              "opacity": 0,
+              "red": 0
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Foreground Color",
+          "type": "variable",
+          "typeName": "foregroundColor",
+          "valueType": "raw:core:color"
+        },
+        {
+          "defaultValue": {
+            "blue": 0,
+            "green": 0,
+            "opacity": 1,
+            "red": 0
+          },
+          "inLetTypeName": "backgroundColorIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": {
+              "blue": 1,
+              "green": 1,
+              "opacity": 1,
+              "red": 1
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": {
+              "blue": 0,
+              "green": 0,
+              "opacity": 0,
+              "red": 0
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Background Color",
+          "type": "variable",
+          "typeName": "backgroundColor",
+          "valueType": "raw:core:color"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:graphic:colorEffect:threshold",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/colorEffect/threshold"
+    }
+  ]
+}

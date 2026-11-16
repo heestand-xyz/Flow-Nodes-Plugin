@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Graphic",
+  "parentName": "Time Effect",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Delay a graphic over time. The first inlet is the graphic to be delayed and the second inlet is the graphic used as a source of delay based on its luminance. Black is zero delay, gray is half delay, and white is full delay.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Delay Luma",
+          "typeName": "lumaGraphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Delay Time",
+          "typeName": "delayTimeIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Luma Delay",
+      "newInAppVersion": "2.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Time Effect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "delayTimeIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Delay Time",
+          "type": "variable",
+          "typeName": "delayTime",
+          "valueType": "raw:core:duration"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Time Machine"
+      ],
+      "typePath": "node:graphic:timeEffect:lumaDelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/timeEffect/lumaDelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "An effect that generates directional change vectors for each pixel in the graphic over time.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Multiplier",
+          "typeName": "multiplierIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Offset",
+          "typeName": "offsetIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Optical Flow",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Time Effect",
+      "platforms": [
+        "iOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "High",
+            "typeName": "high"
+          },
+          "enumCases": [
+            {
+              "name": "Low",
+              "typeName": "low"
+            },
+            {
+              "name": "Medium",
+              "typeName": "medium"
+            },
+            {
+              "name": "High",
+              "typeName": "high"
+            },
+            {
+              "name": "Very High",
+              "typeName": "veryHigh"
+            }
+          ],
+          "isHidden": false,
+          "name": "Accuracy",
+          "type": "typedEnum",
+          "typeName": "accuracy"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "multiplierIn",
+          "isHidden": false,
+          "name": "Multiplier",
+          "type": "variable",
+          "typeName": "multiplier",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "offsetIn",
+          "isHidden": false,
+          "name": "Offset",
+          "type": "variable",
+          "typeName": "offset",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Directional",
+        "Vectors"
+      ],
+      "typePath": "node:graphic:timeEffect:opticalFlow",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/timeEffect/opticalFlow"
+    }
+  ]
+}

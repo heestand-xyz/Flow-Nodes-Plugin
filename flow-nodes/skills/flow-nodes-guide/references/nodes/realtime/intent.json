@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Realtime",
+  "parentName": "Intent",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Triggers an action when the Flow Nodes \"Node Action\" intent runs. Use the \"Node Action\" shortcut with the Action Button on iPhone, or use the \"Node Action\" intent in the Shortcuts app, or just say \"Hey Siri trigger action in \".",
+      "familyName": "Realtime",
+      "inLets": [],
+      "isPro": false,
+      "name": "Action",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Action",
+          "typeName": "actionOut",
+          "valueType": "raw:action",
+          "way": "out"
+        }
+      ],
+      "parentName": "Intent",
+      "platforms": [
+        "iOS",
+        "macOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Shortcuts",
+        "Trigger",
+        "Siri"
+      ],
+      "typePath": "node:realtime:intent:action",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/intent/action"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Receive a float value when the Flow Nodes Node Float Input Intent runs. Use the intent with the action button on iPhone or the Shortcuts app.",
+      "familyName": "Realtime",
+      "inLets": [],
+      "isPro": false,
+      "name": "Float Input",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Intent",
+      "platforms": [
+        "iOS",
+        "macOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Shortcuts",
+        "Input",
+        "Siri",
+        "Float"
+      ],
+      "typePath": "node:realtime:intent:floatInput",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/intent/floatInput"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Send a float value when the Flow Nodes Node Float Output Intent runs. Use the intent with the action button on iPhone or the Shortcuts app.",
+      "familyName": "Realtime",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Float Output",
+      "newInAppVersion": "4.0.0",
+      "outLets": [],
+      "parentName": "Intent",
+      "platforms": [
+        "iOS",
+        "macOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Shortcuts",
+        "Output",
+        "Siri",
+        "Float"
+      ],
+      "typePath": "node:realtime:intent:floatOutput",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/intent/floatOutput"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Receive a string value when the Flow Nodes Node String Input Intent runs. Use the intent with the action button on iPhone or the Shortcuts app.",
+      "familyName": "Realtime",
+      "inLets": [],
+      "isPro": false,
+      "name": "String Input",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Text",
+          "typeName": "textOut",
+          "valueType": "raw:core:string",
+          "way": "out"
+        }
+      ],
+      "parentName": "Intent",
+      "platforms": [
+        "iOS",
+        "macOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Shortcuts",
+        "Input",
+        "Siri",
+        "String",
+        "Text"
+      ],
+      "typePath": "node:realtime:intent:stringInput",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/intent/stringInput"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Send a string value when the Flow Nodes Node String Output Intent runs. Use the intent with the action button on iPhone or the Shortcuts app.",
+      "familyName": "Realtime",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Text",
+          "typeName": "textIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "String Output",
+      "newInAppVersion": "4.0.0",
+      "outLets": [],
+      "parentName": "Intent",
+      "platforms": [
+        "iOS",
+        "macOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Shortcuts",
+        "Output",
+        "Siri",
+        "String",
+        "Text"
+      ],
+      "typePath": "node:realtime:intent:stringOutput",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/realtime/intent/stringOutput"
+    }
+  ]
+}

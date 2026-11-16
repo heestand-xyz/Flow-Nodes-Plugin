@@ -1,0 +1,1439 @@
+{
+  "schemaVersion": 1,
+  "familyName": "General",
+  "parentName": "Time",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Schedule an action at a specific time. See a count down with a duration to the scheduled time.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Time",
+          "typeName": "timeIn",
+          "valueType": "raw:core:date",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Alarm",
+      "newInAppVersion": "2.2.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Alarm",
+          "typeName": "alarmOut",
+          "valueType": "raw:action",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Count Down",
+          "typeName": "countDownOut",
+          "valueType": "raw:core:duration",
+          "way": "out"
+        }
+      ],
+      "parentName": "Time",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "timeIn",
+          "info": "The time to trigger the action.",
+          "isHidden": false,
+          "name": "Time",
+          "type": "variable",
+          "typeName": "time",
+          "valueType": "raw:core:date"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Schedule"
+      ],
+      "typePath": "node:general:time:alarm",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/time/alarm"
+    },
+    {
+      "complexity": "basic",
+      "docs": "The current time.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Fractional",
+          "typeName": "fractionalIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Clock",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Time",
+          "typeName": "out",
+          "valueType": "raw:core:date",
+          "way": "out"
+        }
+      ],
+      "parentName": "Time",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "fractionalIn",
+          "info": "Include milliseconds.",
+          "isHidden": false,
+          "name": "Fractional",
+          "type": "variable",
+          "typeName": "fractional",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Time",
+        "Date"
+      ],
+      "typePath": "node:general:time:clock",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/time/clock"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Sends the latest value after no new values arrive for the duration.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The delay before the latest value is sent.",
+          "level": "external",
+          "name": "Duration",
+          "typeName": "durationIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Debounce",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Time",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "durationIn",
+          "info": "The delay before the latest value is sent.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Duration",
+          "type": "variable",
+          "typeName": "duration",
+          "valueType": "raw:core:duration"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Delay",
+        "Rate",
+        "Signal"
+      ],
+      "typePath": "node:general:time:debounce",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/time/debounce"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Delay a value over time.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Delay",
+          "typeName": "secondsIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Delay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Time",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "secondsIn",
+          "isHidden": false,
+          "name": "Duration",
+          "type": "variable",
+          "typeName": "seconds",
+          "valueType": "raw:core:duration"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Seconds"
+      ],
+      "typePath": "node:general:time:delay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/time/delay"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Retains the latest value while frozen.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Retains the last received value while enabled.",
+          "level": "external",
+          "name": "Frozen",
+          "typeName": "frozenIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Freeze",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Time",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "frozenIn",
+          "info": "Retains the last received value while enabled.",
+          "isHidden": false,
+          "name": "Frozen",
+          "type": "variable",
+          "typeName": "frozen",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Hold",
+        "Pause",
+        "Cache"
+      ],
+      "typePath": "node:general:time:freeze",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/time/freeze"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Control playback of a time. Connect the time inlet upstream to a State node to further connect to other nodes downstream.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Time",
+          "typeName": "timeIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Duration",
+          "typeName": "durationIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Playing",
+          "typeName": "isPlayingIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Loop",
+          "typeName": "isLoopingIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Playback",
+      "newInAppVersion": "27.0.0",
+      "outLets": [],
+      "parentName": "Time",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "timeIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Time",
+          "type": "variable",
+          "typeName": "time",
+          "valueType": "raw:core:duration"
+        },
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "durationIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Duration",
+          "type": "variable",
+          "typeName": "duration",
+          "valueType": "raw:core:duration"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isPlayingIn",
+          "isHidden": false,
+          "name": "Playing",
+          "type": "variable",
+          "typeName": "isPlaying",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isLoopingIn",
+          "isHidden": false,
+          "name": "Loop",
+          "type": "variable",
+          "typeName": "isLooping",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Seconds",
+        "Animation",
+        "Play",
+        "Pause"
+      ],
+      "typePath": "node:general:time:playback",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/time/playback"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Smooth a value over time.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Seconds",
+          "typeName": "secondsIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Smooth",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Time",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Smooth",
+            "typeName": "smooth"
+          },
+          "enumCases": [
+            {
+              "name": "Linear",
+              "typeName": "linear"
+            },
+            {
+              "name": "Smooth",
+              "typeName": "smooth"
+            }
+          ],
+          "isHidden": false,
+          "name": "Style",
+          "type": "typedEnum",
+          "typeName": "style"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "secondsIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Duration",
+          "type": "variable",
+          "typeName": "seconds",
+          "valueType": "raw:core:duration"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Seconds",
+        "Average",
+        "Filter"
+      ],
+      "typePath": "node:general:time:smooth",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/time/smooth"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Counts in seconds up from zero.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Running",
+          "typeName": "isRunningIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Fractional",
+          "typeName": "fractionalIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Speed",
+          "typeName": "speedIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reset",
+          "typeName": "resetIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Stopwatch",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Seconds",
+          "typeName": "out",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Time",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isRunningIn",
+          "isHidden": false,
+          "name": "Running",
+          "type": "variable",
+          "typeName": "isRunning",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "fractionalIn",
+          "isHidden": false,
+          "name": "Fractional",
+          "type": "variable",
+          "typeName": "fractional",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "speedIn",
+          "isHidden": false,
+          "name": "Speed",
+          "type": "variable",
+          "typeName": "speed",
+          "valueType": "raw:core:float"
+        },
+        {
+          "isHidden": false,
+          "name": "Reset",
+          "type": "action",
+          "typeName": "reset"
+        }
+      ],
+      "replacedByTypePath": "node:general:time:stopwatch2",
+      "replacesTypePaths": [],
+      "tags": [
+        "Timer",
+        "Seconds"
+      ],
+      "typePath": "node:general:time:stopwatch",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/general/time/stopwatch"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Counts up from zero.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Running",
+          "typeName": "isRunningIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Fractional",
+          "typeName": "isFractionalIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Speed",
+          "typeName": "speedIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reset",
+          "typeName": "resetIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Stopwatch",
+      "newInAppVersion": "2.4.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Time",
+          "typeName": "timeOut",
+          "valueType": "raw:core:duration",
+          "way": "out"
+        }
+      ],
+      "parentName": "Time",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isRunningIn",
+          "isHidden": false,
+          "name": "Running",
+          "type": "variable",
+          "typeName": "isRunning",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": true,
+          "inLetTypeName": "isFractionalIn",
+          "isHidden": false,
+          "name": "Fractional",
+          "type": "variable",
+          "typeName": "isFractional",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "speedIn",
+          "isHidden": false,
+          "name": "Speed",
+          "type": "variable",
+          "typeName": "speed",
+          "valueType": "raw:core:float"
+        },
+        {
+          "isHidden": false,
+          "name": "Reset",
+          "type": "action",
+          "typeName": "reset"
+        }
+      ],
+      "replacesTypePaths": [
+        "node:general:time:stopwatch"
+      ],
+      "tags": [
+        "Seconds"
+      ],
+      "typePath": "node:general:time:stopwatch2",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/time/stopwatch2"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Sends the first value immediately, then limit values to one per duration.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The minimum interval between sent values.",
+          "level": "external",
+          "name": "Duration",
+          "typeName": "durationIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Throttle",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Time",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "durationIn",
+          "info": "The minimum interval between sent values.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Duration",
+          "type": "variable",
+          "typeName": "duration",
+          "valueType": "raw:core:duration"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Rate",
+        "Limit",
+        "Signal"
+      ],
+      "typePath": "node:general:time:throttle",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/time/throttle"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Count down by a specified duration. When zero is reached an action will be sent.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Duration",
+          "typeName": "durationIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Start",
+          "typeName": "startActionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Pause",
+          "typeName": "pauseActionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Stop",
+          "typeName": "stopActionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Timer",
+      "newInAppVersion": "2.2.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Timer",
+          "typeName": "timerOut",
+          "valueType": "raw:action",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Count Down",
+          "typeName": "countDownOut",
+          "valueType": "raw:core:duration",
+          "way": "out"
+        }
+      ],
+      "parentName": "Time",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "durationIn",
+          "isHidden": false,
+          "name": "Duration",
+          "type": "variable",
+          "typeName": "duration",
+          "valueType": "raw:core:duration"
+        },
+        {
+          "isHidden": false,
+          "name": "Start",
+          "type": "action",
+          "typeName": "startAction"
+        },
+        {
+          "isHidden": true,
+          "name": "Pause",
+          "type": "action",
+          "typeName": "pauseAction"
+        },
+        {
+          "isHidden": true,
+          "name": "Stop",
+          "type": "action",
+          "typeName": "stopAction"
+        }
+      ],
+      "replacedByTypePath": "node:general:time:timer2",
+      "replacesTypePaths": [],
+      "tags": [
+        "Seconds"
+      ],
+      "typePath": "node:general:time:timer",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/general/time/timer"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Count down by a specified duration. When zero is reached an action will be sent. Optionally repeat the timer.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Duration",
+          "typeName": "durationIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Repeat",
+          "typeName": "isRepeatingIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Start",
+          "typeName": "startActionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Pause",
+          "typeName": "pauseActionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Stop",
+          "typeName": "stopActionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Timer",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Timer",
+          "typeName": "timerOut",
+          "valueType": "raw:action",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Count Down",
+          "typeName": "countDownOut",
+          "valueType": "raw:core:duration",
+          "way": "out"
+        }
+      ],
+      "parentName": "Time",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "durationIn",
+          "isHidden": false,
+          "name": "Duration",
+          "type": "variable",
+          "typeName": "duration",
+          "valueType": "raw:core:duration"
+        },
+        {
+          "isHidden": false,
+          "name": "Start",
+          "type": "action",
+          "typeName": "startAction"
+        },
+        {
+          "isHidden": true,
+          "name": "Pause",
+          "type": "action",
+          "typeName": "pauseAction"
+        },
+        {
+          "isHidden": true,
+          "name": "Stop",
+          "type": "action",
+          "typeName": "stopAction"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isRepeatingIn",
+          "isHidden": false,
+          "name": "Repeat",
+          "type": "variable",
+          "typeName": "isRepeating",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [
+        "node:general:time:timer"
+      ],
+      "tags": [
+        "Seconds"
+      ],
+      "typePath": "node:general:time:timer2",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/time/timer2"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Trace values from the inlet into a list in the outlet over time.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Active",
+          "typeName": "isActiveIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Time",
+          "typeName": "secondsIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Count",
+          "typeName": "countIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Sample Rate",
+          "typeName": "sampleRateIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Display Link",
+          "typeName": "displayLinkIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Trace",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Time",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": true,
+          "inLetTypeName": "isActiveIn",
+          "isHidden": false,
+          "name": "Active",
+          "type": "variable",
+          "typeName": "isActive",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Time",
+            "typeName": "time"
+          },
+          "enumCases": [
+            {
+              "name": "Time",
+              "typeName": "time"
+            },
+            {
+              "name": "Count",
+              "typeName": "count"
+            }
+          ],
+          "isHidden": false,
+          "name": "Method",
+          "type": "typedEnum",
+          "typeName": "method"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "secondsIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Time",
+          "type": "variable",
+          "typeName": "seconds",
+          "valueType": "raw:core:duration"
+        },
+        {
+          "defaultValue": 100,
+          "inLetTypeName": "countIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 100,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Count",
+          "type": "variable",
+          "typeName": "count",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": true,
+          "inLetTypeName": "displayLinkIn",
+          "isHidden": false,
+          "name": "Display Link",
+          "type": "variable",
+          "typeName": "displayLink",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": 30,
+          "inLetTypeName": "sampleRateIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 60,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Sample Rate",
+          "type": "variable",
+          "typeName": "sampleRate",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Seconds",
+        "Trail"
+      ],
+      "typePath": "node:general:time:trace",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/time/trace"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Trace values into a list on every signal, value change, or hash change. Limit the history with Max Count or empty it with Clear.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The maximum number of traced values to retain.",
+          "level": "external",
+          "name": "Max Count",
+          "typeName": "maxCountIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Clear",
+          "typeName": "clearIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Trace On Change",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Time",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Signal",
+            "typeName": "signal"
+          },
+          "enumCases": [
+            {
+              "name": "Signal",
+              "typeName": "signal"
+            },
+            {
+              "name": "Value",
+              "typeName": "value"
+            },
+            {
+              "name": "Hash",
+              "typeName": "hash"
+            }
+          ],
+          "info": "Trace on every signal, when the value changes, or when its hash changes.",
+          "isHidden": false,
+          "name": "Mode",
+          "type": "typedEnum",
+          "typeName": "mode"
+        },
+        {
+          "defaultValue": 100,
+          "inLetTypeName": "maxCountIn",
+          "info": "The maximum number of traced values to retain.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1000,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Max Count",
+          "type": "variable",
+          "typeName": "maxCount",
+          "valueType": "raw:core:int"
+        },
+        {
+          "info": "Removes all traced values from the node.",
+          "isHidden": false,
+          "name": "Clear",
+          "type": "action",
+          "typeName": "clear"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Trace",
+        "History",
+        "Change",
+        "Signal",
+        "Hash",
+        "Clear"
+      ],
+      "typePath": "node:general:time:traceOnChange",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/time/traceOnChange"
+    }
+  ]
+}

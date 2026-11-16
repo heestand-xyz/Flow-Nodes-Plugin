@@ -1,0 +1,768 @@
+{
+  "schemaVersion": 1,
+  "familyName": "General",
+  "parentName": "List",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Add a value from the second inlet into the bottom of the list of the first inlet. (The first inlet can be connected to a List State Node.)",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Destination",
+          "typeName": "listIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Source",
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Append",
+          "typeName": "actionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Append",
+      "newInAppVersion": "1.0.0",
+      "outLets": [],
+      "parentName": "List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Add the value to the end of the list.",
+          "isHidden": false,
+          "name": "Append",
+          "type": "action",
+          "typeName": "action"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:general:list:append",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/list/append"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Averages all values in a list into one value.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Average",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Average",
+          "typeName": "averageOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Mean",
+        "Arithmetic",
+        "List",
+        "Mix"
+      ],
+      "typePath": "node:general:list:average",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/list/average"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Count the number of values in a list.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "List",
+          "typeName": "in",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Count",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:int",
+          "way": "out"
+        }
+      ],
+      "parentName": "List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:general:list:count",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/list/count"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Duplicate one value from the inlet to a list in the outlet.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Count",
+          "typeName": "countIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Duplicate",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 2,
+          "inLetTypeName": "countIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Count",
+          "type": "variable",
+          "typeName": "count",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Copy"
+      ],
+      "typePath": "node:general:list:duplicate",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/list/duplicate"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Outputs the zero-based indices of the list elements.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "List",
+          "typeName": "listIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Indices",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Indices",
+          "typeName": "indicesOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        }
+      ],
+      "parentName": "List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Index",
+        "Indices",
+        "List",
+        "Enumerate"
+      ],
+      "typePath": "node:general:list:indices",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/list/indices"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Insert a value from the second inlet into the list of the first inlet. (The first inlet can be connected to a List State Node.)",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Destination",
+          "typeName": "listIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Source",
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Index",
+          "typeName": "indexIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Insert",
+          "typeName": "actionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Insert",
+      "newInAppVersion": "1.0.0",
+      "outLets": [],
+      "parentName": "List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "indexIn",
+          "info": "The position in the list to add the value. The first position is 0.",
+          "isHidden": false,
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Index",
+          "type": "variable",
+          "typeName": "index",
+          "valueType": "raw:core:int"
+        },
+        {
+          "info": "Add the value to the list at the index.",
+          "isHidden": false,
+          "name": "Insert",
+          "type": "action",
+          "typeName": "action"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:general:list:insert",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/list/insert"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Move a value from the source index to the target index in the list of the first inlet. (The inlet can be connected to a List State Node.)",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "List",
+          "typeName": "listIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Source Index",
+          "typeName": "sourceIndexIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Target Index",
+          "typeName": "targetIndexIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Move",
+          "typeName": "actionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Move",
+      "newInAppVersion": "1.0.0",
+      "outLets": [],
+      "parentName": "List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "sourceIndexIn",
+          "info": "The position of the value to move. The first value has index 0.",
+          "isHidden": false,
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Source Index",
+          "type": "variable",
+          "typeName": "sourceIndex",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "targetIndexIn",
+          "info": "The position to move the value to. The first position is 0.",
+          "isHidden": false,
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Target Index",
+          "type": "variable",
+          "typeName": "targetIndex",
+          "valueType": "raw:core:int"
+        },
+        {
+          "info": "Move a value in the list to a new position.",
+          "isHidden": false,
+          "name": "Move",
+          "type": "action",
+          "typeName": "action"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Rearrange"
+      ],
+      "typePath": "node:general:list:move",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/list/move"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Remove one value from the inlet. (The inlet can be connected to a List State Node.)",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "List",
+          "typeName": "listIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Index",
+          "typeName": "indexIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Remove",
+          "typeName": "actionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Remove",
+      "newInAppVersion": "1.0.0",
+      "outLets": [],
+      "parentName": "List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "indexIn",
+          "info": "The position of the element to remove. The first value in the list has index 0.",
+          "isHidden": false,
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Source",
+          "type": "variable",
+          "typeName": "index",
+          "valueType": "raw:core:int"
+        },
+        {
+          "info": "Remove the value at the index in the list.",
+          "isHidden": false,
+          "name": "Remove",
+          "type": "action",
+          "typeName": "action"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:general:list:remove",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/list/remove"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Remove all values from the inlet. (The inlet can be connected to a List State Node.)",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "List",
+          "typeName": "listIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Remove All",
+          "typeName": "actionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Remove All",
+      "newInAppVersion": "1.0.0",
+      "outLets": [],
+      "parentName": "List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Remove all values in the list.",
+          "isHidden": false,
+          "name": "Remove All",
+          "type": "action",
+          "typeName": "action"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:general:list:removeAll",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/list/removeAll"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Select a value from the inlet list at an index.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "List",
+          "typeName": "listIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Index",
+          "typeName": "indexIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Select",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Item",
+          "typeName": "itemOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "indexIn",
+          "info": "The position of the selected item. The first value is at index 0.",
+          "isHidden": false,
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Index",
+          "type": "variable",
+          "typeName": "index",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:general:list:select",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/list/select"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Transition between multiple values, two at a time, with a fraction.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Index",
+          "typeName": "indexIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Transition",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Leading",
+          "typeName": "leadingValueOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Trailing",
+          "typeName": "trailingValueOut",
+          "valueType": "generic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Fraction",
+          "typeName": "fractionOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "indexIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Index",
+          "type": "variable",
+          "typeName": "index",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Cross",
+        "Fade",
+        "Dissolve",
+        "Wipe",
+        "Switch",
+        "Mix",
+        "Blend"
+      ],
+      "typePath": "node:general:list:transition",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/list/transition"
+    }
+  ]
+}

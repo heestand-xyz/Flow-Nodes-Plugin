@@ -33,7 +33,7 @@ This returns a gradient Graphic, based on predefined `u` (x / width) and `v` (y 
 
 ## User Defined Variables
 
-In the [Shader](../nodes/node-general-code-shader.json) node, custom variables and textures can be added via inlets.
+In the [Shader](../nodes/general/code.json) (`node:general:code:shader`) node, custom variables and textures can be added via inlets.
 
 In properties, use **External Inlets** to add the variables, along with names.
 

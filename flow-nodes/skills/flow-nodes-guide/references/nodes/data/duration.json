@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Data",
+  "parentName": "Duration",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Relay a list of Durations. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "in",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Relay",
+      "newInAppVersion": "2.2.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:duration",
+          "way": "out"
+        }
+      ],
+      "parentName": "Duration",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:duration:listRelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/duration/listRelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of Durations.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "2.2.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Durations",
+          "typeName": "out",
+          "valueType": "raw:core:duration",
+          "way": "out"
+        }
+      ],
+      "parentName": "Duration",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValues": [],
+          "isHidden": false,
+          "name": "Durations",
+          "type": "valueArray",
+          "typeName": "durations",
+          "valueType": "raw:core:duration"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array"
+      ],
+      "typePath": "node:data:duration:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/duration/listState"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a Duration. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "2.2.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:duration",
+          "way": "out"
+        }
+      ],
+      "parentName": "Duration",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:data:duration:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/duration/relay"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a Duration.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "2.2.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Duration",
+          "typeName": "out",
+          "valueType": "raw:core:duration",
+          "way": "out"
+        }
+      ],
+      "parentName": "Duration",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 1,
+          "isHidden": false,
+          "name": "Duration",
+          "type": "value",
+          "typeName": "duration",
+          "valueType": "raw:core:duration"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store"
+      ],
+      "typePath": "node:data:duration:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/duration/state"
+    }
+  ]
+}

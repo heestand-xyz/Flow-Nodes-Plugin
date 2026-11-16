@@ -14,9 +14,9 @@ Then choose between adding as a copy or as an instance.
 
 ![Folder & Instance Nodes — step 2](https://flownodes.app/docs/media/info-folder-instance-nodes/media-02.png)
 
-A folder node can contain nodes and can connect to the outside via the leading or trailing side. 
+A folder node can contain nodes and can connect to the outside via the leading or trailing side.
 
-Drag a new wire close to a side to create a new folder in or outlet. The new connection will be available both inside and outside the folder node. 
+Drag a new wire close to a side to create a new folder in or outlet. The new connection will be available both inside and outside the folder node.
 
 ### Instance Node
 

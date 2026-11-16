@@ -1,60 +1,60 @@
 # Interface nodes
 
-Read the linked JSON for exact ports and properties. Prefer visible replacements for new flows.
+Each linked JSON file contains a parent group. Select the entry in `nodes` with the exact listed `typePath` for ports and properties. Prefer visible replacements for new flows.
 
-- **Control / Button** — Free. [JSON](../nodes/node-interface-control-button.json) · `node:interface:control:button`. A button. To change the appearance, wire a view inlet.
-- **Control / Color** — Free. [JSON](../nodes/node-interface-control-color.json) · `node:interface:control:color`. A solid color. This can be used as a background.
-- **Control / Color Picker** — Free. [JSON](../nodes/node-interface-control-colorPicker.json) · `node:interface:control:colorPicker`. A color picker control. Tapping the button opens up a native color picker. The selected color can be save in Color State node.
-- **Control / Date Picker** — Free. [JSON](../nodes/node-interface-control-datePicker.json) · `node:interface:control:datePicker`. A date picker control. Tapping the button opens up a native date picker. The selected date can be save in Date State node.
-- **Control / Picker** — Free. [JSON](../nodes/node-interface-control-picker.json) · `node:interface:control:picker`. Pick a value from a list of string options.
-- **Control / Slider** — Free. [JSON](../nodes/node-interface-control-slider.json) · `node:interface:control:slider`. A slider with a range from minimum to maximum.
-- **Control / Spacer** — Free. [JSON](../nodes/node-interface-control-spacer.json) · `node:interface:control:spacer`. Add spacing between views in a stack.
-- **Control / Stepper** — Free. [JSON](../nodes/node-interface-control-stepper.json) · `node:interface:control:stepper`. Increment an Int by stepping up or down. Connect this node upstream to a State node to modify it’s value.
-- **Control / Toggle** — Free. [JSON](../nodes/node-interface-control-toggle.json) · `node:interface:control:toggle`. An on / off switch.
-- **Gesture / Drag** — Free; deprecated; replacement node:interface:gesture:drag2. [JSON](../nodes/node-interface-gesture-drag.json) · `node:interface:gesture:drag`. Detect a drag with location updates on a view. Downstream views will also respond to the gesture.
-- **Gesture / Drag** — Free. [JSON](../nodes/node-interface-gesture-drag2.json) · `node:interface:gesture:drag2`. Detect a drag with location updates on a view. Downstream views will also respond to the gesture.
-- **Gesture / Key Press** — Free. [JSON](../nodes/node-interface-gesture-keyPress.json) · `node:interface:gesture:keyPress`. Detect a key presses. To detect a key press the view needs to be in focus.
-- **Gesture / Long Press** — Free. [JSON](../nodes/node-interface-gesture-longPress.json) · `node:interface:gesture:longPress`. Detect a long press on a view. Specify a minimum duration in seconds. Downstream views will also respond to the gesture.
-- **Gesture / Magnify** — Free; deprecated; replacement node:interface:gesture:magnify2. [JSON](../nodes/node-interface-gesture-magnify.json) · `node:interface:gesture:magnify`. Detect a magnification with scale on a view. Downstream views will also respond to the gesture.
-- **Gesture / Magnify** — Free. [JSON](../nodes/node-interface-gesture-magnify2.json) · `node:interface:gesture:magnify2`. Detect a magnification with scale on a view. Downstream views will also respond to the gesture.
-- **Gesture / Tap** — Free; deprecated; replacement node:interface:gesture:tap2. [JSON](../nodes/node-interface-gesture-tap.json) · `node:interface:gesture:tap`. Detect a tap / click with a location on a view. Downstream views will also respond to the gesture.
-- **Gesture / Tap** — Free. [JSON](../nodes/node-interface-gesture-tap2.json) · `node:interface:gesture:tap2`. Detect a tap / click with a location on a view. Downstream views will also respond to the gesture.
-- **Grid / Horizontal** — Free. [JSON](../nodes/node-interface-grid-horizontal.json) · `node:interface:grid:horizontal`. Lazily arranges multiple views in a horizontal grid.
-- **Grid / Vertical** — Free. [JSON](../nodes/node-interface-grid-vertical.json) · `node:interface:grid:vertical`. Lazily arranges multiple views in a vertical grid.
-- **Layer Modifier / Background** — Free. [JSON](../nodes/node-interface-layerModifier-background.json) · `node:interface:layerModifier:background`. Background a view (trailing) under another view (leading).
-- **Layer Modifier / Mask** — Free. [JSON](../nodes/node-interface-layerModifier-mask.json) · `node:interface:layerModifier:mask`. Mask a view (leading) with another view (trailing).
-- **Layer Modifier / Overlay** — Free. [JSON](../nodes/node-interface-layerModifier-overlay.json) · `node:interface:layerModifier:overlay`. Overlay a view (trailing) over another view (leading).
-- **Layout / Coordinate Space** — Free. [JSON](../nodes/node-interface-layout-coordinateSpace.json) · `node:interface:layout:coordinateSpace`. Define a named coordinate space that sub views can reference.
-- **Layout / Scroll** — Free. [JSON](../nodes/node-interface-layout-scroll.json) · `node:interface:layout:scroll`. A scroll view.
-- **Modifier / Allows Hit Testing** — Free. [JSON](../nodes/node-interface-modifier-allowsHitTesting.json) · `node:interface:modifier:allowsHitTesting`. Block a view from receiving interaction. This modifier won’t affect the view’s appearance.
-- **Modifier / Aspect Ratio** — Free. [JSON](../nodes/node-interface-modifier-aspectRatio.json) · `node:interface:modifier:aspectRatio`. Constrain a view to an aspect ratio using fit or fill.
-- **Modifier / Blur** — Free. [JSON](../nodes/node-interface-modifier-blur.json) · `node:interface:modifier:blur`. Blur a view.
-- **Modifier / Border** — Free. [JSON](../nodes/node-interface-modifier-border.json) · `node:interface:modifier:border`. Add a simple rectanlge around a view.
-- **Modifier / Clip** — Free. [JSON](../nodes/node-interface-modifier-clip.json) · `node:interface:modifier:clip`. Clip content outside of the view’s bounds.
-- **Modifier / Clip Shape** — Free. [JSON](../nodes/node-interface-modifier-clipShape.json) · `node:interface:modifier:clipShape`. Mask a view with rounded corners.
-- **Modifier / Clip Vector** — Free. [JSON](../nodes/node-interface-modifier-clipVector.json) · `node:interface:modifier:clipVector`. Mask a view with a vector shape.
-- **Modifier / Color** — Free. [JSON](../nodes/node-interface-modifier-color.json) · `node:interface:modifier:color`. Color text and shapes.
-- **Modifier / Disabled** — Free. [JSON](../nodes/node-interface-modifier-disabled.json) · `node:interface:modifier:disabled`. Disable interaction on a view.
-- **Modifier / Frame** — Free. [JSON](../nodes/node-interface-modifier-frame.json) · `node:interface:modifier:frame`. Set a size of a view.
-- **Modifier / Geometry Reader** — Free; deprecated; replacement node:interface:modifier:geometryReader2. [JSON](../nodes/node-interface-modifier-geometryReader.json) · `node:interface:modifier:geometryReader`. Read the position and size of a view.
-- **Modifier / Geometry Reader** — Pro. [JSON](../nodes/node-interface-modifier-geometryReader2.json) · `node:interface:modifier:geometryReader2`. Read the frame (origin and size) of a view relative to coordinate space.
-- **Modifier / Offset** — Free. [JSON](../nodes/node-interface-modifier-offset.json) · `node:interface:modifier:offset`. Offset a view.
-- **Modifier / Opacity** — Free. [JSON](../nodes/node-interface-modifier-opacity.json) · `node:interface:modifier:opacity`. Add transparency to a view.
-- **Modifier / Padding** — Free. [JSON](../nodes/node-interface-modifier-padding.json) · `node:interface:modifier:padding`. Add padding to a view.
-- **Modifier / Position** — Free. [JSON](../nodes/node-interface-modifier-position.json) · `node:interface:modifier:position`. Place a view at a specific position.
-- **Modifier / Relay** — Free. [JSON](../nodes/node-interface-modifier-relay.json) · `node:interface:modifier:relay`. Relay a View. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Modifier / Shadow** — Free. [JSON](../nodes/node-interface-modifier-shadow.json) · `node:interface:modifier:shadow`. Apply a drop shadow or glow.
-- **Resource / Convert from Graphic** — Free. [JSON](../nodes/node-interface-resource-convertFromGraphic.json) · `node:interface:resource:convertFromGraphic`. Convert a graphic to a view.
-- **Resource / Convert from Vector** — Free. [JSON](../nodes/node-interface-resource-convertFromVector.json) · `node:interface:resource:convertFromVector`. Convert a vector shape to a view.
-- **Resource / Gradient** — Free; deprecated; replacement node:interface:resource:gradient2. [JSON](../nodes/node-interface-resource-gradient.json) · `node:interface:resource:gradient`. A gradient of colors. Match the colors inlet with the stops inlet. The stops are between zero and one.
-- **Resource / Gradient** — Free. [JSON](../nodes/node-interface-resource-gradient2.json) · `node:interface:resource:gradient2`. Displays connected color stops, or uses the Gradient property when Color Stops is not connected.
-- **Resource / Mesh Gradient** — Free. [JSON](../nodes/node-interface-resource-meshGradient.json) · `node:interface:resource:meshGradient`. A mesh gradient view based on point and color pairs. The points need to have x and y between 0.0 and 1.0.
-- **Resource / Video Player** — Free. [JSON](../nodes/node-interface-resource-videoPlayer.json) · `node:interface:resource:videoPlayer`. Play a video.
-- **Signal / On Appear** — Free. [JSON](../nodes/node-interface-signal-onAppear.json) · `node:interface:signal:onAppear`. Triggers an action when the view appears. It is also triggered when this node's view appears downstream.
-- **Signal / On Disappear** — Free. [JSON](../nodes/node-interface-signal-onDisappear.json) · `node:interface:signal:onDisappear`. Triggers an action when the view disappears. It is also triggered when this node's view disappears downstream.
-- **Stack / Horizontal** — Free. [JSON](../nodes/node-interface-stack-horizontal.json) · `node:interface:stack:horizontal`. A horizontal stack.
-- **Stack / Layers** — Free. [JSON](../nodes/node-interface-stack-layers.json) · `node:interface:stack:layers`. A depth stack.
-- **Stack / Vertical** — Free. [JSON](../nodes/node-interface-stack-vertical.json) · `node:interface:stack:vertical`. A vertical stack.
-- **Text / Field** — Free. [JSON](../nodes/node-interface-text-field.json) · `node:interface:text:field`. An editable text field.
-- **Text / Font** — Free. [JSON](../nodes/node-interface-text-font.json) · `node:interface:text:font`. Customize the font of text of an view inlet.
-- **Text / Label** — Free. [JSON](../nodes/node-interface-text-label.json) · `node:interface:text:label`. A text label. To change the font size, wire out to a Font Node.
+- **Control / Button** — Free. [JSON](../nodes/interface/control.json) · `node:interface:control:button`. A button. To change the appearance, wire a view inlet.
+- **Control / Color** — Free. [JSON](../nodes/interface/control.json) · `node:interface:control:color`. A solid color. This can be used as a background.
+- **Control / Color Picker** — Free. [JSON](../nodes/interface/control.json) · `node:interface:control:colorPicker`. A color picker control. Tapping the button opens up a native color picker. The selected color can be save in Color State node.
+- **Control / Date Picker** — Free. [JSON](../nodes/interface/control.json) · `node:interface:control:datePicker`. A date picker control. Tapping the button opens up a native date picker. The selected date can be save in Date State node.
+- **Control / Picker** — Free. [JSON](../nodes/interface/control.json) · `node:interface:control:picker`. Pick a value from a list of string options.
+- **Control / Slider** — Free. [JSON](../nodes/interface/control.json) · `node:interface:control:slider`. A slider with a range from minimum to maximum.
+- **Control / Spacer** — Free. [JSON](../nodes/interface/control.json) · `node:interface:control:spacer`. Add spacing between views in a stack.
+- **Control / Stepper** — Free. [JSON](../nodes/interface/control.json) · `node:interface:control:stepper`. Increment an Int by stepping up or down. Connect this node upstream to a State node to modify it’s value.
+- **Control / Toggle** — Free. [JSON](../nodes/interface/control.json) · `node:interface:control:toggle`. An on / off switch.
+- **Gesture / Drag** — Free; deprecated; replacement node:interface:gesture:drag2. [JSON](../nodes/interface/gesture.json) · `node:interface:gesture:drag`. Detect a drag with location updates on a view. Downstream views will also respond to the gesture.
+- **Gesture / Drag** — Free. [JSON](../nodes/interface/gesture.json) · `node:interface:gesture:drag2`. Detect a drag with location updates on a view. Downstream views will also respond to the gesture.
+- **Gesture / Key Press** — Free. [JSON](../nodes/interface/gesture.json) · `node:interface:gesture:keyPress`. Detect a key presses. To detect a key press the view needs to be in focus.
+- **Gesture / Long Press** — Free. [JSON](../nodes/interface/gesture.json) · `node:interface:gesture:longPress`. Detect a long press on a view. Specify a minimum duration in seconds. Downstream views will also respond to the gesture.
+- **Gesture / Magnify** — Free; deprecated; replacement node:interface:gesture:magnify2. [JSON](../nodes/interface/gesture.json) · `node:interface:gesture:magnify`. Detect a magnification with scale on a view. Downstream views will also respond to the gesture.
+- **Gesture / Magnify** — Free. [JSON](../nodes/interface/gesture.json) · `node:interface:gesture:magnify2`. Detect a magnification with scale on a view. Downstream views will also respond to the gesture.
+- **Gesture / Tap** — Free; deprecated; replacement node:interface:gesture:tap2. [JSON](../nodes/interface/gesture.json) · `node:interface:gesture:tap`. Detect a tap / click with a location on a view. Downstream views will also respond to the gesture.
+- **Gesture / Tap** — Free. [JSON](../nodes/interface/gesture.json) · `node:interface:gesture:tap2`. Detect a tap / click with a location on a view. Downstream views will also respond to the gesture.
+- **Grid / Horizontal** — Free. [JSON](../nodes/interface/grid.json) · `node:interface:grid:horizontal`. Lazily arranges multiple views in a horizontal grid.
+- **Grid / Vertical** — Free. [JSON](../nodes/interface/grid.json) · `node:interface:grid:vertical`. Lazily arranges multiple views in a vertical grid.
+- **Layer Modifier / Background** — Free. [JSON](../nodes/interface/layerModifier.json) · `node:interface:layerModifier:background`. Background a view (trailing) under another view (leading).
+- **Layer Modifier / Mask** — Free. [JSON](../nodes/interface/layerModifier.json) · `node:interface:layerModifier:mask`. Mask a view (leading) with another view (trailing).
+- **Layer Modifier / Overlay** — Free. [JSON](../nodes/interface/layerModifier.json) · `node:interface:layerModifier:overlay`. Overlay a view (trailing) over another view (leading).
+- **Layout / Coordinate Space** — Free. [JSON](../nodes/interface/layout.json) · `node:interface:layout:coordinateSpace`. Define a named coordinate space that sub views can reference.
+- **Layout / Scroll** — Free. [JSON](../nodes/interface/layout.json) · `node:interface:layout:scroll`. A scroll view.
+- **Modifier / Allows Hit Testing** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:allowsHitTesting`. Block a view from receiving interaction. This modifier won’t affect the view’s appearance.
+- **Modifier / Aspect Ratio** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:aspectRatio`. Constrain a view to an aspect ratio using fit or fill.
+- **Modifier / Blur** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:blur`. Blur a view.
+- **Modifier / Border** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:border`. Add a simple rectanlge around a view.
+- **Modifier / Clip** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:clip`. Clip content outside of the view’s bounds.
+- **Modifier / Clip Shape** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:clipShape`. Mask a view with rounded corners.
+- **Modifier / Clip Vector** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:clipVector`. Mask a view with a vector shape.
+- **Modifier / Color** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:color`. Color text and shapes.
+- **Modifier / Disabled** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:disabled`. Disable interaction on a view.
+- **Modifier / Frame** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:frame`. Set a size of a view.
+- **Modifier / Geometry Reader** — Free; deprecated; replacement node:interface:modifier:geometryReader2. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:geometryReader`. Read the position and size of a view.
+- **Modifier / Geometry Reader** — Pro. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:geometryReader2`. Read the frame (origin and size) of a view relative to coordinate space.
+- **Modifier / Offset** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:offset`. Offset a view.
+- **Modifier / Opacity** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:opacity`. Add transparency to a view.
+- **Modifier / Padding** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:padding`. Add padding to a view.
+- **Modifier / Position** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:position`. Place a view at a specific position.
+- **Modifier / Relay** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:relay`. Relay a View. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Modifier / Shadow** — Free. [JSON](../nodes/interface/modifier.json) · `node:interface:modifier:shadow`. Apply a drop shadow or glow.
+- **Resource / Convert from Graphic** — Free. [JSON](../nodes/interface/resource.json) · `node:interface:resource:convertFromGraphic`. Convert a graphic to a view.
+- **Resource / Convert from Vector** — Free. [JSON](../nodes/interface/resource.json) · `node:interface:resource:convertFromVector`. Convert a vector shape to a view.
+- **Resource / Gradient** — Free; deprecated; replacement node:interface:resource:gradient2. [JSON](../nodes/interface/resource.json) · `node:interface:resource:gradient`. A gradient of colors. Match the colors inlet with the stops inlet. The stops are between zero and one.
+- **Resource / Gradient** — Free. [JSON](../nodes/interface/resource.json) · `node:interface:resource:gradient2`. Displays connected color stops, or uses the Gradient property when Color Stops is not connected.
+- **Resource / Mesh Gradient** — Free. [JSON](../nodes/interface/resource.json) · `node:interface:resource:meshGradient`. A mesh gradient view based on point and color pairs. The points need to have x and y between 0.0 and 1.0.
+- **Resource / Video Player** — Free. [JSON](../nodes/interface/resource.json) · `node:interface:resource:videoPlayer`. Play a video.
+- **Signal / On Appear** — Free. [JSON](../nodes/interface/signal.json) · `node:interface:signal:onAppear`. Triggers an action when the view appears. It is also triggered when this node's view appears downstream.
+- **Signal / On Disappear** — Free. [JSON](../nodes/interface/signal.json) · `node:interface:signal:onDisappear`. Triggers an action when the view disappears. It is also triggered when this node's view disappears downstream.
+- **Stack / Horizontal** — Free. [JSON](../nodes/interface/stack.json) · `node:interface:stack:horizontal`. A horizontal stack.
+- **Stack / Layers** — Free. [JSON](../nodes/interface/stack.json) · `node:interface:stack:layers`. A depth stack.
+- **Stack / Vertical** — Free. [JSON](../nodes/interface/stack.json) · `node:interface:stack:vertical`. A vertical stack.
+- **Text / Field** — Free. [JSON](../nodes/interface/text.json) · `node:interface:text:field`. An editable text field.
+- **Text / Font** — Free. [JSON](../nodes/interface/text.json) · `node:interface:text:font`. Customize the font of text of an view inlet.
+- **Text / Label** — Free. [JSON](../nodes/interface/text.json) · `node:interface:text:label`. A text label. To change the font size, wire out to a Font Node.

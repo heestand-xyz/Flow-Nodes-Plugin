@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "familyName": "3D Geometry",
+  "parentName": "Boolean",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Add two or more geometries without affecting the meshes.",
+      "familyName": "3D Geometry",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometries",
+          "typeName": "geometriesIn",
+          "valueType": "raw:geometry",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Combine",
+      "newInAppVersion": "1.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryOut",
+          "valueType": "raw:geometry",
+          "way": "out"
+        }
+      ],
+      "parentName": "Boolean",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Combine",
+        "Add"
+      ],
+      "typePath": "node:geometry:boolean:combine",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/geometry/boolean/combine"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Derive a convex hull of two or more geometries.",
+      "familyName": "3D Geometry",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometries",
+          "typeName": "geometriesIn",
+          "valueType": "raw:geometry",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Convex Hull",
+      "newInAppVersion": "1.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryOut",
+          "valueType": "raw:geometry",
+          "way": "out"
+        }
+      ],
+      "parentName": "Boolean",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:geometry:boolean:convexHull",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/geometry/boolean/convexHull"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Derive the difference of two or more geometries.",
+      "familyName": "3D Geometry",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometries",
+          "typeName": "geometriesIn",
+          "valueType": "raw:geometry",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Difference",
+      "newInAppVersion": "1.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryOut",
+          "valueType": "raw:geometry",
+          "way": "out"
+        }
+      ],
+      "parentName": "Boolean",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:geometry:boolean:difference",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/geometry/boolean/difference"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Intersect two or more geometries.",
+      "familyName": "3D Geometry",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometries",
+          "typeName": "geometriesIn",
+          "valueType": "raw:geometry",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Intersection",
+      "newInAppVersion": "1.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryOut",
+          "valueType": "raw:geometry",
+          "way": "out"
+        }
+      ],
+      "parentName": "Boolean",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:geometry:boolean:intersection",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/geometry/boolean/intersection"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Derive a stencil of two or more geometries.",
+      "familyName": "3D Geometry",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometries",
+          "typeName": "geometriesIn",
+          "valueType": "raw:geometry",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Stencil",
+      "newInAppVersion": "1.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryOut",
+          "valueType": "raw:geometry",
+          "way": "out"
+        }
+      ],
+      "parentName": "Boolean",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:geometry:boolean:stencil",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/geometry/boolean/stencil"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Derive the symmetric difference of two or more geometries. This is a mesh reprenting only the volume exclusively occupied by one shape or the other, but not both.",
+      "familyName": "3D Geometry",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometries",
+          "typeName": "geometriesIn",
+          "valueType": "raw:geometry",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Symmetric Difference",
+      "newInAppVersion": "1.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryOut",
+          "valueType": "raw:geometry",
+          "way": "out"
+        }
+      ],
+      "parentName": "Boolean",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:geometry:boolean:symmetricDifference",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/geometry/boolean/symmetricDifference"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Add two or more geometries by merging the meshes.",
+      "familyName": "3D Geometry",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometries",
+          "typeName": "geometriesIn",
+          "valueType": "raw:geometry",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Union",
+      "newInAppVersion": "1.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryOut",
+          "valueType": "raw:geometry",
+          "way": "out"
+        }
+      ],
+      "parentName": "Boolean",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Combine",
+        "Add"
+      ],
+      "typePath": "node:geometry:boolean:union",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/geometry/boolean/union"
+    }
+  ]
+}

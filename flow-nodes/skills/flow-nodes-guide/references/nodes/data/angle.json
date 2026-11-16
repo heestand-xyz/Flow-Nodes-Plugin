@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Data",
+  "parentName": "Angle",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Calculate the angle between the vector of two points. The reference point is zero by default.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Target",
+          "typeName": "targetPointIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reference",
+          "typeName": "referencePointIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Direction",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Angle",
+          "typeName": "angleOut",
+          "valueType": "raw:core:angle",
+          "way": "out"
+        }
+      ],
+      "parentName": "Angle",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": [
+            0,
+            0
+          ],
+          "inLetTypeName": "referencePointIn",
+          "info": "The point the angle is created around.",
+          "isHidden": false,
+          "name": "Reference",
+          "type": "variable",
+          "typeName": "reference",
+          "valueType": "raw:core:point"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Atan2"
+      ],
+      "typePath": "node:data:angle:direction",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/angle/direction"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a list of Angles. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "in",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:angle",
+          "way": "out"
+        }
+      ],
+      "parentName": "Angle",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:angle:listRelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/angle/listRelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of Angles.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Angles",
+          "typeName": "out",
+          "valueType": "raw:core:angle",
+          "way": "out"
+        }
+      ],
+      "parentName": "Angle",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValues": [],
+          "isHidden": false,
+          "name": "Angles",
+          "type": "valueArray",
+          "typeName": "angles",
+          "valueType": "raw:core:angle"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array"
+      ],
+      "typePath": "node:data:angle:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/angle/listState"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay an Angle. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:angle",
+          "way": "out"
+        }
+      ],
+      "parentName": "Angle",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:data:angle:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/angle/relay"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a Angle.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Angle",
+          "typeName": "out",
+          "valueType": "raw:core:angle",
+          "way": "out"
+        }
+      ],
+      "parentName": "Angle",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "isHidden": false,
+          "name": "Angle",
+          "type": "value",
+          "typeName": "angle",
+          "valueType": "raw:core:angle"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store"
+      ],
+      "typePath": "node:data:angle:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/angle/state"
+    }
+  ]
+}

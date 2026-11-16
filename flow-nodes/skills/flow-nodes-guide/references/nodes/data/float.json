@@ -1,0 +1,812 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Data",
+  "parentName": "Float",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Makes a negative value positive.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Abs",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Float",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Absolute"
+      ],
+      "typePath": "node:data:float:abs",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/float/abs"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Atan",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Float",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:float:atan",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/float/atan"
+    },
+    {
+      "complexity": "basic",
+      "docs": "",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Cosine",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Float",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Wave"
+      ],
+      "typePath": "node:data:float:cosine",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/float/cosine"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A range of Floats from a lower bound to an upper bound by a fractional step.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The first number.",
+          "level": "external",
+          "name": "Lower Bound",
+          "typeName": "lowerBoundIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The last number if closed. If not closed it will be the number after the last number in the list.",
+          "level": "external",
+          "name": "Upper Bound",
+          "typeName": "upperBoundIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The fractional step between numbers in the list.",
+          "level": "external",
+          "name": "Step",
+          "typeName": "stepIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "If closed the upper bound will include its number (if the step aligns with the upper bound).",
+          "level": "external",
+          "name": "Closed",
+          "typeName": "closedIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Fraction Span",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Span",
+          "typeName": "spanOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Float",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "lowerBoundIn",
+          "info": "The first number.",
+          "isHidden": false,
+          "name": "Lower Bound",
+          "type": "variable",
+          "typeName": "lowerBound",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "upperBoundIn",
+          "info": "The last number if closed. If not closed it will be the number after the last number in the list.",
+          "isHidden": false,
+          "name": "Upper Bound",
+          "type": "variable",
+          "typeName": "upperBound",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0.1,
+          "inLetTypeName": "stepIn",
+          "info": "The fractional step between numbers in the list.",
+          "isHidden": false,
+          "name": "Step",
+          "type": "variable",
+          "typeName": "step",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "closedIn",
+          "info": "If closed the upper bound will include its number (if the step aligns with the upper bound).",
+          "isHidden": false,
+          "name": "Closed",
+          "type": "variable",
+          "typeName": "closed",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Range",
+        "Numbers"
+      ],
+      "typePath": "node:data:float:fractionSpan",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/float/fractionSpan"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Negate a value.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Invert",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Float",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Negate"
+      ],
+      "typePath": "node:data:float:invert",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/float/invert"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a list of Floats. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "in",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Float",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:float:listRelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/float/listRelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of Floats.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Float",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValues": [],
+          "isHidden": false,
+          "name": "Values",
+          "type": "valueArray",
+          "typeName": "values",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array"
+      ],
+      "typePath": "node:data:float:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/float/listState"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "Pi",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Pi",
+          "typeName": "out",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Float",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:float:pi",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/float/pi"
+    },
+    {
+      "complexity": "basic",
+      "docs": "",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Exponent",
+          "typeName": "exponentIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Power",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Float",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 2,
+          "inLetTypeName": "exponentIn",
+          "info": "How many times the value in-let will be multiplied with itself.",
+          "isHidden": false,
+          "name": "Exponent",
+          "type": "variable",
+          "typeName": "exponent",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:float:power",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/float/power"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a Float. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Float",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:data:float:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/float/relay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Modulus operation.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Divider",
+          "typeName": "dividerIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Remainder",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Remainder",
+          "typeName": "out",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Float",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 2,
+          "inLetTypeName": "dividerIn",
+          "isHidden": false,
+          "name": "Divider",
+          "type": "variable",
+          "typeName": "divider",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Modulo"
+      ],
+      "typePath": "node:data:float:remainder",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/float/remainder"
+    },
+    {
+      "complexity": "basic",
+      "docs": "",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Sine",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Float",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Wave"
+      ],
+      "typePath": "node:data:float:sine",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/float/sine"
+    },
+    {
+      "complexity": "basic",
+      "docs": "A range of Floats.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The first number.",
+          "level": "external",
+          "name": "Lower Bound",
+          "typeName": "lowerBoundIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The last number.",
+          "level": "external",
+          "name": "Upper Bound",
+          "typeName": "upperBoundIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The number of Floats in the list.",
+          "level": "external",
+          "name": "Count",
+          "typeName": "countIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Span",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Span",
+          "typeName": "spanOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Float",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "lowerBoundIn",
+          "info": "The first number.",
+          "isHidden": false,
+          "name": "Lower Bound",
+          "type": "variable",
+          "typeName": "lowerBound",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "upperBoundIn",
+          "info": "The last number.",
+          "isHidden": false,
+          "name": "Upper Bound",
+          "type": "variable",
+          "typeName": "upperBound",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "countIn",
+          "info": "The number of Floats in the list.",
+          "isHidden": false,
+          "name": "Count",
+          "type": "variable",
+          "typeName": "count",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Range",
+        "Numbers"
+      ],
+      "typePath": "node:data:float:span",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/float/span"
+    },
+    {
+      "complexity": "basic",
+      "docs": "",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Square Root",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "valueOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Float",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:float:squareRoot",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/float/squareRoot"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a float.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Float",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "isHidden": false,
+          "name": "Value",
+          "type": "value",
+          "typeName": "value",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store"
+      ],
+      "typePath": "node:data:float:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/float/state"
+    }
+  ]
+}

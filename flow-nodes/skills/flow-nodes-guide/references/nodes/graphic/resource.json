@@ -1,0 +1,2288 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Graphic",
+  "parentName": "Resource",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "A live camera capture feed.",
+      "familyName": "Graphic",
+      "inLets": [],
+      "isPro": false,
+      "name": "Camera",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "isHidden": true,
+          "name": "Authorize Camera Access",
+          "type": "action",
+          "typeName": "authorize"
+        },
+        {
+          "isHidden": false,
+          "name": "Device",
+          "type": "stringEnum",
+          "typeName": "device"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "1080p",
+            "typeName": "hd1080p"
+          },
+          "enumCases": [
+            {
+              "name": "VGA",
+              "typeName": "vga"
+            },
+            {
+              "name": "720p",
+              "typeName": "hd720p"
+            },
+            {
+              "name": "1080p",
+              "typeName": "hd1080p"
+            },
+            {
+              "name": "4K",
+              "typeName": "hd4K"
+            }
+          ],
+          "isHidden": false,
+          "name": "Quality",
+          "type": "typedEnum",
+          "typeName": "quality"
+        },
+        {
+          "defaultValue": true,
+          "isHidden": true,
+          "name": "Center Stage",
+          "type": "value",
+          "typeName": "centerStage",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Live",
+        "Capture"
+      ],
+      "typePath": "node:graphic:resource:camera",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/resource/camera"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Convert a 3D graphic to a 2D graphic using trace, add, or average methods.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Graphic",
+          "typeName": "graphic3DIn",
+          "valueType": "raw:graphic3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Alpha cutoff used when tracing the projected graphic.",
+          "level": "external",
+          "name": "Alpha Threshold",
+          "typeName": "alphaThresholdIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Brightness multiplier used when adding slices together.",
+          "level": "external",
+          "name": "Brightness",
+          "typeName": "brightnessIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Convert from 3D Graphic",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Average",
+            "typeName": "average"
+          },
+          "enumCases": [
+            {
+              "name": "Trace",
+              "typeName": "trace"
+            },
+            {
+              "name": "Add",
+              "typeName": "add"
+            },
+            {
+              "name": "Average",
+              "typeName": "average"
+            }
+          ],
+          "info": "Select the projection style used to convert the 3D graphic to a 2D graphic.",
+          "isHidden": false,
+          "name": "Style",
+          "type": "typedEnum",
+          "typeName": "style"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Z",
+            "typeName": "z"
+          },
+          "enumCases": [
+            {
+              "name": "X",
+              "typeName": "x"
+            },
+            {
+              "name": "Y",
+              "typeName": "y"
+            },
+            {
+              "name": "Z",
+              "typeName": "z"
+            }
+          ],
+          "info": "Pick the axis to project along when converting to 2D.",
+          "isHidden": false,
+          "name": "Axis",
+          "type": "typedEnum",
+          "typeName": "axis"
+        },
+        {
+          "defaultValue": 0.5,
+          "inLetTypeName": "alphaThresholdIn",
+          "info": "Alpha cutoff used when tracing the projected graphic.",
+          "isHidden": true,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Alpha Threshold",
+          "type": "variable",
+          "typeName": "alphaThreshold",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "brightnessIn",
+          "info": "Brightness multiplier used when adding slices together.",
+          "isHidden": true,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Brightness",
+          "type": "variable",
+          "typeName": "brightness",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Graphic3D",
+        "Convert",
+        "Projection"
+      ],
+      "typePath": "node:graphic:resource:convertFromGraphic3D",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/resource/convertFromGraphic3D"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Convert a vector shape to a graphic. Fill or stroke with a color.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "vectorIn",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Resolution",
+          "typeName": "resolutionIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Stroked",
+          "typeName": "isStrokedIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Line Width",
+          "typeName": "lineWidthIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Scale",
+          "typeName": "scaleIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Offset",
+          "typeName": "offsetIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Foreground Color",
+          "typeName": "foregroundColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Background Color",
+          "typeName": "backgroundColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Premultiply",
+          "typeName": "premultiplyIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Convert from Vector",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "resolutionIn",
+          "isHidden": false,
+          "name": "Resolution",
+          "type": "variable",
+          "typeName": "resolution",
+          "valueType": "raw:core:size"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isStrokedIn",
+          "isHidden": false,
+          "name": "Stroked",
+          "type": "variable",
+          "typeName": "stroked",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Center",
+            "typeName": "center"
+          },
+          "enumCases": [
+            {
+              "name": "Inside",
+              "typeName": "inside"
+            },
+            {
+              "name": "Center",
+              "typeName": "center"
+            },
+            {
+              "name": "Outside",
+              "typeName": "outside"
+            }
+          ],
+          "isHidden": true,
+          "name": "Stroke Alignment",
+          "type": "typedEnum",
+          "typeName": "strokeAlignment"
+        },
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "lineWidthIn",
+          "isHidden": true,
+          "maximumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 0.1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "Line Width",
+          "type": "variable",
+          "typeName": "lineWidth",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "scaleIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Scale",
+          "type": "variable",
+          "typeName": "scale",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": [
+            0,
+            0
+          ],
+          "inLetTypeName": "offsetIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": [
+              500,
+              500
+            ],
+            "coreType": "point",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": [
+              -500,
+              -500
+            ],
+            "coreType": "point",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Offset",
+          "type": "variable",
+          "typeName": "offset",
+          "valueType": "raw:core:point"
+        },
+        {
+          "defaultValue": {
+            "blue": 1,
+            "green": 1,
+            "opacity": 1,
+            "red": 1
+          },
+          "inLetTypeName": "foregroundColorIn",
+          "isHidden": false,
+          "name": "Foreground Color",
+          "type": "variable",
+          "typeName": "foregroundColor",
+          "valueType": "raw:core:color"
+        },
+        {
+          "defaultValue": {
+            "blue": 0,
+            "green": 0,
+            "opacity": 1,
+            "red": 0
+          },
+          "inLetTypeName": "backgroundColorIn",
+          "isHidden": false,
+          "name": "Background Color",
+          "type": "variable",
+          "typeName": "backgroundColor",
+          "valueType": "raw:core:color"
+        },
+        {
+          "defaultValue": true,
+          "inLetTypeName": "premultiplyIn",
+          "isHidden": false,
+          "name": "Premultiply",
+          "type": "variable",
+          "typeName": "premultiply",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "8 Bit",
+            "typeName": "bit8"
+          },
+          "enumCases": [
+            {
+              "name": "8 Bit",
+              "typeName": "bit8"
+            },
+            {
+              "name": "16 Bit",
+              "typeName": "bit16"
+            },
+            {
+              "name": "32 Bit",
+              "typeName": "bit32"
+            }
+          ],
+          "isHidden": false,
+          "name": "Bits",
+          "type": "typedEnum",
+          "typeName": "bits"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Shape",
+        "Rasterize"
+      ],
+      "typePath": "node:graphic:resource:convertFromVector",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/resource/convertFromVector"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Convert a view to a graphic.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Resolution",
+          "typeName": "resolutionIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Foreground Color",
+          "typeName": "foregroundColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Background Color",
+          "typeName": "backgroundColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Convert from View",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "resolutionIn",
+          "isHidden": false,
+          "name": "Resolution",
+          "type": "variable",
+          "typeName": "resolution",
+          "valueType": "raw:core:size"
+        },
+        {
+          "defaultValue": {
+            "blue": 1,
+            "green": 1,
+            "opacity": 1,
+            "red": 1
+          },
+          "inLetTypeName": "foregroundColorIn",
+          "isHidden": false,
+          "name": "Foreground Color",
+          "type": "variable",
+          "typeName": "foregroundColor",
+          "valueType": "raw:core:color"
+        },
+        {
+          "defaultValue": {
+            "blue": 0,
+            "green": 0,
+            "opacity": 0,
+            "red": 0
+          },
+          "inLetTypeName": "backgroundColorIn",
+          "isHidden": false,
+          "name": "Background Color",
+          "type": "variable",
+          "typeName": "backgroundColor",
+          "valueType": "raw:core:color"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "8 Bit",
+            "typeName": "bit8"
+          },
+          "enumCases": [
+            {
+              "name": "8 Bit",
+              "typeName": "bit8"
+            },
+            {
+              "name": "16 Bit",
+              "typeName": "bit16"
+            },
+            {
+              "name": "32 Bit",
+              "typeName": "bit32"
+            }
+          ],
+          "isHidden": false,
+          "name": "Bits",
+          "type": "typedEnum",
+          "typeName": "bits"
+        }
+      ],
+      "replacedByTypePath": "node:graphic:resource:convertFromView2",
+      "replacesTypePaths": [],
+      "tags": [
+        "Interface"
+      ],
+      "typePath": "node:graphic:resource:convertFromView",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/graphic/resource/convertFromView"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Convert a view to a graphic with configurable resolution, foreground color, background color, and bit depth.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Resolution",
+          "typeName": "resolutionIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Foreground Color",
+          "typeName": "foregroundColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Background Color",
+          "typeName": "backgroundColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Convert from View",
+      "newInAppVersion": "4.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "resolutionIn",
+          "isHidden": false,
+          "name": "Resolution",
+          "type": "variable",
+          "typeName": "resolution",
+          "valueType": "raw:core:size"
+        },
+        {
+          "defaultValue": {
+            "blue": 1,
+            "green": 1,
+            "opacity": 1,
+            "red": 1
+          },
+          "inLetTypeName": "foregroundColorIn",
+          "isHidden": false,
+          "name": "Foreground Color",
+          "type": "variable",
+          "typeName": "foregroundColor",
+          "valueType": "raw:core:color"
+        },
+        {
+          "defaultValue": {
+            "blue": 0,
+            "green": 0,
+            "opacity": 0,
+            "red": 0
+          },
+          "inLetTypeName": "backgroundColorIn",
+          "isHidden": false,
+          "name": "Background Color",
+          "type": "variable",
+          "typeName": "backgroundColor",
+          "valueType": "raw:core:color"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "8 Bit",
+            "typeName": "bit8"
+          },
+          "enumCases": [
+            {
+              "name": "8 Bit",
+              "typeName": "bit8"
+            },
+            {
+              "name": "16 Bit",
+              "typeName": "bit16"
+            },
+            {
+              "name": "32 Bit",
+              "typeName": "bit32"
+            }
+          ],
+          "isHidden": false,
+          "name": "Bits",
+          "type": "typedEnum",
+          "typeName": "bits"
+        }
+      ],
+      "replacesTypePaths": [
+        "node:graphic:resource:convertFromView"
+      ],
+      "tags": [
+        "View",
+        "Graphic",
+        "Convert"
+      ],
+      "typePath": "node:graphic:resource:convertFromView2",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/resource/convertFromView2"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of graphics.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Clear",
+          "typeName": "clearIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Graphics",
+          "typeName": "graphicsBindingOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Remove all graphics.",
+          "isHidden": false,
+          "name": "Clear",
+          "type": "action",
+          "typeName": "clear"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array",
+        "Images"
+      ],
+      "typePath": "node:graphic:resource:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/resource/listState"
+    },
+    {
+      "complexity": "basic",
+      "docs": "World map. Lower the span to narrow down on a location.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Resolution",
+          "typeName": "resolutionIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Latitude",
+          "typeName": "latitudeIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Longitude",
+          "typeName": "longitudeIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Span",
+          "typeName": "spanIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Show Points of Interest",
+          "typeName": "showPointsOfInterestIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Dark Mode",
+          "typeName": "darkModeIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Maps",
+      "newInAppVersion": "1.2.3",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Standard",
+            "typeName": "standard"
+          },
+          "enumCases": [
+            {
+              "name": "Standard",
+              "typeName": "standard"
+            },
+            {
+              "name": "Muted Standard",
+              "typeName": "mutedStandard"
+            },
+            {
+              "name": "Satellite",
+              "typeName": "satellite"
+            },
+            {
+              "name": "Satellite Flyover",
+              "typeName": "satelliteFlyover"
+            },
+            {
+              "name": "Hybrid",
+              "typeName": "hybrid"
+            },
+            {
+              "name": "Hybrid Flyover",
+              "typeName": "hybridFlyover"
+            }
+          ],
+          "isHidden": false,
+          "name": "Map Type",
+          "type": "typedEnum",
+          "typeName": "mapType"
+        },
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "resolutionIn",
+          "isHidden": false,
+          "name": "Resolution",
+          "type": "variable",
+          "typeName": "resolution",
+          "valueType": "raw:core:size"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "latitudeIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1.5707963267948966,
+            "coreType": "angle",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": -1.5707963267948966,
+            "coreType": "angle",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Latitude",
+          "type": "variable",
+          "typeName": "latitude",
+          "valueType": "raw:core:angle"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "longitudeIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 3.141592653589793,
+            "coreType": "angle",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": -3.141592653589793,
+            "coreType": "angle",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Longitude",
+          "type": "variable",
+          "typeName": "longitude",
+          "valueType": "raw:core:angle"
+        },
+        {
+          "defaultValue": 3.141592653589793,
+          "inLetTypeName": "spanIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 3.141592653589793,
+            "coreType": "angle",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "angle",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Span",
+          "type": "variable",
+          "typeName": "span",
+          "valueType": "raw:core:angle"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "showPointsOfInterestIn",
+          "isHidden": false,
+          "name": "Show Points of Interest",
+          "type": "variable",
+          "typeName": "showPointsOfInterest",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "darkModeIn",
+          "isHidden": false,
+          "name": "Dark Mode",
+          "type": "variable",
+          "typeName": "darkMode",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "World"
+      ],
+      "typePath": "node:graphic:resource:maps",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/resource/maps"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Information about details of a graphic.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "in",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Metadata",
+      "newInAppVersion": "1.5.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Resolution",
+          "typeName": "resolutionOut",
+          "valueType": "raw:core:size",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Bit Depth",
+          "typeName": "bitsOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Information",
+        "Details"
+      ],
+      "typePath": "node:graphic:resource:metadata",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/resource/metadata"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Paint with various brushes like circle, gradient, line, and sample a another graphic. Paint is passed upstream to a State Graphic node via the source inlet. Switch between release and live paint mode. Sample over time. Interpolate between points for a more accurate path. Control active and location of the paint via inlets. Overlay a reference graphic with opacity.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Source",
+          "typeName": "sourceIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Active",
+          "typeName": "activeIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Location",
+          "typeName": "locationIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Brush Sample",
+          "typeName": "brushSampleIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reference",
+          "typeName": "referenceIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Resolution",
+          "typeName": "resolutionIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Brush Color",
+          "typeName": "brushColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Brush Radius",
+          "typeName": "brushRadiusIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Brush Gamma",
+          "typeName": "brushGammaIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Brush Line Width",
+          "typeName": "brushLineWidthIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Brush Angle",
+          "typeName": "brushAngleIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "When active, the brush will interpolate between points. (Not supported when in sampling over time in live mode)",
+          "level": "external",
+          "name": "Interpolate",
+          "typeName": "interpolateIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The amount of brush sub points to draw one point when interpolating from the last point.",
+          "level": "external",
+          "name": "Interpolation Count",
+          "typeName": "interpolationCountIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Background Color",
+          "typeName": "backgroundColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reference Opacity",
+          "typeName": "referenceOpacityIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The brush will be sampled over time, as often as possible.",
+          "level": "external",
+          "name": "Sample over Time",
+          "typeName": "sampleOverTimeIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Clear",
+          "typeName": "clearIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Paint",
+      "newInAppVersion": "3.2.0",
+      "outLets": [],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "resolutionIn",
+          "isHidden": false,
+          "name": "Resolution",
+          "type": "variable",
+          "typeName": "resolution",
+          "valueType": "raw:core:size"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "8 Bit",
+            "typeName": "bit8"
+          },
+          "enumCases": [
+            {
+              "name": "8 Bit",
+              "typeName": "bit8"
+            },
+            {
+              "name": "16 Bit",
+              "typeName": "bit16"
+            },
+            {
+              "name": "32 Bit",
+              "typeName": "bit32"
+            }
+          ],
+          "isHidden": false,
+          "name": "Bits",
+          "type": "typedEnum",
+          "typeName": "bits"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Release",
+            "typeName": "release"
+          },
+          "enumCases": [
+            {
+              "name": "Release",
+              "typeName": "release"
+            },
+            {
+              "name": "Live",
+              "typeName": "live"
+            }
+          ],
+          "info": "In live mode, the source will be updated continuously, and in release mode the source will only apply the path once the brush is released.",
+          "isHidden": false,
+          "name": "Paint Mode",
+          "type": "typedEnum",
+          "typeName": "paintMode"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Add",
+            "typeName": "add"
+          },
+          "enumCases": [
+            {
+              "name": "Over",
+              "typeName": "over"
+            },
+            {
+              "name": "Over with Alpha",
+              "typeName": "overWithAlpha"
+            },
+            {
+              "name": "Under",
+              "typeName": "under"
+            },
+            {
+              "name": "Screen",
+              "typeName": "screen"
+            },
+            {
+              "name": "Lighten",
+              "typeName": "lighten"
+            },
+            {
+              "name": "Darken",
+              "typeName": "darken"
+            },
+            {
+              "name": "Darken without Alpha",
+              "typeName": "darkenWithoutAlpha"
+            },
+            {
+              "name": "Add",
+              "typeName": "add"
+            },
+            {
+              "name": "Add with Alpha",
+              "typeName": "addWithAlpha"
+            },
+            {
+              "name": "Multiply",
+              "typeName": "multiply"
+            },
+            {
+              "name": "Multiply without Alpha",
+              "typeName": "multiplyWithoutAlpha"
+            },
+            {
+              "name": "Difference",
+              "typeName": "difference"
+            },
+            {
+              "name": "Difference with Alpha",
+              "typeName": "differenceWithAlpha"
+            },
+            {
+              "name": "Subtract",
+              "typeName": "subtract"
+            },
+            {
+              "name": "Subtract with Alpha",
+              "typeName": "subtractWithAlpha"
+            },
+            {
+              "name": "Maximum",
+              "typeName": "maximum"
+            },
+            {
+              "name": "Minimum",
+              "typeName": "minimum"
+            },
+            {
+              "name": "Gamma",
+              "typeName": "gamma"
+            },
+            {
+              "name": "Power",
+              "typeName": "power"
+            },
+            {
+              "name": "Divide",
+              "typeName": "divide"
+            },
+            {
+              "name": "Average",
+              "typeName": "average"
+            },
+            {
+              "name": "Cosine",
+              "typeName": "cosine"
+            },
+            {
+              "name": "Inside",
+              "typeName": "inside"
+            },
+            {
+              "name": "Outside",
+              "typeName": "outside"
+            },
+            {
+              "name": "Exclusive Or",
+              "typeName": "exclusiveOr"
+            }
+          ],
+          "isHidden": false,
+          "name": "Blend Mode",
+          "type": "typedEnum",
+          "typeName": "blendMode"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Circle",
+            "typeName": "circle"
+          },
+          "enumCases": [
+            {
+              "name": "Circle",
+              "typeName": "circle"
+            },
+            {
+              "name": "Gradient",
+              "typeName": "gradient"
+            },
+            {
+              "name": "Line",
+              "typeName": "line"
+            },
+            {
+              "name": "Sample",
+              "typeName": "sample"
+            }
+          ],
+          "isHidden": false,
+          "name": "Brush Mode",
+          "type": "typedEnum",
+          "typeName": "brushMode"
+        },
+        {
+          "defaultValue": {
+            "blue": 1,
+            "green": 1,
+            "opacity": 1,
+            "red": 1
+          },
+          "inLetTypeName": "brushColorIn",
+          "isHidden": false,
+          "name": "Brush Color",
+          "type": "variable",
+          "typeName": "brushColor",
+          "valueType": "raw:core:color"
+        },
+        {
+          "defaultValue": 50,
+          "inLetTypeName": "brushRadiusIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 100,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Brush Radius",
+          "type": "variable",
+          "typeName": "brushRadius",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "brushGammaIn",
+          "isHidden": true,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Brush Gamma",
+          "type": "variable",
+          "typeName": "brushGamma",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 5,
+          "inLetTypeName": "brushLineWidthIn",
+          "isHidden": true,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Brush Line Width",
+          "type": "variable",
+          "typeName": "brushLineWidth",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "brushAngleIn",
+          "isHidden": true,
+          "name": "Brush Angle",
+          "type": "variable",
+          "typeName": "brushAngle",
+          "valueType": "raw:core:angle"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "interpolateIn",
+          "info": "When active, the brush will interpolate between points. (Not supported when in sampling over time in live mode)",
+          "isHidden": false,
+          "name": "Interpolate",
+          "type": "variable",
+          "typeName": "interpolate",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": 2,
+          "inLetTypeName": "interpolationCountIn",
+          "info": "The amount of brush sub points to draw one point when interpolating from the last point.",
+          "isHidden": true,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 2,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Interpolation Count",
+          "type": "variable",
+          "typeName": "interpolationCount",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": {
+            "blue": 0,
+            "green": 0,
+            "opacity": 0,
+            "red": 0
+          },
+          "inLetTypeName": "backgroundColorIn",
+          "isHidden": false,
+          "name": "Background Color",
+          "type": "variable",
+          "typeName": "backgroundColor",
+          "valueType": "raw:core:color"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Fit",
+            "typeName": "fit"
+          },
+          "enumCases": [
+            {
+              "name": "Fixed",
+              "typeName": "fixed"
+            },
+            {
+              "name": "Fit",
+              "typeName": "fit"
+            },
+            {
+              "name": "Fill",
+              "typeName": "fill"
+            },
+            {
+              "name": "Stretch",
+              "typeName": "stretch"
+            }
+          ],
+          "isHidden": false,
+          "name": "Reference Placement",
+          "type": "typedEnum",
+          "typeName": "referencePlacement"
+        },
+        {
+          "defaultValue": 0.5,
+          "inLetTypeName": "referenceOpacityIn",
+          "isHidden": false,
+          "name": "Reference Opacity",
+          "type": "variable",
+          "typeName": "referenceOpacity",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "sampleOverTimeIn",
+          "info": "The brush will be sampled over time, as often as possible.",
+          "isHidden": false,
+          "name": "Sample over Time",
+          "type": "variable",
+          "typeName": "sampleOverTime",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "info": "Remove all vector paths from the vector inlet.",
+          "isHidden": false,
+          "name": "Clear",
+          "type": "action",
+          "typeName": "clear"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Painter",
+        "Path",
+        "Draw",
+        "Drawing",
+        "Brush"
+      ],
+      "typePath": "node:graphic:resource:paint",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/resource/paint"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Generate a QR code Graphic from a text String.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Text",
+          "typeName": "textIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Resolution",
+          "typeName": "resolutionIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "QR Code",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": "",
+          "inLetTypeName": "textIn",
+          "isHidden": false,
+          "name": "Text",
+          "type": "variable",
+          "typeName": "text",
+          "valueType": "raw:core:string"
+        },
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "resolutionIn",
+          "isHidden": false,
+          "name": "Resolution",
+          "type": "variable",
+          "typeName": "resolution",
+          "valueType": "raw:core:size"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:graphic:resource:qrCode",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/resource/qrCode"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Scan a barcode or QR code from a Graphic, update a bound String, and report whether a code was detected.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Text",
+          "typeName": "stringIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Scan Code",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Detected",
+          "typeName": "detectedOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "QR",
+            "typeName": "qr"
+          },
+          "enumCases": [
+            {
+              "name": "QR",
+              "typeName": "qr"
+            },
+            {
+              "name": "Aztec",
+              "typeName": "aztec"
+            },
+            {
+              "name": "Code 128",
+              "typeName": "code128"
+            },
+            {
+              "name": "Code 39",
+              "typeName": "code39"
+            },
+            {
+              "name": "Code 39 Checksum",
+              "typeName": "code39Checksum"
+            },
+            {
+              "name": "Code 39 Full ASCII",
+              "typeName": "code39FullASCII"
+            },
+            {
+              "name": "Code 39 Full ASCII Checksum",
+              "typeName": "code39FullASCIIChecksum"
+            },
+            {
+              "name": "Code 93",
+              "typeName": "code93"
+            },
+            {
+              "name": "Data Matrix",
+              "typeName": "dataMatrix"
+            },
+            {
+              "name": "EAN-13",
+              "typeName": "ean13"
+            },
+            {
+              "name": "EAN-8",
+              "typeName": "ean8"
+            },
+            {
+              "name": "Interleaved 2 of 5",
+              "typeName": "i2of5"
+            },
+            {
+              "name": "Interleaved 2 of 5 Checksum",
+              "typeName": "i2of5Checksum"
+            },
+            {
+              "name": "ITF-14",
+              "typeName": "itf14"
+            },
+            {
+              "name": "PDF417",
+              "typeName": "pdf417"
+            },
+            {
+              "name": "UPC-E",
+              "typeName": "upce"
+            }
+          ],
+          "info": "The barcode symbology to detect in the graphic.",
+          "isHidden": false,
+          "name": "Symbology",
+          "type": "typedEnum",
+          "typeName": "symbology"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Barcode",
+        "QR Code"
+      ],
+      "typePath": "node:graphic:resource:scanCode",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/resource/scanCode"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Live screen capture from a display or window.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Display Index",
+          "typeName": "displayIndexIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Screen Capture",
+      "newInAppVersion": "2.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Please restart the app after authorization.",
+          "isHidden": true,
+          "name": "Authorize Screen Capture",
+          "type": "action",
+          "typeName": "authorize"
+        },
+        {
+          "isHidden": false,
+          "name": "Open Picker",
+          "type": "action",
+          "typeName": "openPicker"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Display",
+            "typeName": "display"
+          },
+          "enumCases": [
+            {
+              "name": "Display",
+              "typeName": "display"
+            },
+            {
+              "name": "Window",
+              "typeName": "window"
+            }
+          ],
+          "isHidden": false,
+          "name": "Capture",
+          "type": "typedEnum",
+          "typeName": "screenCaptureType"
+        },
+        {
+          "defaultValue": 0,
+          "isHidden": true,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Display Index",
+          "type": "variable",
+          "typeName": "displayIndex",
+          "valueType": "raw:core:int"
+        },
+        {
+          "isHidden": true,
+          "name": "Window",
+          "type": "stringEnum",
+          "typeName": "windowName"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Live"
+      ],
+      "typePath": "node:graphic:resource:screenCapture",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/resource/screenCapture"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Sample a 2D slice from a 3D graphic along a selected axis.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Graphic",
+          "typeName": "graphic3DIn",
+          "valueType": "raw:graphic3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Slice location along the selected axis.",
+          "level": "external",
+          "name": "Location",
+          "typeName": "locationIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Slice from 3D Graphic",
+      "newInAppVersion": "4.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Z",
+            "typeName": "z"
+          },
+          "enumCases": [
+            {
+              "name": "X",
+              "typeName": "x"
+            },
+            {
+              "name": "Y",
+              "typeName": "y"
+            },
+            {
+              "name": "Z",
+              "typeName": "z"
+            }
+          ],
+          "info": "Pick the axis to sample along.",
+          "isHidden": false,
+          "name": "Axis",
+          "type": "typedEnum",
+          "typeName": "axis"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Unit",
+            "typeName": "unit"
+          },
+          "enumCases": [
+            {
+              "name": "Unit",
+              "typeName": "unit"
+            },
+            {
+              "name": "Pixel",
+              "typeName": "pixel"
+            }
+          ],
+          "info": "Choose whether location is interpreted as a normalized unit fraction or pixel coordinate.",
+          "isHidden": false,
+          "name": "Coordinate Space",
+          "type": "typedEnum",
+          "typeName": "coordinateSpace"
+        },
+        {
+          "defaultValue": 0.5,
+          "inLetTypeName": "locationIn",
+          "info": "Slice location along the selected axis.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Location",
+          "type": "variable",
+          "typeName": "location",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Slice",
+        "Sample"
+      ],
+      "typePath": "node:graphic:resource:sliceFromGraphic3D",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/resource/sliceFromGraphic3D"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a graphic.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Clear",
+          "typeName": "clearIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicBindingOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "isHidden": false,
+          "name": "Clear",
+          "type": "action",
+          "typeName": "clear"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Image"
+      ],
+      "typePath": "node:graphic:resource:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/resource/state"
+    }
+  ]
+}

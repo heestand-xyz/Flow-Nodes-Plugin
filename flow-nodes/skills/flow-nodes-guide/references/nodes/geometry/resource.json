@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "familyName": "3D Geometry",
+  "parentName": "Resource",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Clone a geometry with transforms.",
+      "familyName": "3D Geometry",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryIn",
+          "valueType": "raw:geometry",
+          "way": "in"
+        },
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Transforms",
+          "typeName": "transformsIn",
+          "valueType": "raw:core:transform3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "links": [
+        {
+          "title": "Guide",
+          "url": "https://flownodes.notion.site/3D-Clones-Guide-27f9a07f8bd9804fa559dcd14d72ded8"
+        }
+      ],
+      "name": "Clones",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryOut",
+          "valueType": "raw:geometry",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacedByTypePath": "node:spatial:entity:cloneTransform",
+      "replacesTypePaths": [],
+      "tags": [
+        "Copy",
+        "Instance"
+      ],
+      "typePath": "node:geometry:resource:clones",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/geometry/resource/clones"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Construct a Geometry mesh from polygons.",
+      "familyName": "3D Geometry",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "polygonsIn",
+          "valueType": "raw:polygon",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Construct",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryOut",
+          "valueType": "raw:geometry",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Polygons"
+      ],
+      "typePath": "node:geometry:resource:construct",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/geometry/resource/construct"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a geometry.",
+      "familyName": "3D Geometry",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Clear",
+          "typeName": "clearIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "1.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryBindingOut",
+          "valueType": "raw:geometry",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "isHidden": false,
+          "name": "Clear",
+          "type": "action",
+          "typeName": "clear"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Mesh",
+        "OBJ",
+        "STL"
+      ],
+      "typePath": "node:geometry:resource:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/geometry/resource/state"
+    }
+  ]
+}

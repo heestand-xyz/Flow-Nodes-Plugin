@@ -1,0 +1,498 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Data",
+  "parentName": "Quaternion",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Get the x, y, z and w components of a Quaternion.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:quaternion",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Components",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "X",
+          "typeName": "xOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Y",
+          "typeName": "yOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Z",
+          "typeName": "zOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "W",
+          "typeName": "wOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Quaternion",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:quaternion:components",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/quaternion/components"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Construct a Quaternion from x, y, z, and w values.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "X",
+          "typeName": "xIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Y",
+          "typeName": "yIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Z",
+          "typeName": "zIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "W",
+          "typeName": "wIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Construct",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:quaternion",
+          "way": "out"
+        }
+      ],
+      "parentName": "Quaternion",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:quaternion:construct",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/quaternion/construct"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Invert the angles of a Quaternion.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:quaternion",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Invert",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:quaternion",
+          "way": "out"
+        }
+      ],
+      "parentName": "Quaternion",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Inverse"
+      ],
+      "typePath": "node:data:quaternion:invert",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/quaternion/invert"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a list of Quaternions. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "in",
+          "valueType": "raw:core:quaternion",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Relay",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:quaternion",
+          "way": "out"
+        }
+      ],
+      "parentName": "Quaternion",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:quaternion:listRelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/quaternion/listRelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of Quaternions. Used for 3D rotations.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Quaternions",
+          "typeName": "out",
+          "valueType": "raw:core:quaternion",
+          "way": "out"
+        }
+      ],
+      "parentName": "Quaternion",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValues": [],
+          "isHidden": false,
+          "name": "Quaternions",
+          "type": "valueArray",
+          "typeName": "quaternions",
+          "valueType": "raw:core:quaternion"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array"
+      ],
+      "typePath": "node:data:quaternion:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/quaternion/listState"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "A rotation looking at a point.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The location of the source of the perspective.",
+          "level": "external",
+          "name": "Eye",
+          "typeName": "eyeIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The location of the target that the source is looking at.",
+          "level": "external",
+          "name": "Target",
+          "typeName": "targetIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "What direction is up. (Default is standard)",
+          "level": "external",
+          "name": "Up",
+          "typeName": "upIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "What direction is forward. (Default is standard)",
+          "level": "external",
+          "name": "Forward",
+          "typeName": "forwardIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Look At",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Rotation",
+          "typeName": "rotationOut",
+          "valueType": "raw:core:quaternion",
+          "way": "out"
+        }
+      ],
+      "parentName": "Quaternion",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "inLetTypeName": "eyeIn",
+          "info": "The location of the source of the perspective.",
+          "isHidden": false,
+          "name": "Eye",
+          "type": "variable",
+          "typeName": "eye",
+          "valueType": "raw:core:point3D"
+        },
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "inLetTypeName": "targetIn",
+          "info": "The location of the target that the source is looking at.",
+          "isHidden": false,
+          "name": "Target",
+          "type": "variable",
+          "typeName": "target",
+          "valueType": "raw:core:point3D"
+        },
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          },
+          "inLetTypeName": "upIn",
+          "info": "What direction is up. (Default is standard)",
+          "isHidden": false,
+          "name": "Up",
+          "type": "variable",
+          "typeName": "up",
+          "valueType": "raw:core:point3D"
+        },
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 0,
+            "z": -1
+          },
+          "inLetTypeName": "forwardIn",
+          "info": "What direction is forward. (Default is standard)",
+          "isHidden": false,
+          "name": "Forward",
+          "type": "variable",
+          "typeName": "forward",
+          "valueType": "raw:core:point3D"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:quaternion:lookAt",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/quaternion/lookAt"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a Quaternion. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:quaternion",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:quaternion",
+          "way": "out"
+        }
+      ],
+      "parentName": "Quaternion",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:data:quaternion:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/quaternion/relay"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a Quaternion. Used for 3D rotation.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Quaternion",
+          "typeName": "out",
+          "valueType": "raw:core:quaternion",
+          "way": "out"
+        }
+      ],
+      "parentName": "Quaternion",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "w": 1,
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "isHidden": false,
+          "name": "Quaternion",
+          "type": "value",
+          "typeName": "quaternion",
+          "valueType": "raw:core:quaternion"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store"
+      ],
+      "typePath": "node:data:quaternion:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/quaternion/state"
+    }
+  ]
+}

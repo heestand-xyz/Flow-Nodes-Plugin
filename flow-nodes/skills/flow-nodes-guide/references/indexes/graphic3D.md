@@ -1,58 +1,58 @@
 # 3D Graphic nodes
 
-Read the linked JSON for exact ports and properties. Prefer visible replacements for new flows.
+Each linked JSON file contains a parent group. Select the entry in `nodes` with the exact listed `typePath` for ports and properties. Prefer visible replacements for new flows.
 
-- **Color Effect / Channel Mix** — Free. [JSON](../nodes/node-graphic3D-colorEffect-channelMix.json) · `node:graphic3D:colorEffect:channelMix`. Mix red, green, blue and alpha channels.
-- **Color Effect / Clamp** — Free. [JSON](../nodes/node-graphic3D-colorEffect-clamp.json) · `node:graphic3D:colorEffect:clamp`. Apply various styles to colors outside of the set range.
-- **Color Effect / Color Map** — Free. [JSON](../nodes/node-graphic3D-colorEffect-colorMap.json) · `node:graphic3D:colorEffect:colorMap`. Map colors with a 2 stop gradient, from background to foreground.
-- **Color Effect / Color Shift** — Free. [JSON](../nodes/node-graphic3D-colorEffect-colorShift.json) · `node:graphic3D:colorEffect:colorShift`. Shift colors in a graphic.
-- **Color Effect / Gradient Lookup** — Free; deprecated; replacement node:graphic3D:colorEffect:gradientLookup2. [JSON](../nodes/node-graphic3D-colorEffect-gradientLookup.json) · `node:graphic3D:colorEffect:gradientLookup`. Lookup colors in a gradient based on luminance.
-- **Color Effect / Gradient Lookup** — Free. [JSON](../nodes/node-graphic3D-colorEffect-gradientLookup2.json) · `node:graphic3D:colorEffect:gradientLookup2`. Creates a gradient from Color Stops, falling back to Gradient when the inlet is disconnected.
-- **Color Effect / Levels** — Free. [JSON](../nodes/node-graphic3D-colorEffect-levels.json) · `node:graphic3D:colorEffect:levels`. 
-- **Color Effect / Quantize** — Free. [JSON](../nodes/node-graphic3D-colorEffect-quantize.json) · `node:graphic3D:colorEffect:quantize`. Lowers the color detail.
-- **Color Effect / Range** — Free. [JSON](../nodes/node-graphic3D-colorEffect-range.json) · `node:graphic3D:colorEffect:range`. Range a graphics colors from a reference low and high to a target low and high.
-- **Color Effect / Relay** — Free. [JSON](../nodes/node-graphic3D-colorEffect-relay.json) · `node:graphic3D:colorEffect:relay`. Relay a 3D Graphic. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Color Effect / Slope** — Free. [JSON](../nodes/node-graphic3D-colorEffect-slope.json) · `node:graphic3D:colorEffect:slope`. Calculate the slope between neighboring voxels by generating a normal map. 16 or 32 bit recommended.
-- **Color Effect / Threshold** — Free. [JSON](../nodes/node-graphic3D-colorEffect-threshold.json) · `node:graphic3D:colorEffect:threshold`. Divide the graphic into two regions: one with a value below the threshold (background), and one with a value above (foreground).
-- **Convert / Bits** — Free. [JSON](../nodes/node-graphic3D-convert-bits.json) · `node:graphic3D:convert:bits`. Change the color depth of a graphic.
-- **Convert / Crop** — Free. [JSON](../nodes/node-graphic3D-convert-crop.json) · `node:graphic3D:convert:crop`. 
-- **Modifier Effect / Blend** — Free; deprecated; replacement node:graphic3D:modifierEffect:blend2. [JSON](../nodes/node-graphic3D-modifierEffect-blend.json) · `node:graphic3D:modifierEffect:blend`. Blend two graphics together.
-- **Modifier Effect / Blend** — Free. [JSON](../nodes/node-graphic3D-modifierEffect-blend2.json) · `node:graphic3D:modifierEffect:blend2`. Blend two 3D graphics. Placement controls scaling, and alignment positions the modifier volume on all three axes. The output keeps the first volume's resolution.
-- **Modifier Effect / Cross** — Free. [JSON](../nodes/node-graphic3D-modifierEffect-cross.json) · `node:graphic3D:modifierEffect:cross`. Average two graphics together.
-- **Modifier Effect / Displace** — Free. [JSON](../nodes/node-graphic3D-modifierEffect-displace.json) · `node:graphic3D:modifierEffect:displace`. Displace the first graphic with the seconds graphics red (x), green (y) and blue (z) colors.
-- **Modifier Effect / Lookup** — Free. [JSON](../nodes/node-graphic3D-modifierEffect-lookup.json) · `node:graphic3D:modifierEffect:lookup`. Lookup colors in the second graphic based on the first graphics luminance.
-- **Modifier Effect / Luma Blur** — Free. [JSON](../nodes/node-graphic3D-modifierEffect-lumaBlur.json) · `node:graphic3D:modifierEffect:lumaBlur`. Blur the first graphic based on the second graphic's luminance.
-- **Modifier Effect / Luma Color Shift** — Free. [JSON](../nodes/node-graphic3D-modifierEffect-lumaColorShift.json) · `node:graphic3D:modifierEffect:lumaColorShift`. Shift colors in the first graphic based on the second graphic's luminance.
-- **Modifier Effect / Luma Levels** — Free. [JSON](../nodes/node-graphic3D-modifierEffect-lumaLevels.json) · `node:graphic3D:modifierEffect:lumaLevels`. Level the first graphic based on the second graphic's luminance.
-- **Modifier Effect / Luma Rainbow Blur** — Free. [JSON](../nodes/node-graphic3D-modifierEffect-lumaRainbowBlur.json) · `node:graphic3D:modifierEffect:lumaRainbowBlur`. Rainbow blur the first graphic based on the second graphic's luminance.
-- **Modifier Effect / Luma Transform** — Free. [JSON](../nodes/node-graphic3D-modifierEffect-lumaTransform.json) · `node:graphic3D:modifierEffect:lumaTransform`. Transform the first graphic based on the second graphic's luminance.
-- **Modifier Effect / Mask** — Free. [JSON](../nodes/node-graphic3D-modifierEffect-mask.json) · `node:graphic3D:modifierEffect:mask`. 
-- **Resource / Convert from Graphic** — Free. [JSON](../nodes/node-graphic3D-resource-convertFromGraphic.json) · `node:graphic3D:resource:convertFromGraphic`. Convert a Graphic into a 3D Graphic with a width, height, or depth of one voxel along the selected axis. Binding edits to the single slice update the source Graphic.
-- **Resource / Metadata** — Free. [JSON](../nodes/node-graphic3D-resource-metadata.json) · `node:graphic3D:resource:metadata`. Information about details of a 3D graphic.
-- **Resource / State** — Free. [JSON](../nodes/node-graphic3D-resource-state.json) · `node:graphic3D:resource:state`. Store a 3D graphic.
-- **Shape / Box** — Free; deprecated; replacement node:graphic3D:shape:box2. [JSON](../nodes/node-graphic3D-shape-box.json) · `node:graphic3D:shape:box`. 
-- **Shape / Box** — Free. [JSON](../nodes/node-graphic3D-shape-box2.json) · `node:graphic3D:shape:box2`. Creates a box in a 3D graphic, with adjustable size, position, colors, and surface.
-- **Shape / Cone** — Free; deprecated; replacement node:graphic3D:shape:cone2. [JSON](../nodes/node-graphic3D-shape-cone.json) · `node:graphic3D:shape:cone`. 
-- **Shape / Cone** — Free. [JSON](../nodes/node-graphic3D-shape-cone2.json) · `node:graphic3D:shape:cone2`. Creates a cone in a 3D graphic, with adjustable size, position, colors, and surface.
-- **Shape / Cylinder** — Free; deprecated; replacement node:graphic3D:shape:cylinder2. [JSON](../nodes/node-graphic3D-shape-cylinder.json) · `node:graphic3D:shape:cylinder`. A 3D tube shape.
-- **Shape / Cylinder** — Free. [JSON](../nodes/node-graphic3D-shape-cylinder2.json) · `node:graphic3D:shape:cylinder2`. A 3D tube shape.
-- **Shape / Sphere** — Free; deprecated; replacement node:graphic3D:shape:sphere2. [JSON](../nodes/node-graphic3D-shape-sphere.json) · `node:graphic3D:shape:sphere`. 
-- **Shape / Sphere** — Free. [JSON](../nodes/node-graphic3D-shape-sphere2.json) · `node:graphic3D:shape:sphere2`. Creates a sphere in a 3D graphic, with adjustable size, position, colors, and surface.
-- **Shape / Tetrahedron** — Free; deprecated; replacement node:graphic3D:shape:tetrahedron2. [JSON](../nodes/node-graphic3D-shape-tetrahedron.json) · `node:graphic3D:shape:tetrahedron`. A 3D shape with four triangular faces, six edges, and four vertices.
-- **Shape / Tetrahedron** — Free. [JSON](../nodes/node-graphic3D-shape-tetrahedron2.json) · `node:graphic3D:shape:tetrahedron2`. A 3D shape with four triangular faces, six edges, and four vertices.
-- **Shape / Torus** — Free; deprecated; replacement node:graphic3D:shape:torus2. [JSON](../nodes/node-graphic3D-shape-torus.json) · `node:graphic3D:shape:torus`. A 3D donut shape.
-- **Shape / Torus** — Free. [JSON](../nodes/node-graphic3D-shape-torus2.json) · `node:graphic3D:shape:torus2`. A 3D donut shape.
-- **Solid / Color** — Free; deprecated; replacement node:graphic3D:solid:color2. [JSON](../nodes/node-graphic3D-solid-color.json) · `node:graphic3D:solid:color`. A plain solid color, filling the volume.
-- **Solid / Color** — Free. [JSON](../nodes/node-graphic3D-solid-color2.json) · `node:graphic3D:solid:color2`. A plain solid color, filling the volume.
-- **Solid / Gradient** — Free; deprecated; replacement node:graphic3D:solid:gradient2. [JSON](../nodes/node-graphic3D-solid-gradient.json) · `node:graphic3D:solid:gradient`. A gradient of colors. Match the colors inlet with the stops inlet. The stops are between zero and one.
-- **Solid / Gradient** — Free. [JSON](../nodes/node-graphic3D-solid-gradient2.json) · `node:graphic3D:solid:gradient2`. Creates a gradient from Color Stops, falling back to Gradient when the inlet is disconnected.
-- **Solid / Noise** — Free; deprecated; replacement node:graphic3D:solid:noise2. [JSON](../nodes/node-graphic3D-solid-noise.json) · `node:graphic3D:solid:noise`. Generate random, cloudy or smooth noise.
-- **Solid / Noise** — Free. [JSON](../nodes/node-graphic3D-solid-noise2.json) · `node:graphic3D:solid:noise2`. Generate random, cloudy or smooth noise.
-- **Space Effect / Blur** — Free. [JSON](../nodes/node-graphic3D-spaceEffect-blur.json) · `node:graphic3D:spaceEffect:blur`. Blur a graphic.
-- **Space Effect / Edge** — Free. [JSON](../nodes/node-graphic3D-spaceEffect-edge.json) · `node:graphic3D:spaceEffect:edge`. Highlight the edges of a graphic.
-- **Space Effect / Transform** — Free; deprecated; replacement node:graphic3D:spaceEffect:transform2. [JSON](../nodes/node-graphic3D-spaceEffect-transform.json) · `node:graphic3D:spaceEffect:transform`. 
-- **Space Effect / Transform** — Free. [JSON](../nodes/node-graphic3D-spaceEffect-transform2.json) · `node:graphic3D:spaceEffect:transform2`. Transform a 3D Graphic.
-- **Stack / Depth** — Free. [JSON](../nodes/node-graphic3D-stack-depth.json) · `node:graphic3D:stack:depth`. Stack 3D graphics along the depth axis, from far to near. Align the other two axes and set the spacing between volumes in voxels.
-- **Stack / Horizontal** — Free. [JSON](../nodes/node-graphic3D-stack-horizontal.json) · `node:graphic3D:stack:horizontal`. Stack 3D graphics side by side, from leading to trailing. Align the other two axes and set the spacing between volumes in voxels.
-- **Stack / Layers** — Free. [JSON](../nodes/node-graphic3D-stack-layers.json) · `node:graphic3D:stack:layers`. Layer 3D graphics within their combined bounding volume. Alignment places smaller volumes without scaling. The first volume keeps its original color and opacity; the blend mode combines subsequent volumes.
-- **Stack / Vertical** — Free. [JSON](../nodes/node-graphic3D-stack-vertical.json) · `node:graphic3D:stack:vertical`. Stack 3D graphics from top to bottom. Align the other two axes and set the spacing between volumes in voxels.
+- **Color Effect / Channel Mix** — Free. [JSON](../nodes/graphic3D/colorEffect.json) · `node:graphic3D:colorEffect:channelMix`. Mix red, green, blue and alpha channels.
+- **Color Effect / Clamp** — Free. [JSON](../nodes/graphic3D/colorEffect.json) · `node:graphic3D:colorEffect:clamp`. Apply various styles to colors outside of the set range.
+- **Color Effect / Color Map** — Free. [JSON](../nodes/graphic3D/colorEffect.json) · `node:graphic3D:colorEffect:colorMap`. Map colors with a 2 stop gradient, from background to foreground.
+- **Color Effect / Color Shift** — Free. [JSON](../nodes/graphic3D/colorEffect.json) · `node:graphic3D:colorEffect:colorShift`. Shift colors in a graphic.
+- **Color Effect / Gradient Lookup** — Free; deprecated; replacement node:graphic3D:colorEffect:gradientLookup2. [JSON](../nodes/graphic3D/colorEffect.json) · `node:graphic3D:colorEffect:gradientLookup`. Lookup colors in a gradient based on luminance.
+- **Color Effect / Gradient Lookup** — Free. [JSON](../nodes/graphic3D/colorEffect.json) · `node:graphic3D:colorEffect:gradientLookup2`. Creates a gradient from Color Stops, falling back to Gradient when the inlet is disconnected.
+- **Color Effect / Levels** — Free. [JSON](../nodes/graphic3D/colorEffect.json) · `node:graphic3D:colorEffect:levels`.
+- **Color Effect / Quantize** — Free. [JSON](../nodes/graphic3D/colorEffect.json) · `node:graphic3D:colorEffect:quantize`. Lowers the color detail.
+- **Color Effect / Range** — Free. [JSON](../nodes/graphic3D/colorEffect.json) · `node:graphic3D:colorEffect:range`. Range a graphics colors from a reference low and high to a target low and high.
+- **Color Effect / Relay** — Free. [JSON](../nodes/graphic3D/colorEffect.json) · `node:graphic3D:colorEffect:relay`. Relay a 3D Graphic. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Color Effect / Slope** — Free. [JSON](../nodes/graphic3D/colorEffect.json) · `node:graphic3D:colorEffect:slope`. Calculate the slope between neighboring voxels by generating a normal map. 16 or 32 bit recommended.
+- **Color Effect / Threshold** — Free. [JSON](../nodes/graphic3D/colorEffect.json) · `node:graphic3D:colorEffect:threshold`. Divide the graphic into two regions: one with a value below the threshold (background), and one with a value above (foreground).
+- **Convert / Bits** — Free. [JSON](../nodes/graphic3D/convert.json) · `node:graphic3D:convert:bits`. Change the color depth of a graphic.
+- **Convert / Crop** — Free. [JSON](../nodes/graphic3D/convert.json) · `node:graphic3D:convert:crop`.
+- **Modifier Effect / Blend** — Free; deprecated; replacement node:graphic3D:modifierEffect:blend2. [JSON](../nodes/graphic3D/modifierEffect.json) · `node:graphic3D:modifierEffect:blend`. Blend two graphics together.
+- **Modifier Effect / Blend** — Free. [JSON](../nodes/graphic3D/modifierEffect.json) · `node:graphic3D:modifierEffect:blend2`. Blend two 3D graphics. Placement controls scaling, and alignment positions the modifier volume on all three axes. The output keeps the first volume's resolution.
+- **Modifier Effect / Cross** — Free. [JSON](../nodes/graphic3D/modifierEffect.json) · `node:graphic3D:modifierEffect:cross`. Average two graphics together.
+- **Modifier Effect / Displace** — Free. [JSON](../nodes/graphic3D/modifierEffect.json) · `node:graphic3D:modifierEffect:displace`. Displace the first graphic with the seconds graphics red (x), green (y) and blue (z) colors.
+- **Modifier Effect / Lookup** — Free. [JSON](../nodes/graphic3D/modifierEffect.json) · `node:graphic3D:modifierEffect:lookup`. Lookup colors in the second graphic based on the first graphics luminance.
+- **Modifier Effect / Luma Blur** — Free. [JSON](../nodes/graphic3D/modifierEffect.json) · `node:graphic3D:modifierEffect:lumaBlur`. Blur the first graphic based on the second graphic's luminance.
+- **Modifier Effect / Luma Color Shift** — Free. [JSON](../nodes/graphic3D/modifierEffect.json) · `node:graphic3D:modifierEffect:lumaColorShift`. Shift colors in the first graphic based on the second graphic's luminance.
+- **Modifier Effect / Luma Levels** — Free. [JSON](../nodes/graphic3D/modifierEffect.json) · `node:graphic3D:modifierEffect:lumaLevels`. Level the first graphic based on the second graphic's luminance.
+- **Modifier Effect / Luma Rainbow Blur** — Free. [JSON](../nodes/graphic3D/modifierEffect.json) · `node:graphic3D:modifierEffect:lumaRainbowBlur`. Rainbow blur the first graphic based on the second graphic's luminance.
+- **Modifier Effect / Luma Transform** — Free. [JSON](../nodes/graphic3D/modifierEffect.json) · `node:graphic3D:modifierEffect:lumaTransform`. Transform the first graphic based on the second graphic's luminance.
+- **Modifier Effect / Mask** — Free. [JSON](../nodes/graphic3D/modifierEffect.json) · `node:graphic3D:modifierEffect:mask`.
+- **Resource / Convert from Graphic** — Free. [JSON](../nodes/graphic3D/resource.json) · `node:graphic3D:resource:convertFromGraphic`. Convert a Graphic into a 3D Graphic with a width, height, or depth of one voxel along the selected axis. Binding edits to the single slice update the source Graphic.
+- **Resource / Metadata** — Free. [JSON](../nodes/graphic3D/resource.json) · `node:graphic3D:resource:metadata`. Information about details of a 3D graphic.
+- **Resource / State** — Free. [JSON](../nodes/graphic3D/resource.json) · `node:graphic3D:resource:state`. Store a 3D graphic.
+- **Shape / Box** — Free; deprecated; replacement node:graphic3D:shape:box2. [JSON](../nodes/graphic3D/shape.json) · `node:graphic3D:shape:box`.
+- **Shape / Box** — Free. [JSON](../nodes/graphic3D/shape.json) · `node:graphic3D:shape:box2`. Creates a box in a 3D graphic, with adjustable size, position, colors, and surface.
+- **Shape / Cone** — Free; deprecated; replacement node:graphic3D:shape:cone2. [JSON](../nodes/graphic3D/shape.json) · `node:graphic3D:shape:cone`.
+- **Shape / Cone** — Free. [JSON](../nodes/graphic3D/shape.json) · `node:graphic3D:shape:cone2`. Creates a cone in a 3D graphic, with adjustable size, position, colors, and surface.
+- **Shape / Cylinder** — Free; deprecated; replacement node:graphic3D:shape:cylinder2. [JSON](../nodes/graphic3D/shape.json) · `node:graphic3D:shape:cylinder`. A 3D tube shape.
+- **Shape / Cylinder** — Free. [JSON](../nodes/graphic3D/shape.json) · `node:graphic3D:shape:cylinder2`. A 3D tube shape.
+- **Shape / Sphere** — Free; deprecated; replacement node:graphic3D:shape:sphere2. [JSON](../nodes/graphic3D/shape.json) · `node:graphic3D:shape:sphere`.
+- **Shape / Sphere** — Free. [JSON](../nodes/graphic3D/shape.json) · `node:graphic3D:shape:sphere2`. Creates a sphere in a 3D graphic, with adjustable size, position, colors, and surface.
+- **Shape / Tetrahedron** — Free; deprecated; replacement node:graphic3D:shape:tetrahedron2. [JSON](../nodes/graphic3D/shape.json) · `node:graphic3D:shape:tetrahedron`. A 3D shape with four triangular faces, six edges, and four vertices.
+- **Shape / Tetrahedron** — Free. [JSON](../nodes/graphic3D/shape.json) · `node:graphic3D:shape:tetrahedron2`. A 3D shape with four triangular faces, six edges, and four vertices.
+- **Shape / Torus** — Free; deprecated; replacement node:graphic3D:shape:torus2. [JSON](../nodes/graphic3D/shape.json) · `node:graphic3D:shape:torus`. A 3D donut shape.
+- **Shape / Torus** — Free. [JSON](../nodes/graphic3D/shape.json) · `node:graphic3D:shape:torus2`. A 3D donut shape.
+- **Solid / Color** — Free; deprecated; replacement node:graphic3D:solid:color2. [JSON](../nodes/graphic3D/solid.json) · `node:graphic3D:solid:color`. A plain solid color, filling the volume.
+- **Solid / Color** — Free. [JSON](../nodes/graphic3D/solid.json) · `node:graphic3D:solid:color2`. A plain solid color, filling the volume.
+- **Solid / Gradient** — Free; deprecated; replacement node:graphic3D:solid:gradient2. [JSON](../nodes/graphic3D/solid.json) · `node:graphic3D:solid:gradient`. A gradient of colors. Match the colors inlet with the stops inlet. The stops are between zero and one.
+- **Solid / Gradient** — Free. [JSON](../nodes/graphic3D/solid.json) · `node:graphic3D:solid:gradient2`. Creates a gradient from Color Stops, falling back to Gradient when the inlet is disconnected.
+- **Solid / Noise** — Free; deprecated; replacement node:graphic3D:solid:noise2. [JSON](../nodes/graphic3D/solid.json) · `node:graphic3D:solid:noise`. Generate random, cloudy or smooth noise.
+- **Solid / Noise** — Free. [JSON](../nodes/graphic3D/solid.json) · `node:graphic3D:solid:noise2`. Generate random, cloudy or smooth noise.
+- **Space Effect / Blur** — Free. [JSON](../nodes/graphic3D/spaceEffect.json) · `node:graphic3D:spaceEffect:blur`. Blur a graphic.
+- **Space Effect / Edge** — Free. [JSON](../nodes/graphic3D/spaceEffect.json) · `node:graphic3D:spaceEffect:edge`. Highlight the edges of a graphic.
+- **Space Effect / Transform** — Free; deprecated; replacement node:graphic3D:spaceEffect:transform2. [JSON](../nodes/graphic3D/spaceEffect.json) · `node:graphic3D:spaceEffect:transform`.
+- **Space Effect / Transform** — Free. [JSON](../nodes/graphic3D/spaceEffect.json) · `node:graphic3D:spaceEffect:transform2`. Transform a 3D Graphic.
+- **Stack / Depth** — Free. [JSON](../nodes/graphic3D/stack.json) · `node:graphic3D:stack:depth`. Stack 3D graphics along the depth axis, from far to near. Align the other two axes and set the spacing between volumes in voxels.
+- **Stack / Horizontal** — Free. [JSON](../nodes/graphic3D/stack.json) · `node:graphic3D:stack:horizontal`. Stack 3D graphics side by side, from leading to trailing. Align the other two axes and set the spacing between volumes in voxels.
+- **Stack / Layers** — Free. [JSON](../nodes/graphic3D/stack.json) · `node:graphic3D:stack:layers`. Layer 3D graphics within their combined bounding volume. Alignment places smaller volumes without scaling. The first volume keeps its original color and opacity; the blend mode combines subsequent volumes.
+- **Stack / Vertical** — Free. [JSON](../nodes/graphic3D/stack.json) · `node:graphic3D:stack:vertical`. Stack 3D graphics from top to bottom. Align the other two axes and set the spacing between volumes in voxels.

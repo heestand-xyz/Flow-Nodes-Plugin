@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Data",
+  "parentName": "3D Size",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Get the width, height and depth Float components of a 3D Size.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:size3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Components",
+      "newInAppVersion": "1.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Width",
+          "typeName": "widthOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Height",
+          "typeName": "heightOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Depth",
+          "typeName": "depthOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Size",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:size3D:components",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/size3D/components"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Construct a 3D Size from width, height and depth floats.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Width",
+          "typeName": "widthIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Height",
+          "typeName": "heightIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Depth",
+          "typeName": "depthIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Construct",
+      "newInAppVersion": "1.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:size3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Size",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:size3D:construct",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/size3D/construct"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a list of 3D Sizes. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "in",
+          "valueType": "raw:core:size3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:size3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Size",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:size3D:listRelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/size3D/listRelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of 3D Sizes.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:size3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Size",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValues": [],
+          "isHidden": false,
+          "name": "Values",
+          "type": "valueArray",
+          "typeName": "values",
+          "valueType": "raw:core:size3D"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array"
+      ],
+      "typePath": "node:data:size3D:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/size3D/listState"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a 3D Size. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:size3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:size3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Size",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:data:size3D:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/size3D/relay"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a 3D Size.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:size3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Size",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "depth": 1,
+            "height": 1,
+            "width": 1
+          },
+          "isHidden": false,
+          "name": "Value",
+          "type": "value",
+          "typeName": "value",
+          "valueType": "raw:core:size3D"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store"
+      ],
+      "typePath": "node:data:size3D:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/size3D/state"
+    }
+  ]
+}

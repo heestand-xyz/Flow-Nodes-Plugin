@@ -1,0 +1,525 @@
+{
+  "schemaVersion": 1,
+  "familyName": "General",
+  "parentName": "Keyed List",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Create a keyed list by using each value's index as its key.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Enumerate",
+      "newInAppVersion": "4.3.0",
+      "outLets": [
+        {
+          "capacity": "lex",
+          "direction": "binding",
+          "keyType": "raw:core:int",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Keyed List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Index"
+      ],
+      "typePath": "node:general:keyedList:enumerate",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/keyedList/enumerate"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Insert or replace a source value in a keyed list at the provided key.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Key",
+          "typeName": "keyIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Source",
+          "typeName": "valueIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "lex",
+          "direction": "binding",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Destination",
+          "typeName": "valuesIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Insert",
+          "typeName": "insertIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Key Insert",
+      "newInAppVersion": "4.3.0",
+      "outLets": [],
+      "parentName": "Keyed List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Insert or replace the source value in the destination keyed list.",
+          "isHidden": false,
+          "name": "Insert",
+          "type": "action",
+          "typeName": "insert"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Key",
+        "Dictionary"
+      ],
+      "typePath": "node:general:keyedList:keyInsert",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/keyedList/keyInsert"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Extract keys from a keyed list.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "lex",
+          "direction": "direct",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reverse Order",
+          "typeName": "reverseOrderIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Keys",
+      "newInAppVersion": "4.3.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Keys",
+          "typeName": "keysOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Keyed List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "reverseOrderIn",
+          "isHidden": false,
+          "name": "Reverse Order",
+          "type": "variable",
+          "typeName": "reverseOrder",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Key",
+        "Dictionary"
+      ],
+      "typePath": "node:general:keyedList:keys",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/keyedList/keys"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Keyed list with evenly spaced float keys from Low to High, including both endpoints.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The key of the first value.",
+          "level": "external",
+          "name": "Low",
+          "typeName": "lowIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The key of the last value when the list contains at least two values.",
+          "level": "external",
+          "name": "High",
+          "typeName": "highIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Range Enumerate",
+      "newInAppVersion": "27.1.0",
+      "outLets": [
+        {
+          "capacity": "lex",
+          "direction": "binding",
+          "keyType": "raw:core:float",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Keyed List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "lowIn",
+          "info": "The key of the first value.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Low",
+          "type": "variable",
+          "typeName": "low",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "highIn",
+          "info": "The key of the last value when the list contains at least two values.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "High",
+          "type": "variable",
+          "typeName": "high",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Index",
+        "Float",
+        "Range",
+        "Interpolate",
+        "Normalize"
+      ],
+      "typePath": "node:general:keyedList:rangeEnumerate",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/keyedList/rangeEnumerate"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a keyed list of values. This node has no effect. Tho useful when merging multiple keyed lists.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "lex",
+          "direction": "binding",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Keyed List Relay",
+      "newInAppVersion": "2.4.0",
+      "outLets": [
+        {
+          "capacity": "lex",
+          "direction": "binding",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Keyed List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:general:keyedList:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/keyedList/relay"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Select a value from a keyed list by key.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "lex",
+          "direction": "binding",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Key",
+          "typeName": "keyIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Key Select",
+      "newInAppVersion": "4.2.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Item",
+          "typeName": "itemOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Keyed List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:general:keyedList:select",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/keyedList/select"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Create a keyed list from unique keys and matching values.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Keys",
+          "typeName": "keysIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesIn",
+          "valueType": "generic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Unique Keys with Values",
+      "newInAppVersion": "4.3.0",
+      "outLets": [
+        {
+          "capacity": "lex",
+          "direction": "binding",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Keyed List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Dictionary"
+      ],
+      "typePath": "node:general:keyedList:uniqueKeysWithValues",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/keyedList/uniqueKeysWithValues"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Extract values from a keyed list.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "lex",
+          "direction": "direct",
+          "keyType": "generic",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesIn",
+          "valueType": "generic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reverse Order",
+          "typeName": "reverseOrderIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Values",
+      "newInAppVersion": "4.3.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Values",
+          "typeName": "valuesOut",
+          "valueType": "generic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Keyed List",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "reverseOrderIn",
+          "isHidden": false,
+          "name": "Reverse Order",
+          "type": "variable",
+          "typeName": "reverseOrder",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Value",
+        "Dictionary"
+      ],
+      "typePath": "node:general:keyedList:values",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/keyedList/values"
+    }
+  ]
+}

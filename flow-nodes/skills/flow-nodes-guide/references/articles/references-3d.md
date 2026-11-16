@@ -32,47 +32,47 @@ Field nodes are run on the GPU and are essentially particles with support for in
 
 A color or graphic with a simple or unlit lighting mode.
 
-[Simple](../nodes/node-spatial-material-simple.json)
+[Simple](../nodes/spatial/material.json) (`node:spatial:material:simple`)
 
-[Unlit](../nodes/node-spatial-material-unlit.json)
+[Unlit](../nodes/spatial/material.json) (`node:spatial:material:unlit`)
 
 ## Camera
 
 A perspective or orthographic camera (or a mix).
 
-[Perspective](../nodes/node-spatial-camera-perspective.json)
+[Perspective](../nodes/spatial/camera.json) (`node:spatial:camera:perspective`)
 
-[Orthographic](../nodes/node-spatial-camera-orthographic.json)
+[Orthographic](../nodes/spatial/camera.json) (`node:spatial:camera:orthographic`)
 
 There is a calibration node to find a camera based on 6 2D and 3D points.
 
-[Calibration](../nodes/node-spatial-camera-calibration.json)
+[Calibration](../nodes/spatial/camera.json) (`node:spatial:camera:calibration`)
 
 ## Light
 
 A point, directional, or ambient light.
 
-[Point](../nodes/node-spatial-light-point.json)
+[Point](../nodes/spatial/light.json) (`node:spatial:light:point`)
 
-[Directional](../nodes/node-spatial-light-directional.json)
+[Directional](../nodes/spatial/light.json) (`node:spatial:light:directional`)
 
-[Ambient](../nodes/node-spatial-light-ambient.json)
+[Ambient](../nodes/spatial/light.json) (`node:spatial:light:ambient`)
 
 ## Projector
 
 A virtual projector, created by combining a camera and a graphic.
 
-[Projector](../nodes/node-spatial-camera-projector.json)
+[Projector](../nodes/spatial/camera.json) (`node:spatial:camera:projector`)
 
 ## Entity
 
-Entity nodes are a structural representation of the all 3D types. It is used to group, texture and clone transform geometry, fields, 3d graphics, cameras, lights and projectors. 
+Entity nodes are a structural representation of the all 3D types. It is used to group, texture and clone transform geometry, fields, 3d graphics, cameras, lights and projectors.
 
-[Group](../nodes/node-spatial-entity-group.json)
+[Group](../nodes/spatial/entity.json) (`node:spatial:entity:group`)
 
-[Texture](../nodes/node-spatial-entity-texture.json)
+[Texture](../nodes/spatial/entity.json) (`node:spatial:entity:texture`)
 
-[Clone Transform](../nodes/node-spatial-entity-cloneTransform.json)
+[Clone Transform](../nodes/spatial/entity.json) (`node:spatial:entity:cloneTransform`)
 
 > **Tip**
 >
@@ -82,7 +82,7 @@ Entity nodes are a structural representation of the all 3D types. It is used to 
 
 The 3D Render nodes has an entities multi inlet and a graphic mono outlet.
 
-[3D Render](../nodes/node-graphic-engine-kagamiRender.json)
+[3D Render](../nodes/graphic/engine.json) (`node:graphic:engine:kagamiRender`)
 
 *Required at least one camera.*
 

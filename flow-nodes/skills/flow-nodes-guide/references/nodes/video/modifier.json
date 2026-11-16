@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Video",
+  "parentName": "Modifier",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Relay a list of videos. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Video",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Videos",
+          "typeName": "in",
+          "valueType": "raw:video",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Relay",
+      "newInAppVersion": "1.5.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Videos",
+          "typeName": "out",
+          "valueType": "raw:video",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:video:modifier:listRelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/video/modifier/listRelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a video. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Video",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Video",
+          "typeName": "in",
+          "valueType": "raw:video",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "1.5.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Video",
+          "typeName": "out",
+          "valueType": "raw:video",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:video:modifier:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/video/modifier/relay"
+    }
+  ]
+}

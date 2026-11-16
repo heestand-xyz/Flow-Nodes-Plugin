@@ -1,0 +1,993 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Vector",
+  "parentName": "Info",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Get the bounding frame of the vector path.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Size",
+          "typeName": "sizeIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Bounding Box",
+      "newInAppVersion": "1.7.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Bounds",
+          "typeName": "out",
+          "valueType": "raw:core:rect",
+          "way": "out"
+        }
+      ],
+      "parentName": "Info",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "sizeIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": [
+              1000,
+              1000
+            ],
+            "coreType": "size",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": [
+              1,
+              1
+            ],
+            "coreType": "size",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Size",
+          "type": "variable",
+          "typeName": "size",
+          "valueType": "raw:core:size"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:vector:info:boundingBox",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/info/boundingBox"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Get points and closed state from a selected sub path in a Vector Path.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "vectorPathIn",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "If the vector is flexible, this will be used to determine the point locations.",
+          "level": "external",
+          "name": "Size",
+          "typeName": "sizeIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "If the Vector has multiple shapes, this index specifies which one to return points from.",
+          "level": "external",
+          "name": "Sub Path Index",
+          "typeName": "subPathIndexIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Components",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Points",
+          "typeName": "pointsOut",
+          "valueType": "raw:core:vectorPoint",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Closed",
+          "typeName": "closedOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        }
+      ],
+      "parentName": "Info",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": [
+            100,
+            100
+          ],
+          "inLetTypeName": "sizeIn",
+          "info": "If the vector is flexible, this will be used to determine the point locations.",
+          "isHidden": false,
+          "name": "Size",
+          "type": "variable",
+          "typeName": "size",
+          "valueType": "raw:core:size"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "subPathIndexIn",
+          "info": "If the Vector has multiple shapes, this index specifies which one to return points from.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Sub Path Index",
+          "type": "variable",
+          "typeName": "subPathIndex",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Path",
+        "Sub Path",
+        "Points"
+      ],
+      "typePath": "node:vector:info:components",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/info/components"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Check if a point is contains within the vector path.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Point",
+          "typeName": "pointIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Size",
+          "typeName": "sizeIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Contains",
+      "newInAppVersion": "1.7.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Contained",
+          "typeName": "out",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        }
+      ],
+      "parentName": "Info",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": [
+            0,
+            0
+          ],
+          "inLetTypeName": "pointIn",
+          "isHidden": false,
+          "name": "Point",
+          "type": "variable",
+          "typeName": "point",
+          "valueType": "raw:core:point"
+        },
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "sizeIn",
+          "info": "The canvas size. It's passed upstream. It is used to define the size of flexible sized shapes. This value is ignored when using fixed layout.",
+          "isHidden": false,
+          "name": "Size",
+          "type": "variable",
+          "typeName": "size",
+          "valueType": "raw:core:size"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:vector:info:contains",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/info/contains"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Get the location of a point on a path of a shape. The fraction should be between zero and one.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Offset Fraction",
+          "typeName": "offsetFractionIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Size",
+          "typeName": "sizeIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Fraction Point",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Point",
+          "typeName": "out",
+          "valueType": "raw:core:point",
+          "way": "out"
+        }
+      ],
+      "parentName": "Info",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "offsetFractionIn",
+          "info": "Set the value to 0.5 to get the center point along the path.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Offset Fraction",
+          "type": "variable",
+          "typeName": "offsetFraction",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 20,
+          "info": "The accuracy of curves. A higher value will take longer to process tho will result in more precision.",
+          "isHidden": false,
+          "maximumValue": {
+            "type": "value",
+            "value": 100,
+            "valueType": {
+              "raw": {
+                "_0": {
+                  "core": {
+                    "_0": "int"
+                  }
+                }
+              }
+            }
+          },
+          "minimumValue": {
+            "type": "value",
+            "value": 10,
+            "valueType": {
+              "raw": {
+                "_0": {
+                  "core": {
+                    "_0": "int"
+                  }
+                }
+              }
+            }
+          },
+          "name": "Curve Subdivisions",
+          "type": "value",
+          "typeName": "curveSubdivisions",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "sizeIn",
+          "info": "The canvas size. It's passed upstream. It is used to define the size of flexible sized shapes. This value is ignored when using fixed layout.",
+          "isHidden": false,
+          "name": "Size",
+          "type": "variable",
+          "typeName": "size",
+          "valueType": "raw:core:size"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:vector:info:fractionPoint",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/info/fractionPoint"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Get the locations of points on a path. The fractions should be between zero and one.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Spacing Fraction",
+          "typeName": "spacingFractionIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Phase Fraction",
+          "typeName": "phaseFractionIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Size",
+          "typeName": "sizeIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Fraction Points",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Point",
+          "typeName": "out",
+          "valueType": "raw:core:point",
+          "way": "out"
+        }
+      ],
+      "parentName": "Info",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0.1,
+          "inLetTypeName": "spacingFractionIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Spacing Fraction",
+          "type": "variable",
+          "typeName": "spacingFraction",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "phaseFractionIn",
+          "info": "The starting offset. Set this value to 0.5 to have the middle point be at the center of the path.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Phase Fraction",
+          "type": "variable",
+          "typeName": "phaseFraction",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 20,
+          "info": "The accuracy of curves. A higher value will take longer to process tho will result in more precision.",
+          "isHidden": false,
+          "maximumValue": {
+            "type": "value",
+            "value": 100,
+            "valueType": {
+              "raw": {
+                "_0": {
+                  "core": {
+                    "_0": "int"
+                  }
+                }
+              }
+            }
+          },
+          "minimumValue": {
+            "type": "value",
+            "value": 10,
+            "valueType": {
+              "raw": {
+                "_0": {
+                  "core": {
+                    "_0": "int"
+                  }
+                }
+              }
+            }
+          },
+          "name": "Curve Subdivisions",
+          "type": "value",
+          "typeName": "curveSubdivisions",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "sizeIn",
+          "info": "The canvas size. It's passed upstream. It is used to define the size of flexible sized shapes. This value is ignored when using fixed layout.",
+          "isHidden": false,
+          "name": "Size",
+          "type": "variable",
+          "typeName": "size",
+          "valueType": "raw:core:size"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:vector:info:fractionPoints",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/info/fractionPoints"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Get the length of the vector path.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Size",
+          "typeName": "sizeIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Length",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Length",
+          "typeName": "out",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Info",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 20,
+          "info": "The accuracy of curves. A higher value will take longer to process tho will result in more precision.",
+          "isHidden": false,
+          "maximumValue": {
+            "type": "value",
+            "value": 100,
+            "valueType": {
+              "raw": {
+                "_0": {
+                  "core": {
+                    "_0": "int"
+                  }
+                }
+              }
+            }
+          },
+          "minimumValue": {
+            "type": "value",
+            "value": 10,
+            "valueType": {
+              "raw": {
+                "_0": {
+                  "core": {
+                    "_0": "int"
+                  }
+                }
+              }
+            }
+          },
+          "name": "Curve Subdivisions",
+          "type": "value",
+          "typeName": "curveSubdivisions",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "sizeIn",
+          "info": "The canvas size. It's passed upstream. It is used to define the size of flexible sized shapes. This value is ignored when using fixed layout.",
+          "isHidden": false,
+          "name": "Size",
+          "type": "variable",
+          "typeName": "size",
+          "valueType": "raw:core:size"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:vector:info:length",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/info/length"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Get the location of a point on a path.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Offset",
+          "typeName": "offsetIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Size",
+          "typeName": "sizeIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Point",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Point",
+          "typeName": "out",
+          "valueType": "raw:core:point",
+          "way": "out"
+        }
+      ],
+      "parentName": "Info",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "offsetIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1000,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Offset",
+          "type": "variable",
+          "typeName": "offset",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 20,
+          "info": "The accuracy of curves. A higher value will take longer to process tho will result in more precision.",
+          "isHidden": false,
+          "maximumValue": {
+            "type": "value",
+            "value": 100,
+            "valueType": {
+              "raw": {
+                "_0": {
+                  "core": {
+                    "_0": "int"
+                  }
+                }
+              }
+            }
+          },
+          "minimumValue": {
+            "type": "value",
+            "value": 10,
+            "valueType": {
+              "raw": {
+                "_0": {
+                  "core": {
+                    "_0": "int"
+                  }
+                }
+              }
+            }
+          },
+          "name": "Curve Subdivisions",
+          "type": "value",
+          "typeName": "curveSubdivisions",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "sizeIn",
+          "info": "The canvas size. It's passed upstream. It is used to define the size of flexible sized shapes. This value is ignored when using fixed layout.",
+          "isHidden": false,
+          "name": "Size",
+          "type": "variable",
+          "typeName": "size",
+          "valueType": "raw:core:size"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:vector:info:point",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/info/point"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Get the locations of points on a path. ",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Spacing",
+          "typeName": "spacingIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Phase",
+          "typeName": "phaseIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Size",
+          "typeName": "sizeIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Points",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Point",
+          "typeName": "out",
+          "valueType": "raw:core:point",
+          "way": "out"
+        }
+      ],
+      "parentName": "Info",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 100,
+          "inLetTypeName": "spacingIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1000,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Spacing",
+          "type": "variable",
+          "typeName": "spacing",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "phaseIn",
+          "info": "The starting offset.",
+          "isHidden": false,
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Phase",
+          "type": "variable",
+          "typeName": "phase",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 20,
+          "info": "The accuracy of curves. A higher value will take longer to process tho will result in more precision.",
+          "isHidden": false,
+          "maximumValue": {
+            "type": "value",
+            "value": 100,
+            "valueType": {
+              "raw": {
+                "_0": {
+                  "core": {
+                    "_0": "int"
+                  }
+                }
+              }
+            }
+          },
+          "minimumValue": {
+            "type": "value",
+            "value": 10,
+            "valueType": {
+              "raw": {
+                "_0": {
+                  "core": {
+                    "_0": "int"
+                  }
+                }
+              }
+            }
+          },
+          "name": "Curve Subdivisions",
+          "type": "value",
+          "typeName": "curveSubdivisions",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": [
+            1000,
+            1000
+          ],
+          "inLetTypeName": "sizeIn",
+          "info": "The canvas size. It's passed upstream. It is used to define the size of flexible sized shapes. This value is ignored when using fixed layout.",
+          "isHidden": false,
+          "name": "Size",
+          "type": "variable",
+          "typeName": "size",
+          "valueType": "raw:core:size"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:vector:info:points",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/info/points"
+    }
+  ]
+}

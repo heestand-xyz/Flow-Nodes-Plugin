@@ -1,0 +1,2895 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Graphic",
+  "parentName": "Convert",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Combine every pixel of a graphic into a single color. Useful for auto exposure, dominant color and black and white points. The graphic is always read at its own resolution.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Analyze",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Color",
+          "typeName": "colorOut",
+          "valueType": "raw:core:color",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Average",
+            "typeName": "average"
+          },
+          "enumCases": [
+            {
+              "name": "Average",
+              "typeName": "average"
+            },
+            {
+              "name": "Minimum",
+              "typeName": "minimum"
+            },
+            {
+              "name": "Maximum",
+              "typeName": "maximum"
+            },
+            {
+              "name": "Sum",
+              "typeName": "sum"
+            }
+          ],
+          "info": "How the pixels are combined. Sum can exceed one, use 16 or 32 bit to keep the range.",
+          "isHidden": false,
+          "name": "Method",
+          "type": "typedEnum",
+          "typeName": "method"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Analyze",
+        "Reduce",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Sum",
+        "Color",
+        "Pixels"
+      ],
+      "typePath": "node:graphic:convert:analyze",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/analyze"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Change the color depth of a graphic.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Bits",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "8 Bit",
+            "typeName": "bit8"
+          },
+          "enumCases": [
+            {
+              "name": "8 Bit",
+              "typeName": "bit8"
+            },
+            {
+              "name": "16 Bit",
+              "typeName": "bit16"
+            },
+            {
+              "name": "32 Bit",
+              "typeName": "bit32"
+            }
+          ],
+          "isHidden": false,
+          "name": "Bits",
+          "type": "stringEnum",
+          "typeName": "bits"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Color Depth"
+      ],
+      "typePath": "node:graphic:convert:bits",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/bits"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Unwrap the circle at the center of a graphic into polar coordinates, keeping the resolution. The horizontal axis is a full turn from the start angle, going clockwise. The vertical axis is the radius, the top is the center and the bottom is half the height out.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The angle at the leading edge of the result. Zero points right and the turn goes clockwise.",
+          "level": "external",
+          "name": "Start Angle",
+          "typeName": "startAngleIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Cartesian to Polar",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "startAngleIn",
+          "info": "The angle at the leading edge of the result. Zero points right and the turn goes clockwise.",
+          "isHidden": false,
+          "name": "Start Angle",
+          "type": "variable",
+          "typeName": "startAngle",
+          "valueType": "raw:core:angle"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Polar",
+        "Cartesian",
+        "Radial",
+        "Coordinates",
+        "Unwrap",
+        "Circle",
+        "360"
+      ],
+      "typePath": "node:graphic:convert:cartesianToPolar",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/cartesianToPolar"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Convert the light of a graphic from one color space to another, keeping the resolution and the bits.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Color Space",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "sRGB",
+            "typeName": "sRGB"
+          },
+          "enumCases": [
+            {
+              "name": "sRGB",
+              "typeName": "sRGB"
+            },
+            {
+              "name": "Linear sRGB",
+              "typeName": "linearSRGB"
+            },
+            {
+              "name": "Display P3",
+              "typeName": "displayP3"
+            },
+            {
+              "name": "Linear Display P3",
+              "typeName": "linearDisplayP3"
+            },
+            {
+              "name": "DCI-P3",
+              "typeName": "dciP3"
+            },
+            {
+              "name": "Rec. 709",
+              "typeName": "rec709"
+            },
+            {
+              "name": "Rec. 2020",
+              "typeName": "rec2020"
+            },
+            {
+              "name": "Linear Rec. 2020",
+              "typeName": "linearRec2020"
+            },
+            {
+              "name": "Adobe RGB",
+              "typeName": "adobeRGB"
+            },
+            {
+              "name": "Rec. 2100 PQ (XDR)",
+              "typeName": "rec2100PQ"
+            },
+            {
+              "name": "Rec. 2100 HLG",
+              "typeName": "rec2100HLG"
+            },
+            {
+              "name": "ACEScg",
+              "typeName": "acesCGLinear"
+            }
+          ],
+          "info": "The color space the graphic is read as.",
+          "isHidden": false,
+          "name": "From",
+          "type": "typedEnum",
+          "typeName": "fromColorSpace"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Linear sRGB",
+            "typeName": "linearSRGB"
+          },
+          "enumCases": [
+            {
+              "name": "sRGB",
+              "typeName": "sRGB"
+            },
+            {
+              "name": "Linear sRGB",
+              "typeName": "linearSRGB"
+            },
+            {
+              "name": "Display P3",
+              "typeName": "displayP3"
+            },
+            {
+              "name": "Linear Display P3",
+              "typeName": "linearDisplayP3"
+            },
+            {
+              "name": "DCI-P3",
+              "typeName": "dciP3"
+            },
+            {
+              "name": "Rec. 709",
+              "typeName": "rec709"
+            },
+            {
+              "name": "Rec. 2020",
+              "typeName": "rec2020"
+            },
+            {
+              "name": "Linear Rec. 2020",
+              "typeName": "linearRec2020"
+            },
+            {
+              "name": "Adobe RGB",
+              "typeName": "adobeRGB"
+            },
+            {
+              "name": "Rec. 2100 PQ (XDR)",
+              "typeName": "rec2100PQ"
+            },
+            {
+              "name": "Rec. 2100 HLG",
+              "typeName": "rec2100HLG"
+            },
+            {
+              "name": "ACEScg",
+              "typeName": "acesCGLinear"
+            }
+          ],
+          "info": "The color space the graphic is converted to.",
+          "isHidden": false,
+          "name": "To",
+          "type": "typedEnum",
+          "typeName": "toColorSpace"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Color Space",
+        "Gamma",
+        "Linear",
+        "sRGB",
+        "Display P3",
+        "DCI-P3",
+        "Rec. 709",
+        "Rec. 2020",
+        "Rec. 2100",
+        "Adobe RGB",
+        "ACEScg",
+        "XDR",
+        "HDR"
+      ],
+      "typePath": "node:graphic:convert:colorSpace",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/colorSpace"
+    },
+    {
+      "complexity": "basic",
+      "docs": "",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Top Left",
+          "typeName": "topLeftIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Top Right",
+          "typeName": "topRightIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Bottom Left",
+          "typeName": "bottomLeftIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Bottom Right",
+          "typeName": "bottomRightIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Perspective",
+          "typeName": "perspectiveIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Subdivisions",
+          "typeName": "subdivisionsIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Background Color",
+          "typeName": "backgroundColorIn",
+          "valueType": "raw:core:color",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Corner Pin",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "topLeftIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 1
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 0
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "Top Left",
+          "type": "variable",
+          "typeName": "topLeft",
+          "valueType": "raw:core:point"
+        },
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "topRightIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 1
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 0
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "Top Right",
+          "type": "variable",
+          "typeName": "topRight",
+          "valueType": "raw:core:point"
+        },
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "bottomLeftIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 1
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 0
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "Bottom Left",
+          "type": "variable",
+          "typeName": "bottomLeft",
+          "valueType": "raw:core:point"
+        },
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "bottomRightIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 1
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 0
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "Bottom Right",
+          "type": "variable",
+          "typeName": "bottomRight",
+          "valueType": "raw:core:point"
+        },
+        {
+          "defaultValue": true,
+          "inLetTypeName": "perspectiveIn",
+          "info": "Calculates a perspective correct corner pin. Useful when projection mapping from an angle.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": true,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": false,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Perspective",
+          "type": "variable",
+          "typeName": "perspective",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": 32,
+          "inLetTypeName": "subdivisionsIn",
+          "info": "A higher value increases the quality of the perspective.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 64,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 8,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Subdivisions",
+          "type": "variable",
+          "typeName": "subdivisions",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": {
+            "blue": 0,
+            "green": 0,
+            "opacity": 0,
+            "red": 0
+          },
+          "inLetTypeName": "backgroundColorIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": {
+              "blue": 1,
+              "green": 1,
+              "opacity": 1,
+              "red": 1
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": {
+              "blue": 0,
+              "green": 0,
+              "opacity": 0,
+              "red": 0
+            },
+            "coreType": "color",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Background Color",
+          "type": "variable",
+          "typeName": "backgroundColor",
+          "valueType": "raw:core:color"
+        }
+      ],
+      "replacedByTypePath": "node:graphic:convert:cornerPin2",
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:graphic:convert:cornerPin",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/graphic/convert/cornerPin"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Corner pin a graphic using four unit-space points.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Top Left",
+          "typeName": "topLeftIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Top Right",
+          "typeName": "topRightIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Bottom Left",
+          "typeName": "bottomLeftIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Bottom Right",
+          "typeName": "bottomRightIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Calculates a perspective correct corner pin. Useful when projection mapping from an angle.",
+          "level": "external",
+          "name": "Perspective",
+          "typeName": "perspectiveIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "A higher value increases the quality of the perspective.",
+          "level": "external",
+          "name": "Subdivisions",
+          "typeName": "subdivisionsIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Corner Pin",
+      "newInAppVersion": "4.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "topLeftIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 1
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 0
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "Top Left",
+          "type": "variable",
+          "typeName": "topLeft",
+          "valueType": "raw:core:point"
+        },
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "topRightIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 1
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 0
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "Top Right",
+          "type": "variable",
+          "typeName": "topRight",
+          "valueType": "raw:core:point"
+        },
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "bottomLeftIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 1
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 0
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "Bottom Left",
+          "type": "variable",
+          "typeName": "bottomLeft",
+          "valueType": "raw:core:point"
+        },
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "bottomRightIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 1
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "point",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 0
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "Bottom Right",
+          "type": "variable",
+          "typeName": "bottomRight",
+          "valueType": "raw:core:point"
+        },
+        {
+          "defaultValue": true,
+          "inLetTypeName": "perspectiveIn",
+          "info": "Calculates a perspective correct corner pin. Useful when projection mapping from an angle.",
+          "isHidden": false,
+          "name": "Perspective",
+          "type": "variable",
+          "typeName": "perspective",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": 32,
+          "inLetTypeName": "subdivisionsIn",
+          "info": "A higher value increases the quality of the perspective.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 64,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 8,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Subdivisions",
+          "type": "variable",
+          "typeName": "subdivisions",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [
+        "node:graphic:convert:cornerPin"
+      ],
+      "tags": [
+        "Warp",
+        "Corner",
+        "Perspective",
+        "Projection"
+      ],
+      "typePath": "node:graphic:convert:cornerPin2",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/cornerPin2"
+    },
+    {
+      "complexity": "basic",
+      "docs": "",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "From Left",
+          "typeName": "fromLeftIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "From Right",
+          "typeName": "fromRightIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "From Top",
+          "typeName": "fromTopIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "From Bottom",
+          "typeName": "fromBottomIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Crop",
+      "newInAppVersion": "1.0.1",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "fromLeftIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "fixed": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "From Left",
+          "type": "variable",
+          "typeName": "fromLeft",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "fromRightIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "fixed": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "From Right",
+          "type": "variable",
+          "typeName": "fromRight",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "fromTopIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "fixed": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "From Top",
+          "type": "variable",
+          "typeName": "fromTop",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "fromBottomIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "fixed": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "From Bottom",
+          "type": "variable",
+          "typeName": "fromBottom",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:graphic:convert:crop",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/crop"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Crop the six faces out of a cube map, a horizontal cross in a 4x3 atlas. Each face is a quarter of the width and a third of the height, seen from the outside of the cube. The opposite of Cube Map Construct.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Cube Map",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Cube Map Components",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Front",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Back",
+          "typeName": "backGraphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Left",
+          "typeName": "leftGraphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Right",
+          "typeName": "rightGraphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Top",
+          "typeName": "topGraphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Bottom",
+          "typeName": "bottomGraphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Cube",
+        "Cube Map",
+        "Atlas",
+        "Cross",
+        "Skybox",
+        "Faces",
+        "Split"
+      ],
+      "typePath": "node:graphic:convert:cubeMapComponents",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/cubeMapComponents"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Align six face graphics into one cube map, a horizontal cross in a 4x3 atlas. The layout matches the cube UVs, so the result can be used as a texture on a Cube node. All six graphics need the same resolution, each seen from the outside of the cube.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Front",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Back",
+          "typeName": "backGraphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Left",
+          "typeName": "leftGraphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Right",
+          "typeName": "rightGraphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Top",
+          "typeName": "topGraphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Bottom",
+          "typeName": "bottomGraphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Cube Map Construct",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Cube",
+        "Cube Map",
+        "Atlas",
+        "Cross",
+        "Skybox",
+        "Texture"
+      ],
+      "typePath": "node:graphic:convert:cubeMapConstruct",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/cubeMapConstruct"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Unwrap a cube map, laid out as a horizontal cross in a 4x3 atlas, into an equirectangular graphic. Columns are left, front, right and back, rows are top, sides and bottom. The result is twice as wide as it is tall, with the north pole at the top and the front at the center.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Inside",
+          "typeName": "insideIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Cube Map to Equirect",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "insideIn",
+          "info": "Mirrors the mapping, for an environment map seen from inside the cube.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": true,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": false,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Inside",
+          "type": "variable",
+          "typeName": "inside",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Cube Map",
+        "Equirectangular",
+        "Panorama",
+        "Cross",
+        "Skybox",
+        "360"
+      ],
+      "typePath": "node:graphic:convert:cubeMapToEquirect",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/cubeMapToEquirect"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Rotate and mirror the content of an equirectangular graphic, keeping the resolution. The top is the north pole, the center is the front and the left and right edges meet at the back. The source is mirrored first and rotated second.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Mirrors the longitude, swapping east and west.",
+          "level": "external",
+          "name": "Mirror Horizontal",
+          "typeName": "mirrorHorizontalIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Mirrors the latitude, swapping the north and south poles.",
+          "level": "external",
+          "name": "Mirror Vertical",
+          "typeName": "mirrorVerticalIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Rotates the content of the equirectangular graphic.",
+          "level": "external",
+          "name": "Rotation",
+          "typeName": "rotationIn",
+          "valueType": "raw:core:quaternion",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Equirect Orientation",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "mirrorHorizontalIn",
+          "info": "Mirrors the longitude, swapping east and west.",
+          "isHidden": false,
+          "name": "Mirror Horizontal",
+          "type": "variable",
+          "typeName": "mirrorHorizontal",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "mirrorVerticalIn",
+          "info": "Mirrors the latitude, swapping the north and south poles.",
+          "isHidden": false,
+          "name": "Mirror Vertical",
+          "type": "variable",
+          "typeName": "mirrorVertical",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": {
+            "w": 1,
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "inLetTypeName": "rotationIn",
+          "info": "Rotates the content of the equirectangular graphic.",
+          "isHidden": false,
+          "name": "Rotation",
+          "type": "variable",
+          "typeName": "rotation",
+          "valueType": "raw:core:quaternion"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Equirectangular",
+        "Panorama",
+        "Rotate",
+        "Mirror",
+        "Skybox",
+        "360"
+      ],
+      "typePath": "node:graphic:convert:equirectOrientation",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/equirectOrientation"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Project an equirectangular graphic onto the six faces of a cube map, laid out as a horizontal cross in a 4x3 atlas. Columns are left, front, right and back, rows are top, sides and bottom. Each face is a square quarter of the width, keeping the width of the graphic. The graphic is expected to have a 2:1 aspect ratio, with the north pole at the top and the front at the center.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Inside",
+          "typeName": "insideIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Equirect to Cube Map",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "insideIn",
+          "info": "Mirrors the mapping, for an environment map seen from inside the cube.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": true,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": false,
+            "coreType": "bool",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Inside",
+          "type": "variable",
+          "typeName": "inside",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Cube Map",
+        "Equirectangular",
+        "Panorama",
+        "Cross",
+        "Skybox",
+        "360"
+      ],
+      "typePath": "node:graphic:convert:equirectToCubeMap",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/equirectToCubeMap"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Detect faces in a graphic. The output is a list of frames and cropped graphics for each face.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Face Detection",
+      "newInAppVersion": "2.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Faces",
+          "typeName": "graphicsOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        },
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Frames",
+          "typeName": "framesOut",
+          "valueType": "raw:core:rect",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:graphic:convert:faceDetection",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/faceDetection"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Frame",
+          "typeName": "frameIn",
+          "valueType": "raw:core:rect",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Frame Crop",
+      "newInAppVersion": "2.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "frameIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "rect",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 0
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 0
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 1
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "rect",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "fixed": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "fixed": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "fixed": {
+                        "value": 0
+                      }
+                    },
+                    {
+                      "fixed": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "Frame",
+          "type": "variable",
+          "typeName": "frame",
+          "valueType": "raw:core:rect"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:graphic:convert:frameCrop",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/frameCrop"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Warp a graphic through a grid of points. Connect a List State Point node to edit points. The points are expected to be in row-major order.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Points",
+          "typeName": "pointsIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "X Count",
+          "typeName": "xCountIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Y Count",
+          "typeName": "yCountIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Subdivides the quads into even smaller quads for improved warping.",
+          "level": "external",
+          "name": "Subdivide",
+          "typeName": "subdivideIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Subdivisions per quad. A higher value increases the quality of the warp.",
+          "level": "external",
+          "name": "Subdivisions",
+          "typeName": "subdivisionsIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Uses diagonal intersection instead of averaging to determine each quad center.",
+          "level": "external",
+          "name": "Diagonal Intersection",
+          "typeName": "perspectiveIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Save Points",
+          "typeName": "savePointsIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Grid Warp",
+      "newInAppVersion": "4.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 2,
+          "inLetTypeName": "xCountIn",
+          "isHidden": false,
+          "name": "X Count",
+          "type": "variable",
+          "typeName": "xCount",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 2,
+          "inLetTypeName": "yCountIn",
+          "isHidden": false,
+          "name": "Y Count",
+          "type": "variable",
+          "typeName": "yCount",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Unit",
+            "typeName": "unit"
+          },
+          "enumCases": [
+            {
+              "name": "Unit",
+              "typeName": "unit"
+            },
+            {
+              "name": "Pixel",
+              "typeName": "pixel"
+            }
+          ],
+          "info": "How the input points are measured. Unit is between 0.0 and 1.0.",
+          "isHidden": false,
+          "name": "Coordinate Space",
+          "type": "typedEnum",
+          "typeName": "coordinateSpace"
+        },
+        {
+          "isHidden": false,
+          "name": "Save Points",
+          "type": "action",
+          "typeName": "savePoints"
+        },
+        {
+          "defaultValue": true,
+          "inLetTypeName": "subdivideIn",
+          "info": "Subdivides the quads into even smaller quads for improved warping.",
+          "isHidden": false,
+          "name": "Subdivide",
+          "type": "variable",
+          "typeName": "subdivide",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": 16,
+          "inLetTypeName": "subdivisionsIn",
+          "info": "Subdivisions per quad. A higher value increases the quality of the warp.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 32,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 4,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Subdivisions",
+          "type": "variable",
+          "typeName": "subdivisions",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "perspectiveIn",
+          "info": "Uses diagonal intersection instead of averaging to determine each quad center.",
+          "isHidden": true,
+          "name": "Diagonal Intersection",
+          "type": "variable",
+          "typeName": "perspective",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Warp",
+        "Grid",
+        "Deform",
+        "Mesh"
+      ],
+      "typePath": "node:graphic:convert:gridWarp",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/gridWarp"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Reconstruct world-space location per pixel from a camera and a non-normalized depth map. XYZ as RGB.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Depth",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Camera",
+          "typeName": "cameraIn",
+          "valueType": "raw:core:camera",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Location from Depth",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Location",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Depth",
+        "Location",
+        "Camera",
+        "3D",
+        "XYZ",
+        "RGB"
+      ],
+      "typePath": "node:graphic:convert:locationFromDepth",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/locationFromDepth"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Wrap a graphic in polar coordinates into a circle at the center, keeping the resolution. The horizontal axis is a full turn from the start angle, going clockwise. The vertical axis is the radius, the top is the center and the bottom is half the height out. Outside of the circle is transparent.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The angle the leading edge of the source is placed at. Zero points right and the turn goes clockwise.",
+          "level": "external",
+          "name": "Start Angle",
+          "typeName": "startAngleIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Polar to Cartesian",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "startAngleIn",
+          "info": "The angle the leading edge of the source is placed at. Zero points right and the turn goes clockwise.",
+          "isHidden": false,
+          "name": "Start Angle",
+          "type": "variable",
+          "typeName": "startAngle",
+          "valueType": "raw:core:angle"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Polar",
+        "Cartesian",
+        "Radial",
+        "Coordinates",
+        "Wrap",
+        "Circle",
+        "360"
+      ],
+      "typePath": "node:graphic:convert:polarToCartesian",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/polarToCartesian"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Combine every pixel along one axis into a single row or column. Useful for scopes and profiles. The graphic is always read at its own resolution.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Reduce",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Average",
+            "typeName": "average"
+          },
+          "enumCases": [
+            {
+              "name": "Average",
+              "typeName": "average"
+            },
+            {
+              "name": "Minimum",
+              "typeName": "minimum"
+            },
+            {
+              "name": "Maximum",
+              "typeName": "maximum"
+            },
+            {
+              "name": "Sum",
+              "typeName": "sum"
+            }
+          ],
+          "info": "How the pixels are combined. Sum can exceed one, use 16 or 32 bit to keep the range.",
+          "isHidden": false,
+          "name": "Method",
+          "type": "typedEnum",
+          "typeName": "method"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Row",
+            "typeName": "row"
+          },
+          "enumCases": [
+            {
+              "name": "Row",
+              "typeName": "row"
+            },
+            {
+              "name": "Column",
+              "typeName": "column"
+            }
+          ],
+          "info": "A row is one pixel tall and combines each column. A column is one pixel wide and combines each row.",
+          "isHidden": false,
+          "name": "Reduce To",
+          "type": "typedEnum",
+          "typeName": "reduceTo"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Reduce",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Sum",
+        "Scope",
+        "Profile",
+        "Row",
+        "Column"
+      ],
+      "typePath": "node:graphic:convert:reduce",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/reduce"
+    },
+    {
+      "complexity": "basic",
+      "docs": "",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Resolution",
+          "typeName": "resolutionIn",
+          "valueType": "raw:core:size",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Resolution",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "resolutionIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "size",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 0
+                        },
+                        "fraction": 1
+                      }
+                    },
+                    {
+                      "flexible": {
+                        "axis": {
+                          "count": 2,
+                          "index": 1
+                        },
+                        "fraction": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "size",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "fixed": {
+                        "value": 1
+                      }
+                    },
+                    {
+                      "fixed": {
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "Resolution",
+          "type": "variable",
+          "typeName": "resolution",
+          "valueType": "raw:core:size"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Fit",
+            "typeName": "fit"
+          },
+          "enumCases": [
+            {
+              "name": "Stretch",
+              "typeName": "stretch"
+            },
+            {
+              "name": "Fit",
+              "typeName": "fit"
+            },
+            {
+              "name": "Fill",
+              "typeName": "fill"
+            },
+            {
+              "name": "Fixed",
+              "typeName": "fixed"
+            }
+          ],
+          "isHidden": false,
+          "name": "Placement",
+          "type": "stringEnum",
+          "typeName": "placement"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Linear",
+            "typeName": "linear"
+          },
+          "enumCases": [
+            {
+              "name": "Linear",
+              "typeName": "linear"
+            },
+            {
+              "name": "Lanczos",
+              "typeName": "lanczos"
+            },
+            {
+              "name": "Bilinear",
+              "typeName": "bilinear"
+            },
+            {
+              "name": "Pixelated",
+              "typeName": "pixelated"
+            }
+          ],
+          "isHidden": false,
+          "name": "Interpolation",
+          "type": "stringEnum",
+          "typeName": "interpolation"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:graphic:convert:resolution",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/resolution"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Detect text in a Graphic and output a keyed list whose frames identify the location of each recognized String.",
+      "familyName": "Graphic",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Text Detection",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "lex",
+          "direction": "direct",
+          "keyType": "raw:core:rect",
+          "level": "external",
+          "name": "Framed Texts",
+          "typeName": "textOut",
+          "valueType": "raw:core:string",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Convert",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "OCR",
+        "Recognize",
+        "Vision"
+      ],
+      "typePath": "node:graphic:convert:textDetection",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic/convert/textDetection"
+    }
+  ]
+}

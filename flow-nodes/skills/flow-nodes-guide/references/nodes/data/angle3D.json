@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Data",
+  "parentName": "3D Angle",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Get the x, y and z Angle components of a 3D Angle.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:angle3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Components",
+      "newInAppVersion": "1.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "X",
+          "typeName": "xOut",
+          "valueType": "raw:core:angle",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Y",
+          "typeName": "yOut",
+          "valueType": "raw:core:angle",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Z",
+          "typeName": "zOut",
+          "valueType": "raw:core:angle",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Angle",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:angle3D:components",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/angle3D/components"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Construct a 3D Angle from x, y and z angles.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "X",
+          "typeName": "xIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Y",
+          "typeName": "yIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Z",
+          "typeName": "zIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Construct",
+      "newInAppVersion": "1.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:angle3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Angle",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:angle3D:construct",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/angle3D/construct"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a list of 3D Angles. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "in",
+          "valueType": "raw:core:angle3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:angle3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Angle",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:angle3D:listRelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/angle3D/listRelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of 3D Angles.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Angles",
+          "typeName": "out",
+          "valueType": "raw:core:angle3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Angle",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValues": [],
+          "isHidden": false,
+          "name": "Angles",
+          "type": "valueArray",
+          "typeName": "angles",
+          "valueType": "raw:core:angle3D"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array"
+      ],
+      "typePath": "node:data:angle3D:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/angle3D/listState"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a 3D Angle. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:angle3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:angle3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Angle",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:data:angle3D:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/angle3D/relay"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a 3D Angle.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Angle",
+          "typeName": "out",
+          "valueType": "raw:core:angle3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Angle",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "isHidden": false,
+          "name": "Angle",
+          "type": "value",
+          "typeName": "angle",
+          "valueType": "raw:core:angle3D"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store"
+      ],
+      "typePath": "node:data:angle3D:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/angle3D/state"
+    }
+  ]
+}

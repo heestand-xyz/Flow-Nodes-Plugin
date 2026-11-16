@@ -2,7 +2,7 @@
 
 Source route: `/docs/info/wire-connections`. Media is not bundled; public route availability must be verified.
 
-There are different types of wires in Flow Nodes, in **thin wires** only **one value** can flow downstream (towards the right), tho in **double wires** data can flow **both down and up stream**. 
+There are different types of wires in Flow Nodes, in **thin wires** only **one value** can flow downstream (towards the right), tho in **double wires** data can flow **both down and up stream**.
 
 There are also **thicker wires**, they can send more than one value at a time in an **array**. Finally there is the **lexicon wire**, it can send a **dictionary** of keyed values.
 

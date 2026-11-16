@@ -2,6 +2,8 @@
 
 These plans were checked against the bundled node definitions and selected implementation code. They have not been executed in the app as part of plugin creation. Read each selected node's JSON before adapting the recipe. Verify device/version and existing Pro access when relevant.
 
+Each record link opens a parent JSON file. Select the entry in its `nodes` array with the exact linked `typePath`; several nodes, including deprecated variants, share the same file.
+
 ## A slider controls image blur
 
 Create **State — Graphic / Resource**, **State — Data / Float**, **Slider — Interface / Control**, and **Blur — Graphic / Space Effect**. Import an image into Graphic State. Set Float State Value to 10; set Slider Minimum to 0 and Maximum to 50 as example values. These slider settings are a useful chosen range, not catalog defaults. Choose Gaussian blur for a simple starting point.
@@ -14,7 +16,7 @@ Create **State — Graphic / Resource**, **State — Data / Float**, **Slider �
 
 Show the Slider's View and Blur's Graphic. Moving the slider updates the Float State and changes the blur. Do not wire Slider View into Blur Radius.
 
-Records: `node-graphic-resource-state`, `node-data-float-state`, `node-interface-control-slider`, `node-graphic-spaceEffect-blur`.
+Records: [`node:graphic:resource:state`](nodes/graphic/resource.json), [`node:data:float:state`](nodes/data/float.json), [`node:interface:control:slider`](nodes/interface/control.json), [`node:graphic:spaceEffect:blur`](nodes/graphic/spaceEffect.json).
 
 ## Scrub a video with a slider
 
@@ -30,7 +32,7 @@ Show Slider View and Sample Graphic. The current Sample evaluates its selected p
 
 The older Video Guide uses Frame Count minus one multiplied by the slider fraction, followed by frame-index sampling. Use that when explaining an older saved graph; for a new current flow, fraction sampling avoids those math nodes. If using Frame Index, select that Seek Mode and use **Seek Frame Index** on the current node.
 
-Records: `node-video-resource-state`, `node-video-resource-sample2`, `node-video-resource-player`, `node-data-float-state`, `node-interface-control-slider`.
+Records: [`node:video:resource:state`](nodes/video/resource.json), [`node:video:resource:sample2`](nodes/video/resource.json), [`node:video:resource:player`](nodes/video/resource.json), [`node:data:float:state`](nodes/data/float.json), [`node:interface:control:slider`](nodes/interface/control.json).
 
 ## Apply an effect to every video frame
 
@@ -45,7 +47,7 @@ Create a source Video State, a separate empty destination Video State, **Video E
 
 Set Blur Radius. Trigger Video Edit **Start Render**, or connect an Action to its external **Render** inlet. Observe rendering progress. After completion, the destination State stores the edited video; connect that State's Video to a Player for playback. Do not look for a Video Edit Video output; none is defined.
 
-Records: `node-video-resource-state`, `node-container-map-videoEdit`, `node-graphic-spaceEffect-blur`, `node-video-resource-player`.
+Records: [`node:video:resource:state`](nodes/video/resource.json), [`node:container:map:videoEdit`](nodes/container/map.json), [`node:graphic:spaceEffect:blur`](nodes/graphic/spaceEffect.json), [`node:video:resource:player`](nodes/video/resource.json).
 
 ## Multiply each Float in a list
 
@@ -59,7 +61,7 @@ Create **List State — Data / Float**, current **Edit — Container / Map** (`e
 
 Read the external **Array Out**; it should contain 2, 4, 6. **Index** is an optional internal Int output, not the current element. Keep the type Float throughout this example.
 
-Records: `node-data-float-listState`, `node-container-map-edit2`, `node-general-math-operation`.
+Records: [`node:data:float:listState`](nodes/data/float.json), [`node:container:map:edit2`](nodes/container/map.json), [`node:general:math:operation`](nodes/general/math.json).
 
 ## Save a value when a button is pressed
 
@@ -73,7 +75,7 @@ Create two Float States named Source and Saved, **Save — General / Generic**, 
 
 Display Button View and press the button. Saved receives the Source value. Save has no outlet and does not automatically run just because Source changes.
 
-Records: `node-data-float-state`, `node-general-generic-save`, `node-interface-control-button`, `node-interface-text-label`.
+Records: [`node:data:float:state`](nodes/data/float.json), [`node:general:generic:save`](nodes/general/generic.json), [`node:interface:control:button`](nodes/interface/control.json), [`node:interface:text:label`](nodes/interface/text.json).
 
 ## Render a cube
 
@@ -83,4 +85,4 @@ The Render node has one Multi **Entities** input. The cube, camera, and light fe
 
 For clones, add **Clone Transform — 3D Spatial / Entity**, which requires Pro access, and a list of 3D transforms, for example the 3D Point Grid used with conversion in the 3D Guide. Feed the cube into Clone Transform **Entity**, transforms into **Transforms**, and its Entity output into Render **Entities** alongside the camera and light. Do not mix this with the deprecated Geometry Clones signature.
 
-Records: `node-geometry-shape-cube2`, `node-spatial-camera-perspective`, `node-spatial-light-directional`, `node-graphic-engine-kagamiRender`, `node-spatial-entity-cloneTransform`, `node-data-point3D-grid`.
+Records: [`node:geometry:shape:cube2`](nodes/geometry/shape.json), [`node:spatial:camera:perspective`](nodes/spatial/camera.json), [`node:spatial:light:directional`](nodes/spatial/light.json), [`node:graphic:engine:kagamiRender`](nodes/graphic/engine.json), [`node:spatial:entity:cloneTransform`](nodes/spatial/entity.json), [`node:data:point3D:grid`](nodes/data/point3D.json).

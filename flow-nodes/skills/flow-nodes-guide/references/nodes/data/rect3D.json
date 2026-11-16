@@ -1,0 +1,564 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Data",
+  "parentName": "3D Rect",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Get the center 3D Point and 3D Size components of a 3D Rect.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:rect3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Center Components",
+      "newInAppVersion": "2.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Center",
+          "typeName": "centerOut",
+          "valueType": "raw:core:point3D",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Size",
+          "typeName": "sizeOut",
+          "valueType": "raw:core:size3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Rect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Frame"
+      ],
+      "typePath": "node:data:rect3D:centerComponents",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/rect3D/centerComponents"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Construct a 3D Rect from a center 3D Point and a 3D Size.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Center",
+          "typeName": "centerIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Size",
+          "typeName": "sizeIn",
+          "valueType": "raw:core:size3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Center Construct",
+      "newInAppVersion": "2.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:rect3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Rect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Frame"
+      ],
+      "typePath": "node:data:rect3D:centerConstruct",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/rect3D/centerConstruct"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Get the origin (top, left, far) and size components of a 3D Rect.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:rect3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Components",
+      "newInAppVersion": "1.7.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Origin",
+          "typeName": "originOut",
+          "valueType": "raw:core:point3D",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Size",
+          "typeName": "sizeOut",
+          "valueType": "raw:core:size3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Rect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Frame"
+      ],
+      "typePath": "node:data:rect3D:components",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/rect3D/components"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Construct a 3D Rect from an origin (top, left, far) and a size.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Origin",
+          "typeName": "originIn",
+          "valueType": "raw:core:point3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Size",
+          "typeName": "sizeIn",
+          "valueType": "raw:core:size3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Construct",
+      "newInAppVersion": "1.7.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:rect3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Rect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Frame"
+      ],
+      "typePath": "node:data:rect3D:construct",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/rect3D/construct"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a list of 3D Rects. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "in",
+          "valueType": "raw:core:rect3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Relay",
+      "newInAppVersion": "1.7.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:rect3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Rect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Frame"
+      ],
+      "typePath": "node:data:rect3D:listRelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/rect3D/listRelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of 3D Rects.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "1.7.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:rect3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Rect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValues": [],
+          "isHidden": false,
+          "name": "Values",
+          "type": "valueArray",
+          "typeName": "values",
+          "valueType": "raw:core:rect3D"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array",
+        "Frame"
+      ],
+      "typePath": "node:data:rect3D:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/rect3D/listState"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Adds padding to selected sides of a 3D Rect. All also pads the depth. Negative padding reduces the frame.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Frame",
+          "typeName": "frameIn",
+          "valueType": "raw:core:rect3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The amount added to the selected sides of the frame.",
+          "level": "external",
+          "name": "Padding",
+          "typeName": "paddingIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Padding",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Frame",
+          "typeName": "frameOut",
+          "valueType": "raw:core:rect3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Rect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "origin": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "size": {
+              "depth": 1,
+              "height": 1,
+              "width": 1
+            }
+          },
+          "inLetTypeName": "frameIn",
+          "isHidden": false,
+          "name": "Frame",
+          "type": "variable",
+          "typeName": "frame",
+          "valueType": "raw:core:rect3D"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "All",
+            "typeName": "all"
+          },
+          "enumCases": [
+            {
+              "name": "All",
+              "typeName": "all"
+            },
+            {
+              "name": "Horizontal",
+              "typeName": "horizontal"
+            },
+            {
+              "name": "Leading",
+              "typeName": "leading"
+            },
+            {
+              "name": "Trailing",
+              "typeName": "trailing"
+            },
+            {
+              "name": "Vertical",
+              "typeName": "vertical"
+            },
+            {
+              "name": "Top",
+              "typeName": "top"
+            },
+            {
+              "name": "Bottom",
+              "typeName": "bottom"
+            },
+            {
+              "name": "Depth",
+              "typeName": "depth"
+            },
+            {
+              "name": "Far",
+              "typeName": "far"
+            },
+            {
+              "name": "Near",
+              "typeName": "near"
+            }
+          ],
+          "isHidden": false,
+          "name": "Sides",
+          "type": "typedEnum",
+          "typeName": "sides"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "paddingIn",
+          "info": "The amount added to the selected sides of the frame.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 16,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Padding",
+          "type": "variable",
+          "typeName": "padding",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Frame",
+        "Inset",
+        "Expand"
+      ],
+      "typePath": "node:data:rect3D:padding",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/rect3D/padding"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a 3D Rect. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:rect3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "1.7.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:rect3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Rect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null",
+        "Frame"
+      ],
+      "typePath": "node:data:rect3D:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/rect3D/relay"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a 3D Rect.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "1.7.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:rect3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "3D Rect",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": {
+            "origin": {
+              "x": 0,
+              "y": 0,
+              "z": 0
+            },
+            "size": {
+              "depth": 1,
+              "height": 1,
+              "width": 1
+            }
+          },
+          "isHidden": false,
+          "name": "Value",
+          "type": "value",
+          "typeName": "value",
+          "valueType": "raw:core:rect3D"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Frame"
+      ],
+      "typePath": "node:data:rect3D:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/rect3D/state"
+    }
+  ]
+}

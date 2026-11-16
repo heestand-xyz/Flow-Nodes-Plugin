@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Data",
+  "parentName": "Int",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Negate a value.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Invert",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:int",
+          "way": "out"
+        }
+      ],
+      "parentName": "Int",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Negate"
+      ],
+      "typePath": "node:data:int:invert",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/int/invert"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a list of Ints. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "in",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:int",
+          "way": "out"
+        }
+      ],
+      "parentName": "Int",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:data:int:listRelay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/int/listRelay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of Ints.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Values",
+          "typeName": "out",
+          "valueType": "raw:core:int",
+          "way": "out"
+        }
+      ],
+      "parentName": "Int",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValues": [],
+          "isHidden": false,
+          "name": "Values",
+          "type": "valueArray",
+          "typeName": "values",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array"
+      ],
+      "typePath": "node:data:int:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/int/listState"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay an Int. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:int",
+          "way": "out"
+        }
+      ],
+      "parentName": "Int",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:data:int:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/int/relay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Modulus operation.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Value",
+          "typeName": "in",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Divider",
+          "typeName": "dividerIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Remainder",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Remainder",
+          "typeName": "out",
+          "valueType": "raw:core:int",
+          "way": "out"
+        }
+      ],
+      "parentName": "Int",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 2,
+          "inLetTypeName": "dividerIn",
+          "isHidden": false,
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Divider",
+          "type": "variable",
+          "typeName": "divider",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Modulo"
+      ],
+      "typePath": "node:data:int:remainder",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/int/remainder"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "A range of Ints.",
+      "familyName": "Data",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Lower Bound",
+          "typeName": "lowerBoundIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Upper Bound",
+          "typeName": "upperBoundIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Step",
+          "typeName": "stepIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Closed",
+          "typeName": "closedIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Span",
+      "newInAppVersion": "2.2.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Span",
+          "typeName": "out",
+          "valueType": "raw:core:int",
+          "way": "out"
+        }
+      ],
+      "parentName": "Int",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "lowerBoundIn",
+          "info": "The first number.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Lower Bound",
+          "type": "variable",
+          "typeName": "lowerBound",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "upperBoundIn",
+          "info": "The last number if closed. If not closed it will be the number after the last number in the list.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Upper Bound",
+          "type": "variable",
+          "typeName": "upperBound",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "stepIn",
+          "info": "The step between numbers in the list.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Step",
+          "type": "variable",
+          "typeName": "step",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "closedIn",
+          "info": "If closed the upper bound will include its number.",
+          "isHidden": false,
+          "name": "Closed",
+          "type": "variable",
+          "typeName": "closed",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Range",
+        "Numbers"
+      ],
+      "typePath": "node:data:int:span",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/int/span"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store an Int.",
+      "familyName": "Data",
+      "inLets": [],
+      "isPro": false,
+      "name": "State",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Value",
+          "typeName": "out",
+          "valueType": "raw:core:int",
+          "way": "out"
+        }
+      ],
+      "parentName": "Int",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "isHidden": false,
+          "name": "Value",
+          "type": "value",
+          "typeName": "value",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store"
+      ],
+      "typePath": "node:data:int:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/data/int/state"
+    }
+  ]
+}

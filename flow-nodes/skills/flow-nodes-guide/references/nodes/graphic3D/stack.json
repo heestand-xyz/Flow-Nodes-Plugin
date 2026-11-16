@@ -1,0 +1,696 @@
+{
+  "schemaVersion": 1,
+  "familyName": "3D Graphic",
+  "parentName": "Stack",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Stack 3D graphics along the depth axis, from far to near. Align the other two axes and set the spacing between volumes in voxels.",
+      "familyName": "3D Graphic",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Graphics",
+          "typeName": "graphicsIn",
+          "valueType": "raw:graphic3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The gap between each graphic, in voxels.",
+          "level": "external",
+          "name": "Spacing",
+          "typeName": "spacingIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Depth",
+      "newInAppVersion": "27.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Graphic",
+          "typeName": "graphic3DOut",
+          "valueType": "raw:graphic3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "Stack",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Center",
+            "typeName": "center"
+          },
+          "enumCases": [
+            {
+              "name": "Leading",
+              "typeName": "leading"
+            },
+            {
+              "name": "Center",
+              "typeName": "center"
+            },
+            {
+              "name": "Trailing",
+              "typeName": "trailing"
+            }
+          ],
+          "info": "Alignment on the horizontal axis.",
+          "isHidden": false,
+          "name": "Horizontal Alignment",
+          "type": "typedEnum",
+          "typeName": "horizontalAlignment"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Center",
+            "typeName": "center"
+          },
+          "enumCases": [
+            {
+              "name": "Top",
+              "typeName": "top"
+            },
+            {
+              "name": "Center",
+              "typeName": "center"
+            },
+            {
+              "name": "Bottom",
+              "typeName": "bottom"
+            }
+          ],
+          "info": "Alignment on the vertical axis.",
+          "isHidden": false,
+          "name": "Vertical Alignment",
+          "type": "typedEnum",
+          "typeName": "verticalAlignment"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "spacingIn",
+          "info": "The gap between each graphic, in voxels.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Spacing",
+          "type": "variable",
+          "typeName": "spacing",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Stack",
+        "Depth",
+        "Volume",
+        "3D",
+        "Spacing"
+      ],
+      "typePath": "node:graphic3D:stack:depth",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic3D/stack/depth"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Stack 3D graphics side by side, from leading to trailing. Align the other two axes and set the spacing between volumes in voxels.",
+      "familyName": "3D Graphic",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Graphics",
+          "typeName": "graphicsIn",
+          "valueType": "raw:graphic3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The gap between each graphic, in voxels.",
+          "level": "external",
+          "name": "Spacing",
+          "typeName": "spacingIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Horizontal",
+      "newInAppVersion": "27.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Graphic",
+          "typeName": "graphic3DOut",
+          "valueType": "raw:graphic3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "Stack",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Center",
+            "typeName": "center"
+          },
+          "enumCases": [
+            {
+              "name": "Top",
+              "typeName": "top"
+            },
+            {
+              "name": "Center",
+              "typeName": "center"
+            },
+            {
+              "name": "Bottom",
+              "typeName": "bottom"
+            }
+          ],
+          "info": "Alignment on the vertical axis.",
+          "isHidden": false,
+          "name": "Vertical Alignment",
+          "type": "typedEnum",
+          "typeName": "verticalAlignment"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Center",
+            "typeName": "center"
+          },
+          "enumCases": [
+            {
+              "name": "Far",
+              "typeName": "far"
+            },
+            {
+              "name": "Center",
+              "typeName": "center"
+            },
+            {
+              "name": "Near",
+              "typeName": "near"
+            }
+          ],
+          "info": "Alignment on the depth axis.",
+          "isHidden": false,
+          "name": "Depth Alignment",
+          "type": "typedEnum",
+          "typeName": "depthAlignment"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "spacingIn",
+          "info": "The gap between each graphic, in voxels.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Spacing",
+          "type": "variable",
+          "typeName": "spacing",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Stack",
+        "Horizontal",
+        "Volume",
+        "3D",
+        "Spacing"
+      ],
+      "typePath": "node:graphic3D:stack:horizontal",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic3D/stack/horizontal"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Layer 3D graphics within their combined bounding volume. Alignment places smaller volumes without scaling. The first volume keeps its original color and opacity; the blend mode combines subsequent volumes.",
+      "familyName": "3D Graphic",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Graphics",
+          "typeName": "graphicsIn",
+          "valueType": "raw:graphic3D",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Layers",
+      "newInAppVersion": "27.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Graphic",
+          "typeName": "graphic3DOut",
+          "valueType": "raw:graphic3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "Stack",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Center",
+            "typeName": "center"
+          },
+          "enumCases": [
+            {
+              "name": "Far Top Leading",
+              "typeName": "farTopLeading"
+            },
+            {
+              "name": "Far Top",
+              "typeName": "farTop"
+            },
+            {
+              "name": "Far Top Trailing",
+              "typeName": "farTopTrailing"
+            },
+            {
+              "name": "Far Leading",
+              "typeName": "farLeading"
+            },
+            {
+              "name": "Far",
+              "typeName": "far"
+            },
+            {
+              "name": "Far Trailing",
+              "typeName": "farTrailing"
+            },
+            {
+              "name": "Far Bottom Leading",
+              "typeName": "farBottomLeading"
+            },
+            {
+              "name": "Far Bottom",
+              "typeName": "farBottom"
+            },
+            {
+              "name": "Far Bottom Trailing",
+              "typeName": "farBottomTrailing"
+            },
+            {
+              "name": "Top Leading",
+              "typeName": "topLeading"
+            },
+            {
+              "name": "Top",
+              "typeName": "top"
+            },
+            {
+              "name": "Top Trailing",
+              "typeName": "topTrailing"
+            },
+            {
+              "name": "Leading",
+              "typeName": "leading"
+            },
+            {
+              "name": "Center",
+              "typeName": "center"
+            },
+            {
+              "name": "Trailing",
+              "typeName": "trailing"
+            },
+            {
+              "name": "Bottom Leading",
+              "typeName": "bottomLeading"
+            },
+            {
+              "name": "Bottom",
+              "typeName": "bottom"
+            },
+            {
+              "name": "Bottom Trailing",
+              "typeName": "bottomTrailing"
+            },
+            {
+              "name": "Near Top Leading",
+              "typeName": "nearTopLeading"
+            },
+            {
+              "name": "Near Top",
+              "typeName": "nearTop"
+            },
+            {
+              "name": "Near Top Trailing",
+              "typeName": "nearTopTrailing"
+            },
+            {
+              "name": "Near Leading",
+              "typeName": "nearLeading"
+            },
+            {
+              "name": "Near",
+              "typeName": "near"
+            },
+            {
+              "name": "Near Trailing",
+              "typeName": "nearTrailing"
+            },
+            {
+              "name": "Near Bottom Leading",
+              "typeName": "nearBottomLeading"
+            },
+            {
+              "name": "Near Bottom",
+              "typeName": "nearBottom"
+            },
+            {
+              "name": "Near Bottom Trailing",
+              "typeName": "nearBottomTrailing"
+            }
+          ],
+          "info": "How graphics of different resolutions are placed in the stack.",
+          "isHidden": false,
+          "name": "Alignment",
+          "type": "typedEnum",
+          "typeName": "alignment"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Over",
+            "typeName": "over"
+          },
+          "enumCases": [
+            {
+              "name": "Over",
+              "typeName": "over"
+            },
+            {
+              "name": "Over with Alpha",
+              "typeName": "overWithAlpha"
+            },
+            {
+              "name": "Under",
+              "typeName": "under"
+            },
+            {
+              "name": "Screen",
+              "typeName": "screen"
+            },
+            {
+              "name": "Lighten",
+              "typeName": "lighten"
+            },
+            {
+              "name": "Darken",
+              "typeName": "darken"
+            },
+            {
+              "name": "Darken without Alpha",
+              "typeName": "darkenWithoutAlpha"
+            },
+            {
+              "name": "Add",
+              "typeName": "add"
+            },
+            {
+              "name": "Add with Alpha",
+              "typeName": "addWithAlpha"
+            },
+            {
+              "name": "Multiply",
+              "typeName": "multiply"
+            },
+            {
+              "name": "Multiply without Alpha",
+              "typeName": "multiplyWithoutAlpha"
+            },
+            {
+              "name": "Difference",
+              "typeName": "difference"
+            },
+            {
+              "name": "Difference with Alpha",
+              "typeName": "differenceWithAlpha"
+            },
+            {
+              "name": "Subtract",
+              "typeName": "subtract"
+            },
+            {
+              "name": "Subtract with Alpha",
+              "typeName": "subtractWithAlpha"
+            },
+            {
+              "name": "Maximum",
+              "typeName": "maximum"
+            },
+            {
+              "name": "Minimum",
+              "typeName": "minimum"
+            },
+            {
+              "name": "Gamma",
+              "typeName": "gamma"
+            },
+            {
+              "name": "Power",
+              "typeName": "power"
+            },
+            {
+              "name": "Divide",
+              "typeName": "divide"
+            },
+            {
+              "name": "Average",
+              "typeName": "average"
+            },
+            {
+              "name": "Cosine",
+              "typeName": "cosine"
+            },
+            {
+              "name": "Inside",
+              "typeName": "inside"
+            },
+            {
+              "name": "Outside",
+              "typeName": "outside"
+            },
+            {
+              "name": "Exclusive Or",
+              "typeName": "exclusiveOr"
+            }
+          ],
+          "info": "How each graphic is blended with the graphics below it. The first graphic keeps its original color and opacity.",
+          "isHidden": false,
+          "name": "Blend Mode",
+          "type": "typedEnum",
+          "typeName": "blendMode"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Stack",
+        "Layers",
+        "Blend",
+        "Volume",
+        "3D",
+        "Alignment"
+      ],
+      "typePath": "node:graphic3D:stack:layers",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic3D/stack/layers"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Stack 3D graphics from top to bottom. Align the other two axes and set the spacing between volumes in voxels.",
+      "familyName": "3D Graphic",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Graphics",
+          "typeName": "graphicsIn",
+          "valueType": "raw:graphic3D",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The gap between each graphic, in voxels.",
+          "level": "external",
+          "name": "Spacing",
+          "typeName": "spacingIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Vertical",
+      "newInAppVersion": "27.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "3D Graphic",
+          "typeName": "graphic3DOut",
+          "valueType": "raw:graphic3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "Stack",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Center",
+            "typeName": "center"
+          },
+          "enumCases": [
+            {
+              "name": "Leading",
+              "typeName": "leading"
+            },
+            {
+              "name": "Center",
+              "typeName": "center"
+            },
+            {
+              "name": "Trailing",
+              "typeName": "trailing"
+            }
+          ],
+          "info": "Alignment on the horizontal axis.",
+          "isHidden": false,
+          "name": "Horizontal Alignment",
+          "type": "typedEnum",
+          "typeName": "horizontalAlignment"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Center",
+            "typeName": "center"
+          },
+          "enumCases": [
+            {
+              "name": "Far",
+              "typeName": "far"
+            },
+            {
+              "name": "Center",
+              "typeName": "center"
+            },
+            {
+              "name": "Near",
+              "typeName": "near"
+            }
+          ],
+          "info": "Alignment on the depth axis.",
+          "isHidden": false,
+          "name": "Depth Alignment",
+          "type": "typedEnum",
+          "typeName": "depthAlignment"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "spacingIn",
+          "info": "The gap between each graphic, in voxels.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 10,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Spacing",
+          "type": "variable",
+          "typeName": "spacing",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Stack",
+        "Vertical",
+        "Volume",
+        "3D",
+        "Spacing"
+      ],
+      "typePath": "node:graphic3D:stack:vertical",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/graphic3D/stack/vertical"
+    }
+  ]
+}

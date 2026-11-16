@@ -1,0 +1,1129 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Interface",
+  "parentName": "Gesture",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Detect a drag with location updates on a view. Downstream views will also respond to the gesture.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Minimum Distance",
+          "typeName": "minimumDistanceIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Drag",
+      "newInAppVersion": "1.4.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Active",
+          "typeName": "activeOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Location",
+          "typeName": "locationOut",
+          "valueType": "raw:core:point",
+          "way": "out"
+        }
+      ],
+      "parentName": "Gesture",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Regular",
+            "typeName": "regular"
+          },
+          "enumCases": [
+            {
+              "name": "Regular",
+              "typeName": "regular"
+            },
+            {
+              "name": "High",
+              "typeName": "high"
+            },
+            {
+              "name": "Simultaneous",
+              "typeName": "simultaneous"
+            }
+          ],
+          "isHidden": false,
+          "name": "Priority",
+          "type": "typedEnum",
+          "typeName": "priority"
+        },
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "minimumDistanceIn",
+          "info": "The distance before a drag is recognized.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 20,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Minimum Distance",
+          "type": "variable",
+          "typeName": "minimumDistance",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacedByTypePath": "node:interface:gesture:drag2",
+      "replacesTypePaths": [],
+      "tags": [
+        "Touch"
+      ],
+      "typePath": "node:interface:gesture:drag",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/interface/gesture/drag"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Detect a drag with location updates on a view. Downstream views will also respond to the gesture.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Active",
+          "typeName": "activeIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Location",
+          "typeName": "locationIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Add a Coordinate Space node downstream to reference its frame.",
+          "level": "external",
+          "name": "Coordinate Space Name",
+          "typeName": "coordinateSpaceNameIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Minimum Distance",
+          "typeName": "minimumDistanceIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Drag",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Gesture",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Local",
+            "typeName": "local"
+          },
+          "enumCases": [
+            {
+              "name": "Local",
+              "typeName": "local"
+            },
+            {
+              "name": "Global",
+              "typeName": "global"
+            },
+            {
+              "name": "Named",
+              "typeName": "named"
+            }
+          ],
+          "isHidden": false,
+          "name": "Coordinate Space",
+          "type": "typedEnum",
+          "typeName": "coordinateSpace"
+        },
+        {
+          "defaultValue": "",
+          "inLetTypeName": "coordinateSpaceNameIn",
+          "info": "Add a Coordinate Space node downstream to reference its frame.",
+          "isHidden": true,
+          "name": "Coordinate Space Name",
+          "type": "variable",
+          "typeName": "coordinateSpaceName",
+          "valueType": "raw:core:string"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Regular",
+            "typeName": "regular"
+          },
+          "enumCases": [
+            {
+              "name": "Regular",
+              "typeName": "regular"
+            },
+            {
+              "name": "High",
+              "typeName": "high"
+            },
+            {
+              "name": "Simultaneous",
+              "typeName": "simultaneous"
+            }
+          ],
+          "isHidden": false,
+          "name": "Priority",
+          "type": "typedEnum",
+          "typeName": "priority"
+        },
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "minimumDistanceIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 20,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Minimum Distance",
+          "type": "variable",
+          "typeName": "minimumDistance",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [
+        "node:interface:gesture:drag"
+      ],
+      "tags": [
+        "Touch"
+      ],
+      "typePath": "node:interface:gesture:drag2",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/gesture/drag2"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Detect a key presses. To detect a key press the view needs to be in focus.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Allow Repeat",
+          "typeName": "allowRepeatIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Key Press",
+      "newInAppVersion": "2.1.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        },
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Keys",
+          "typeName": "keysOut",
+          "valueType": "raw:core:string",
+          "way": "out"
+        },
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Flags",
+          "typeName": "flagsOut",
+          "valueType": "raw:core:string",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Active",
+          "typeName": "activeOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Key Down",
+          "typeName": "keyDownOut",
+          "valueType": "raw:action",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Key Up",
+          "typeName": "keyUpOut",
+          "valueType": "raw:action",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Key Repeat",
+          "typeName": "keyRepeatOut",
+          "valueType": "raw:action",
+          "way": "out"
+        }
+      ],
+      "parentName": "Gesture",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValues": [],
+          "info": "An empty list will match any key.",
+          "isHidden": false,
+          "name": "Allowed Keys",
+          "type": "valueArray",
+          "typeName": "allowedKeys",
+          "valueType": "raw:core:string"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "allowRepeatIn",
+          "info": "When pressing the key over time, it can repeat.",
+          "isHidden": false,
+          "name": "Allow Repeat",
+          "type": "variable",
+          "typeName": "allowRepeat",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Keyboard",
+        "Shortcut"
+      ],
+      "typePath": "node:interface:gesture:keyPress",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/gesture/keyPress"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Detect a long press on a view. Specify a minimum duration in seconds. Downstream views will also respond to the gesture.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Minimum Duration",
+          "typeName": "minimumDurationIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Maximum Distance",
+          "typeName": "maximumDistanceIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Long Press",
+      "newInAppVersion": "1.4.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Action",
+          "typeName": "actionOut",
+          "valueType": "raw:action",
+          "way": "out"
+        }
+      ],
+      "parentName": "Gesture",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Regular",
+            "typeName": "regular"
+          },
+          "enumCases": [
+            {
+              "name": "Regular",
+              "typeName": "regular"
+            },
+            {
+              "name": "High",
+              "typeName": "high"
+            },
+            {
+              "name": "Simultaneous",
+              "typeName": "simultaneous"
+            }
+          ],
+          "isHidden": false,
+          "name": "Priority",
+          "type": "typedEnum",
+          "typeName": "priority"
+        },
+        {
+          "defaultValue": 0.5,
+          "inLetTypeName": "minimumDurationIn",
+          "info": "The time before a long press is recognized.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Minimum Duration",
+          "type": "variable",
+          "typeName": "minimumDuration",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "maximumDistanceIn",
+          "info": "The distance before a long press is cancelled.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 20,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 5,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Maximum Distance",
+          "type": "variable",
+          "typeName": "maximumDistance",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Touch",
+        "Hold"
+      ],
+      "typePath": "node:interface:gesture:longPress",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/gesture/longPress"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Detect a magnification with scale on a view. Downstream views will also respond to the gesture.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Minimum Scale Delta",
+          "typeName": "minimumScaleDeltaIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Magnify",
+      "newInAppVersion": "1.4.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Active",
+          "typeName": "activeOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Magnification",
+          "typeName": "magnificationOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Start Location",
+          "typeName": "startLocationOut",
+          "valueType": "raw:core:point",
+          "way": "out"
+        }
+      ],
+      "parentName": "Gesture",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Regular",
+            "typeName": "regular"
+          },
+          "enumCases": [
+            {
+              "name": "Regular",
+              "typeName": "regular"
+            },
+            {
+              "name": "High",
+              "typeName": "high"
+            },
+            {
+              "name": "Simultaneous",
+              "typeName": "simultaneous"
+            }
+          ],
+          "isHidden": false,
+          "name": "Priority",
+          "type": "typedEnum",
+          "typeName": "priority"
+        },
+        {
+          "defaultValue": 0.01,
+          "inLetTypeName": "minimumScaleDeltaIn",
+          "info": "The difference in scale before a gesture is recognized.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 0.02,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0.005,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Count",
+          "type": "variable",
+          "typeName": "minimumScaleDelta",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacedByTypePath": "node:interface:gesture:magnify2",
+      "replacesTypePaths": [],
+      "tags": [
+        "Touch"
+      ],
+      "typePath": "node:interface:gesture:magnify",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/interface/gesture/magnify"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Detect a magnification with scale on a view. Downstream views will also respond to the gesture.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Active",
+          "typeName": "activeIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Start Location",
+          "typeName": "startLocationIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Magnification",
+          "typeName": "magnificationIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Minimum Scale Delta",
+          "typeName": "minimumScaleDeltaIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Magnify",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Gesture",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Regular",
+            "typeName": "regular"
+          },
+          "enumCases": [
+            {
+              "name": "Regular",
+              "typeName": "regular"
+            },
+            {
+              "name": "High",
+              "typeName": "high"
+            },
+            {
+              "name": "Simultaneous",
+              "typeName": "simultaneous"
+            }
+          ],
+          "isHidden": false,
+          "name": "Priority",
+          "type": "typedEnum",
+          "typeName": "priority"
+        },
+        {
+          "defaultValue": 0.01,
+          "inLetTypeName": "minimumScaleDeltaIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 0.02,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0.005,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Minimum Scale Delta",
+          "type": "variable",
+          "typeName": "minimumScaleDelta",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [
+        "node:interface:gesture:magnify"
+      ],
+      "tags": [
+        "Touch"
+      ],
+      "typePath": "node:interface:gesture:magnify2",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/gesture/magnify2"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Detect a tap / click with a location on a view. Downstream views will also respond to the gesture.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Count",
+          "typeName": "countIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Tap",
+      "newInAppVersion": "1.4.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Action",
+          "typeName": "actionOut",
+          "valueType": "raw:action",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Location",
+          "typeName": "locationOut",
+          "valueType": "raw:core:point",
+          "way": "out"
+        }
+      ],
+      "parentName": "Gesture",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Regular",
+            "typeName": "regular"
+          },
+          "enumCases": [
+            {
+              "name": "Regular",
+              "typeName": "regular"
+            },
+            {
+              "name": "High",
+              "typeName": "high"
+            },
+            {
+              "name": "Simultaneous",
+              "typeName": "simultaneous"
+            }
+          ],
+          "isHidden": false,
+          "name": "Priority",
+          "type": "typedEnum",
+          "typeName": "priority"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "countIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Count",
+          "type": "variable",
+          "typeName": "count",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacedByTypePath": "node:interface:gesture:tap2",
+      "replacesTypePaths": [],
+      "tags": [
+        "Click",
+        "Touch"
+      ],
+      "typePath": "node:interface:gesture:tap",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/interface/gesture/tap"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Detect a tap / click with a location on a view. Downstream views will also respond to the gesture.",
+      "familyName": "Interface",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewIn",
+          "valueType": "raw:view",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Location",
+          "typeName": "locationIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Add a Coordinate Space node downstream to reference its frame.",
+          "level": "external",
+          "name": "Coordinate Space Name",
+          "typeName": "coordinateSpaceNameIn",
+          "valueType": "raw:core:string",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Count",
+          "typeName": "countIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Tap",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Action",
+          "typeName": "actionOut",
+          "valueType": "raw:action",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "View",
+          "typeName": "viewOut",
+          "valueType": "raw:view",
+          "way": "out"
+        }
+      ],
+      "parentName": "Gesture",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Local",
+            "typeName": "local"
+          },
+          "enumCases": [
+            {
+              "name": "Local",
+              "typeName": "local"
+            },
+            {
+              "name": "Global",
+              "typeName": "global"
+            },
+            {
+              "name": "Named",
+              "typeName": "named"
+            }
+          ],
+          "isHidden": false,
+          "name": "Coordinate Space",
+          "type": "typedEnum",
+          "typeName": "coordinateSpace"
+        },
+        {
+          "defaultValue": "",
+          "inLetTypeName": "coordinateSpaceNameIn",
+          "info": "Add a Coordinate Space node downstream to reference its frame.",
+          "isHidden": true,
+          "name": "Coordinate Space Name",
+          "type": "variable",
+          "typeName": "coordinateSpaceName",
+          "valueType": "raw:core:string"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Regular",
+            "typeName": "regular"
+          },
+          "enumCases": [
+            {
+              "name": "Regular",
+              "typeName": "regular"
+            },
+            {
+              "name": "High",
+              "typeName": "high"
+            },
+            {
+              "name": "Simultaneous",
+              "typeName": "simultaneous"
+            }
+          ],
+          "isHidden": false,
+          "name": "Priority",
+          "type": "typedEnum",
+          "typeName": "priority"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "countIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Count",
+          "type": "variable",
+          "typeName": "count",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [
+        "node:interface:gesture:tap"
+      ],
+      "tags": [
+        "Click",
+        "Touch"
+      ],
+      "typePath": "node:interface:gesture:tap2",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/interface/gesture/tap2"
+    }
+  ]
+}

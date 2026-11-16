@@ -1,0 +1,958 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Vector",
+  "parentName": "Modifier",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Clone a vector path with multiple transforms and combine the transformed clones into a single vector path.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "vectorIn",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Transforms",
+          "typeName": "transformsIn",
+          "valueType": "raw:core:transform",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Union",
+          "typeName": "unionIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": true,
+      "name": "Clone Transform",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "vectorOut",
+          "valueType": "raw:vector",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "unionIn",
+          "isHidden": false,
+          "name": "Union",
+          "type": "variable",
+          "typeName": "union",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Clone",
+        "Transform",
+        "Instance",
+        "Copy"
+      ],
+      "typePath": "node:vector:modifier:cloneTransform",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/modifier/cloneTransform"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Combine a list of Vectors together.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vectors",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Combine",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "out",
+          "valueType": "raw:vector",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:vector:modifier:combine",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/modifier/combine"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Convert vector curves into line segments by subdividing each curve.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "vectorIn",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "The number of line segments used for each curve.",
+          "level": "external",
+          "name": "Subdivisions",
+          "typeName": "subdivisionsIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Curve Subdivide",
+      "newInAppVersion": "4.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "vectorOut",
+          "valueType": "raw:vector",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 10,
+          "inLetTypeName": "subdivisionsIn",
+          "info": "The number of line segments used for each curve.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 20,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Subdivisions",
+          "type": "variable",
+          "typeName": "subdivisions",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Curve",
+        "Subdivide",
+        "Lines",
+        "Quantize"
+      ],
+      "typePath": "node:vector:modifier:curveSubdivide",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/modifier/curveSubdivide"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Intersect a list of Vectors.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vectors",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Intersection",
+      "newInAppVersion": "1.7.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "out",
+          "valueType": "raw:vector",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:vector:modifier:intersection",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/modifier/intersection"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Mirror a vector path horizontally, vertically, or both.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "vectorIn",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Horizontal",
+          "typeName": "horizontalIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vertical",
+          "typeName": "verticalIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Mirror",
+      "newInAppVersion": "4.3.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "vectorOut",
+          "valueType": "raw:vector",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": true,
+          "inLetTypeName": "horizontalIn",
+          "isHidden": false,
+          "name": "Horizontal",
+          "type": "variable",
+          "typeName": "horizontal",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "verticalIn",
+          "isHidden": false,
+          "name": "Vertical",
+          "type": "variable",
+          "typeName": "vertical",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Flip",
+        "Horizontal",
+        "Vertical"
+      ],
+      "typePath": "node:vector:modifier:mirror",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/modifier/mirror"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Relay a Vector. This node has no effect. Tho useful to define a type when wiring to generics.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Relay",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "out",
+          "valueType": "raw:vector",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Nil",
+        "Null"
+      ],
+      "typePath": "node:vector:modifier:relay",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/modifier/relay"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Round corners of a Vector shape. (This node is a bit experimental, and does not work in all cases)",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Corner Radius",
+          "typeName": "cornerRadiusIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Round",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "out",
+          "valueType": "raw:vector",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "cornerRadiusIn",
+          "isHidden": false,
+          "minimumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "fixed": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "Corner Radius",
+          "type": "variable",
+          "typeName": "cornerRadius",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Corner Radius"
+      ],
+      "typePath": "node:vector:modifier:round",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/modifier/round"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Create a outline shape from a solid vector shape.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Line Width",
+          "typeName": "lineWidthIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Dash Length",
+          "typeName": "dashLengthIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Dash Phase",
+          "typeName": "dashPhaseIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Stroke",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "out",
+          "valueType": "raw:vector",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "lineWidthIn",
+          "isHidden": false,
+          "maximumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "fixed": {
+                        "value": 10
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "fixed": {
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "Line Width",
+          "type": "variable",
+          "typeName": "lineWidth",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 10,
+          "info": "Controls the maximum extension of mitered corners before they are converted to a bevel. A higher value preserves sharp angles, while a lower value smooths them out.",
+          "isHidden": false,
+          "maximumValue": {
+            "type": "value",
+            "value": 10,
+            "valueType": {
+              "raw": {
+                "_0": {
+                  "core": {
+                    "_0": "float"
+                  }
+                }
+              }
+            }
+          },
+          "minimumValue": {
+            "type": "value",
+            "value": 0,
+            "valueType": {
+              "raw": {
+                "_0": {
+                  "core": {
+                    "_0": "float"
+                  }
+                }
+              }
+            }
+          },
+          "name": "Miter Limit",
+          "type": "value",
+          "typeName": "miterLimit",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": false,
+          "isHidden": false,
+          "name": "Dash",
+          "type": "value",
+          "typeName": "dash",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "dashLengthIn",
+          "isHidden": false,
+          "minimumValue": {
+            "coreType": "float",
+            "mode": {
+              "spatial": {
+                "_0": {
+                  "components": [
+                    {
+                      "fixed": {
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "type": "variable"
+          },
+          "name": "Dash Length",
+          "type": "variable",
+          "typeName": "dashLength",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "dashPhaseIn",
+          "isHidden": false,
+          "name": "Dash Phase",
+          "type": "variable",
+          "typeName": "dashPhase",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Line Width",
+        "Border"
+      ],
+      "typePath": "node:vector:modifier:stroke",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/modifier/stroke"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Subtract a list of Vectors from each other.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vectors",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Subtraction",
+      "newInAppVersion": "1.7.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "out",
+          "valueType": "raw:vector",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:vector:modifier:subtraction",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/modifier/subtraction"
+    },
+    {
+      "complexity": "basic",
+      "docs": "",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Translation",
+          "typeName": "translationIn",
+          "valueType": "raw:core:point",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Scale",
+          "typeName": "scaleIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Rotation",
+          "typeName": "rotationIn",
+          "valueType": "raw:core:angle",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Transform",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "out",
+          "valueType": "raw:vector",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultVariableMode": "spatial",
+          "inLetTypeName": "translationIn",
+          "isHidden": false,
+          "name": "Translation",
+          "type": "variable",
+          "typeName": "translation",
+          "valueType": "raw:core:point"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "scaleIn",
+          "isHidden": false,
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Scale",
+          "type": "variable",
+          "typeName": "scale",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "rotationIn",
+          "isHidden": false,
+          "name": "Rotation",
+          "type": "variable",
+          "typeName": "rotation",
+          "valueType": "raw:core:angle"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Position",
+        "Offset",
+        "Translation",
+        "Scale",
+        "Rotation"
+      ],
+      "typePath": "node:vector:modifier:transform",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/modifier/transform"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Trim the shape path at fractions between 0.0 and 1.0.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Start Fraction",
+          "typeName": "startFractionIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "End Fraction",
+          "typeName": "endFractionIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Trim",
+      "newInAppVersion": "1.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "out",
+          "valueType": "raw:vector",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "startFractionIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Start Fraction",
+          "type": "variable",
+          "typeName": "startFraction",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "endFractionIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "End Fraction",
+          "type": "variable",
+          "typeName": "endFraction",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:vector:modifier:trim",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/modifier/trim"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Union a list of Vectors together.",
+      "familyName": "Vector",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vectors",
+          "typeName": "in",
+          "valueType": "raw:vector",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Union",
+      "newInAppVersion": "1.7.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Vector",
+          "typeName": "out",
+          "valueType": "raw:vector",
+          "way": "out"
+        }
+      ],
+      "parentName": "Modifier",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:vector:modifier:union",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/vector/modifier/union"
+    }
+  ]
+}

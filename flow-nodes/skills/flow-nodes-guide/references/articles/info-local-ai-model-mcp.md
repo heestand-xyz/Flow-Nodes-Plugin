@@ -100,7 +100,7 @@ mcpServers:
       - "/Applications/Flow Nodes.app/Contents/Resources/MCP/FlowNodesMCP"
 ```
 
-Write and exit vim with `:wq` 
+Write and exit vim with `:wq`
 
 # **4. Start Flow Nodes**
 

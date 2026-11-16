@@ -1,195 +1,195 @@
 # Data nodes
 
-Read the linked JSON for exact ports and properties. Prefer visible replacements for new flows.
+Each linked JSON file contains a parent group. Select the entry in `nodes` with the exact listed `typePath` for ports and properties. Prefer visible replacements for new flows.
 
-- **3D Angle / Components** — Free. [JSON](../nodes/node-data-angle3D-components.json) · `node:data:angle3D:components`. Get the x, y and z Angle components of a 3D Angle.
-- **3D Angle / Construct** — Free. [JSON](../nodes/node-data-angle3D-construct.json) · `node:data:angle3D:construct`. Construct a 3D Angle from x, y and z angles.
-- **3D Angle / List Relay** — Free. [JSON](../nodes/node-data-angle3D-listRelay.json) · `node:data:angle3D:listRelay`. Relay a list of 3D Angles. This node has no effect. Tho useful to define a type when wiring to generics.
-- **3D Angle / List State** — Free. [JSON](../nodes/node-data-angle3D-listState.json) · `node:data:angle3D:listState`. Store a list of 3D Angles.
-- **3D Angle / Relay** — Free. [JSON](../nodes/node-data-angle3D-relay.json) · `node:data:angle3D:relay`. Relay a 3D Angle. This node has no effect. Tho useful to define a type when wiring to generics.
-- **3D Angle / State** — Free. [JSON](../nodes/node-data-angle3D-state.json) · `node:data:angle3D:state`. Store a 3D Angle.
-- **3D Point / Components** — Free. [JSON](../nodes/node-data-point3D-components.json) · `node:data:point3D:components`. Get the x, y and z Float components of a 3D Point.
-- **3D Point / Construct** — Free. [JSON](../nodes/node-data-point3D-construct.json) · `node:data:point3D:construct`. Construct a 3D Point from x, y and z floats.
-- **3D Point / Fraction Grid** — Free. [JSON](../nodes/node-data-point3D-fractionGrid.json) · `node:data:point3D:fractionGrid`. A grid of points. Based on a spacing and offset.
-- **3D Point / Fraction Line** — Free. [JSON](../nodes/node-data-point3D-fractionLine.json) · `node:data:point3D:fractionLine`. A line of points. Based on a spacing and offset.
-- **3D Point / Fraction Sphere** — Free. [JSON](../nodes/node-data-point3D-fractionSphere.json) · `node:data:point3D:fractionSphere`. A circle of points. Based on a spacing and offset.
-- **3D Point / Grid** — Free. [JSON](../nodes/node-data-point3D-grid.json) · `node:data:point3D:grid`. A grid of points.
-- **3D Point / Length** — Free. [JSON](../nodes/node-data-point3D-length.json) · `node:data:point3D:length`. Distance between two 3D points.
-- **3D Point / Line** — Free. [JSON](../nodes/node-data-point3D-line.json) · `node:data:point3D:line`. A line of points.
-- **3D Point / List Relay** — Free. [JSON](../nodes/node-data-point3D-listRelay.json) · `node:data:point3D:listRelay`. Relay a list of 3D Points. This node has no effect. Tho useful to define a type when wiring to generics.
-- **3D Point / List State** — Free. [JSON](../nodes/node-data-point3D-listState.json) · `node:data:point3D:listState`. Store a list of 3D Points.
-- **3D Point / Relay** — Free. [JSON](../nodes/node-data-point3D-relay.json) · `node:data:point3D:relay`. Relay a 3D Point. This node has no effect. Tho useful to define a type when wiring to generics.
-- **3D Point / Sphere** — Free. [JSON](../nodes/node-data-point3D-sphere.json) · `node:data:point3D:sphere`. A circle of points.
-- **3D Point / State** — Free. [JSON](../nodes/node-data-point3D-state.json) · `node:data:point3D:state`. Store a 3D Point.
-- **3D Rect / Center Components** — Free. [JSON](../nodes/node-data-rect3D-centerComponents.json) · `node:data:rect3D:centerComponents`. Get the center 3D Point and 3D Size components of a 3D Rect.
-- **3D Rect / Center Construct** — Free. [JSON](../nodes/node-data-rect3D-centerConstruct.json) · `node:data:rect3D:centerConstruct`. Construct a 3D Rect from a center 3D Point and a 3D Size.
-- **3D Rect / Components** — Free. [JSON](../nodes/node-data-rect3D-components.json) · `node:data:rect3D:components`. Get the origin (top, left, far) and size components of a 3D Rect.
-- **3D Rect / Construct** — Free. [JSON](../nodes/node-data-rect3D-construct.json) · `node:data:rect3D:construct`. Construct a 3D Rect from an origin (top, left, far) and a size.
-- **3D Rect / List Relay** — Free. [JSON](../nodes/node-data-rect3D-listRelay.json) · `node:data:rect3D:listRelay`. Relay a list of 3D Rects. This node has no effect. Tho useful to define a type when wiring to generics.
-- **3D Rect / List State** — Free. [JSON](../nodes/node-data-rect3D-listState.json) · `node:data:rect3D:listState`. Store a list of 3D Rects.
-- **3D Rect / Padding** — Free. [JSON](../nodes/node-data-rect3D-padding.json) · `node:data:rect3D:padding`. Adds padding to selected sides of a 3D Rect. All also pads the depth. Negative padding reduces the frame.
-- **3D Rect / Relay** — Free. [JSON](../nodes/node-data-rect3D-relay.json) · `node:data:rect3D:relay`. Relay a 3D Rect. This node has no effect. Tho useful to define a type when wiring to generics.
-- **3D Rect / State** — Free. [JSON](../nodes/node-data-rect3D-state.json) · `node:data:rect3D:state`. Store a 3D Rect.
-- **3D Size / Components** — Free. [JSON](../nodes/node-data-size3D-components.json) · `node:data:size3D:components`. Get the width, height and depth Float components of a 3D Size.
-- **3D Size / Construct** — Free. [JSON](../nodes/node-data-size3D-construct.json) · `node:data:size3D:construct`. Construct a 3D Size from width, height and depth floats.
-- **3D Size / List Relay** — Free. [JSON](../nodes/node-data-size3D-listRelay.json) · `node:data:size3D:listRelay`. Relay a list of 3D Sizes. This node has no effect. Tho useful to define a type when wiring to generics.
-- **3D Size / List State** — Free. [JSON](../nodes/node-data-size3D-listState.json) · `node:data:size3D:listState`. Store a list of 3D Sizes.
-- **3D Size / Relay** — Free. [JSON](../nodes/node-data-size3D-relay.json) · `node:data:size3D:relay`. Relay a 3D Size. This node has no effect. Tho useful to define a type when wiring to generics.
-- **3D Size / State** — Free. [JSON](../nodes/node-data-size3D-state.json) · `node:data:size3D:state`. Store a 3D Size.
-- **3D Transform / Components** — Free. [JSON](../nodes/node-data-transform3D-components.json) · `node:data:transform3D:components`. Get the position, scale, and rotation components of a 3D Transform.
-- **3D Transform / Construct** — Free. [JSON](../nodes/node-data-transform3D-construct.json) · `node:data:transform3D:construct`. Construct a 3D Transform from position, scale, and rotation.
-- **3D Transform / List Relay** — Free. [JSON](../nodes/node-data-transform3D-listRelay.json) · `node:data:transform3D:listRelay`. Relay a list of 3D Transforms. This node has no effect. Tho useful to define a type when wiring to generics.
-- **3D Transform / List State** — Free. [JSON](../nodes/node-data-transform3D-listState.json) · `node:data:transform3D:listState`. Store a list of 3D Transforms.
-- **3D Transform / Relay** — Free. [JSON](../nodes/node-data-transform3D-relay.json) · `node:data:transform3D:relay`. Relay a 3D Transform. This node has no effect. Tho useful to define a type when wiring to generics.
-- **3D Transform / State** — Free. [JSON](../nodes/node-data-transform3D-state.json) · `node:data:transform3D:state`. Store a 3D Transform.
-- **3D Vector Point / Construct** — Free. [JSON](../nodes/node-data-vectorPoint3D-construct.json) · `node:data:vectorPoint3D:construct`. Construct a 3D Vector Point from a Point3D with options for quadratic or cubic curve mode with control points.
-- **3D Vector Point / List Relay** — Free. [JSON](../nodes/node-data-vectorPoint3D-listRelay.json) · `node:data:vectorPoint3D:listRelay`. Relay a list of 3D Vector Points.
-- **3D Vector Point / List State** — Free. [JSON](../nodes/node-data-vectorPoint3D-listState.json) · `node:data:vectorPoint3D:listState`. Store a list of 3D Vector Points.
-- **3D Vector Point / Relay** — Free. [JSON](../nodes/node-data-vectorPoint3D-relay.json) · `node:data:vectorPoint3D:relay`. Relay a 3D Vector Point.
-- **3D Vector Point / State** — Free. [JSON](../nodes/node-data-vectorPoint3D-state.json) · `node:data:vectorPoint3D:state`. Store a 3D Vector Point.
-- **Angle / Direction** — Free. [JSON](../nodes/node-data-angle-direction.json) · `node:data:angle:direction`. Calculate the angle between the vector of two points. The reference point is zero by default.
-- **Angle / List Relay** — Free. [JSON](../nodes/node-data-angle-listRelay.json) · `node:data:angle:listRelay`. Relay a list of Angles. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Angle / List State** — Free. [JSON](../nodes/node-data-angle-listState.json) · `node:data:angle:listState`. Store a list of Angles.
-- **Angle / Relay** — Free. [JSON](../nodes/node-data-angle-relay.json) · `node:data:angle:relay`. Relay an Angle. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Angle / State** — Free. [JSON](../nodes/node-data-angle-state.json) · `node:data:angle:state`. Store a Angle.
-- **Bool / If Else** — Free. [JSON](../nodes/node-data-bool-ifElse.json) · `node:data:bool:ifElse`. Switch between two values based on a condition.
-- **Bool / Invert** — Free. [JSON](../nodes/node-data-bool-invert.json) · `node:data:bool:invert`. Negate the boolean value.
-- **Bool / List Relay** — Free. [JSON](../nodes/node-data-bool-listRelay.json) · `node:data:bool:listRelay`. Relay a list of Bools. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Bool / List State** — Free. [JSON](../nodes/node-data-bool-listState.json) · `node:data:bool:listState`. Store a list of Bools.
-- **Bool / Logic** — Free. [JSON](../nodes/node-data-bool-logic.json) · `node:data:bool:logic`. Logic gate.
-- **Bool / Relay** — Free. [JSON](../nodes/node-data-bool-relay.json) · `node:data:bool:relay`. Relay a Bool. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Bool / State** — Free. [JSON](../nodes/node-data-bool-state.json) · `node:data:bool:state`. Store a Bool.
-- **Bool / Toggle** — Free. [JSON](../nodes/node-data-bool-toggle.json) · `node:data:bool:toggle`. Toggles an upstream Bool when the action is triggered.
-- **Color / HSBA Components** — Free. [JSON](../nodes/node-data-color-hsbaComponents.json) · `node:data:color:hsbaComponents`. Get the hue, saturation, brightness and alpha Float components of a Color.
-- **Color / HSBA Construct** — Free. [JSON](../nodes/node-data-color-hsbaConstruct.json) · `node:data:color:hsbaConstruct`. Construct a Color from hue, saturation, brightness and alpha Floats.
-- **Color / Hex Components** — Free. [JSON](../nodes/node-data-color-hexComponents.json) · `node:data:color:hexComponents`. Get the hex String and alpha Float components of a Color.
-- **Color / Hex Construct** — Free. [JSON](../nodes/node-data-color-hexConstruct.json) · `node:data:color:hexConstruct`. Construct a Color from a hex String and an alpha Float.
-- **Color / Key** — Pro. [JSON](../nodes/node-data-color-key.json) · `node:data:color:key`. Find key Colors in a Graphic.
-- **Color / Levels** — Free. [JSON](../nodes/node-data-color-levels.json) · `node:data:color:levels`. Adjust the levels of a Color.
-- **Color / List Relay** — Free. [JSON](../nodes/node-data-color-listRelay.json) · `node:data:color:listRelay`. Relay a list of Colors. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Color / List State** — Free. [JSON](../nodes/node-data-color-listState.json) · `node:data:color:listState`. Store a list of Colors.
-- **Color / Opacity** — Free. [JSON](../nodes/node-data-color-opacity.json) · `node:data:color:opacity`. Adjust the levels of a Color.
-- **Color / Pixel** — Pro; deprecated; replacement node:data:color:pixel2. [JSON](../nodes/node-data-color-pixel.json) · `node:data:color:pixel`. Get a pixel Color at a specific position from a Graphic.
-- **Color / Pixel** — Free. [JSON](../nodes/node-data-color-pixel2.json) · `node:data:color:pixel2`. Get a pixel Color at a specific location from a Graphic. Unit coordinates range from zero to one; pixel coordinates use pixel-center indices.
-- **Color / RGBA Components** — Free. [JSON](../nodes/node-data-color-rgbaComponents.json) · `node:data:color:rgbaComponents`. Get the red, green, blue and alpha Float components of a Color.
-- **Color / RGBA Construct** — Free. [JSON](../nodes/node-data-color-rgbaConstruct.json) · `node:data:color:rgbaConstruct`. Construct a Color from red, green, blue and alpha Floats.
-- **Color / Relay** — Free. [JSON](../nodes/node-data-color-relay.json) · `node:data:color:relay`. Relay a Color. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Color / Shift** — Free. [JSON](../nodes/node-data-color-shift.json) · `node:data:color:shift`. Shift hue, change saturation and tint.
-- **Color / State** — Free. [JSON](../nodes/node-data-color-state.json) · `node:data:color:state`. Store a Color.
-- **Color / Voxel** — Pro. [JSON](../nodes/node-data-color-voxel.json) · `node:data:color:voxel`. Get a voxel Color at a specific position from a 3D Graphic.
-- **Date / Components** — Free. [JSON](../nodes/node-data-date-components.json) · `node:data:date:components`. Split up a date into its components.
-- **Date / Construct** — Free. [JSON](../nodes/node-data-date-construct.json) · `node:data:date:construct`. Create a date from components.
-- **Date / Distance** — Free; deprecated; replacement node:data:date:duration. [JSON](../nodes/node-data-date-distance.json) · `node:data:date:distance`. Measure the time distance between two dates in seconds.
-- **Date / Duration** — Free. [JSON](../nodes/node-data-date-duration.json) · `node:data:date:duration`. Measure the time duration between two dates.
-- **Date / Format from String** — Free. [JSON](../nodes/node-data-date-formatFromString.json) · `node:data:date:formatFromString`. Format a date from a string.
-- **Date / Format to String** — Free. [JSON](../nodes/node-data-date-formatToString.json) · `node:data:date:formatToString`. Format a date to a string.
-- **Date / List Relay** — Free. [JSON](../nodes/node-data-date-listRelay.json) · `node:data:date:listRelay`. Relay a list of Dates. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Date / List State** — Free. [JSON](../nodes/node-data-date-listState.json) · `node:data:date:listState`. Store a list of Dates.
-- **Date / Relay** — Free. [JSON](../nodes/node-data-date-relay.json) · `node:data:date:relay`. Relay a Date. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Date / State** — Free. [JSON](../nodes/node-data-date-state.json) · `node:data:date:state`. Store a Date.
-- **Duration / List Relay** — Free. [JSON](../nodes/node-data-duration-listRelay.json) · `node:data:duration:listRelay`. Relay a list of Durations. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Duration / List State** — Free. [JSON](../nodes/node-data-duration-listState.json) · `node:data:duration:listState`. Store a list of Durations.
-- **Duration / Relay** — Free. [JSON](../nodes/node-data-duration-relay.json) · `node:data:duration:relay`. Relay a Duration. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Duration / State** — Free. [JSON](../nodes/node-data-duration-state.json) · `node:data:duration:state`. Store a Duration.
-- **Float / Abs** — Free. [JSON](../nodes/node-data-float-abs.json) · `node:data:float:abs`. Makes a negative value positive.
-- **Float / Atan** — Free. [JSON](../nodes/node-data-float-atan.json) · `node:data:float:atan`. 
-- **Float / Cosine** — Free. [JSON](../nodes/node-data-float-cosine.json) · `node:data:float:cosine`. 
-- **Float / Fraction Span** — Free. [JSON](../nodes/node-data-float-fractionSpan.json) · `node:data:float:fractionSpan`. A range of Floats from a lower bound to an upper bound by a fractional step.
-- **Float / Invert** — Free. [JSON](../nodes/node-data-float-invert.json) · `node:data:float:invert`. Negate a value.
-- **Float / List Relay** — Free. [JSON](../nodes/node-data-float-listRelay.json) · `node:data:float:listRelay`. Relay a list of Floats. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Float / List State** — Free. [JSON](../nodes/node-data-float-listState.json) · `node:data:float:listState`. Store a list of Floats.
-- **Float / Pi** — Free. [JSON](../nodes/node-data-float-pi.json) · `node:data:float:pi`. 
-- **Float / Power** — Free. [JSON](../nodes/node-data-float-power.json) · `node:data:float:power`. 
-- **Float / Relay** — Free. [JSON](../nodes/node-data-float-relay.json) · `node:data:float:relay`. Relay a Float. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Float / Remainder** — Free. [JSON](../nodes/node-data-float-remainder.json) · `node:data:float:remainder`. Modulus operation.
-- **Float / Sine** — Free. [JSON](../nodes/node-data-float-sine.json) · `node:data:float:sine`. 
-- **Float / Span** — Free. [JSON](../nodes/node-data-float-span.json) · `node:data:float:span`. A range of Floats.
-- **Float / Square Root** — Free. [JSON](../nodes/node-data-float-squareRoot.json) · `node:data:float:squareRoot`. 
-- **Float / State** — Free. [JSON](../nodes/node-data-float-state.json) · `node:data:float:state`. Store a float.
-- **Int / Invert** — Free. [JSON](../nodes/node-data-int-invert.json) · `node:data:int:invert`. Negate a value.
-- **Int / List Relay** — Free. [JSON](../nodes/node-data-int-listRelay.json) · `node:data:int:listRelay`. Relay a list of Ints. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Int / List State** — Free. [JSON](../nodes/node-data-int-listState.json) · `node:data:int:listState`. Store a list of Ints.
-- **Int / Relay** — Free. [JSON](../nodes/node-data-int-relay.json) · `node:data:int:relay`. Relay an Int. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Int / Remainder** — Free. [JSON](../nodes/node-data-int-remainder.json) · `node:data:int:remainder`. Modulus operation.
-- **Int / Span** — Free. [JSON](../nodes/node-data-int-span.json) · `node:data:int:span`. A range of Ints.
-- **Int / State** — Free. [JSON](../nodes/node-data-int-state.json) · `node:data:int:state`. Store an Int.
-- **Point / Circle** — Free. [JSON](../nodes/node-data-point-circle.json) · `node:data:point:circle`. A circle of points.
-- **Point / Components** — Free. [JSON](../nodes/node-data-point-components.json) · `node:data:point:components`. Get the x and y Float components of a Point.
-- **Point / Construct** — Free. [JSON](../nodes/node-data-point-construct.json) · `node:data:point:construct`. Construct a Point from x and y floats.
-- **Point / Fraction Circle** — Free. [JSON](../nodes/node-data-point-fractionCircle.json) · `node:data:point:fractionCircle`. A circle of points. Based on a spacing and offset.
-- **Point / Fraction Grid** — Free. [JSON](../nodes/node-data-point-fractionGrid.json) · `node:data:point:fractionGrid`. A grid of points. Based on a spacing and offset.
-- **Point / Fraction Line** — Free. [JSON](../nodes/node-data-point-fractionLine.json) · `node:data:point:fractionLine`. A line of points. Based on a spacing and offset.
-- **Point / Grid** — Free. [JSON](../nodes/node-data-point-grid.json) · `node:data:point:grid`. A grid of points.
-- **Point / Length** — Free. [JSON](../nodes/node-data-point-length.json) · `node:data:point:length`. Distance between two points.
-- **Point / Line** — Free. [JSON](../nodes/node-data-point-line.json) · `node:data:point:line`. A line of points.
-- **Point / List Relay** — Free. [JSON](../nodes/node-data-point-listRelay.json) · `node:data:point:listRelay`. Relay a list of Points. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Point / List State** — Free. [JSON](../nodes/node-data-point-listState.json) · `node:data:point:listState`. Store a list of Points.
-- **Point / Relay** — Free. [JSON](../nodes/node-data-point-relay.json) · `node:data:point:relay`. Relay a Point. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Point / State** — Free. [JSON](../nodes/node-data-point-state.json) · `node:data:point:state`. Store a Point.
-- **Point / Vector from Angle** — Free. [JSON](../nodes/node-data-point-vectorFromAngle.json) · `node:data:point:vectorFromAngle`. Create a normalized vector Point from an Angle. The length of this vector is always one.
-- **Quaternion / Components** — Free. [JSON](../nodes/node-data-quaternion-components.json) · `node:data:quaternion:components`. Get the x, y, z and w components of a Quaternion.
-- **Quaternion / Construct** — Free. [JSON](../nodes/node-data-quaternion-construct.json) · `node:data:quaternion:construct`. Construct a Quaternion from x, y, z, and w values.
-- **Quaternion / Invert** — Free. [JSON](../nodes/node-data-quaternion-invert.json) · `node:data:quaternion:invert`. Invert the angles of a Quaternion.
-- **Quaternion / List Relay** — Free. [JSON](../nodes/node-data-quaternion-listRelay.json) · `node:data:quaternion:listRelay`. Relay a list of Quaternions. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Quaternion / List State** — Free. [JSON](../nodes/node-data-quaternion-listState.json) · `node:data:quaternion:listState`. Store a list of Quaternions. Used for 3D rotations.
-- **Quaternion / Look At** — Free. [JSON](../nodes/node-data-quaternion-lookAt.json) · `node:data:quaternion:lookAt`. A rotation looking at a point.
-- **Quaternion / Relay** — Free. [JSON](../nodes/node-data-quaternion-relay.json) · `node:data:quaternion:relay`. Relay a Quaternion. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Quaternion / State** — Free. [JSON](../nodes/node-data-quaternion-state.json) · `node:data:quaternion:state`. Store a Quaternion. Used for 3D rotation.
-- **Rect / Center Components** — Free. [JSON](../nodes/node-data-rect-centerComponents.json) · `node:data:rect:centerComponents`. Get the center Point and Size components of a Rect.
-- **Rect / Center Construct** — Free. [JSON](../nodes/node-data-rect-centerConstruct.json) · `node:data:rect:centerConstruct`. Construct a Rect from a center Point and a Size.
-- **Rect / Components** — Free. [JSON](../nodes/node-data-rect-components.json) · `node:data:rect:components`. Get the origin (top left) and size components of a Rect.
-- **Rect / Construct** — Free. [JSON](../nodes/node-data-rect-construct.json) · `node:data:rect:construct`. Construct a Rect from an origin (top left) and a size.
-- **Rect / List Relay** — Free. [JSON](../nodes/node-data-rect-listRelay.json) · `node:data:rect:listRelay`. Relay a list of Rects. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Rect / List State** — Free. [JSON](../nodes/node-data-rect-listState.json) · `node:data:rect:listState`. Store a list of Rects.
-- **Rect / Padding** — Free. [JSON](../nodes/node-data-rect-padding.json) · `node:data:rect:padding`. Adds padding to selected sides of a Rect. Negative padding reduces the frame.
-- **Rect / Relay** — Free. [JSON](../nodes/node-data-rect-relay.json) · `node:data:rect:relay`. Relay a Rect. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Rect / State** — Free. [JSON](../nodes/node-data-rect-state.json) · `node:data:rect:state`. Store a Rect.
-- **Size / Components** — Free. [JSON](../nodes/node-data-size-components.json) · `node:data:size:components`. Get the width and height Float components of a Size.
-- **Size / Construct** — Free. [JSON](../nodes/node-data-size-construct.json) · `node:data:size:construct`. Construct a Size from width and height floats.
-- **Size / List Relay** — Free. [JSON](../nodes/node-data-size-listRelay.json) · `node:data:size:listRelay`. Relay a list of Sizes. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Size / List State** — Free. [JSON](../nodes/node-data-size-listState.json) · `node:data:size:listState`. Store a list of Sizes.
-- **Size / Relay** — Free. [JSON](../nodes/node-data-size-relay.json) · `node:data:size:relay`. Relay a Size. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Size / State** — Free. [JSON](../nodes/node-data-size-state.json) · `node:data:size:state`. Store a Size.
-- **String / Decode from JSON** — Free. [JSON](../nodes/node-data-string-decodeFromJSON.json) · `node:data:string:decodeFromJSON`. Decode a core value from a JSON string.
-- **String / Description** — Free. [JSON](../nodes/node-data-string-description.json) · `node:data:string:description`. Describe a value.
-- **String / Encode to JSON** — Free. [JSON](../nodes/node-data-string-encodeToJSON.json) · `node:data:string:encodeToJSON`. Encode a core value into a JSON string.
-- **String / Item from JSON** — Free. [JSON](../nodes/node-data-string-itemFromJSON.json) · `node:data:string:itemFromJSON`. Select a value from a JSON dictionary with a specific key.
-- **String / JSON List from CSV** — Free. [JSON](../nodes/node-data-string-jsonListFromCSV.json) · `node:data:string:jsonListFromCSV`. Convert CSV rows into a JSON string list based on header keys.
-- **String / Join** — Free. [JSON](../nodes/node-data-string-join.json) · `node:data:string:join`. Join a list of Strings into one String, optionally separated by another string.
-- **String / Keyed List to JSON** — Free. [JSON](../nodes/node-data-string-keyedListToJSON.json) · `node:data:string:keyedListToJSON`. Combine keys and values into a JSON string.
-- **String / List Relay** — Free. [JSON](../nodes/node-data-string-listRelay.json) · `node:data:string:listRelay`. Relay a list of Strings. This node has no effect. Tho useful to define a type when wiring to generics.
-- **String / List State** — Free. [JSON](../nodes/node-data-string-listState.json) · `node:data:string:listState`. Store a list of Strings.
-- **String / List from JSON** — Free. [JSON](../nodes/node-data-string-listFromJSON.json) · `node:data:string:listFromJSON`. Derive a list of values from a JSON array.
-- **String / List to JSON** — Free. [JSON](../nodes/node-data-string-listToJSON.json) · `node:data:string:listToJSON`. Combine values into a JSON string.
-- **String / Lowercase** — Free. [JSON](../nodes/node-data-string-lowercase.json) · `node:data:string:lowercase`. 
-- **String / Percent Decode** — Free. [JSON](../nodes/node-data-string-percentDecode.json) · `node:data:string:percentDecode`. Percent-decode a string.
-- **String / Percent Encode** — Free. [JSON](../nodes/node-data-string-percentEncode.json) · `node:data:string:percentEncode`. Percent-encode a string using the selected character set.
-- **String / Pretty Print JSON** — Free. [JSON](../nodes/node-data-string-prettyPrintJSON.json) · `node:data:string:prettyPrintJSON`. Format JSON onto multiple lines with indentation.
-- **String / Regex** — Pro. [JSON](../nodes/node-data-string-regex.json) · `node:data:string:regex`. Match a regular expression pattern against text and output the matches.
-- **String / Relay** — Free. [JSON](../nodes/node-data-string-relay.json) · `node:data:string:relay`. Relay a String. This node has no effect. Tho useful to define a type when wiring to generics.
-- **String / Replace** — Free. [JSON](../nodes/node-data-string-replace.json) · `node:data:string:replace`. Replace occurrences in a string with another string.
-- **String / Split** — Free. [JSON](../nodes/node-data-string-split.json) · `node:data:string:split`. Split a String into a list of String.
-- **String / State** — Free. [JSON](../nodes/node-data-string-state.json) · `node:data:string:state`. Store a String.
-- **String / Transcription** — Pro. [JSON](../nodes/node-data-string-transcription.json) · `node:data:string:transcription`. Transcribe live speech to text using speech recognition. Connect a State String node to the Transcript inlet to save transcribed text.
-- **String / URL Components** — Free. [JSON](../nodes/node-data-string-urlComponents.json) · `node:data:string:urlComponents`. Extract the scheme, host, path components, query components, and fragment from a URL.
-- **String / URL Construct** — Free. [JSON](../nodes/node-data-string-urlConstruct.json) · `node:data:string:urlConstruct`. Construct a URL from a scheme, host, path components, query components, and an optional fragment.
-- **String / Uppercase** — Free. [JSON](../nodes/node-data-string-uppercase.json) · `node:data:string:uppercase`. 
-- **Transform / Components** — Free. [JSON](../nodes/node-data-transform-components.json) · `node:data:transform:components`. Get the position, scale, and rotation components of a Transform.
-- **Transform / Construct** — Free. [JSON](../nodes/node-data-transform-construct.json) · `node:data:transform:construct`. Construct a Transform from position, scale, and rotation.
-- **Transform / List Relay** — Free. [JSON](../nodes/node-data-transform-listRelay.json) · `node:data:transform:listRelay`. Relay a list of Transforms. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Transform / List State** — Free. [JSON](../nodes/node-data-transform-listState.json) · `node:data:transform:listState`. Store a list of Transforms.
-- **Transform / Relay** — Free. [JSON](../nodes/node-data-transform-relay.json) · `node:data:transform:relay`. Relay a Transform. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Transform / State** — Free. [JSON](../nodes/node-data-transform-state.json) · `node:data:transform:state`. Store a Transform.
-- **Vector Point / Construct** — Free. [JSON](../nodes/node-data-vectorPoint-construct.json) · `node:data:vectorPoint:construct`. Construct a Vector Point from a Point with options for quadratic or cubic curve mode with control points.
-- **Vector Point / List Relay** — Free. [JSON](../nodes/node-data-vectorPoint-listRelay.json) · `node:data:vectorPoint:listRelay`. Relay a list of Vector Points.
-- **Vector Point / List State** — Free. [JSON](../nodes/node-data-vectorPoint-listState.json) · `node:data:vectorPoint:listState`. Store a list of Vector Points.
-- **Vector Point / Relay** — Free. [JSON](../nodes/node-data-vectorPoint-relay.json) · `node:data:vectorPoint:relay`. Relay a Vector Point value.
-- **Vector Point / State** — Free. [JSON](../nodes/node-data-vectorPoint-state.json) · `node:data:vectorPoint:state`. Store a Vector Point value.
-- **Vertex / Components** — Free. [JSON](../nodes/node-data-vertex-components.json) · `node:data:vertex:components`. Get the position, normal, texture coordinate, and color components of a Vertex.
-- **Vertex / Construct** — Free. [JSON](../nodes/node-data-vertex-construct.json) · `node:data:vertex:construct`. Construct a Vetex from position, normal, texture coordinate, and color.
-- **Vertex / List Relay** — Free. [JSON](../nodes/node-data-vertex-listRelay.json) · `node:data:vertex:listRelay`. Relay a list of Vertices. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Vertex / List State** — Free. [JSON](../nodes/node-data-vertex-listState.json) · `node:data:vertex:listState`. Store a list of Vertices .
-- **Vertex / Polygon from Vertices** — Free. [JSON](../nodes/node-data-vertex-polygonFromVertices.json) · `node:data:vertex:polygonFromVertices`. Polygon from Vertices.
-- **Vertex / Relay** — Free. [JSON](../nodes/node-data-vertex-relay.json) · `node:data:vertex:relay`. Relay a Vertex. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Vertex / State** — Free. [JSON](../nodes/node-data-vertex-state.json) · `node:data:vertex:state`. Store a Vertex.
-- **Vertex / Vertices from Polygon** — Free. [JSON](../nodes/node-data-vertex-verticesFromPolygon.json) · `node:data:vertex:verticesFromPolygon`. Vertices from a Polygon.
+- **3D Angle / Components** — Free. [JSON](../nodes/data/angle3D.json) · `node:data:angle3D:components`. Get the x, y and z Angle components of a 3D Angle.
+- **3D Angle / Construct** — Free. [JSON](../nodes/data/angle3D.json) · `node:data:angle3D:construct`. Construct a 3D Angle from x, y and z angles.
+- **3D Angle / List Relay** — Free. [JSON](../nodes/data/angle3D.json) · `node:data:angle3D:listRelay`. Relay a list of 3D Angles. This node has no effect. Tho useful to define a type when wiring to generics.
+- **3D Angle / List State** — Free. [JSON](../nodes/data/angle3D.json) · `node:data:angle3D:listState`. Store a list of 3D Angles.
+- **3D Angle / Relay** — Free. [JSON](../nodes/data/angle3D.json) · `node:data:angle3D:relay`. Relay a 3D Angle. This node has no effect. Tho useful to define a type when wiring to generics.
+- **3D Angle / State** — Free. [JSON](../nodes/data/angle3D.json) · `node:data:angle3D:state`. Store a 3D Angle.
+- **3D Point / Components** — Free. [JSON](../nodes/data/point3D.json) · `node:data:point3D:components`. Get the x, y and z Float components of a 3D Point.
+- **3D Point / Construct** — Free. [JSON](../nodes/data/point3D.json) · `node:data:point3D:construct`. Construct a 3D Point from x, y and z floats.
+- **3D Point / Fraction Grid** — Free. [JSON](../nodes/data/point3D.json) · `node:data:point3D:fractionGrid`. A grid of points. Based on a spacing and offset.
+- **3D Point / Fraction Line** — Free. [JSON](../nodes/data/point3D.json) · `node:data:point3D:fractionLine`. A line of points. Based on a spacing and offset.
+- **3D Point / Fraction Sphere** — Free. [JSON](../nodes/data/point3D.json) · `node:data:point3D:fractionSphere`. A circle of points. Based on a spacing and offset.
+- **3D Point / Grid** — Free. [JSON](../nodes/data/point3D.json) · `node:data:point3D:grid`. A grid of points.
+- **3D Point / Length** — Free. [JSON](../nodes/data/point3D.json) · `node:data:point3D:length`. Distance between two 3D points.
+- **3D Point / Line** — Free. [JSON](../nodes/data/point3D.json) · `node:data:point3D:line`. A line of points.
+- **3D Point / List Relay** — Free. [JSON](../nodes/data/point3D.json) · `node:data:point3D:listRelay`. Relay a list of 3D Points. This node has no effect. Tho useful to define a type when wiring to generics.
+- **3D Point / List State** — Free. [JSON](../nodes/data/point3D.json) · `node:data:point3D:listState`. Store a list of 3D Points.
+- **3D Point / Relay** — Free. [JSON](../nodes/data/point3D.json) · `node:data:point3D:relay`. Relay a 3D Point. This node has no effect. Tho useful to define a type when wiring to generics.
+- **3D Point / Sphere** — Free. [JSON](../nodes/data/point3D.json) · `node:data:point3D:sphere`. A circle of points.
+- **3D Point / State** — Free. [JSON](../nodes/data/point3D.json) · `node:data:point3D:state`. Store a 3D Point.
+- **3D Rect / Center Components** — Free. [JSON](../nodes/data/rect3D.json) · `node:data:rect3D:centerComponents`. Get the center 3D Point and 3D Size components of a 3D Rect.
+- **3D Rect / Center Construct** — Free. [JSON](../nodes/data/rect3D.json) · `node:data:rect3D:centerConstruct`. Construct a 3D Rect from a center 3D Point and a 3D Size.
+- **3D Rect / Components** — Free. [JSON](../nodes/data/rect3D.json) · `node:data:rect3D:components`. Get the origin (top, left, far) and size components of a 3D Rect.
+- **3D Rect / Construct** — Free. [JSON](../nodes/data/rect3D.json) · `node:data:rect3D:construct`. Construct a 3D Rect from an origin (top, left, far) and a size.
+- **3D Rect / List Relay** — Free. [JSON](../nodes/data/rect3D.json) · `node:data:rect3D:listRelay`. Relay a list of 3D Rects. This node has no effect. Tho useful to define a type when wiring to generics.
+- **3D Rect / List State** — Free. [JSON](../nodes/data/rect3D.json) · `node:data:rect3D:listState`. Store a list of 3D Rects.
+- **3D Rect / Padding** — Free. [JSON](../nodes/data/rect3D.json) · `node:data:rect3D:padding`. Adds padding to selected sides of a 3D Rect. All also pads the depth. Negative padding reduces the frame.
+- **3D Rect / Relay** — Free. [JSON](../nodes/data/rect3D.json) · `node:data:rect3D:relay`. Relay a 3D Rect. This node has no effect. Tho useful to define a type when wiring to generics.
+- **3D Rect / State** — Free. [JSON](../nodes/data/rect3D.json) · `node:data:rect3D:state`. Store a 3D Rect.
+- **3D Size / Components** — Free. [JSON](../nodes/data/size3D.json) · `node:data:size3D:components`. Get the width, height and depth Float components of a 3D Size.
+- **3D Size / Construct** — Free. [JSON](../nodes/data/size3D.json) · `node:data:size3D:construct`. Construct a 3D Size from width, height and depth floats.
+- **3D Size / List Relay** — Free. [JSON](../nodes/data/size3D.json) · `node:data:size3D:listRelay`. Relay a list of 3D Sizes. This node has no effect. Tho useful to define a type when wiring to generics.
+- **3D Size / List State** — Free. [JSON](../nodes/data/size3D.json) · `node:data:size3D:listState`. Store a list of 3D Sizes.
+- **3D Size / Relay** — Free. [JSON](../nodes/data/size3D.json) · `node:data:size3D:relay`. Relay a 3D Size. This node has no effect. Tho useful to define a type when wiring to generics.
+- **3D Size / State** — Free. [JSON](../nodes/data/size3D.json) · `node:data:size3D:state`. Store a 3D Size.
+- **3D Transform / Components** — Free. [JSON](../nodes/data/transform3D.json) · `node:data:transform3D:components`. Get the position, scale, and rotation components of a 3D Transform.
+- **3D Transform / Construct** — Free. [JSON](../nodes/data/transform3D.json) · `node:data:transform3D:construct`. Construct a 3D Transform from position, scale, and rotation.
+- **3D Transform / List Relay** — Free. [JSON](../nodes/data/transform3D.json) · `node:data:transform3D:listRelay`. Relay a list of 3D Transforms. This node has no effect. Tho useful to define a type when wiring to generics.
+- **3D Transform / List State** — Free. [JSON](../nodes/data/transform3D.json) · `node:data:transform3D:listState`. Store a list of 3D Transforms.
+- **3D Transform / Relay** — Free. [JSON](../nodes/data/transform3D.json) · `node:data:transform3D:relay`. Relay a 3D Transform. This node has no effect. Tho useful to define a type when wiring to generics.
+- **3D Transform / State** — Free. [JSON](../nodes/data/transform3D.json) · `node:data:transform3D:state`. Store a 3D Transform.
+- **3D Vector Point / Construct** — Free. [JSON](../nodes/data/vectorPoint3D.json) · `node:data:vectorPoint3D:construct`. Construct a 3D Vector Point from a Point3D with options for quadratic or cubic curve mode with control points.
+- **3D Vector Point / List Relay** — Free. [JSON](../nodes/data/vectorPoint3D.json) · `node:data:vectorPoint3D:listRelay`. Relay a list of 3D Vector Points.
+- **3D Vector Point / List State** — Free. [JSON](../nodes/data/vectorPoint3D.json) · `node:data:vectorPoint3D:listState`. Store a list of 3D Vector Points.
+- **3D Vector Point / Relay** — Free. [JSON](../nodes/data/vectorPoint3D.json) · `node:data:vectorPoint3D:relay`. Relay a 3D Vector Point.
+- **3D Vector Point / State** — Free. [JSON](../nodes/data/vectorPoint3D.json) · `node:data:vectorPoint3D:state`. Store a 3D Vector Point.
+- **Angle / Direction** — Free. [JSON](../nodes/data/angle.json) · `node:data:angle:direction`. Calculate the angle between the vector of two points. The reference point is zero by default.
+- **Angle / List Relay** — Free. [JSON](../nodes/data/angle.json) · `node:data:angle:listRelay`. Relay a list of Angles. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Angle / List State** — Free. [JSON](../nodes/data/angle.json) · `node:data:angle:listState`. Store a list of Angles.
+- **Angle / Relay** — Free. [JSON](../nodes/data/angle.json) · `node:data:angle:relay`. Relay an Angle. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Angle / State** — Free. [JSON](../nodes/data/angle.json) · `node:data:angle:state`. Store a Angle.
+- **Bool / If Else** — Free. [JSON](../nodes/data/bool.json) · `node:data:bool:ifElse`. Switch between two values based on a condition.
+- **Bool / Invert** — Free. [JSON](../nodes/data/bool.json) · `node:data:bool:invert`. Negate the boolean value.
+- **Bool / List Relay** — Free. [JSON](../nodes/data/bool.json) · `node:data:bool:listRelay`. Relay a list of Bools. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Bool / List State** — Free. [JSON](../nodes/data/bool.json) · `node:data:bool:listState`. Store a list of Bools.
+- **Bool / Logic** — Free. [JSON](../nodes/data/bool.json) · `node:data:bool:logic`. Logic gate.
+- **Bool / Relay** — Free. [JSON](../nodes/data/bool.json) · `node:data:bool:relay`. Relay a Bool. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Bool / State** — Free. [JSON](../nodes/data/bool.json) · `node:data:bool:state`. Store a Bool.
+- **Bool / Toggle** — Free. [JSON](../nodes/data/bool.json) · `node:data:bool:toggle`. Toggles an upstream Bool when the action is triggered.
+- **Color / HSBA Components** — Free. [JSON](../nodes/data/color.json) · `node:data:color:hsbaComponents`. Get the hue, saturation, brightness and alpha Float components of a Color.
+- **Color / HSBA Construct** — Free. [JSON](../nodes/data/color.json) · `node:data:color:hsbaConstruct`. Construct a Color from hue, saturation, brightness and alpha Floats.
+- **Color / Hex Components** — Free. [JSON](../nodes/data/color.json) · `node:data:color:hexComponents`. Get the hex String and alpha Float components of a Color.
+- **Color / Hex Construct** — Free. [JSON](../nodes/data/color.json) · `node:data:color:hexConstruct`. Construct a Color from a hex String and an alpha Float.
+- **Color / Key** — Pro. [JSON](../nodes/data/color.json) · `node:data:color:key`. Find key Colors in a Graphic.
+- **Color / Levels** — Free. [JSON](../nodes/data/color.json) · `node:data:color:levels`. Adjust the levels of a Color.
+- **Color / List Relay** — Free. [JSON](../nodes/data/color.json) · `node:data:color:listRelay`. Relay a list of Colors. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Color / List State** — Free. [JSON](../nodes/data/color.json) · `node:data:color:listState`. Store a list of Colors.
+- **Color / Opacity** — Free. [JSON](../nodes/data/color.json) · `node:data:color:opacity`. Adjust the levels of a Color.
+- **Color / Pixel** — Pro; deprecated; replacement node:data:color:pixel2. [JSON](../nodes/data/color.json) · `node:data:color:pixel`. Get a pixel Color at a specific position from a Graphic.
+- **Color / Pixel** — Free. [JSON](../nodes/data/color.json) · `node:data:color:pixel2`. Get a pixel Color at a specific location from a Graphic. Unit coordinates range from zero to one; pixel coordinates use pixel-center indices.
+- **Color / RGBA Components** — Free. [JSON](../nodes/data/color.json) · `node:data:color:rgbaComponents`. Get the red, green, blue and alpha Float components of a Color.
+- **Color / RGBA Construct** — Free. [JSON](../nodes/data/color.json) · `node:data:color:rgbaConstruct`. Construct a Color from red, green, blue and alpha Floats.
+- **Color / Relay** — Free. [JSON](../nodes/data/color.json) · `node:data:color:relay`. Relay a Color. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Color / Shift** — Free. [JSON](../nodes/data/color.json) · `node:data:color:shift`. Shift hue, change saturation and tint.
+- **Color / State** — Free. [JSON](../nodes/data/color.json) · `node:data:color:state`. Store a Color.
+- **Color / Voxel** — Pro. [JSON](../nodes/data/color.json) · `node:data:color:voxel`. Get a voxel Color at a specific position from a 3D Graphic.
+- **Date / Components** — Free. [JSON](../nodes/data/date.json) · `node:data:date:components`. Split up a date into its components.
+- **Date / Construct** — Free. [JSON](../nodes/data/date.json) · `node:data:date:construct`. Create a date from components.
+- **Date / Distance** — Free; deprecated; replacement node:data:date:duration. [JSON](../nodes/data/date.json) · `node:data:date:distance`. Measure the time distance between two dates in seconds.
+- **Date / Duration** — Free. [JSON](../nodes/data/date.json) · `node:data:date:duration`. Measure the time duration between two dates.
+- **Date / Format from String** — Free. [JSON](../nodes/data/date.json) · `node:data:date:formatFromString`. Format a date from a string.
+- **Date / Format to String** — Free. [JSON](../nodes/data/date.json) · `node:data:date:formatToString`. Format a date to a string.
+- **Date / List Relay** — Free. [JSON](../nodes/data/date.json) · `node:data:date:listRelay`. Relay a list of Dates. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Date / List State** — Free. [JSON](../nodes/data/date.json) · `node:data:date:listState`. Store a list of Dates.
+- **Date / Relay** — Free. [JSON](../nodes/data/date.json) · `node:data:date:relay`. Relay a Date. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Date / State** — Free. [JSON](../nodes/data/date.json) · `node:data:date:state`. Store a Date.
+- **Duration / List Relay** — Free. [JSON](../nodes/data/duration.json) · `node:data:duration:listRelay`. Relay a list of Durations. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Duration / List State** — Free. [JSON](../nodes/data/duration.json) · `node:data:duration:listState`. Store a list of Durations.
+- **Duration / Relay** — Free. [JSON](../nodes/data/duration.json) · `node:data:duration:relay`. Relay a Duration. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Duration / State** — Free. [JSON](../nodes/data/duration.json) · `node:data:duration:state`. Store a Duration.
+- **Float / Abs** — Free. [JSON](../nodes/data/float.json) · `node:data:float:abs`. Makes a negative value positive.
+- **Float / Atan** — Free. [JSON](../nodes/data/float.json) · `node:data:float:atan`.
+- **Float / Cosine** — Free. [JSON](../nodes/data/float.json) · `node:data:float:cosine`.
+- **Float / Fraction Span** — Free. [JSON](../nodes/data/float.json) · `node:data:float:fractionSpan`. A range of Floats from a lower bound to an upper bound by a fractional step.
+- **Float / Invert** — Free. [JSON](../nodes/data/float.json) · `node:data:float:invert`. Negate a value.
+- **Float / List Relay** — Free. [JSON](../nodes/data/float.json) · `node:data:float:listRelay`. Relay a list of Floats. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Float / List State** — Free. [JSON](../nodes/data/float.json) · `node:data:float:listState`. Store a list of Floats.
+- **Float / Pi** — Free. [JSON](../nodes/data/float.json) · `node:data:float:pi`.
+- **Float / Power** — Free. [JSON](../nodes/data/float.json) · `node:data:float:power`.
+- **Float / Relay** — Free. [JSON](../nodes/data/float.json) · `node:data:float:relay`. Relay a Float. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Float / Remainder** — Free. [JSON](../nodes/data/float.json) · `node:data:float:remainder`. Modulus operation.
+- **Float / Sine** — Free. [JSON](../nodes/data/float.json) · `node:data:float:sine`.
+- **Float / Span** — Free. [JSON](../nodes/data/float.json) · `node:data:float:span`. A range of Floats.
+- **Float / Square Root** — Free. [JSON](../nodes/data/float.json) · `node:data:float:squareRoot`.
+- **Float / State** — Free. [JSON](../nodes/data/float.json) · `node:data:float:state`. Store a float.
+- **Int / Invert** — Free. [JSON](../nodes/data/int.json) · `node:data:int:invert`. Negate a value.
+- **Int / List Relay** — Free. [JSON](../nodes/data/int.json) · `node:data:int:listRelay`. Relay a list of Ints. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Int / List State** — Free. [JSON](../nodes/data/int.json) · `node:data:int:listState`. Store a list of Ints.
+- **Int / Relay** — Free. [JSON](../nodes/data/int.json) · `node:data:int:relay`. Relay an Int. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Int / Remainder** — Free. [JSON](../nodes/data/int.json) · `node:data:int:remainder`. Modulus operation.
+- **Int / Span** — Free. [JSON](../nodes/data/int.json) · `node:data:int:span`. A range of Ints.
+- **Int / State** — Free. [JSON](../nodes/data/int.json) · `node:data:int:state`. Store an Int.
+- **Point / Circle** — Free. [JSON](../nodes/data/point.json) · `node:data:point:circle`. A circle of points.
+- **Point / Components** — Free. [JSON](../nodes/data/point.json) · `node:data:point:components`. Get the x and y Float components of a Point.
+- **Point / Construct** — Free. [JSON](../nodes/data/point.json) · `node:data:point:construct`. Construct a Point from x and y floats.
+- **Point / Fraction Circle** — Free. [JSON](../nodes/data/point.json) · `node:data:point:fractionCircle`. A circle of points. Based on a spacing and offset.
+- **Point / Fraction Grid** — Free. [JSON](../nodes/data/point.json) · `node:data:point:fractionGrid`. A grid of points. Based on a spacing and offset.
+- **Point / Fraction Line** — Free. [JSON](../nodes/data/point.json) · `node:data:point:fractionLine`. A line of points. Based on a spacing and offset.
+- **Point / Grid** — Free. [JSON](../nodes/data/point.json) · `node:data:point:grid`. A grid of points.
+- **Point / Length** — Free. [JSON](../nodes/data/point.json) · `node:data:point:length`. Distance between two points.
+- **Point / Line** — Free. [JSON](../nodes/data/point.json) · `node:data:point:line`. A line of points.
+- **Point / List Relay** — Free. [JSON](../nodes/data/point.json) · `node:data:point:listRelay`. Relay a list of Points. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Point / List State** — Free. [JSON](../nodes/data/point.json) · `node:data:point:listState`. Store a list of Points.
+- **Point / Relay** — Free. [JSON](../nodes/data/point.json) · `node:data:point:relay`. Relay a Point. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Point / State** — Free. [JSON](../nodes/data/point.json) · `node:data:point:state`. Store a Point.
+- **Point / Vector from Angle** — Free. [JSON](../nodes/data/point.json) · `node:data:point:vectorFromAngle`. Create a normalized vector Point from an Angle. The length of this vector is always one.
+- **Quaternion / Components** — Free. [JSON](../nodes/data/quaternion.json) · `node:data:quaternion:components`. Get the x, y, z and w components of a Quaternion.
+- **Quaternion / Construct** — Free. [JSON](../nodes/data/quaternion.json) · `node:data:quaternion:construct`. Construct a Quaternion from x, y, z, and w values.
+- **Quaternion / Invert** — Free. [JSON](../nodes/data/quaternion.json) · `node:data:quaternion:invert`. Invert the angles of a Quaternion.
+- **Quaternion / List Relay** — Free. [JSON](../nodes/data/quaternion.json) · `node:data:quaternion:listRelay`. Relay a list of Quaternions. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Quaternion / List State** — Free. [JSON](../nodes/data/quaternion.json) · `node:data:quaternion:listState`. Store a list of Quaternions. Used for 3D rotations.
+- **Quaternion / Look At** — Free. [JSON](../nodes/data/quaternion.json) · `node:data:quaternion:lookAt`. A rotation looking at a point.
+- **Quaternion / Relay** — Free. [JSON](../nodes/data/quaternion.json) · `node:data:quaternion:relay`. Relay a Quaternion. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Quaternion / State** — Free. [JSON](../nodes/data/quaternion.json) · `node:data:quaternion:state`. Store a Quaternion. Used for 3D rotation.
+- **Rect / Center Components** — Free. [JSON](../nodes/data/rect.json) · `node:data:rect:centerComponents`. Get the center Point and Size components of a Rect.
+- **Rect / Center Construct** — Free. [JSON](../nodes/data/rect.json) · `node:data:rect:centerConstruct`. Construct a Rect from a center Point and a Size.
+- **Rect / Components** — Free. [JSON](../nodes/data/rect.json) · `node:data:rect:components`. Get the origin (top left) and size components of a Rect.
+- **Rect / Construct** — Free. [JSON](../nodes/data/rect.json) · `node:data:rect:construct`. Construct a Rect from an origin (top left) and a size.
+- **Rect / List Relay** — Free. [JSON](../nodes/data/rect.json) · `node:data:rect:listRelay`. Relay a list of Rects. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Rect / List State** — Free. [JSON](../nodes/data/rect.json) · `node:data:rect:listState`. Store a list of Rects.
+- **Rect / Padding** — Free. [JSON](../nodes/data/rect.json) · `node:data:rect:padding`. Adds padding to selected sides of a Rect. Negative padding reduces the frame.
+- **Rect / Relay** — Free. [JSON](../nodes/data/rect.json) · `node:data:rect:relay`. Relay a Rect. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Rect / State** — Free. [JSON](../nodes/data/rect.json) · `node:data:rect:state`. Store a Rect.
+- **Size / Components** — Free. [JSON](../nodes/data/size.json) · `node:data:size:components`. Get the width and height Float components of a Size.
+- **Size / Construct** — Free. [JSON](../nodes/data/size.json) · `node:data:size:construct`. Construct a Size from width and height floats.
+- **Size / List Relay** — Free. [JSON](../nodes/data/size.json) · `node:data:size:listRelay`. Relay a list of Sizes. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Size / List State** — Free. [JSON](../nodes/data/size.json) · `node:data:size:listState`. Store a list of Sizes.
+- **Size / Relay** — Free. [JSON](../nodes/data/size.json) · `node:data:size:relay`. Relay a Size. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Size / State** — Free. [JSON](../nodes/data/size.json) · `node:data:size:state`. Store a Size.
+- **String / Decode from JSON** — Free. [JSON](../nodes/data/string.json) · `node:data:string:decodeFromJSON`. Decode a core value from a JSON string.
+- **String / Description** — Free. [JSON](../nodes/data/string.json) · `node:data:string:description`. Describe a value.
+- **String / Encode to JSON** — Free. [JSON](../nodes/data/string.json) · `node:data:string:encodeToJSON`. Encode a core value into a JSON string.
+- **String / Item from JSON** — Free. [JSON](../nodes/data/string.json) · `node:data:string:itemFromJSON`. Select a value from a JSON dictionary with a specific key.
+- **String / JSON List from CSV** — Free. [JSON](../nodes/data/string.json) · `node:data:string:jsonListFromCSV`. Convert CSV rows into a JSON string list based on header keys.
+- **String / Join** — Free. [JSON](../nodes/data/string.json) · `node:data:string:join`. Join a list of Strings into one String, optionally separated by another string.
+- **String / Keyed List to JSON** — Free. [JSON](../nodes/data/string.json) · `node:data:string:keyedListToJSON`. Combine keys and values into a JSON string.
+- **String / List Relay** — Free. [JSON](../nodes/data/string.json) · `node:data:string:listRelay`. Relay a list of Strings. This node has no effect. Tho useful to define a type when wiring to generics.
+- **String / List State** — Free. [JSON](../nodes/data/string.json) · `node:data:string:listState`. Store a list of Strings.
+- **String / List from JSON** — Free. [JSON](../nodes/data/string.json) · `node:data:string:listFromJSON`. Derive a list of values from a JSON array.
+- **String / List to JSON** — Free. [JSON](../nodes/data/string.json) · `node:data:string:listToJSON`. Combine values into a JSON string.
+- **String / Lowercase** — Free. [JSON](../nodes/data/string.json) · `node:data:string:lowercase`.
+- **String / Percent Decode** — Free. [JSON](../nodes/data/string.json) · `node:data:string:percentDecode`. Percent-decode a string.
+- **String / Percent Encode** — Free. [JSON](../nodes/data/string.json) · `node:data:string:percentEncode`. Percent-encode a string using the selected character set.
+- **String / Pretty Print JSON** — Free. [JSON](../nodes/data/string.json) · `node:data:string:prettyPrintJSON`. Format JSON onto multiple lines with indentation.
+- **String / Regex** — Pro. [JSON](../nodes/data/string.json) · `node:data:string:regex`. Match a regular expression pattern against text and output the matches.
+- **String / Relay** — Free. [JSON](../nodes/data/string.json) · `node:data:string:relay`. Relay a String. This node has no effect. Tho useful to define a type when wiring to generics.
+- **String / Replace** — Free. [JSON](../nodes/data/string.json) · `node:data:string:replace`. Replace occurrences in a string with another string.
+- **String / Split** — Free. [JSON](../nodes/data/string.json) · `node:data:string:split`. Split a String into a list of String.
+- **String / State** — Free. [JSON](../nodes/data/string.json) · `node:data:string:state`. Store a String.
+- **String / Transcription** — Pro. [JSON](../nodes/data/string.json) · `node:data:string:transcription`. Transcribe live speech to text using speech recognition. Connect a State String node to the Transcript inlet to save transcribed text.
+- **String / URL Components** — Free. [JSON](../nodes/data/string.json) · `node:data:string:urlComponents`. Extract the scheme, host, path components, query components, and fragment from a URL.
+- **String / URL Construct** — Free. [JSON](../nodes/data/string.json) · `node:data:string:urlConstruct`. Construct a URL from a scheme, host, path components, query components, and an optional fragment.
+- **String / Uppercase** — Free. [JSON](../nodes/data/string.json) · `node:data:string:uppercase`.
+- **Transform / Components** — Free. [JSON](../nodes/data/transform.json) · `node:data:transform:components`. Get the position, scale, and rotation components of a Transform.
+- **Transform / Construct** — Free. [JSON](../nodes/data/transform.json) · `node:data:transform:construct`. Construct a Transform from position, scale, and rotation.
+- **Transform / List Relay** — Free. [JSON](../nodes/data/transform.json) · `node:data:transform:listRelay`. Relay a list of Transforms. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Transform / List State** — Free. [JSON](../nodes/data/transform.json) · `node:data:transform:listState`. Store a list of Transforms.
+- **Transform / Relay** — Free. [JSON](../nodes/data/transform.json) · `node:data:transform:relay`. Relay a Transform. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Transform / State** — Free. [JSON](../nodes/data/transform.json) · `node:data:transform:state`. Store a Transform.
+- **Vector Point / Construct** — Free. [JSON](../nodes/data/vectorPoint.json) · `node:data:vectorPoint:construct`. Construct a Vector Point from a Point with options for quadratic or cubic curve mode with control points.
+- **Vector Point / List Relay** — Free. [JSON](../nodes/data/vectorPoint.json) · `node:data:vectorPoint:listRelay`. Relay a list of Vector Points.
+- **Vector Point / List State** — Free. [JSON](../nodes/data/vectorPoint.json) · `node:data:vectorPoint:listState`. Store a list of Vector Points.
+- **Vector Point / Relay** — Free. [JSON](../nodes/data/vectorPoint.json) · `node:data:vectorPoint:relay`. Relay a Vector Point value.
+- **Vector Point / State** — Free. [JSON](../nodes/data/vectorPoint.json) · `node:data:vectorPoint:state`. Store a Vector Point value.
+- **Vertex / Components** — Free. [JSON](../nodes/data/vertex.json) · `node:data:vertex:components`. Get the position, normal, texture coordinate, and color components of a Vertex.
+- **Vertex / Construct** — Free. [JSON](../nodes/data/vertex.json) · `node:data:vertex:construct`. Construct a Vetex from position, normal, texture coordinate, and color.
+- **Vertex / List Relay** — Free. [JSON](../nodes/data/vertex.json) · `node:data:vertex:listRelay`. Relay a list of Vertices. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Vertex / List State** — Free. [JSON](../nodes/data/vertex.json) · `node:data:vertex:listState`. Store a list of Vertices .
+- **Vertex / Polygon from Vertices** — Free. [JSON](../nodes/data/vertex.json) · `node:data:vertex:polygonFromVertices`. Polygon from Vertices.
+- **Vertex / Relay** — Free. [JSON](../nodes/data/vertex.json) · `node:data:vertex:relay`. Relay a Vertex. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Vertex / State** — Free. [JSON](../nodes/data/vertex.json) · `node:data:vertex:state`. Store a Vertex.
+- **Vertex / Vertices from Polygon** — Free. [JSON](../nodes/data/vertex.json) · `node:data:vertex:verticesFromPolygon`. Vertices from a Polygon.

@@ -1,8 +1,10 @@
 # Flow Nodes references
 
-Bundled app documentation version: 27.5.0. Snapshot: 2026-11-15.
+Bundled app documentation version: 27.5.0. Snapshot: 2026-11-16.
 
 Read [wiring](wiring.md), [recipes](recipes.md), and [version notes](version-notes.md) as needed.
+
+Node JSON is grouped by family and parent. In each linked file, select the entry in `nodes` whose `typePath` matches the listed identity.
 
 ## Node families
 

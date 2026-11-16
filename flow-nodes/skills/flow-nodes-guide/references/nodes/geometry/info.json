@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "familyName": "3D Geometry",
+  "parentName": "Info",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Measure the bounding frame of a Geometry.",
+      "familyName": "3D Geometry",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryIn",
+          "valueType": "raw:geometry",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Bounding Box",
+      "newInAppVersion": "2.7.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Frame",
+          "typeName": "frameOut",
+          "valueType": "raw:core:rect3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "Info",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [
+        "node:geometry:info:relay"
+      ],
+      "tags": [],
+      "typePath": "node:geometry:info:boundingBox",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/geometry/info/boundingBox"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Polygons from a Geometry mesh.",
+      "familyName": "3D Geometry",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryIn",
+          "valueType": "raw:geometry",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Components",
+      "newInAppVersion": "3.0.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Polygons",
+          "typeName": "polygonsOut",
+          "valueType": "raw:polygon",
+          "way": "out"
+        }
+      ],
+      "parentName": "Info",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Polygons"
+      ],
+      "typePath": "node:geometry:info:components",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/geometry/info/components"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Measure the bounding frame of a Geometry.",
+      "familyName": "3D Geometry",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Geometry",
+          "typeName": "geometryIn",
+          "valueType": "raw:geometry",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Bounding Box",
+      "newInAppVersion": "1.7.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Bounds",
+          "typeName": "out",
+          "valueType": "raw:core:rect3D",
+          "way": "out"
+        }
+      ],
+      "parentName": "Info",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacedByTypePath": "node:geometry:info:boundingBox",
+      "replacesTypePaths": [],
+      "tags": [],
+      "typePath": "node:geometry:info:relay",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/geometry/info/relay"
+    }
+  ]
+}

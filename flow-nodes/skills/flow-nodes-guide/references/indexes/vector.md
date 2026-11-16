@@ -1,42 +1,42 @@
 # Vector nodes
 
-Read the linked JSON for exact ports and properties. Prefer visible replacements for new flows.
+Each linked JSON file contains a parent group. Select the entry in `nodes` with the exact listed `typePath` for ports and properties. Prefer visible replacements for new flows.
 
-- **Info / Bounding Box** — Free. [JSON](../nodes/node-vector-info-boundingBox.json) · `node:vector:info:boundingBox`. Get the bounding frame of the vector path.
-- **Info / Components** — Free. [JSON](../nodes/node-vector-info-components.json) · `node:vector:info:components`. Get points and closed state from a selected sub path in a Vector Path.
-- **Info / Contains** — Free. [JSON](../nodes/node-vector-info-contains.json) · `node:vector:info:contains`. Check if a point is contains within the vector path.
-- **Info / Fraction Point** — Free. [JSON](../nodes/node-vector-info-fractionPoint.json) · `node:vector:info:fractionPoint`. Get the location of a point on a path of a shape. The fraction should be between zero and one.
-- **Info / Fraction Points** — Free. [JSON](../nodes/node-vector-info-fractionPoints.json) · `node:vector:info:fractionPoints`. Get the locations of points on a path. The fractions should be between zero and one.
-- **Info / Length** — Free. [JSON](../nodes/node-vector-info-length.json) · `node:vector:info:length`. Get the length of the vector path.
-- **Info / Point** — Free. [JSON](../nodes/node-vector-info-point.json) · `node:vector:info:point`. Get the location of a point on a path.
-- **Info / Points** — Free. [JSON](../nodes/node-vector-info-points.json) · `node:vector:info:points`. Get the locations of points on a path.
-- **Modifier / Clone Transform** — Pro. [JSON](../nodes/node-vector-modifier-cloneTransform.json) · `node:vector:modifier:cloneTransform`. Clone a vector path with multiple transforms and combine the transformed clones into a single vector path.
-- **Modifier / Combine** — Free. [JSON](../nodes/node-vector-modifier-combine.json) · `node:vector:modifier:combine`. Combine a list of Vectors together.
-- **Modifier / Curve Subdivide** — Free. [JSON](../nodes/node-vector-modifier-curveSubdivide.json) · `node:vector:modifier:curveSubdivide`. Convert vector curves into line segments by subdividing each curve.
-- **Modifier / Intersection** — Free. [JSON](../nodes/node-vector-modifier-intersection.json) · `node:vector:modifier:intersection`. Intersect a list of Vectors.
-- **Modifier / Mirror** — Free. [JSON](../nodes/node-vector-modifier-mirror.json) · `node:vector:modifier:mirror`. Mirror a vector path horizontally, vertically, or both.
-- **Modifier / Relay** — Free. [JSON](../nodes/node-vector-modifier-relay.json) · `node:vector:modifier:relay`. Relay a Vector. This node has no effect. Tho useful to define a type when wiring to generics.
-- **Modifier / Round** — Free. [JSON](../nodes/node-vector-modifier-round.json) · `node:vector:modifier:round`. Round corners of a Vector shape. (This node is a bit experimental, and does not work in all cases)
-- **Modifier / Stroke** — Free. [JSON](../nodes/node-vector-modifier-stroke.json) · `node:vector:modifier:stroke`. Create a outline shape from a solid vector shape.
-- **Modifier / Subtraction** — Free. [JSON](../nodes/node-vector-modifier-subtraction.json) · `node:vector:modifier:subtraction`. Subtract a list of Vectors from each other.
-- **Modifier / Transform** — Free. [JSON](../nodes/node-vector-modifier-transform.json) · `node:vector:modifier:transform`. 
-- **Modifier / Trim** — Free. [JSON](../nodes/node-vector-modifier-trim.json) · `node:vector:modifier:trim`. Trim the shape path at fractions between 0.0 and 1.0.
-- **Modifier / Union** — Free. [JSON](../nodes/node-vector-modifier-union.json) · `node:vector:modifier:union`. Union a list of Vectors together.
-- **Resource / Construct** — Free. [JSON](../nodes/node-vector-resource-construct.json) · `node:vector:resource:construct`. Construct a Vector Path from a list of Vector Points.
-- **Resource / Convert from Graphic** — Free. [JSON](../nodes/node-vector-resource-convertFromGraphic.json) · `node:vector:resource:convertFromGraphic`. Detects contours of an image and traces a vector shape.
-- **Resource / L-System** — Free. [JSON](../nodes/node-vector-resource-lSystem.json) · `node:vector:resource:lSystem`. Create a 2D vector path from an L-system grammar. Draw forward with F, and move forward without drawing with f, + and - turn, and [ ] create branches.
-- **Resource / List State** — Free. [JSON](../nodes/node-vector-resource-listState.json) · `node:vector:resource:listState`. Store a list of vectors.
-- **Resource / Paint** — Pro. [JSON](../nodes/node-vector-resource-paint.json) · `node:vector:resource:paint`. Paint by drawing vector paths that are passed upstream to a State Vector node via the source inlet. Switch between release and live paint mode. Control active and location of the drawing via inlets. Overlay a reference graphic with opacity.
-- **Resource / State** — Free. [JSON](../nodes/node-vector-resource-state.json) · `node:vector:resource:state`. Store a vector.
-- **Resource / Text** — Free. [JSON](../nodes/node-vector-resource-text.json) · `node:vector:resource:text`. Create a vector path from a String.
-- **Shape / Arc** — Free. [JSON](../nodes/node-vector-shape-arc.json) · `node:vector:shape:arc`. 
-- **Shape / Area** — Free. [JSON](../nodes/node-vector-shape-area.json) · `node:vector:shape:area`. 
-- **Shape / Capsule** — Free. [JSON](../nodes/node-vector-shape-capsule.json) · `node:vector:shape:capsule`. 
-- **Shape / Circle** — Free. [JSON](../nodes/node-vector-shape-circle.json) · `node:vector:shape:circle`. 
-- **Shape / Donut** — Free. [JSON](../nodes/node-vector-shape-donut.json) · `node:vector:shape:donut`. 
-- **Shape / Ellipse** — Free. [JSON](../nodes/node-vector-shape-ellipse.json) · `node:vector:shape:ellipse`. 
-- **Shape / Line** — Free. [JSON](../nodes/node-vector-shape-line.json) · `node:vector:shape:line`. 
-- **Shape / Pie** — Free. [JSON](../nodes/node-vector-shape-pie.json) · `node:vector:shape:pie`. 
-- **Shape / Polygon** — Free. [JSON](../nodes/node-vector-shape-polygon.json) · `node:vector:shape:polygon`. 
-- **Shape / Rectangle** — Free. [JSON](../nodes/node-vector-shape-rectangle.json) · `node:vector:shape:rectangle`. 
-- **Shape / Star** — Free. [JSON](../nodes/node-vector-shape-star.json) · `node:vector:shape:star`. 
+- **Info / Bounding Box** — Free. [JSON](../nodes/vector/info.json) · `node:vector:info:boundingBox`. Get the bounding frame of the vector path.
+- **Info / Components** — Free. [JSON](../nodes/vector/info.json) · `node:vector:info:components`. Get points and closed state from a selected sub path in a Vector Path.
+- **Info / Contains** — Free. [JSON](../nodes/vector/info.json) · `node:vector:info:contains`. Check if a point is contains within the vector path.
+- **Info / Fraction Point** — Free. [JSON](../nodes/vector/info.json) · `node:vector:info:fractionPoint`. Get the location of a point on a path of a shape. The fraction should be between zero and one.
+- **Info / Fraction Points** — Free. [JSON](../nodes/vector/info.json) · `node:vector:info:fractionPoints`. Get the locations of points on a path. The fractions should be between zero and one.
+- **Info / Length** — Free. [JSON](../nodes/vector/info.json) · `node:vector:info:length`. Get the length of the vector path.
+- **Info / Point** — Free. [JSON](../nodes/vector/info.json) · `node:vector:info:point`. Get the location of a point on a path.
+- **Info / Points** — Free. [JSON](../nodes/vector/info.json) · `node:vector:info:points`. Get the locations of points on a path.
+- **Modifier / Clone Transform** — Pro. [JSON](../nodes/vector/modifier.json) · `node:vector:modifier:cloneTransform`. Clone a vector path with multiple transforms and combine the transformed clones into a single vector path.
+- **Modifier / Combine** — Free. [JSON](../nodes/vector/modifier.json) · `node:vector:modifier:combine`. Combine a list of Vectors together.
+- **Modifier / Curve Subdivide** — Free. [JSON](../nodes/vector/modifier.json) · `node:vector:modifier:curveSubdivide`. Convert vector curves into line segments by subdividing each curve.
+- **Modifier / Intersection** — Free. [JSON](../nodes/vector/modifier.json) · `node:vector:modifier:intersection`. Intersect a list of Vectors.
+- **Modifier / Mirror** — Free. [JSON](../nodes/vector/modifier.json) · `node:vector:modifier:mirror`. Mirror a vector path horizontally, vertically, or both.
+- **Modifier / Relay** — Free. [JSON](../nodes/vector/modifier.json) · `node:vector:modifier:relay`. Relay a Vector. This node has no effect. Tho useful to define a type when wiring to generics.
+- **Modifier / Round** — Free. [JSON](../nodes/vector/modifier.json) · `node:vector:modifier:round`. Round corners of a Vector shape. (This node is a bit experimental, and does not work in all cases)
+- **Modifier / Stroke** — Free. [JSON](../nodes/vector/modifier.json) · `node:vector:modifier:stroke`. Create a outline shape from a solid vector shape.
+- **Modifier / Subtraction** — Free. [JSON](../nodes/vector/modifier.json) · `node:vector:modifier:subtraction`. Subtract a list of Vectors from each other.
+- **Modifier / Transform** — Free. [JSON](../nodes/vector/modifier.json) · `node:vector:modifier:transform`.
+- **Modifier / Trim** — Free. [JSON](../nodes/vector/modifier.json) · `node:vector:modifier:trim`. Trim the shape path at fractions between 0.0 and 1.0.
+- **Modifier / Union** — Free. [JSON](../nodes/vector/modifier.json) · `node:vector:modifier:union`. Union a list of Vectors together.
+- **Resource / Construct** — Free. [JSON](../nodes/vector/resource.json) · `node:vector:resource:construct`. Construct a Vector Path from a list of Vector Points.
+- **Resource / Convert from Graphic** — Free. [JSON](../nodes/vector/resource.json) · `node:vector:resource:convertFromGraphic`. Detects contours of an image and traces a vector shape.
+- **Resource / L-System** — Free. [JSON](../nodes/vector/resource.json) · `node:vector:resource:lSystem`. Create a 2D vector path from an L-system grammar. Draw forward with F, and move forward without drawing with f, + and - turn, and [ ] create branches.
+- **Resource / List State** — Free. [JSON](../nodes/vector/resource.json) · `node:vector:resource:listState`. Store a list of vectors.
+- **Resource / Paint** — Pro. [JSON](../nodes/vector/resource.json) · `node:vector:resource:paint`. Paint by drawing vector paths that are passed upstream to a State Vector node via the source inlet. Switch between release and live paint mode. Control active and location of the drawing via inlets. Overlay a reference graphic with opacity.
+- **Resource / State** — Free. [JSON](../nodes/vector/resource.json) · `node:vector:resource:state`. Store a vector.
+- **Resource / Text** — Free. [JSON](../nodes/vector/resource.json) · `node:vector:resource:text`. Create a vector path from a String.
+- **Shape / Arc** — Free. [JSON](../nodes/vector/shape.json) · `node:vector:shape:arc`.
+- **Shape / Area** — Free. [JSON](../nodes/vector/shape.json) · `node:vector:shape:area`.
+- **Shape / Capsule** — Free. [JSON](../nodes/vector/shape.json) · `node:vector:shape:capsule`.
+- **Shape / Circle** — Free. [JSON](../nodes/vector/shape.json) · `node:vector:shape:circle`.
+- **Shape / Donut** — Free. [JSON](../nodes/vector/shape.json) · `node:vector:shape:donut`.
+- **Shape / Ellipse** — Free. [JSON](../nodes/vector/shape.json) · `node:vector:shape:ellipse`.
+- **Shape / Line** — Free. [JSON](../nodes/vector/shape.json) · `node:vector:shape:line`.
+- **Shape / Pie** — Free. [JSON](../nodes/vector/shape.json) · `node:vector:shape:pie`.
+- **Shape / Polygon** — Free. [JSON](../nodes/vector/shape.json) · `node:vector:shape:polygon`.
+- **Shape / Rectangle** — Free. [JSON](../nodes/vector/shape.json) · `node:vector:shape:rectangle`.
+- **Shape / Star** — Free. [JSON](../nodes/vector/shape.json) · `node:vector:shape:star`.

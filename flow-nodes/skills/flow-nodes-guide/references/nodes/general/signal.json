@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "familyName": "General",
+  "parentName": "Signal",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Passes action signals while the gate is enabled and drops them while it is disabled.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Action",
+          "typeName": "actionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Allows action signals to pass when enabled.",
+          "level": "external",
+          "name": "Gate",
+          "typeName": "gateIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Gate",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Action",
+          "typeName": "actionOut",
+          "valueType": "raw:action",
+          "way": "out"
+        }
+      ],
+      "parentName": "Signal",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "gateIn",
+          "info": "Allows action signals to pass when enabled.",
+          "isHidden": false,
+          "name": "Gate",
+          "type": "variable",
+          "typeName": "gate",
+          "valueType": "raw:core:bool"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Action",
+        "Signal",
+        "Gate"
+      ],
+      "typePath": "node:general:signal:gate",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/signal/gate"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Merges multiple action signals into one action signal.",
+      "familyName": "General",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Actions",
+          "typeName": "actionsIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Merge",
+      "newInAppVersion": "27.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Action",
+          "typeName": "actionOut",
+          "valueType": "raw:action",
+          "way": "out"
+        }
+      ],
+      "parentName": "Signal",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Action",
+        "Signal",
+        "Merge",
+        "Combine",
+        "Join"
+      ],
+      "typePath": "node:general:signal:merge",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/signal/merge"
+    }
+  ]
+}

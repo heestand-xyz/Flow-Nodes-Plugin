@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "familyName": "General",
+  "parentName": "Phase",
+  "nodes": [
+    {
+      "complexity": "basic",
+      "docs": "Read the current app foreground and active schene phases.",
+      "familyName": "General",
+      "inLets": [],
+      "isPro": false,
+      "name": "App",
+      "newInAppVersion": "4.4.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "In Foreground",
+          "typeName": "inForegroundOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Active",
+          "typeName": "activeOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        }
+      ],
+      "parentName": "Phase",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "App",
+        "Foreground",
+        "Active",
+        "Scene"
+      ],
+      "typePath": "node:general:phase:app",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/phase/app"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Trigger an action when the flow has opened.",
+      "familyName": "General",
+      "inLets": [],
+      "isPro": false,
+      "name": "Flow",
+      "newInAppVersion": "4.4.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Opened",
+          "typeName": "openedOut",
+          "valueType": "raw:action",
+          "way": "out"
+        }
+      ],
+      "parentName": "Phase",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Flow",
+        "Open",
+        "Action"
+      ],
+      "typePath": "node:general:phase:flow",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/general/phase/flow"
+    }
+  ]
+}

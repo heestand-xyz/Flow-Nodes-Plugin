@@ -1,0 +1,1061 @@
+{
+  "schemaVersion": 1,
+  "familyName": "Video",
+  "parentName": "Resource",
+  "nodes": [
+    {
+      "complexity": "advanced",
+      "docs": "Store a list of videos.",
+      "familyName": "Video",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Clear",
+          "typeName": "clearIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "List State",
+      "newInAppVersion": "1.5.0",
+      "outLets": [
+        {
+          "capacity": "multi",
+          "direction": "binding",
+          "level": "external",
+          "name": "Videos",
+          "typeName": "videosBindingOut",
+          "valueType": "raw:video",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Remove all videos.",
+          "isHidden": false,
+          "name": "Clear",
+          "type": "action",
+          "typeName": "clear"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Array",
+        "Movies"
+      ],
+      "typePath": "node:video:resource:listState",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/video/resource/listState"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Information about details of a video.",
+      "familyName": "Video",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Video",
+          "typeName": "in",
+          "valueType": "raw:video",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Metadata",
+      "newInAppVersion": "1.5.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Resolution",
+          "typeName": "resolutionOut",
+          "valueType": "raw:core:size",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Duration",
+          "typeName": "durationOut",
+          "valueType": "raw:core:duration",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Frame Count",
+          "typeName": "frameCountOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Frame Rate",
+          "typeName": "frameRateOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [],
+      "replacesTypePaths": [],
+      "tags": [
+        "Information",
+        "Details"
+      ],
+      "typePath": "node:video:resource:metadata",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/video/resource/metadata"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Play a video stream of graphics.",
+      "familyName": "Video",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Video",
+          "typeName": "videoIn",
+          "valueType": "raw:video",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Playing",
+          "typeName": "isPlayingIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Loop",
+          "typeName": "isLoopingIn",
+          "valueType": "raw:core:bool",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Speed of video playback.",
+          "level": "external",
+          "name": "Playback Rate",
+          "typeName": "playbackRateIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Target time in seconds used to seek.",
+          "level": "external",
+          "name": "Seek Time",
+          "typeName": "seekTimeIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Target frame index used to seek.",
+          "level": "external",
+          "name": "Seek Frame Index",
+          "typeName": "seekFrameIndexIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Target normalized progress used to seek (0.0 to 1.0).",
+          "level": "external",
+          "name": "Seek Fraction",
+          "typeName": "seekFractionIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Seek",
+          "typeName": "seekActionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Reset",
+          "typeName": "resetActionIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Player",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isPlayingIn",
+          "isHidden": false,
+          "name": "Playing",
+          "type": "variable",
+          "typeName": "isPlaying",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": false,
+          "inLetTypeName": "isLoopingIn",
+          "isHidden": false,
+          "name": "Loop",
+          "type": "variable",
+          "typeName": "isLooping",
+          "valueType": "raw:core:bool"
+        },
+        {
+          "defaultValue": 1,
+          "inLetTypeName": "playbackRateIn",
+          "info": "Speed of video playback.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 2,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Playback Rate",
+          "type": "variable",
+          "typeName": "playbackRate",
+          "valueType": "raw:core:float"
+        },
+        {
+          "defaultEnumCase": {
+            "name": "Time",
+            "typeName": "time"
+          },
+          "enumCases": [
+            {
+              "name": "Time",
+              "typeName": "time"
+            },
+            {
+              "name": "Frame Index",
+              "typeName": "frameIndex"
+            },
+            {
+              "name": "Fraction",
+              "typeName": "fraction"
+            }
+          ],
+          "isHidden": false,
+          "name": "Seek Mode",
+          "type": "typedEnum",
+          "typeName": "seekMode"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "seekTimeIn",
+          "info": "Target time in seconds used to seek.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 60,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Seek Time",
+          "type": "variable",
+          "typeName": "seekTime",
+          "valueType": "raw:core:duration"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "seekFrameIndexIn",
+          "info": "Target frame index used to seek.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 100,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Seek Frame Index",
+          "type": "variable",
+          "typeName": "seekFrameIndex",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "seekFractionIn",
+          "info": "Target normalized progress used to seek (0.0 to 1.0).",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Seek Fraction",
+          "type": "variable",
+          "typeName": "seekFraction",
+          "valueType": "raw:core:float"
+        },
+        {
+          "isHidden": false,
+          "name": "Seek",
+          "type": "action",
+          "typeName": "seekAction"
+        },
+        {
+          "info": "Reset playback position to the start of the video.",
+          "isHidden": false,
+          "name": "Reset",
+          "type": "action",
+          "typeName": "resetAction"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Play",
+        "Preview",
+        "Movie",
+        "Seek"
+      ],
+      "typePath": "node:video:resource:player",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/video/resource/player"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Record live graphics to a video.",
+      "familyName": "Video",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Source",
+          "typeName": "sourceIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Destination",
+          "typeName": "destinationIn",
+          "valueType": "raw:video",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Frame Rate",
+          "typeName": "frameRateIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Record",
+          "typeName": "recordIn",
+          "valueType": "raw:action",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Stop",
+          "typeName": "stopIn",
+          "valueType": "raw:action",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Cancel",
+          "typeName": "cancelIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Record",
+      "newInAppVersion": "1.5.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Recording",
+          "typeName": "isRecordingOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Frame Index",
+          "typeName": "frameIndexOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Fixed",
+            "typeName": "fixed"
+          },
+          "enumCases": [
+            {
+              "name": "Fixed",
+              "typeName": "fixed"
+            },
+            {
+              "name": "Variable",
+              "typeName": "variable"
+            }
+          ],
+          "isHidden": false,
+          "name": "Frame Rate Mode",
+          "type": "typedEnum",
+          "typeName": "frameRateMode"
+        },
+        {
+          "defaultValue": 30,
+          "inLetTypeName": "frameRateIn",
+          "info": "Frames per second.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 60,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Frame Rate",
+          "type": "variable",
+          "typeName": "frameRate",
+          "valueType": "raw:core:float"
+        },
+        {
+          "isHidden": false,
+          "name": "Record",
+          "type": "action",
+          "typeName": "startRender"
+        },
+        {
+          "isHidden": true,
+          "name": "Stop",
+          "type": "action",
+          "typeName": "stopRender"
+        },
+        {
+          "isHidden": true,
+          "name": "Cancel",
+          "type": "action",
+          "typeName": "cancelRender"
+        },
+        {
+          "isHidden": true,
+          "name": "Status",
+          "type": "label",
+          "typeName": "renderStatus"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Film",
+        "Movie"
+      ],
+      "typePath": "node:video:resource:record",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/video/resource/record"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Sample a graphic from a video at a specific frame index. This can be used to seek in a video.",
+      "familyName": "Video",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Video",
+          "typeName": "videoIn",
+          "valueType": "raw:video",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Frame Index",
+          "typeName": "frameIndexIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "links": [
+        {
+          "title": "Guide",
+          "url": "https://flownodes.notion.site/Video-Guide-20a9a07f8bd9809394aae6ece4cf2500"
+        }
+      ],
+      "name": "Sample",
+      "newInAppVersion": "1.5.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "frameIndexIn",
+          "info": "The frame position to sample. 0 is the first frame.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 100,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Frame Index",
+          "type": "variable",
+          "typeName": "frameIndex",
+          "valueType": "raw:core:int"
+        }
+      ],
+      "replacedByTypePath": "node:video:resource:sample2",
+      "replacesTypePaths": [],
+      "tags": [
+        "Frame",
+        "Capture",
+        "Seek",
+        "Scrub"
+      ],
+      "typePath": "node:video:resource:sample",
+      "isVisible": false,
+      "sourceRoute": "/docs/nodes/video/resource/sample"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Sample a graphic from a video using seek time, frame index, or a progress (0.0 to 1.0).",
+      "familyName": "Video",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Video",
+          "typeName": "videoIn",
+          "valueType": "raw:video",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Target time in seconds used to sample.",
+          "level": "external",
+          "name": "Seek Time",
+          "typeName": "seekTimeIn",
+          "valueType": "raw:core:duration",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Target frame index used to sample.",
+          "level": "external",
+          "name": "Seek Frame Index",
+          "typeName": "seekFrameIndexIn",
+          "valueType": "raw:core:int",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "info": "Target normalized progress used to sample (0.0 to 1.0).",
+          "level": "external",
+          "name": "Seek Fraction",
+          "typeName": "seekFractionIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Sample",
+      "newInAppVersion": "4.0.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Graphic",
+          "typeName": "graphicOut",
+          "valueType": "raw:graphic",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultEnumCase": {
+            "name": "Time",
+            "typeName": "time"
+          },
+          "enumCases": [
+            {
+              "name": "Time",
+              "typeName": "time"
+            },
+            {
+              "name": "Frame Index",
+              "typeName": "frameIndex"
+            },
+            {
+              "name": "Fraction",
+              "typeName": "fraction"
+            }
+          ],
+          "isHidden": false,
+          "name": "Seek Mode",
+          "type": "typedEnum",
+          "typeName": "seekMode"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "seekTimeIn",
+          "info": "Target time in seconds used to sample.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 60,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "duration",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Seek Time",
+          "type": "variable",
+          "typeName": "seekTime",
+          "valueType": "raw:core:duration"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "seekFrameIndexIn",
+          "info": "Target frame index used to sample.",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 100,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "int",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Seek Frame Index",
+          "type": "variable",
+          "typeName": "seekFrameIndex",
+          "valueType": "raw:core:int"
+        },
+        {
+          "defaultValue": 0,
+          "inLetTypeName": "seekFractionIn",
+          "info": "Target normalized progress used to sample (0.0 to 1.0).",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 0,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Seek Fraction",
+          "type": "variable",
+          "typeName": "seekFraction",
+          "valueType": "raw:core:float"
+        }
+      ],
+      "replacesTypePaths": [
+        "node:video:resource:sample"
+      ],
+      "tags": [
+        "Frame",
+        "Capture",
+        "Seek",
+        "Scrub"
+      ],
+      "typePath": "node:video:resource:sample2",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/video/resource/sample2"
+    },
+    {
+      "complexity": "advanced",
+      "docs": "Save graphics to a video. Connect the destination inlet to a State Video Node. All graphics are required to have the same resolution.",
+      "familyName": "Video",
+      "inLets": [
+        {
+          "capacity": "multi",
+          "direction": "direct",
+          "level": "external",
+          "name": "Source",
+          "typeName": "sourceIn",
+          "valueType": "raw:graphic",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Destination",
+          "typeName": "destinationIn",
+          "valueType": "raw:video",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Frame Rate",
+          "typeName": "frameRateIn",
+          "valueType": "raw:core:float",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Record",
+          "typeName": "saveIn",
+          "valueType": "raw:action",
+          "way": "in"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Cancel",
+          "typeName": "cancelIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "name": "Save Graphics",
+      "newInAppVersion": "1.7.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Saving",
+          "typeName": "isSavingOut",
+          "valueType": "raw:core:bool",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Frame Index",
+          "typeName": "frameIndexOut",
+          "valueType": "raw:core:int",
+          "way": "out"
+        },
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Fraction",
+          "typeName": "fractionOut",
+          "valueType": "raw:core:float",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "defaultValue": 30,
+          "inLetTypeName": "frameRateIn",
+          "isHidden": false,
+          "maximumValue": {
+            "constantValue": 60,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "minimumValue": {
+            "constantValue": 1,
+            "coreType": "float",
+            "mode": {
+              "constant": {}
+            },
+            "type": "variable"
+          },
+          "name": "Frame Rate",
+          "type": "variable",
+          "typeName": "frameRate",
+          "valueType": "raw:core:float"
+        },
+        {
+          "isHidden": false,
+          "name": "Save",
+          "type": "action",
+          "typeName": "startRender"
+        },
+        {
+          "isHidden": true,
+          "name": "Cancel",
+          "type": "action",
+          "typeName": "cancelRender"
+        },
+        {
+          "isHidden": true,
+          "name": "Status",
+          "type": "label",
+          "typeName": "renderStatus"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Write",
+        "Render",
+        "Export"
+      ],
+      "typePath": "node:video:resource:saveGraphics",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/video/resource/saveGraphics"
+    },
+    {
+      "complexity": "basic",
+      "docs": "Store a video.",
+      "familyName": "Video",
+      "inLets": [
+        {
+          "capacity": "mono",
+          "direction": "direct",
+          "level": "external",
+          "name": "Clear",
+          "typeName": "clearIn",
+          "valueType": "raw:action",
+          "way": "in"
+        }
+      ],
+      "isPro": false,
+      "links": [
+        {
+          "title": "Guide",
+          "url": "https://flownodes.notion.site/Video-Guide-20a9a07f8bd9809394aae6ece4cf2500"
+        }
+      ],
+      "name": "State",
+      "newInAppVersion": "1.5.0",
+      "outLets": [
+        {
+          "capacity": "mono",
+          "direction": "binding",
+          "level": "external",
+          "name": "Video",
+          "typeName": "videoBindingOut",
+          "valueType": "raw:video",
+          "way": "out"
+        }
+      ],
+      "parentName": "Resource",
+      "platforms": [
+        "iOS",
+        "macOS",
+        "visionOS"
+      ],
+      "properties": [
+        {
+          "info": "Remove the video.",
+          "isHidden": false,
+          "name": "Clear",
+          "type": "action",
+          "typeName": "clear"
+        }
+      ],
+      "replacesTypePaths": [],
+      "tags": [
+        "Store",
+        "Movie"
+      ],
+      "typePath": "node:video:resource:state",
+      "isVisible": true,
+      "sourceRoute": "/docs/nodes/video/resource/state"
+    }
+  ]
+}
